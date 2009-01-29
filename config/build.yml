@@ -1,0 +1,6 @@
+name: Tomatoes
+load: lib/application.rb
+version: "1.0"
+icon: resources/tomato.icns
+sources: 
+  - lib/**/*.rb
