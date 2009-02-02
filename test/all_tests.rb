@@ -1,6 +1,6 @@
 require 'test/unit/testsuite'
 require 'test/unit/ui/console/testrunner'
-Dir.glob(File.join(File.dirname(__FILE__), '*_test.rb')).each {|f| require f}
+Dir.glob(File.join(File.dirname(__FILE__), 'tomatoes/*_test.rb')).each {|f| require f}
 
 class AllTests
   def self.suite
@@ -14,4 +14,3 @@ class AllTests
     return suite
   end
 end
-# Test::Unit::UI::Console::TestRunner.run(AllTests)
