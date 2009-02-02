@@ -1,0 +1,17 @@
+- replace file based persistence with an embedded relational database saved to ~/Library/Application Support/Tomatoes as default
+
+HISTORY:
+- show list of tomatoes worked so far right under the input box as paginated grid view
+- make the history collapsible and closed/hidden by default
+
+REPORTS:
+- always show today's tomatoes worked so far, yesterday's total amount worked right below the input box and above the collapsed history view.
+
+TIMER:
+- a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.
+- a 5 mins countdown is started after the submit button is pressed. The timer stops at zero and a new 25 mins countdown is started automatically.
+
+INTERFACE:
+- make the view quicksilver-like with a keystroke sequence to activate it
+- always show the timer on the menu bar
+- bring input box to front at the end of the 25 mins timer
