@@ -5,7 +5,7 @@ require 'tomatoes/tomato'
 class StorageTest < Test::Unit::TestCase
   
   def setup
-    @dir = File.dirname(__FILE__) + "/../work_dir/"
+    @dir = File.dirname(__FILE__) + "/../work/"
     @storage = Storage.new(@dir)
   end
   

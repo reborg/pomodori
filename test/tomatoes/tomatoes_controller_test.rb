@@ -1,5 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'tomatoes/tomatoes_controller'
+require 'tomatoes/tomato'
+require 'tomatoes/kirby_storage'
 
 class TomatoesControllerTest < Test::Unit::TestCase
   
@@ -11,7 +13,7 @@ class TomatoesControllerTest < Test::Unit::TestCase
   
   def test_create_new_tomato
     Tomato.expects(:new).with(:text => "hola").returns(@tomato)
-    Storage.expects(:new).returns(@storage)
+    KirbyStorage.expects(:new).returns(@storage)
     @storage.expects(:save)
     @ctrl.create({:text => "hola"})
   end

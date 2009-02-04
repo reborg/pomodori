@@ -2,7 +2,7 @@ class TomatoesController
   
   def create(params)
     tomato = Tomato.new(params)
-    storage = Storage.new
+    storage = KirbyStorage.new
     storage.save(tomato)
   end
   

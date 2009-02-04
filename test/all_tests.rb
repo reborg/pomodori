@@ -11,6 +11,7 @@ class AllTests
     suite << TextFieldTest.suite
     suite << TomatoTest.suite
     suite << TomatoesControllerTest.suite
+    suite << KirbyStorageTest.suite
     return suite
   end
 end

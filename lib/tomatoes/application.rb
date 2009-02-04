@@ -1,5 +1,5 @@
 require 'hotcocoa'
-Dir.glob(File.join(File.dirname(__FILE__), './*.rb')).each {|f| require f unless f.match(/application.rb/)}
+Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).each {|f| require f}
 
 class Application
   attr_accessor :value
@@ -36,7 +36,7 @@ class Application
   end
   
   def mybutton
-    action = Proc.new do 
+    action = Proc.new do
       tomatoes_controller = TomatoesController.new
       tomatoes_controller.create(:text => @value.to_s)
       exit
@@ -68,5 +68,3 @@ class Application
   def on_bring_all_to_front(menu)
   end
 end
-
-Application.new.start

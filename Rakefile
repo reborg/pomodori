@@ -19,5 +19,5 @@ end
 
 task :test do
   require 'open3'
-	Open3.popen3('macruby test/tomatoes/all_tests.rb') { |stdin, stdout, stderr| puts stdout.read }
+	Open3.popen3('macruby test/all_tests.rb') { |stdin, stdout, stderr| puts stdout.read }
 end
