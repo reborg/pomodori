@@ -1,6 +1,7 @@
 - replace file based persistence with an embedded relational database saved to ~/Library/Application Support/Tomatoes as default
 - try everything on macruby 0.4. Have a look to see if the problem of calling =~ on a UTF-16 string is still producing the error.
 - Try to set that the hit return save the tomato and close the app.
+- see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk
 
 HISTORY:
 - show list of tomatoes worked so far right under the input box as paginated grid view

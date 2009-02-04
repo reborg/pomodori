@@ -28,21 +28,7 @@ class KirbyStorageTest < Test::Unit::TestCase
   end
   
   def teardown
-    wipe_work_dir(@path)
+    wipe_dir(@path)
   end
-  
-  def wipe_work_dir(dir, regex = /.tbl/)
-	  Dir.entries(dir).each do |name|
-	    path = File.join(dir, name)
-	    if name =~ regex
-	      ftype = File.directory?(path) ? Dir : File
-	      begin
-	        ftype.delete(path)
-	      rescue SystemCallError => e
-	        $stderr.puts e.message
-	      end
-	    end
-	  end
-	end
-      
+        
 end

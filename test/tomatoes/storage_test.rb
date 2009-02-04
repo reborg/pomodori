@@ -28,37 +28,28 @@ class StorageTest < Test::Unit::TestCase
   end
 
   def test_that_the_file_name_is_a_timestamp
-    @storage.save("this")
-    assert_match(DateTime.now.strftime("%Y%m%d%H%M"), Dir.entries(@dir)[2])
+    @storage.save("this")    
+    assert_match(DateTime.now.strftime("%Y%m%d%H%M"), get_file_by_index(@dir, 1))
   end
   
   def test_that_the_serialized_tomato_contains_text
     @storage.save(Tomato.new(:text => "hola"))
     content = ""
-    open(@dir + Dir.entries(@dir)[2]).each { |x| content += x}
+    open(@dir + get_file_by_index(@dir, 1)).each { |x| content += x}
     assert_match("hola", content)
   end
   
   def teardown
-    delete_matching_regexp(@dir)
+    wipe_dir(@dir, /#{DateTime.now.year}/)
   end
   
   def count_objects_in(dir)
-    return Dir.entries(dir).size
+    return Dir.entries(dir).size - 1 # remove .gitignore
   end
   
-  def delete_matching_regexp(dir, regex = /#{DateTime.now.year}/)
-	  Dir.entries(dir).each do |name|
-	    path = File.join(dir, name)
-	    if name =~ regex
-	      ftype = File.directory?(path) ? Dir : File
-	      begin
-	        ftype.delete(path)
-	      rescue SystemCallError => e
-	        $stderr.puts e.message
-	      end
-	    end
-	  end
-	end
+  # [0] => . [1] => .. [2] => .gitignore
+  def get_file_by_index(path, i)
+    Dir.entries(path)[2+i]
+  end
   
 end
