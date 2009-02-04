@@ -2,6 +2,7 @@
 - try everything on macruby 0.4. Have a look to see if the problem of calling =~ on a UTF-16 string is still producing the error.
 - Try to set that the hit return save the tomato and close the app.
 - see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk
+- look like the template project created by hotcocoa is different from before. Generate an empty one and copy paste what needed
 
 HISTORY:
 - show list of tomatoes worked so far right under the input box as paginated grid view

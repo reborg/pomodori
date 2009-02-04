@@ -2,5 +2,7 @@ name: Tomatoes
 load: lib/main.rb
 version: "1.0"
 icon: resources/tomato.icns
+resources:
+  - resources/**/*.*
 sources: 
   - lib/**/*.rb

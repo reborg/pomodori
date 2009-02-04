@@ -20,7 +20,7 @@ class Application
   end
   
   def build_window
-    win = window(:frame => [380, 615, 389, 140], :title => "Tomato", :view => :nolayout, :style => [:titled, :closable, :miniturizable])
+    win = window(:frame => [380, 615, 389, 140], :title => "Tomato", :view => :nolayout)
     win.will_close { exit }
     win
   end
