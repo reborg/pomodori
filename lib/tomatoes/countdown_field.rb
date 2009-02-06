@@ -1,14 +1,29 @@
 require 'hotcocoa'
+require 'tomatoes/frame'
 
 class CountdownField
-  attr_accessor :countdown
+  attr_accessor :countdown, :frame, :rendered
+  include HotCocoa
   
-  def initialize(countdown = Countdown.new(25*60))
-    @countdown = countdown
+  def initialize(options = {})
+    @countdown = options[:countdown] ||= Countdown.new(25*60)
+    @frame = options[:frame] ||= Frame.new(0, 0, 96, 35)
   end
   
   def time
     "#{normalize(@countdown.mins)}:#{normalize(@countdown.secs)}"
+  end
+  
+  def tick
+    @countdown.tick
+    @rendered.text = time
+  end
+  
+  def render
+    @rendered = label(:frame => @frame.to_a, 
+      :text => time, 
+      :layout => {:expand => :width, :start => false}, 
+      :font => font(:system => 30))
   end
   
   private

@@ -2,6 +2,7 @@
 - Try to set that the hit return save the tomato and close the app.
 - see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk
 - put everything under continous integration at relevance
+- the tomato icon: rotate 15 degree left and black gradient on the edges instead of light yellow
 
 TIMER:
 - a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.
