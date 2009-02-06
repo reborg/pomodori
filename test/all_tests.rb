@@ -12,6 +12,9 @@ class AllTests
     suite << TomatoTest.suite
     suite << TomatoesControllerTest.suite
     suite << KirbyStorageTest.suite
+    suite << CountdownTest.suite
+    suite << CountdownCallbackTest.suite
+    suite << CountdownFieldTest.suite
     return suite
   end
 end

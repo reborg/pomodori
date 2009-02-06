@@ -1,8 +1,11 @@
-- replace file based persistence with an embedded relational database saved to ~/Library/Application Support/Tomatoes as default
-- try everything on macruby 0.4. Have a look to see if the problem of calling =~ on a UTF-16 string is still producing the error.
+- create database into ~/Library/Application Support/Tomatoes instead of App file
 - Try to set that the hit return save the tomato and close the app.
 - see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk
-- look like the template project created by hotcocoa is different from before. Generate an empty one and copy paste what needed
+- put everything under continous integration at relevance
+
+TIMER:
+- a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.
+- a 5 mins countdown is started after the submit button is pressed. The timer stops at zero and a new 25 mins countdown is started automatically.
 
 HISTORY:
 - show list of tomatoes worked so far right under the input box as paginated grid view
@@ -11,11 +14,10 @@ HISTORY:
 REPORTS:
 - always show today's tomatoes worked so far, yesterday's total amount worked right below the input box and above the collapsed history view.
 
-TIMER:
-- a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.
-- a 5 mins countdown is started after the submit button is pressed. The timer stops at zero and a new 25 mins countdown is started automatically.
-
 INTERFACE:
 - make the view quicksilver-like with a keystroke sequence to activate it
 - always show the timer on the menu bar
 - bring input box to front at the end of the 25 mins timer
+
+KNOWN ISSUES:
+- Encoding from text field: the string you obtain from a text_field instance is UTF-16 (text_field.to_s.encoding). UTF-16 is not even in the list of supported Ruby 1.9 encodings (Encoding.list) but there is a BE/LE specification. If you call the match operator on a UTF-16 string you have a "`=~': regexp preprocess failed: too short escaped multibyte character (ArgumentError)". So I had to convert the string and since neither force_encoding nor encode! works in MacRuby, I had to move the string to bytes and back to string. This is not a final solution of course, because I'm stripping relevant part of multibyte strings. The fix is in tomato.rb class fix_encoding method.
