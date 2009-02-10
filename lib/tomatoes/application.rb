@@ -17,12 +17,8 @@ class Application
       bottom_view << submit_button.render
       
       main_window << bottom_view
-      timer(:interval => 1, :target => self, :selector => 'on_timer_tick', :repeats => true)
+      @countdown_field.start
     end
-  end
-  
-  def on_timer_tick
-    countdown_field.send(:on_timer_tick)
   end
   
   def main_window

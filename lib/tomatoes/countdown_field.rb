@@ -19,6 +19,10 @@ class CountdownField
     "#{normalize(@countdown.mins)}:#{normalize(@countdown.secs)}"
   end
   
+  def start
+    timer(:interval => 1, :target => self, :selector => 'on_timer_tick', :repeats => true)
+  end
+  
   def render
     @render ||= label(:frame => @frame.to_a, 
       :text => time, 
