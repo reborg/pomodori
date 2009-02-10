@@ -1,8 +1,10 @@
-- create database into ~/Library/Application Support/Tomatoes instead of App file
-- Try to set that the hit return save the tomato and close the app.
-- see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk
-- put everything under continous integration at relevance
-- the tomato icon: rotate 15 degree left and black gradient on the edges instead of light yellow
+- the hotcocoa timer is not usable. try to skip and call the nstimer directly and if it crashes. 1
+- create database into ~/Library/Application Support/Tomatoes instead of App file 1
+- Try to set that the hit return save the tomato and close the app 2
+- see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk search for solutions 2
+- search for what you need to do to put everything under CI on Relevance and create relevant tasks 1
+- the tomato icon: rotate 15 degree left and black gradient on the edges instead of light yellow 1
+- embedding macruby with the app 4
 
 TIMER:
 - a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.

@@ -2,63 +2,55 @@ require 'hotcocoa'
 Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).each {|f| require f}
 
 class Application
-  attr_accessor :value, :countdown, :timer
+  attr_accessor :input_box, :countdown_field, :main_window
+  attr_accessor :bottom_view, :submit_button, :main_app, :on_click_submit_button
   
   include HotCocoa
   
   def start
-    app = application :name => "Hotcocoa", &init 
-    app.delegate = self
-    app.run
-  end
-  
-  def init
-    Proc.new {
-      wind = build_window
-      wind << build_input_box
-      wind << build_buttons_view
-      @start = Time.now
-      @timer = timer(:interval => 1, :target => self, :selector => 'timer_fired', :repeats => true)
-    }
-  end
-  
-  def timer_fired
-    if(Time.now - @start < (60*25))
-      @countdown.tick
-    else
-      "Done"
+    @main_app = application :name => "Hotcocoa" do |app|
+      app.delegate = self
+      main_window.will_close { exit }
+      main_window << input_box.render
+      
+      bottom_view << countdown_field.render
+      bottom_view << submit_button.render
+      
+      main_window << bottom_view
+      timer(:interval => 1, :target => self, :selector => 'on_timer_tick', :repeats => true)
     end
   end
   
-  def build_window
-    win = window(:frame => [380, 615, 389, 140], :title => "Tomato", :view => :nolayout)
-    win.will_close { exit }
-    win
+  def on_timer_tick
+    countdown_field.send(:on_timer_tick)
+  end
+  
+  def main_window
+    @main_window ||= window(:frame => [380, 615, 389, 140], :title => "Tomato", :view => :nolayout)
   end
 
-  def build_input_box
-    @value ||= TextField.new(Frame.new(20, 52, 349, 68)).render
+  def input_box
+    @input_box ||= TextField.new(Frame.new(20, 52, 349, 68))
   end
   
-  def build_buttons_view
-    buttons_view = view(:frame => [0, 0, 389, 140], :layout => {:border => :line})
-    buttons_view << build_countdown
-    buttons_view << build_button
-    buttons_view
+  def bottom_view
+    @bottom_view ||= view(:frame => [0, 0, 389, 140], :layout => {:border => :line})
   end
   
-  def build_countdown
-    @countdown ||= CountdownField.new(:frame => Frame.new(20, 8, 96, 35))
-    @countdown.render
+  def countdown_field
+    @countdown_field ||= CountdownField.new(:frame => Frame.new(20, 8, 96, 35))
   end
     
-  def build_button
-    action = Proc.new do
+  def submit_button
+    @submit_button ||= SubmitButton.new(on_click_submit_button, Frame.new(279, 4, 96, 32))
+  end
+  
+  def on_click_submit_button
+    @on_click_submit_button ||= Proc.new do
       tomatoes_controller = TomatoesController.new
-      tomatoes_controller.create(:text => @value.to_s)
+      tomatoes_controller.create(:text => @input_box.to_s)
       exit
     end
-    SubmitButton.new(action, Frame.new(279, 4, 96, 32)).render
   end
   
   # file/open

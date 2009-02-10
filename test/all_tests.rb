@@ -15,6 +15,7 @@ class AllTests
     suite << CountdownTest.suite
     suite << CountdownCallbackTest.suite
     suite << CountdownFieldTest.suite
+    suite << CountdownFieldTimerTest.suite
     return suite
   end
 end
