@@ -17,7 +17,7 @@ class Application
       bottom_view << submit_button.render
       
       main_window << bottom_view
-      @countdown_field.start
+      countdown_field.start
     end
   end
   

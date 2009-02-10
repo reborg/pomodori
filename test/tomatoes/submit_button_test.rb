@@ -1,5 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'tomatoes/submit_button'
+require 'tomatoes/frame'
 
 class SubmitButtonTest < Test::Unit::TestCase
   

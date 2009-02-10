@@ -9,7 +9,7 @@ require 'hotcocoa'
 #
 class SubmitButton
   include HotCocoa
-  attr_accessor :action, :frame, :title
+  attr_accessor :action, :frame, :title, :render
 
   def initialize(_action = action, _frame = frame, _title = title)
     @action = _action
@@ -36,7 +36,7 @@ class SubmitButton
   # Produces the HotCocoa related instance
   #
   def render
-    button(
+    @render ||= button(
       :title => title, 
       :frame => frame.to_a, 
       :bezel => :rounded, 

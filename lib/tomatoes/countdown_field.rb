@@ -1,6 +1,10 @@
 require 'hotcocoa'
 require 'tomatoes/frame'
 
+##
+# Encapsulates all the logic related to the display of the
+# timer on the screen.
+#
 class CountdownField
   attr_accessor :countdown, :frame, :render
   attr_reader :start_time, :state
@@ -19,8 +23,21 @@ class CountdownField
     "#{normalize(@countdown.mins)}:#{normalize(@countdown.secs)}"
   end
   
+  ##
+  # Had to use NSTimer direct call instead of HotCocoa mapping that is
+  # affected by a crash after the application start.
+  #
   def start
-    timer(:interval => 1, :target => self, :selector => 'on_timer_tick', :repeats => true)
+    NSTimer.scheduledTimerWithTimeInterval 1, target:self, selector:'on_timer_tick', userInfo:nil, repeats:true
+  end
+  
+  def on_timer_tick
+    @countdown.tick
+    if(@state == :running)
+      render.text = time
+    else
+      render.text = "Done!"
+    end
   end
   
   def render
@@ -35,15 +52,6 @@ class CountdownField
     def normalize(number)
       return "0#{number}" if number < 10
       return number
-    end
-    
-    def on_timer_tick
-      @countdown.tick
-      if(@state == :running)
-        render.text = time
-      else
-        render.text = "Done!"
-      end
     end
     
     def on_countdown_done

@@ -38,13 +38,13 @@ class CountdownFieldTimerTest < Test::Unit::TestCase
   end
   
   def test_should_update_text_on_tick
-    @countdown_field.send(:on_timer_tick)    
+    @countdown_field.on_timer_tick
     assert_equal("24:59", @countdown_field.render.to_s)
   end
   
   def test_prints_done_when_done
     @countdown_field = CountdownField.new(:countdown => 1)
-    @countdown_field.send(:on_timer_tick)
+    @countdown_field.on_timer_tick
     assert_equal("Done!", @countdown_field.render.to_s)
   end
   
