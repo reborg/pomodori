@@ -2,7 +2,7 @@ require 'hotcocoa'
 
 class TextField
   include HotCocoa
-  attr_reader :frame
+  attr_reader :frame, :render
     
   def initialize(_frame = frame)
     @frame = _frame
@@ -13,7 +13,7 @@ class TextField
   end
   
   def render
-    text_field(:frame => frame.to_a)
+    @render ||= text_field(:frame => frame.to_a)
   end
   
 end

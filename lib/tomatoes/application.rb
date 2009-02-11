@@ -44,7 +44,7 @@ class Application
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
       tomatoes_controller = TomatoesController.new
-      tomatoes_controller.create(:text => @input_box.to_s)
+      tomatoes_controller.create(:text => @input_box.render.to_s)
       exit
     end
   end

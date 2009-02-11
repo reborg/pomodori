@@ -1,5 +1,5 @@
-- the hotcocoa timer is not usable. try to skip and call the nstimer directly and if it crashes. 1 (3)
-- create database into ~/Library/Application Support/Tomatoes instead of App file 1
+- the hotcocoa timer is not usable. try to skip and call the nstimer directly and if it crashes. 1 (4)
+- create database into ~/Library/Application Support/Tomatoes instead of App file 1 (3)
 - Try to set that the hit return save the tomato and close the app 2
 - see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk search for solutions 2
 - search for what you need to do to put everything under CI on Relevance and create relevant tasks 1

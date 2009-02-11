@@ -1,4 +1,3 @@
-#!/usr/local/bin/macruby
-libs = " -r #{File.dirname(__FILE__) + '/../lib/tomatoes.rb'}"
-puts "Loading Tomatoes Interactive Console"
-exec "macirb #{libs} --simple-prompt"
+#!/bin/bash
+echo "Loading Tomatoes Interactive Console"
+macirb -r lib/tomatoes.rb --simple-prompt

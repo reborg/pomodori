@@ -6,7 +6,7 @@ require 'tomatoes/tomato'
 class KirbyStorageTest < Test::Unit::TestCase
   
   def setup
-    @path = File.dirname(__FILE__) + "/../work/"
+    @path = File.dirname(__FILE__) + "/../work"
     create_db(@path)
     @kriby_storage = KirbyStorage.new(@path)
   end
