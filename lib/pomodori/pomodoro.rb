@@ -1,4 +1,4 @@
-class Tomato
+class Pomodoro
   attr_accessor :text, :timestamp
   
   def initialize(params = {})

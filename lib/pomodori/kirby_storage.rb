@@ -3,7 +3,7 @@ require 'thirdparties/kirbybase'
 class KirbyStorage
   attr_accessor :path, :db
   
-  DB_PATH = "#{ENV['HOME']}/Library/Application Support/Tomatoes"
+  DB_PATH = "#{ENV['HOME']}/Library/Application Support/Pomodori"
   
   def initialize(path = DB_PATH)
     @path = path
@@ -26,9 +26,9 @@ class KirbyStorage
   def self.init_db
     create_db(DB_PATH)
     db = KirbyBase.new(:local, nil, nil, DB_PATH)
-    db.create_table(:tomato, 
-      :text, :String, 
-      :timestamp, :Time) { |obj| obj.encrypt = false } unless db.table_exists?(:tomato)
+    db.create_table(:pomodoro, 
+      :text, :String,
+      :timestamp, :Time) { |obj| obj.encrypt = false } unless db.table_exists?(:pomodoro)
   end
   
   private

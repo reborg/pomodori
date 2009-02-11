@@ -1,7 +1,7 @@
-name: Tomatoes
+name: Pomodori
 load: lib/main.rb
 version: "1.0"
-icon: resources/tomato.icns
+icon: resources/pomodori.icns
 resources:
   - resources/**/*.*
 sources: 

@@ -3,7 +3,7 @@ $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
 
 require "mocha"
 require "test/unit"
-require File.dirname(__FILE__) + '/../lib/tomatoes'
+require File.dirname(__FILE__) + '/../lib/pomodori'
 
 def wipe_dir(dir, regex = /.tbl/)
   Dir.entries(dir).each do |name|

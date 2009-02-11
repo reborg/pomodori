@@ -1,22 +1,27 @@
-= Tomatoes
+= Pomodori
 
-* http://github.com/reborg/tomatoes
+* http://github.com/reborg/pomodori
 
 == DESCRIPTION:
 
-Tomatoes is a tool based on the "pomodoro technique" by Francesco Cirillo. Tomatoes contains a timer and lets you store tomatoes descriptions. Tomatoes helps you visualize your performance over time and plan future activities. For more information about pomodoros please read the PDF paper at: http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf
+Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by Francesco Cirillo. Pomodori has a timer and lets you store pomodoro descriptions as well. Pomodori helps visualize your performance and plan future activities. For more information about pomodoros please read the original PDF paper at: http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf
 
 == FEATURES:
 
-* The only implemented feature as of today is storing tomatoes descriptions on the local hardrive.
+The project is young but features are added fast. As of today:
+
+* Pomodori automatically starts a 25 mins countdown when launched
+* A description can be added to the pomodoro just spent and a timestamp is saved automatically
+* A database is created in ~/Library/Application Support/Pomodori where you can read the descriptions (for the final realease advanced report capabilities will be provided)
 
 == REQUIREMENTS:
 
-* MacRuby 0.3
+* MacRuby 0.4 (trunk)
 
 == INSTALL:
 
-* To generate the app, just 'macrake run' from the root directory
+* Run the test suite with 'macrake'
+* To re-generate the app, just 'macrake run' from the root directory
 
 == LICENSE:
 

@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'tomatoes/frame'
+require 'pomodori/frame'
 
 class FrameTest < Test::Unit::TestCase
   

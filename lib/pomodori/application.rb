@@ -22,7 +22,7 @@ class Application
   end
   
   def main_window
-    @main_window ||= window(:frame => [380, 615, 389, 140], :title => "Tomato", :view => :nolayout)
+    @main_window ||= window(:frame => [380, 615, 389, 140], :title => "Pomodori", :view => :nolayout)
   end
 
   def input_box
@@ -43,8 +43,8 @@ class Application
   
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
-      tomatoes_controller = TomatoesController.new
-      tomatoes_controller.create(:text => @input_box.render.to_s)
+      pomodori_controller = PomodoriController.new
+      pomodori_controller.create(:text => @input_box.render.to_s)
       exit
     end
   end

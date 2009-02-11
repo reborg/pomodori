@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'tomatoes/storage'
-require 'tomatoes/tomato'
+require 'pomodori/storage'
+require 'pomodori/pomodoro'
 
 class StorageTest < Test::Unit::TestCase
   
@@ -32,8 +32,8 @@ class StorageTest < Test::Unit::TestCase
     assert_match(DateTime.now.strftime("%Y%m%d%H%M"), get_file_by_index(@dir, 1))
   end
   
-  def test_that_the_serialized_tomato_contains_text
-    @storage.save(Tomato.new(:text => "hola"))
+  def test_that_the_serialized_pomodoro_contains_text
+    @storage.save(Pomodoro.new(:text => "hola"))
     content = ""
     open(@dir + get_file_by_index(@dir, 1)).each { |x| content += x}
     assert_match("hola", content)

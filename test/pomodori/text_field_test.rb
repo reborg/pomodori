@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'tomatoes/text_field'
+require 'pomodori/text_field'
 
 class TextFieldTest < Test::Unit::TestCase
   

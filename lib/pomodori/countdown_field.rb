@@ -1,5 +1,5 @@
 require 'hotcocoa'
-require 'tomatoes/frame'
+require 'pomodori/frame'
 
 ##
 # Encapsulates all the logic related to the display of the

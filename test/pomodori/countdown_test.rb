@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'tomatoes/countdown'
+require 'pomodori/countdown'
 
 class CountdownTest < Test::Unit::TestCase
   

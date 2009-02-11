@@ -11,11 +11,11 @@ TIMER:
 - a 5 mins countdown is started after the submit button is pressed. The timer stops at zero and a new 25 mins countdown is started automatically.
 
 HISTORY:
-- show list of tomatoes worked so far right under the input box as paginated grid view
+- show list of pomodoros worked so far right under the input box as paginated grid view
 - make the history collapsible and closed/hidden by default
 
 REPORTS:
-- always show today's tomatoes worked so far, yesterday's total amount worked right below the input box and above the collapsed history view.
+- always show today's pomodoros worked so far, yesterday's total amount worked right below the input box and above the collapsed history view.
 
 INTERFACE:
 - make the view quicksilver-like with a keystroke sequence to activate it
@@ -23,4 +23,4 @@ INTERFACE:
 - bring input box to front at the end of the 25 mins timer
 
 KNOWN ISSUES:
-- Encoding from text field: the string you obtain from a text_field instance is UTF-16 (text_field.to_s.encoding). UTF-16 is not even in the list of supported Ruby 1.9 encodings (Encoding.list) but there is a BE/LE specification. If you call the match operator on a UTF-16 string you have a "`=~': regexp preprocess failed: too short escaped multibyte character (ArgumentError)". So I had to convert the string and since neither force_encoding nor encode! works in MacRuby, I had to move the string to bytes and back to string. This is not a final solution of course, because I'm stripping relevant part of multibyte strings. The fix is in tomato.rb class fix_encoding method.
+- Encoding from text field: the string you obtain from a text_field instance is UTF-16 (text_field.to_s.encoding). UTF-16 is not even in the list of supported Ruby 1.9 encodings (Encoding.list) but there is a BE/LE specification. If you call the match operator on a UTF-16 string you have a "`=~': regexp preprocess failed: too short escaped multibyte character (ArgumentError)". So I had to convert the string and since neither force_encoding nor encode! works in MacRuby, I had to move the string to bytes and back to string. This is not a final solution of course, because I'm stripping relevant part of multibyte strings. The fix is in pomodoros.rb class fix_encoding method.
