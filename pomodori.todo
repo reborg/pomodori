@@ -1,10 +1,4 @@
-- the hotcocoa timer is not usable. try to skip and call the nstimer directly and if it crashes. 1 (4)
-- create database into ~/Library/Application Support/Tomatoes instead of App file 1 (3)
-- Try to set that the hit return save the tomato and close the app 2
-- see if you can fix macruby textmate bundle that stopped working after upgrade to 0.4 trunk search for solutions 2
-- search for what you need to do to put everything under CI on Relevance and create relevant tasks 1
 - the tomato icon: rotate 15 degree left and black gradient on the edges instead of light yellow 1
-- embedding macruby with the app 4
 
 TIMER:
 - a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.
@@ -24,3 +18,8 @@ INTERFACE:
 
 KNOWN ISSUES:
 - Encoding from text field: the string you obtain from a text_field instance is UTF-16 (text_field.to_s.encoding). UTF-16 is not even in the list of supported Ruby 1.9 encodings (Encoding.list) but there is a BE/LE specification. If you call the match operator on a UTF-16 string you have a "`=~': regexp preprocess failed: too short escaped multibyte character (ArgumentError)". So I had to convert the string and since neither force_encoding nor encode! works in MacRuby, I had to move the string to bytes and back to string. This is not a final solution of course, because I'm stripping relevant part of multibyte strings. The fix is in pomodoros.rb class fix_encoding method.
+- Embedding MacRuby: I tried with the install_name_tool 
+  -change /Library/Frameworks/MacRuby.framework/Versions/0.4/usr/lib/libmacruby.dylib   
+  ../Frameworks/MacRuby.framework/Versions/0.4/usr/lib/libmacruby.dylib
+  Pomodori.app/Contents/MacOS/Pomodori
+which changes the dylib dependencies of the executable. The problem is that it doesn't work with the relative path passed. But if you want to go absolute, then it depend from where the application is installed. If /Applications, I can stuck the absolute path there, but I don't like it. So the plan is to wait some more time and hopefully MacRuby will be part of Leopard snow edition.
