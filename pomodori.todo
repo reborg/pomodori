@@ -1,11 +1,19 @@
-- the tomato icon: rotate 15 degree left and black gradient on the edges instead of light yellow 1
+TODAY: shooting for 10 ()
+- connect the 'return' key pressed event to the submit button 2
+- when the submit button is pressed the timer restarts from 5 minutes 2
+    Need to change the countdown timer to start again, moving more logic into the start method
+    Maybe passing the number of minutes as parameter
+- When the 5 minutes are done, use a callback method that restarts directly another 25 minutes without manual intervention 1
 
-TIMER:
-- a 25 mins countdown timer is started when the app starts and the remaining time is shown on the window. The timer stops at zero and nothing happens.
-- a 5 mins countdown is started after the submit button is pressed. The timer stops at zero and a new 25 mins countdown is started automatically.
+- spike: play sound with hotcocoa 2
+- play alarm bell at the end of countdowns 2
+    I want the same wav 3-2-1 is using in the Resource folder
+- disable the input box if the timer is running. the only way to write something is when the timer is in the "Done" state 2
 
 HISTORY:
-- show list of pomodoros worked so far right under the input box as paginated grid view
+- spike: collapsable view in hotcocoa 2
+- spike: table view with hotcocoa 4
+- show list of pomodoros worked so far right under the input box as paginated grid view 4
 - make the history collapsible and closed/hidden by default
 
 REPORTS:

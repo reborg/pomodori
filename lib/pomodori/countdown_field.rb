@@ -3,13 +3,17 @@ require 'pomodori/frame'
 
 ##
 # Encapsulates all the logic related to the display of the
-# timer on the screen.
+# timer on the screen. An NSTimer is used as ticking mechanism
+# and never stops.
 #
 class CountdownField
   attr_accessor :countdown, :frame, :render
   attr_reader :start_time, :state
   include HotCocoa
   
+  ##
+  # Starts to count from 25 minutes by default. Overridable.
+  #
   def initialize(options = {})
     options[:countdown] ? 
       @countdown = Countdown.new(options[:countdown], method(:on_countdown_done)) : 
@@ -41,7 +45,7 @@ class CountdownField
   end
   
   def render
-    @render ||= label(:frame => @frame.to_a, 
+    @render ||= label(:frame => @frame.to_a,
       :text => time, 
       :layout => {:expand => :width, :start => false}, 
       :font => font(:system => 30))
