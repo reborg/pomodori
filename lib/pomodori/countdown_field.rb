@@ -4,23 +4,22 @@ require 'pomodori/frame'
 ##
 # Encapsulates all the logic related to the display of the
 # timer on the screen. An NSTimer is used as ticking mechanism
-# and never stops.
+# and never stops. Usage of the class:
+# c = CountdownField.new
+# c.start(25*60)
+# c.render
 #
 class CountdownField
   attr_accessor :countdown, :frame, :render
-  attr_reader :start_time, :state
+  attr_reader :start_time, :state, :timer
   include HotCocoa
   
   ##
   # Starts to count from 25 minutes by default. Overridable.
   #
   def initialize(options = {})
-    options[:countdown] ? 
-      @countdown = Countdown.new(options[:countdown], method(:on_countdown_done)) : 
-      @countdown = Countdown.new(25*60, method(:on_countdown_done))
     @frame = options[:frame] ||= Frame.new(0, 0, 96, 35)
-    @start_time = Time.now
-    @state = :running
+    @state = :done
   end
   
   def time
@@ -31,8 +30,12 @@ class CountdownField
   # Had to use NSTimer direct call instead of HotCocoa mapping that is
   # affected by a crash after the application start.
   #
-  def start
-    NSTimer.scheduledTimerWithTimeInterval 1, target:self, selector:'on_timer_tick', userInfo:nil, repeats:true
+  def start(from)
+    @countdown = Countdown.new(from, method(:on_countdown_done))
+    @timer ||= NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:'on_timer_tick', userInfo:nil, repeats:true)
+    @start_time = Time.now
+    @state = :running
+    self
   end
   
   def on_timer_tick

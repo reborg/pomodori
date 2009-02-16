@@ -1,6 +1,4 @@
-TODAY: shooting for 10 ()
-- connect the 'return' key pressed event to the submit button 2
-- when the submit button is pressed the timer restarts from 5 minutes 2
+- when the submit button is pressed the timer restarts from 5 minutes. 2 => 1
     Need to change the countdown timer to start again, moving more logic into the start method
     Maybe passing the number of minutes as parameter
 - When the 5 minutes are done, use a callback method that restarts directly another 25 minutes without manual intervention 1
@@ -9,6 +7,10 @@ TODAY: shooting for 10 ()
 - play alarm bell at the end of countdowns 2
     I want the same wav 3-2-1 is using in the Resource folder
 - disable the input box if the timer is running. the only way to write something is when the timer is in the "Done" state 2
+
+INBOX:
+- the menu is not displayed, can't find way to fix it
+- position the window at startup in the low left corner of the screen 2
 
 HISTORY:
 - spike: collapsable view in hotcocoa 2
@@ -25,6 +27,7 @@ INTERFACE:
 - bring input box to front at the end of the 25 mins timer
 
 KNOWN ISSUES:
+- connect the 'return' key pressed event to the submit button 2 (5) I spent some time on this but with my scarce knowledge of Cocoa I couldn't find a solution. I tried to tweak on a MacRuby example trying to intercept a key pressed event without success. I think it's better I move on hoping that in the future I'll be able to fix this quickly.
 - Encoding from text field: the string you obtain from a text_field instance is UTF-16 (text_field.to_s.encoding). UTF-16 is not even in the list of supported Ruby 1.9 encodings (Encoding.list) but there is a BE/LE specification. If you call the match operator on a UTF-16 string you have a "`=~': regexp preprocess failed: too short escaped multibyte character (ArgumentError)". So I had to convert the string and since neither force_encoding nor encode! works in MacRuby, I had to move the string to bytes and back to string. This is not a final solution of course, because I'm stripping relevant part of multibyte strings. The fix is in pomodoros.rb class fix_encoding method.
 - Embedding MacRuby: I tried with the install_name_tool 
   -change /Library/Frameworks/MacRuby.framework/Versions/0.4/usr/lib/libmacruby.dylib   

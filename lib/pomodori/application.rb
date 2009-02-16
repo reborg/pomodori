@@ -13,11 +13,10 @@ class Application
       main_window.will_close { exit }
       main_window << input_box.render
       
-      bottom_view << countdown_field.render
+      bottom_view << countdown_field.start(25*60).render
       bottom_view << submit_button.render
       
       main_window << bottom_view
-      countdown_field.start
     end
   end
   
@@ -41,11 +40,14 @@ class Application
     @submit_button ||= SubmitButton.new(on_click_submit_button, Frame.new(279, 4, 96, 32))
   end
   
+  def pomodori_controller
+    @pomodori_controller ||= PomodoriController.new
+  end
+  
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
-      pomodori_controller = PomodoriController.new
-      pomodori_controller.create(:text => @input_box.render.to_s)
-      exit
+      pomodori_controller.create(:text => input_box.render.to_s)
+      countdown_field.start(5*60)
     end
   end
   
