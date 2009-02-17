@@ -20,6 +20,8 @@ class CountdownFieldTest < Test::Unit::TestCase
   def test_prints_done_when_done
     @countdown_field.start(1)
     @countdown_field.on_timer_tick
+    assert_equal("00:00", @countdown_field.render.to_s)
+    @countdown_field.on_timer_tick
     assert_equal("Done!", @countdown_field.render.to_s)
   end
 

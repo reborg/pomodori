@@ -1,6 +1,3 @@
-- when the submit button is pressed the timer restarts from 5 minutes. 2 => 1
-    Need to change the countdown timer to start again, moving more logic into the start method
-    Maybe passing the number of minutes as parameter
 - When the 5 minutes are done, use a callback method that restarts directly another 25 minutes without manual intervention 1
 
 - spike: play sound with hotcocoa 2

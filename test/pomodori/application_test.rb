@@ -28,4 +28,11 @@ class OnSubmitTest < Test::Unit::TestCase
     @application.on_click_submit_button.call
   end
   
+  def test_description_should_clean_up_after_submission
+    @pomodori_controller.expects(:create)
+    @application.input_box.render.text = "hola"
+    @application.on_click_submit_button.call
+    assert_equal("", @application.input_box.render.to_s)
+  end
+  
 end

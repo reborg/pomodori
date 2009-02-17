@@ -20,6 +20,7 @@ class CountdownField
   def initialize(options = {})
     @frame = options[:frame] ||= Frame.new(0, 0, 96, 35)
     @state = :done
+    @timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:'on_timer_tick', userInfo:nil, repeats:true)
   end
   
   def time
@@ -32,15 +33,14 @@ class CountdownField
   #
   def start(from)
     @countdown = Countdown.new(from, method(:on_countdown_done))
-    @timer ||= NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:'on_timer_tick', userInfo:nil, repeats:true)
     @start_time = Time.now
     @state = :running
     self
   end
   
   def on_timer_tick
-    @countdown.tick
     if(@state == :running)
+      @countdown.tick
       render.text = time
     else
       render.text = "Done!"

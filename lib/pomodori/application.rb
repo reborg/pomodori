@@ -48,6 +48,7 @@ class Application
     @on_click_submit_button ||= Proc.new do
       pomodori_controller.create(:text => input_box.render.to_s)
       countdown_field.start(5*60)
+      input_box.render.text = ""
     end
   end
   
