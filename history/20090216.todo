@@ -1,4 +1,6 @@
-TODAY:
+TODAY 6:
+- When the 5 minutes are done, use a callback method that restarts directly another 25 minutes without manual intervention 1
+- spike: play sounds with hotcocoa 2
 
-DONE:
+DONE 3:
 - when the submit button is pressed the timer restarts from 5 minutes. 2 => 3

@@ -31,8 +31,8 @@ class CountdownField
   # Had to use NSTimer direct call instead of HotCocoa mapping that is
   # affected by a crash after the application start.
   #
-  def start(from)
-    @countdown = Countdown.new(from, method(:on_countdown_done))
+  def start(from, callback = method(:on_countdown_done))
+    @countdown = Countdown.new(from, callback)
     @start_time = Time.now
     @state = :running
     self

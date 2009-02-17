@@ -24,7 +24,7 @@ class OnSubmitTest < Test::Unit::TestCase
     @pomodori_controller.expects(:create)
     countdown_field = mock
     @application.expects(:countdown_field).returns(countdown_field)
-    countdown_field.expects(:start).with(60*5)
+    countdown_field.expects(:start).with(60*5, @application.method(:on_5_mins_done))
     @application.on_click_submit_button.call
   end
   
@@ -33,6 +33,13 @@ class OnSubmitTest < Test::Unit::TestCase
     @application.input_box.render.text = "hola"
     @application.on_click_submit_button.call
     assert_equal("", @application.input_box.render.to_s)
+  end
+  
+  def test_starts_another_25_mins_timer
+    countdown_field = mock
+    @application.expects(:countdown_field).returns(countdown_field)
+    countdown_field.expects(:start).with(60*25)
+    @application.on_5_mins_done
   end
   
 end

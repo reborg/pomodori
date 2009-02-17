@@ -35,9 +35,10 @@ class CountdownFieldTest < Test::Unit::TestCase
 end
 
 class CountdownFieldTimerTest < Test::Unit::TestCase
+  attr_accessor :called
   
   def setup
-    @countdown_field = CountdownField.new(:timer => @timer)
+    @countdown_field = CountdownField.new
   end
   
   def test_moves_state_to_running
@@ -54,6 +55,16 @@ class CountdownFieldTimerTest < Test::Unit::TestCase
     @countdown_field.start(25*60)
     @countdown_field.on_timer_tick
     assert_equal("24:59", @countdown_field.render.to_s)
+  end
+  
+  def test_passing_a_specific_callback
+    @countdown_field.start(1, method(:callback))
+    @countdown_field.on_timer_tick
+    assert(@called)
+  end
+  
+  def callback
+    @called = true
   end
   
 end
