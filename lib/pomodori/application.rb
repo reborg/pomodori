@@ -2,10 +2,10 @@ require 'hotcocoa'
 Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).each {|f| require f}
 
 class Application
-  # POMODORO = 25 * 60
-  # BREAK = 5 * 60
-  POMODORO = 5
-  BREAK = 2
+  POMODORO = 25 * 60
+  BREAK = 5 * 60
+  # POMODORO = 5
+  # BREAK = 2
   attr_accessor :input_box, :countdown_field, :main_window
   attr_accessor :bottom_view, :submit_button, :main_app, :on_click_submit_button
   
