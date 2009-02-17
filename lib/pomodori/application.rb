@@ -2,10 +2,10 @@ require 'hotcocoa'
 Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).each {|f| require f}
 
 class Application
-  POMODORO = 25 * 60
-  BREAK = 5 * 60
-  # POMODORO = 5
-  # BREAK = 2
+  # POMODORO = 25 * 60
+  # BREAK = 5 * 60
+  POMODORO = 5
+  BREAK = 2
   attr_accessor :input_box, :countdown_field, :main_window
   attr_accessor :bottom_view, :submit_button, :main_app, :on_click_submit_button
   
@@ -25,7 +25,7 @@ class Application
   end
   
   def main_window
-    @main_window ||= window(:frame => [380, 615, 389, 140], :title => "Pomodori", :view => :nolayout)
+    @main_window ||= window(:frame => [0, 0, 389, 140], :title => "Pomodori", :view => :nolayout)
   end
 
   def input_box
@@ -73,29 +73,5 @@ class Application
       :by_reference => true)
     bell.play if bell
   end
-  
-  
-  # file/open
-  def on_open(menu)
-  end
-  
-  # file/new 
-  def on_new(menu)
-  end
-  
-  # help menu item
-  def on_help(menu)
-  end
-  
-  # This is commented out, so the minimize menu item is disabled
-  #def on_minimize(menu)
-  #end
-  
-  # window/zoom
-  def on_zoom(menu)
-  end
-  
-  # window/bring_all_to_front
-  def on_bring_all_to_front(menu)
-  end
+    
 end
