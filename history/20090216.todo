@@ -1,6 +1,20 @@
 TODAY 6:
-- When the 5 minutes are done, use a callback method that restarts directly another 25 minutes without manual intervention 1
+
+DONE 4:
+- when the submit button is pressed the timer restarts from 5 minutes. 2 => 3
+- When the 5 minutes are done, use a callback method that restarts directly another 25 minutes without manual intervention 1 => 1
+
+NOT DONE 2:
 - spike: play sounds with hotcocoa 2
 
-DONE 3:
-- when the submit button is pressed the timer restarts from 5 minutes. 2 => 3
+INTERNAL INTERRUPTIONS:
+- 
+
+EXTERNAL INTERRUPTIONS:
+- 
+
+HISTORY:
+12|@5mins moved state changes to the start method in the countdown_field|2009-02-16 11:23:08 -0600
+13|@5mins moved the creation of the timer to the start method as a parameter so the countdown can be re-instantiated again|2009-02-16 15:47:26 -0600
+14|@5mins now starting a new timer of 5 mins. But I need to clean the descr message first.|2009-02-16 16:42:33 -0600
+18|@5mins started another 25 mins countdown after the break|2009-02-16 18:54:50 -0600

@@ -1,17 +1,14 @@
 INBOX:
-- the menu is not displayed, can't find way to fix it
-- position the window at startup in the low left corner of the screen 2
+- @bug copy and paste on the description box is not possible
+- @lowprio a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
 
-HISTORY:
-- spike: collapsable view in hotcocoa 2
-- spike: table view with hotcocoa 4
-- show list of pomodoros worked so far right under the input box as paginated grid view 4
-- make the history collapsible and closed/hidden by default
+"Pomodoro history": As a Pomodoro user I want to see the Pomodoro history so that I know what I did yesterday:
+- @history new window to show history 3
+- @history new button to open history on main timer window 1
+- @history spike scrollable grid-table views 1
+- @history use grid view to show history as scrollable table 1
 
-REPORTS:
-- always show today's pomodoros worked so far, yesterday's total amount worked right below the input box and above the collapsed history view.
-
-INTERFACE:
+- always show today's pomodoros worked so far, yesterday's total amount worked on main timer window
 - make the view quicksilver-like with a keystroke sequence to activate it
 - always show the timer on the menu bar
 - bring input box to front at the end of the 25 mins timer

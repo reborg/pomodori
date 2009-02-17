@@ -54,6 +54,13 @@ class CountdownField
       :font => font(:system => 30))
   end
   
+  def ring
+    bell = sound(
+      :file => File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation, 'bell.aif'), 
+      :by_reference => true)
+    bell.play if bell
+  end
+  
   private
   
     def normalize(number)
@@ -62,6 +69,7 @@ class CountdownField
     end
     
     def on_countdown_done
+      ring
       @state = :done
     end
   

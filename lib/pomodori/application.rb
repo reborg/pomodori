@@ -53,6 +53,7 @@ class Application
   end
   
   def on_5_mins_done
+    countdown_field.ring
     countdown_field.start(25*60)
   end
   

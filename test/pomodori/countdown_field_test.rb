@@ -31,6 +31,17 @@ class CountdownFieldTest < Test::Unit::TestCase
     assert_equal(:done, @countdown_field.state)
   end
 
+  def test_should_play_sound
+    sound = mock
+    @countdown_field.expects(:sound).returns(sound)
+    sound.expects(:play)
+    @countdown_field.ring
+  end
+  
+  def test_rings_on_count_done
+    @countdown_field.expects(:ring)
+    @countdown_field.send(:on_countdown_done)
+  end
   
 end
 

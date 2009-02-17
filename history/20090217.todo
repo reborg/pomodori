@@ -1,6 +1,23 @@
-TODAY:
-- play alarm bell at the end of countdowns 2
-    I want the same wav 3-2-1 is using in the Resource folder
-- disable the input box if the timer is running. the only way to write something is when the timer is in the "Done" state 2
+TODAY PLANED 11:
+- @ui spike: search how to disable text input when timer running hotcocoa 1
+- @ui disable the input box if the timer is running 1
+- @bug the menu is not displayed, can't find way to fix it 2
+- @ui position the window at startup in the low left corner of the screen 2
+- @history new controller action to query kirbydb and return all pomodoros 3
 
 DONE:
+- @soundalert spike: play sounds with hotcocoa 2 => 2
+- @soundalert play alarm bell at the end of countdowns 2 => 1
+- 
+
+NOT DONE:
+- 
+
+INTERNAL INTERRUPTIONS 2:
+- I decided to spend a tomato to send an email to the list with request for feedback about the videos which are online 1
+- I also spent another one checking the current Agile2009 presentations on the PT. I think in both cases you should have scheduled the activities in the backlog and then judged the opportunitiy to do the task outside the scheduled amount of pomodoros. 1
+
+EXTERNAL INTERRUPTIONS:
+- 
+
+RELEVANT HISTORY:

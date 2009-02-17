@@ -37,7 +37,8 @@ class OnSubmitTest < Test::Unit::TestCase
   
   def test_starts_another_25_mins_timer
     countdown_field = mock
-    @application.expects(:countdown_field).returns(countdown_field)
+    @application.expects(:countdown_field).times(2).returns(countdown_field)
+    countdown_field.expects(:ring)
     countdown_field.expects(:start).with(60*25)
     @application.on_5_mins_done
   end
