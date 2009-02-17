@@ -1,4 +1,7 @@
 INBOX:
+- every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
+- instead of the input box during the break, show the label and something else. I can't think of a scenario where I want to store something during the break. 1
+- search for macruby appliations open source (I think I saw many of them once) and download the sources. HAve a look to see how do they packaged the application, if macruby is embedded maybe. 1
 - instead of changing backgound color of the disabled input text just look at how a label is created and move it to a big giant label. Print on the label running or statistics about yesterday and today. Change it back to an input box when you're done.
 - when the input box is disabled, change the label of the button to "Void". If void is clicked while the tomato is running, then a void pomodoro is recorded and the timer goes to the 5 mins break.
 - @bug copy and paste on the description box is not possible

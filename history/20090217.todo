@@ -1,10 +1,10 @@
 TODAY PLANNED 11:
-- @ui disable the input box if the timer is running 1 => 3 (a new callback necessary)
 - @bug the menu is not displayed, can't find way to fix it 2
 - @ui position the window at startup in the low left corner of the screen 2
 - @history new controller action to query kirbydb and return all pomodoros 3
 
 DONE:
+- @ui disable the input box if the timer is running 1 => 4 (a new callback necessary)
 - @ui spike: search how to disable text input when timer running hotcocoa 1 => 1
 - @soundalert spike: play sounds with hotcocoa 2 => 2
 - @soundalert play alarm bell at the end of countdowns 2 => 1

@@ -1,6 +1,7 @@
-name: Pomodori
+name: pomodori
 load: lib/main.rb
 version: "1.0"
+info_string: "Heila"
 icon: resources/pomodori.icns
 resources:
   - resources/**/*.*
