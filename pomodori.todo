@@ -1,4 +1,6 @@
 INBOX:
+- instead of changing backgound color of the disabled input text just look at how a label is created and move it to a big giant label. Print on the label running or statistics about yesterday and today. Change it back to an input box when you're done.
+- when the input box is disabled, change the label of the button to "Void". If void is clicked while the tomato is running, then a void pomodoro is recorded and the timer goes to the 5 mins break.
 - @bug copy and paste on the description box is not possible
 - @lowprio a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
 

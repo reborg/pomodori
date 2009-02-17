@@ -2,6 +2,10 @@ require 'hotcocoa'
 Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).each {|f| require f}
 
 class Application
+  # POMODORO = 25 * 60
+  # BREAK = 5 * 60
+  POMODORO = 5
+  BREAK = 2
   attr_accessor :input_box, :countdown_field, :main_window
   attr_accessor :bottom_view, :submit_button, :main_app, :on_click_submit_button
   
@@ -11,9 +15,9 @@ class Application
     @main_app = application :name => "Hotcocoa" do |app|
       app.delegate = self
       main_window.will_close { exit }
-      main_window << input_box.render
+      main_window << input_box.disable
       
-      bottom_view << countdown_field.start(25*60).render
+      bottom_view << countdown_field.start(POMODORO, method(:on_25_mins_done))
       bottom_view << submit_button.render
       
       main_window << bottom_view
@@ -47,15 +51,29 @@ class Application
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
       pomodori_controller.create(:text => input_box.render.to_s)
-      countdown_field.start(5*60, method(:on_5_mins_done))
+      countdown_field.start(BREAK, method(:on_5_mins_done))
       input_box.render.text = ""
     end
   end
   
   def on_5_mins_done
-    countdown_field.ring
-    countdown_field.start(25*60)
+    ring
+    input_box.disable
+    countdown_field.start(POMODORO, method(:on_25_mins_done))
   end
+
+  def on_25_mins_done
+    ring
+    input_box.enable
+  end
+  
+  def ring
+    bell = sound(
+      :file => File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation, 'bell.aif'), 
+      :by_reference => true)
+    bell.play if bell
+  end
+  
   
   # file/open
   def on_open(menu)

@@ -20,27 +20,14 @@ class CountdownFieldTest < Test::Unit::TestCase
   def test_prints_done_when_done
     @countdown_field.start(1)
     @countdown_field.on_timer_tick
-    assert_equal("00:00", @countdown_field.render.to_s)
     @countdown_field.on_timer_tick
     assert_equal("Done!", @countdown_field.render.to_s)
   end
-
+  
   def test_state_is_stopped_after_finished
     @countdown_field.start(1)
     @countdown_field.on_timer_tick
     assert_equal(:done, @countdown_field.state)
-  end
-
-  def test_should_play_sound
-    sound = mock
-    @countdown_field.expects(:sound).returns(sound)
-    sound.expects(:play)
-    @countdown_field.ring
-  end
-  
-  def test_rings_on_count_done
-    @countdown_field.expects(:ring)
-    @countdown_field.send(:on_countdown_done)
   end
   
 end
@@ -76,6 +63,11 @@ class CountdownFieldTimerTest < Test::Unit::TestCase
   
   def callback
     @called = true
+  end
+  
+  def test_it_renders_on_start
+    rendered = @countdown_field.start(1)
+    assert_same(rendered, @countdown_field.render)
   end
   
 end

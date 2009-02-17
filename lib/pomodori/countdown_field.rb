@@ -29,13 +29,18 @@ class CountdownField
   
   ##
   # Had to use NSTimer direct call instead of HotCocoa mapping that is
-  # affected by a crash after the application start.
+  # affected by a crash after the application start. Returns the hotcocoa
+  # rendering
   #
-  def start(from, callback = method(:on_countdown_done))
+  def start(from, on_timer_done = nil)
+    callback = lambda do
+      @state = :done
+      on_timer_done.call if on_timer_done
+    end
     @countdown = Countdown.new(from, callback)
     @start_time = Time.now
     @state = :running
-    self
+    render
   end
   
   def on_timer_tick
@@ -54,23 +59,11 @@ class CountdownField
       :font => font(:system => 30))
   end
   
-  def ring
-    bell = sound(
-      :file => File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation, 'bell.aif'), 
-      :by_reference => true)
-    bell.play if bell
-  end
-  
   private
   
     def normalize(number)
       return "0#{number}" if number < 10
       return number
     end
-    
-    def on_countdown_done
-      ring
-      @state = :done
-    end
-  
+      
 end
