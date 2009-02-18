@@ -16,13 +16,13 @@ class TextField
     @render ||= text_field(:frame => frame.to_a)
   end
   
-  def disable
+  def disable(message = "")
     render.text_align = NSCenterTextAlignment
     render.setDrawsBackground(false)
     render.setBordered(false)
     render.setSelectable(false)
     render.editable = false
-    render.text = "...running"
+    render.text = message
     render
   end
 

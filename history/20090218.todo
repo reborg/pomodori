@@ -1,6 +1,9 @@
-TODAY PLANNED XX:
+TODAY PLANNED 6 => 2:
+- @buttonvoid when the input box is disabled, change the label of the button to "Void". If void is clicked while the tomato is running, then a void pomodoro is recorded and the timer goes to the 5 mins break. 2 => 1
+- when the pomodoro is done and the input box is enabled, write a lightgray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
 
 DONE:
+- instead of the input box during the break, show the label and something else. I can't think of a scenario where I want to store something during the break. 1 => 2
 
 NOT DONE:
 

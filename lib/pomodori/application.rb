@@ -2,8 +2,10 @@ require 'hotcocoa'
 Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).each {|f| require f}
 
 class Application
-  POMODORO = 25 * 60
-  BREAK = 5 * 60
+  # POMODORO = 25 * 60
+  # BREAK = 5 * 60
+  POMODORO = 5
+  BREAK = 3
   attr_accessor :input_box, :countdown_field, :main_window
   attr_accessor :bottom_view, :submit_button, :main_app, :on_click_submit_button
   
@@ -13,7 +15,7 @@ class Application
     @main_app = application :name => "Hotcocoa" do |app|
       app.delegate = self
       main_window.will_close { exit }
-      main_window << input_box.disable
+      main_window << input_box.disable("  ...running")
       
       bottom_view << countdown_field.start(POMODORO, method(:on_25_mins_done))
       bottom_view << submit_button.render
@@ -39,7 +41,10 @@ class Application
   end
     
   def submit_button
-    @submit_button ||= SubmitButton.new(on_click_submit_button, Frame.new(279, 4, 96, 32))
+    @submit_button ||= SubmitButton.new(
+      :action => on_click_submit_button, 
+      :frame => Frame.new(279, 4, 96, 32),
+      :title => "Void")
   end
   
   def pomodori_controller
@@ -49,20 +54,23 @@ class Application
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
       pomodori_controller.create(:text => input_box.render.to_s)
+      input_box.disable("   ...break")
+      submit_button.label = "Stop"
       countdown_field.start(BREAK, method(:on_5_mins_done))
-      input_box.render.text = ""
     end
   end
   
   def on_5_mins_done
     ring
-    input_box.disable
+    input_box.disable("   ...running")
+    submit_button.label = "Void"
     countdown_field.start(POMODORO, method(:on_25_mins_done))
   end
 
   def on_25_mins_done
     ring
     input_box.enable
+    submit_button.label = "Submit"
   end
   
   def ring

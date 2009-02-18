@@ -1,40 +1,19 @@
 require 'hotcocoa'
 
-##
-# If initialized with an empty constructor it simply takes
-# the defaults for everything. You probably want to configure at least
-# the callback action:
-#
-# button = SubmitButton.new(Proc.new { # your callback code here })
-#
 class SubmitButton
   include HotCocoa
   attr_accessor :action, :frame, :title, :render
 
-  def initialize(_action = action, _frame = frame, _title = title)
-    @action = _action
-    @frame = _frame
-    @title = _title
-  end
-
-  def title
-    @title ||= "Submit"
-  end
-
-  ##
-  # Creates a new deafult frame if none is given first
-  # 
-  def frame
-    @frame ||= Frame.new(0, 0, 96, 32)
+  def initialize(options = {})
+    @action = options[:action] ||= Proc.new {alert :message => "Button clicked."}
+    @frame = options[:frame] ||= Frame.new(0, 0, 96, 32)
+    @title = options[:title] ||= "Submit"
   end
   
-  def action
-    @action ||= Proc.new {alert :message => "Button clicked."}
+  def label=(new_label)
+    render.title = new_label
   end
-  
-  ##
-  # Produces the HotCocoa related instance
-  #
+
   def render
     @render ||= button(
       :title => title, 

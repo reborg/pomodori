@@ -22,8 +22,13 @@ class SubmitButtonTest < Test::Unit::TestCase
   end
   
   def test_init_with_callback
-    button = SubmitButton.new(lambda { "yep" })
+    button = SubmitButton.new(:action => lambda { "yep" })
     assert_equal("yep", button.action.call)
+  end
+  
+  def test_should_change_label
+    @submit_button.label = "Void"
+    assert_equal("Void", @submit_button.render.title)
   end
   
 end

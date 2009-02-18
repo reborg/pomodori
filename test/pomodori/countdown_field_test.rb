@@ -69,6 +69,6 @@ class CountdownFieldTimerTest < Test::Unit::TestCase
     rendered = @countdown_field.start(1)
     assert_same(rendered, @countdown_field.render)
   end
-  
+
 end
 
