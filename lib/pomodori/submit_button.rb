@@ -11,7 +11,13 @@ class SubmitButton
   end
   
   def label=(new_label)
-    render.title = new_label
+    @title = new_label
+    render.title = @title
+  end
+  
+  def action=(new_action)
+    @action = new_action
+    render.on_action = new_action
   end
 
   def render

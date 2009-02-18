@@ -31,4 +31,9 @@ class SubmitButtonTest < Test::Unit::TestCase
     assert_equal("Void", @submit_button.render.title)
   end
   
+  def test_should_change_action
+    @submit_button.action = lambda {"yup"}
+    assert_equal("yup", @submit_button.action.call)
+  end
+  
 end

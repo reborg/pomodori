@@ -16,7 +16,9 @@ class AllTests
     suite << CountdownCallbackTest.suite
     suite << CountdownFieldTest.suite
     suite << CountdownFieldTimerTest.suite
-    suite << OnSubmitTest.suite
+    suite << ApplicationTest.suite
+    suite << On25MinsTimerTest.suite
+    suite << OnClickTheSubmitButtonTest.suite
     return suite
   end
 end

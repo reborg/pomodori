@@ -1,4 +1,5 @@
 INBOX:
+- I created a Stop button while on break. I just want to implement a way to stop the timer temporarily while on break.
 - @history new controller action to query kirbydb and return all pomodoros 3
 - search for macruby appliations open source (I think I saw many of them once) and download the sources. HAve a look to see how do they packaged the application, if macruby is embedded maybe. 1
 - instead of changing backgound color of the disabled input text just look at how a label is created and move it to a big giant label. Print on the label running or statistics about yesterday and today. Change it back to an input box when you're done.
