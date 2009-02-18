@@ -7,6 +7,17 @@ class OnSubmitTest < Test::Unit::TestCase
   def setup
     @application = Application.new
   end
+
+  # def test_change_label_to_break_after_submission
+  #   @application.on_click_submit_button.call
+  #   assert_equal("   ...break", @application.input_box.render.to_s)
+  # end
+  # 
+  # def test_changes_button_after_submit
+  #   @application.on_click_submit_button.call
+  #   assert_equal("Stop", @application.submit_button.render.title)
+  # end
+
   
   def test_it_starts_the_break_after_submit
     countdown_field = mock('countdown_field')
@@ -22,16 +33,6 @@ class OnSubmitTest < Test::Unit::TestCase
     @application.on_click_submit_button.call
   end
   
-  # def test_change_label_to_break_after_submission
-  #   @application.on_click_submit_button.call
-  #   assert_equal("   ...break", @application.input_box.render.to_s)
-  # end
-  # 
-  # def test_changes_button_after_submit
-  #   @application.on_click_submit_button.call
-  #   assert_equal("Stop", @application.submit_button.render.title)
-  # end
-
   def test_starts_another_25_mins_timer_after_break
     countdown_field = mock('countdown_field')
     @application.expects(:countdown_field).returns(countdown_field)
@@ -52,21 +53,21 @@ class OnSubmitTest < Test::Unit::TestCase
   end
   
   def test_enables_text_input_after_25_mins
-    text_input = mock
+    text_input = mock('text_input')
     @application.expects(:input_box).returns(text_input)
     text_input.expects(:enable)
     @application.on_25_mins_done
   end
   
   def test_changes_button_label_to_submit_after_25_mins
-    button = mock
+    button = mock('button')
     @application.expects(:submit_button).returns(button)
     button.expects(:label=).with("Submit")
     @application.on_25_mins_done
   end
   
   def test_should_play_sound
-    sound = mock
+    sound = mock('sound')
     @application.expects(:sound).returns(sound)
     sound.expects(:play)
     @application.ring
