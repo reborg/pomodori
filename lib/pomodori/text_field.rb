@@ -13,11 +13,14 @@ class TextField
   end
   
   def render
-    @render ||= text_field(:frame => frame.to_a)
+    @render ||= text_field(:frame => frame.to_a, :font => font(:name => "Monaco", :size => 11))
   end
   
   def disable(message = "")
+    # FIXME: touching alignment is the only way I found
+    # to change also the rest of the properties.
     render.text_align = NSCenterTextAlignment
+    render.text_align = NSLeftTextAlignment
     render.setDrawsBackground(false)
     render.setBordered(false)
     render.setSelectable(false)
@@ -27,7 +30,6 @@ class TextField
   end
 
   def enable
-    render.text_align = NSLeftTextAlignment
     render.setDrawsBackground(true)
     render.setBordered(true)
     render.setSelectable(true)

@@ -56,7 +56,7 @@ class CountdownField
     @render ||= label(:frame => @frame.to_a,
       :text => time, 
       :layout => {:expand => :width, :start => false}, 
-      :font => font(:system => 30))
+      :font => font(:name => "Monaco", :size => 26))
   end
   
   private

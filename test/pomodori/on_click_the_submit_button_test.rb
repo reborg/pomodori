@@ -5,6 +5,7 @@ class OnClickTheSubmitButtonTest < Test::Unit::TestCase
 
   def setup
     @application = Application.new
+    @application.stubs(:update_metrics_for_break)
   end
 
   def test_it_starts_the_break
@@ -21,14 +22,4 @@ class OnClickTheSubmitButtonTest < Test::Unit::TestCase
     @application.on_click_submit_button.call
   end
   
-  # def test_changes_label_to_break
-  #   @application.on_click_submit_button.call
-  #   assert_equal("   ...break", @application.input_box.render.to_s)
-  # end
-  
-  # def test_changes_button_to_stop
-  #   @application.on_click_submit_button.call
-  #   assert_equal("Stop", @application.submit_button.render.title)
-  # end
-
 end

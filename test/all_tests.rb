@@ -19,6 +19,7 @@ class AllTests
     suite << ApplicationTest.suite
     suite << On25MinsTimerTest.suite
     suite << OnClickTheSubmitButtonTest.suite
+    suite << DisplayStatisticsTest.suite
     return suite
   end
 end

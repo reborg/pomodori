@@ -9,7 +9,6 @@ class KirbyStorageTest < Test::Unit::TestCase
     @path = File.dirname(__FILE__) + "/../work"
     create_db(@path)
     @kirby_storage = KirbyStorage.new(@path)
-    Time.stubs(:now).returns(Time.local(2009, "feb", 18, "5", "25"))
   end
   
   def test_retrieves_table_for_instances_or_class
@@ -31,16 +30,6 @@ class KirbyStorageTest < Test::Unit::TestCase
     bulk_import_test_data
     date = Time.local(2009, "feb", 16, "5", "25")
     assert_equal(5, @kirby_storage.find_all_by_date(Pomodoro, date).size)
-  end
-  
-  def test_returns_all_yesterdays_pomodoros
-    bulk_import_test_data
-    assert_equal(10, @kirby_storage.yesterday_pomodoros.size)
-  end
-  
-  def test_returns_all_todays_pomodoros
-    bulk_import_test_data
-    assert_equal(6, @kirby_storage.today_pomodoros.size)
   end
   
   def teardown

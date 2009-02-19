@@ -1,11 +1,11 @@
 TODAY PLANNED 12:
-- @basicmetrics new controller actions to query kirbydb and return yesterday and today pomodoros 3 => 4
-- @basicmetrics show today's pomodoros worked so far, yesterday's total in timer mode/break mode 1
+- @basicmetrics show today's pomodoros worked so far, yesterday's total in timer mode/break mode 1 => 3
 - @stopbutton I created a Stop button while on break. I just don't want to show Submit or Void. If no other better ideas, this is the only timer one can decide to interrupt the timer. 1
 - @marketing following dr.nic instructions for choc-top plus macruby embedding to packagize and possible embed macruby 8
 
-DONE:
+DONE 6:
 - @planning 1 => 1
+- @basicmetrics new controller actions to query kirbydb and return yesterday and today pomodoros 3 => 5
 
 NOT DONE:
 
