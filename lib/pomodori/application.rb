@@ -8,7 +8,7 @@ class Application
   # BREAK = 3
   attr_accessor :input_box, :countdown_field, :main_window
   attr_accessor :bottom_view, :submit_button, :main_app
-  attr_accessor :on_click_submit_button, :on_click_void_button
+  attr_accessor :on_click_submit_button, :on_click_void_button, :on_click_stop_button
   
   include HotCocoa
   
@@ -56,15 +56,24 @@ class Application
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
       pomodori_controller.create(:text => input_box.render.to_s)
+      
       update_metrics_for_break
+      submit_button.action = on_click_stop_button
       countdown_field.start(BREAK, method(:on_5_mins_done))
     end
   end
   
   def on_click_void_button
     @on_click_void_button ||= Proc.new do
+      
       update_metrics_for_break
+      submit_button.action = on_click_stop_button
       countdown_field.start(BREAK, method(:on_5_mins_done))
+    end
+  end
+  
+  def on_click_stop_button
+    @on_click_stop_button ||= Proc.new do
     end
   end
   
