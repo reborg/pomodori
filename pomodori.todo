@@ -1,9 +1,9 @@
 INBOX:
-- I created a Stop button while on break. I just want to implement a way to stop the timer temporarily while on break.
-- @history new controller action to query kirbydb and return all pomodoros 3
-- search for macruby appliations open source (I think I saw many of them once) and download the sources. HAve a look to see how do they packaged the application, if macruby is embedded maybe. 1
-- instead of changing backgound color of the disabled input text just look at how a label is created and move it to a big giant label. Print on the label running or statistics about yesterday and today. Change it back to an input box when you're done.
-- every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
+- @marketing prepare wiki page or ticket system for people to file bugs or feature request 2
+- @marketing pomodoro launch. Pomodoro ML announce. Blog post. Macupdate, Version tracker 4
+- @pleaseinsert when the pomodoro is done and the input box is enabled, write a lightgray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
+- @easy search for macruby applications open source (I think I saw many of them once) and download the sources. Have a look to see how do they packaged the application, if macruby is embedded maybe. 1
+- @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
 - @bug copy and paste on the description box is not possible
 - @lowprio a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
 
@@ -13,10 +13,13 @@ INBOX:
 - @history spike scrollable grid-table views 1
 - @history use grid view to show history as scrollable table 1
 
-- always show today's pomodoros worked so far, yesterday's total amount worked on main timer window
-- make the view quicksilver-like with a keystroke sequence to activate it
-- always show the timer on the menu bar
-- bring input box to front at the end of the 25 mins timer
+UI:
+- @uimenubar always show the timer on the menu bar a-la minuteur
+- @uibigscreen bring big panel to front at the end of the 25 mins timer a-la minuteur to stop current activity
+
+TAGGING:
+- @tagmodel many to many relationship pomodoro => tag, kirby table and entity object
+- @uitags everything that starts with a '@' in the input box should autocomplete for already existing tags
 
 KNOWN ISSUES:
 - connect the 'return' key pressed event to the submit button 2 (5) I spent some time on this but with my scarce knowledge of Cocoa I couldn't find a solution. I tried to tweak on a MacRuby example trying to intercept a key pressed event without success. I think it's better I move on hoping that in the future I'll be able to fix this quickly.

@@ -15,7 +15,8 @@ The project is young but features are added fast. As of today:
 * A description can be added to the pomodoro just spent and a timestamp is saved automatically
 * A database is created in ~/Library/Application Support/Pomodori where you can read the descriptions (for the final realease advanced report capabilities will be provided)
 * Pomodori will then start a break timer (5 mins) as soon as you add the description
-* Pomodori will ring again when at the end of the break and will start counting again from 25 mins
+* Pomodori will ring again at the end of the break and will start another 25 mins pomodoro for you
+* A pomodoro can be voided (no information stored) and Pomodori will jump directly to the break
 
 == COMING SOON:
 

@@ -1,0 +1,33 @@
+000035|000000|Struct|recno:Integer|text:String|timestamp:Time
+1|it works!|2009-02-12 09:57:17 -0600
+2|@macrubyembed First pomodoro with pomodori. I think a good solution would be to execute install_name_tool from Ruby everytime the application start, to change the macruby dylib|2009-02-12 11:05:08 -0600
+3|@macrubyembed I tried without success to change the dylib to a relative path. Abandoning because it looks a time sink.|2009-02-12 11:42:48 -0600
+4|@icon @textmate fixed textmate behavior and resolved the icon problem. The name of the icon must exactly be as the app name.|2009-02-12 14:15:41 -0600
+5|@planning review of the 5 minutes timer technical details|2009-02-12 14:55:00 -0600
+6|@keyboardevents searching how to connect return keypressed to action|2009-02-13 10:18:03 -0600
+7|@keyboardevents tried to fix the disappeared menu|2009-02-13 10:46:46 -0600
+8|@keyboardevents studying what the possibilities are, but the situation is not very good.|2009-02-13 11:21:05 -0600
+9|@keyboardevents oriented to try out the NSResponder|2009-02-14 14:50:57 -0600
+10|@keyboardevents had some learning about delegates in hotcocoa and it looks like that I need to implemennt a new one|2009-02-14 15:21:33 -0600
+11|@keyboardevents had a look at macruby examples to see if I could intercept a key pressed. No success.|2009-02-16 10:53:37 -0600
+12|@5mins moved state changes to the start method in the countdown_field|2009-02-16 11:23:08 -0600
+13|@5mins moved the creation of the timer to the start method as a parameter so the countdown can be re-instantiated again|2009-02-16 15:47:26 -0600
+14|@5mins now starting a new timer of 5 mins. But I need to clean the descr message first.|2009-02-16 16:42:33 -0600
+18|@5mins started another 25 mins countdown after the break|2009-02-16 18:54:50 -0600
+19|@soundalert almost a working spike. Found NSSound to use is mapped in hotcocoa and with OSX::NSBundle I can play a sound from the resource folder|2009-02-17 09:29:17 -0600
+20|@soundalert finished spike successful. Started designing solution for including ring bell.|2009-02-17 10:00:21 -0600
+21|@soundalert installed the ring bell at the end of both 25 and 5 mins|2009-02-17 11:19:19 -0600
+22|@ui created a small spike to test how to change the input box to not editable while the tomato is running|2009-02-17 12:22:11 -0600
+23|@ui disabled the input box when 25 mins are running. Need to re-enable at the end.|2009-02-17 12:53:52 -0600
+24|@ui had thoughts about the need of another callback from the countdown field to the main app controller. This is necessary if I want to enable the txt field after the tomato is done.|2009-02-17 13:19:45 -0600
+25|@ui created another callback mechanism to propagate the end timer event up to the app. I can move the ring up now.|2009-02-17 15:00:32 -0600
+26|@ui done with input enabling disabling. The disbled state is basically a label. I had the idea to display statisticis on the label.|2009-02-17 15:31:41 -0600
+27|@bug just moved the menu file to root to see the menu back. Also fixed icon issue (lowering case)|2009-02-17 16:57:15 -0600
+28|@ui now pomodori initializing at the low left corner so the timer is easily visible.|2009-02-17 17:28:40 -0600
+29|@ui working to disable the input box also when the break is running with a specific message (or stats)|2009-02-18 13:31:04 -0600
+30|@ui now displaying a label when counting the break. Had strange issue when removing left-center alignment|2009-02-18 14:01:48 -0600
+31|@buttonvoid added feature to change the button label and changed button lable to Void during timer|2009-02-18 14:33:10 -0600
+32|@buttonvoid now changing labels based on state. The action is always submit though.|2009-02-18 15:07:32 -0600
+33|@buttonvoid I had this problem with the controller test that suddenly stopped working. Debugged and fixed.|2009-02-18 15:39:27 -0600
+34|@buttonvoid implemented the abort pomodoro action which just shortcut to break. Some appliction test refactoring.|2009-02-18 16:11:21 -0600
+35|@planning just arranged tasks and wrote new tasks.|2009-02-19 09:31:05 -0600

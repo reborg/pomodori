@@ -4,6 +4,7 @@ class KirbyStorage
   attr_accessor :path, :db
   
   DB_PATH = "#{ENV['HOME']}/Library/Application Support/Pomodori"
+  SECS_IN_DAY = 60 * 60 * 24
   
   def initialize(path = DB_PATH)
     @path = path
@@ -19,6 +20,22 @@ class KirbyStorage
     table_for(clazz).select
   end
   
+  def yesterday_pomodoros
+    find_all_day_before(Pomodoro, Time.now)
+  end
+  
+  def today_pomodoros
+    find_all_by_date(Pomodoro, Time.now)
+  end
+  
+  def find_all_day_before(clazz, today)
+    find_all_by_date(clazz, today - SECS_IN_DAY)
+  end
+
+  def find_all_by_date(clazz, date)
+    table_for(clazz).select { |r| r.timestamp.year == date.year and r.timestamp.month == date.month and r.timestamp.day == date.day }
+  end
+  
   ##
   # Database migration lives here. Called by main.rb
   # at startup.
@@ -26,7 +43,7 @@ class KirbyStorage
   def self.init_db
     create_db(DB_PATH)
     db = KirbyBase.new(:local, nil, nil, DB_PATH)
-    db.create_table(:pomodoro, 
+    db.create_table(:pomodoro,
       :text, :String,
       :timestamp, :Time) { |obj| obj.encrypt = false } unless db.table_exists?(:pomodoro)
   end
