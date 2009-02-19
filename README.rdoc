@@ -4,24 +4,42 @@
 
 == DESCRIPTION:
 
-Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by Francesco Cirillo. Pomodori has a timer and lets you store pomodoro descriptions as well. Pomodori helps visualize your performance and plan future activities. For more information about pomodoros please read the original PDF paper at: http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf
+Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by Francesco Cirillo. Pomodori has a timer and lets you store pomodoro descriptions as well with just a single click for the overall cycle. Pomodori helps visualize your performance and plan future activities. For more information about pomodoros please read the original PDF paper at: http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf and keep in touch with the pomodoro community at http://www.pomodorotechnique.com/
 
 == FEATURES:
 
 The project is young but features are added fast. As of today:
 
 * Pomodori automatically starts a 25 mins countdown when launched
+* Pomodori will ring a bell at the end of the 25 mins
 * A description can be added to the pomodoro just spent and a timestamp is saved automatically
 * A database is created in ~/Library/Application Support/Pomodori where you can read the descriptions (for the final realease advanced report capabilities will be provided)
+* Pomodori will then start a break timer (5 mins) as soon as you add the description
+* Pomodori will ring again when at the end of the break and will start counting again from 25 mins
+
+== COMING SOON:
+
+* After 4 pomodoros Pomodori will kindly remember you that is time for a longer break
+* Instead of showing "running" Pomodori will collect 2 simple statistics for you: how many pomodoros worked yesterday and how many today so far.
 
 == REQUIREMENTS:
 
-* MacRuby 0.4 (trunk)
+MacRuby 0.4 (trunk). I plan to embed MacRuby in the app so you don't have to until MacRuby is available natively on the Mac. But for now you have to install (more instructions here http://www.macruby.org/trac/wiki/InstallingMacRuby) simply with:
+
+* git clone git://github.com/masterkain/macruby.git
+* cd macruby
+* rake
+* sudo rake install 
 
 == INSTALL:
 
-* Run the test suite with 'macrake'
-* To re-generate the app, just 'macrake run' from the root directory
+Click on the download button at the top of this page right after the name of the project. Unzip the package locally and inside you'll find a file called pomodori.app. Copy pomodori.app in /Applications or double-click right from there.
+
+If you need to rebuild the app just:
+
+* git clone git://github.com/reborg/pomodori.git
+* Optional but recommended: run the test suite with 'macrake'
+* 'macrake clean; macrake build' from the root directory to generate the app
 
 == LICENSE:
 
