@@ -41,8 +41,8 @@ Want to suggest a new feature? http://reborg.lighthouseapp.com/projects/25822-po
 
 == INSTALL:
 
-* Download from http://reborg.net/files/pomodoro.zip
-* Unzip if necessary and copy to pomodori.app to /Applications
+* Click on the download button at the top of the page to download the zipped project
+* Unzip and copy to pomodori.app to /Applications
 * Please file installation issues here: http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets
 
 == BUILD:
