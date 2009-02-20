@@ -13,7 +13,7 @@ class DisplayStatisticsTest < Test::Unit::TestCase
 
   def test_changes_button_label_for_break
     @application.update_metrics_for_break
-    assert_equal("Stop", @application.submit_button.title)
+    assert_equal("Restart", @application.submit_button.title)
   end
   
   def test_label_shows_statistics_for_break

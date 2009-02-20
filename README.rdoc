@@ -34,26 +34,23 @@ Want to suggest a new feature? http://reborg.lighthouseapp.com/projects/25822-po
 
 == REQUIREMENTS:
 
-MacRuby 0.4 (trunk) and XCode. 0.4 stable will be available very soon but for now you have to install from the sources (more instructions here http://www.macruby.org/trac/wiki/InstallingMacRuby) simply with:
-
-* git clone git://github.com/masterkain/macruby.git OR
-* svn co http://svn.macosforge.org/repository/ruby/MacRuby/trunk macruby (go grab coffee)
-* cd macruby
-* rake
-* sudo rake install
-
-XCode is necessary for the build process.
+* MacRuby 0.3
+* Download MacRuby binaries from http://www.macruby.org/files/MacRuby%200.3.zip
+* Unzip and double click on the installer and follow the instructions
+* If you have MacRuby 0.4 trunk installed, please rename /Library/Frameworks/MacRuby.framework before installing 0.3
 
 == INSTALL:
 
-Click on the download button at the top of this page right after the name of the project. Unzip the package locally or git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
+* Click on the download button at the top of this page right after the name of the project. Unzip the package locally copy pomodori.app into /Applications
+* Please file installation issues here: http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets
+
+== BUILD:
+
+Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
 
 * cd pomodori
 * Optional but recommended: run the test suite with 'macrake'
-* 'macrake clean; macrake build' from the root directory to generate the app
-* copy pomodori.app into /Applications
-
-Please file installation issues here: http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets
+* 'macrake run' from the root directory to generate the app and run it
 
 == LICENSE:
 
