@@ -1,6 +1,8 @@
 = Pomodori
 
-* http://github.com/reborg/pomodori
+* Homepage: http://github.com/reborg/pomodori
+* Tracking: http://reborg.lighthouseapp.com/projects/25822-pomodori/overview
+* Blog:     http://blog.reborg.net
 
 == DESCRIPTION:
 
@@ -18,6 +20,8 @@ The project is young but features are added fast. As of today:
 * Pomodori rings again at the end of the break and starts another 25 mins pomodoro for you
 * And so on, until you've got everything DONE!
 * A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break
+
+Want to suggest a new feature? http://reborg.lighthouseapp.com/projects/25822-pomodori/overview
 
 == COMING SOON:
 
