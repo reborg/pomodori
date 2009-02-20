@@ -1,6 +1,5 @@
 INBOX:
 - @stopbutton I just implemented a void action and I realized that there is to introduce a new paused state for the countdown field. When you stop the button changes to play and the countdown goes into paused state. When you click Play it resumes and just start ticking again. 3
-- @marketing prepare wiki page or ticket system for people to file bugs or feature request 2
 - @marketing pomodoro launch. Pomodoro ML announce. Twitter, Blog post. Macupdate, Version tracker. Direct email to Obtivians and 8thlights. Uncle bob. 4
 - @pleaseinsert when the pomodoro is done and the input box is enabled, write a lightgray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
 - @easy search for macruby applications open source (I think I saw many of them once) and download the sources. Have a look to see how do they packaged the application, if macruby is embedded maybe. 1
