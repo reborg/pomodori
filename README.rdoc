@@ -1,6 +1,6 @@
 = Pomodori
 
-* Homepage: http://github.com/reborg/pomodori
+* Homepage: http://reborg.github.com/pomodori
 * Tracking: http://reborg.lighthouseapp.com/projects/25822-pomodori/overview
 * Blog:     http://blog.reborg.net
 * Contact:  reborg -at- reborg.net
@@ -41,7 +41,7 @@ Want to suggest a new feature? http://reborg.lighthouseapp.com/projects/25822-po
 
 == INSTALL:
 
-* Click on the download button at the top of the page to download the zipped project
+* Download http://reborg.github.com/pomodori/pomodori.zip
 * Unzip and copy to pomodori.app to /Applications
 * Please file installation issues here: http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets
 
