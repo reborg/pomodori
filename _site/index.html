@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width = 750">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" charset="utf-8">
-    <title>fff</title>
+    <title>Welcome to Pomodori</title>
   </head>
   <body id="intro">
     <div id="wrapper">
@@ -27,11 +27,105 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <p>this is a teSt This project <a href='http://github.com/reborg/pomodori'>Pomodori</a> is awesome.</p>
+          <p>Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a>. Pomodori has a timer and lets you store pomodoro descriptions. Pomodori manages your pomodoros with just a single click for the overall cycle. Pomodori shows metrics to help you plan future activities. For more information about pomodoros please read the <a href='http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf'>original PDF paper</a> and keep in touch with the <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
 
-<p>To enable Disqus comments + badges for this site, <a href='http://disqus.com/add/'>add it to your Disqus account</a>.</p>
+<h2 id='features'>FEATURES</h2>
 
-<p>Also, you can/should <a href='http://reborg.lighthouseapp.com/projects/new'>create a Lighthouse project</a> for your project and update &#8220;TODO&#8221; within the <em>layouts files with the project id (e.g. &#8220;12345-pomodori&#8221; from the Lighthouse project url).</em></p>
+<p>The project is young but features are added fast. As of today:</p>
+
+<ul>
+<li>Pomodori automatically starts a 25 mins countdown when launched</li>
+
+<li>Pomodori rings a bell at the end of the 25 mins</li>
+
+<li>A description can be added to the pomodoro just spent and a timestamp is saved automatically</li>
+
+<li>A database is created in ~/Library/Application Support/Pomodori where you can read the descriptions (for the final realease advanced report capabilities will be provided)</li>
+
+<li>Pomodori starts a break timer (5 mins) automatically as soon as you add the description</li>
+
+<li>Pomodori rings again at the end of the break and starts another 25 mins pomodoro for you</li>
+
+<li>And so on, until you&#8217;ve got everything DONE!</li>
+
+<li>A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break</li>
+</ul>
+
+<p>Want to suggest a new feature? Use <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>LightHouse</a></p>
+
+<h2 id='coming_soon'>COMING SOON</h2>
+
+<ul>
+<li>After 4 pomodoros Pomodori will kindly remember you that is time for a longer break</li>
+
+<li>Tag management to tag pomodoros belonging to a certain category</li>
+
+<li>Charts and advanced statistics based on pomodoro history</li>
+
+<li>Timer visible in the menubar</li>
+
+<li>Many many more&#8230;</li>
+</ul>
+
+<h2 id='requirements'>REQUIREMENTS</h2>
+
+<ul>
+<li>MacRuby 0.3</li>
+
+<li>Download the <a href='http://www.macruby.org/files/MacRuby%200.3.zip'>MacRuby binaries</a></li>
+
+<li>Unzip and double click on the installer and follow the instructions</li>
+
+<li>If you have MacRuby 0.4 trunk installed, please rename /Library/Frameworks/MacRuby.framework before installing 0.3</li>
+</ul>
+
+<h2 id='install'>INSTALL</h2>
+
+<ul>
+<li>Download the <a href='http://reborg.github.com/pomodori/pomodori.zip'>zipped application</a></li>
+
+<li>Unzip and copy to pomodori.app to /Applications</li>
+
+<li>Please report installation issues at <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets'>LightHouse</a></li>
+</ul>
+
+<h2 id='build'>BUILD</h2>
+
+<p>If you need to build the application from scratch, gitclone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. Then:</p>
+
+<ul>
+<li>cd pomodori</li>
+
+<li>Optional but recommended: run the test suite with &#8216;macrake&#8217;</li>
+
+<li>&#8216;macrake clean&#8217;</li>
+
+<li>&#8216;macrake build&#8217; from the root directory to generate the app</li>
+</ul>
+
+<h2 id='links'>LINKS</h2>
+
+<ul>
+<li><a href='http://reborg.github.com/pomodori'>Homepage</a></li>
+
+<li><a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>Tracking</a> at LightHouse</li>
+
+<li><a href='http://blog.reborg.net'>Blog</a> my blog where I also talk about pomodoros</li>
+
+<li>Mail me at: reborg -at- reborg.net</li>
+</ul>
+
+<h2 id='license'>LICENSE</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2009 Renzo Borgatti</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#8216;Software&#8217;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &#8216;AS IS&#8217;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
         </div>
         <div id="sidebar">
           <div class="item">
