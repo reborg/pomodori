@@ -41,7 +41,7 @@ REQUIREMENTS
 INSTALL
 -------
 
-* Download the [zipped application](http://reborg.github.com/pomodori/pomodori.zip)
+* Download the [zipped application](http://reborg.github.com/pomodori/resources/pomodori.zip)
 * Unzip and copy to pomodori.app to /Applications
 * Please report installation issues at [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets)
 
