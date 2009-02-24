@@ -5,7 +5,7 @@ task :test do
 	Open3.popen3('macruby test/all_tests.rb') { |stdin, stdout, stderr| puts stdout.read }
 end
 
-task :build do
+task :build => [:clean] do
   require 'hotcocoa/application_builder'
   ApplicationBuilder.build :file => "config/build.yml"
 end
