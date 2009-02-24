@@ -4,11 +4,11 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-02-24T16:13:23-06:00</updated>
+ <updated>2009-02-24T16:39:17-06:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
-   <name>Dr Nic Williams</name>
-   <email>reborgwilliams@gmail.com</email>
+   <name>Reborg</name>
+   <email>reborg@reborg.net</email>
  </author>
 
  
@@ -17,7 +17,7 @@
    <link href="http://reborg.github.com/pomodori/2009/02/21/first-post.html"/>
    <updated>2009-02-21T00:00:00-06:00</updated>
    <id>http://reborg.github.com/pomodori/2009/02/21/first-post</id>
-   <content type="html">&lt;p&gt;Pomodori is going to be an awesome project.&lt;/p&gt;</content>
+   <content type="html">&lt;p&gt;Pomodori is out! This first release is missing many of the features intended for the final product but it&amp;#8217;s already usable. More to come in the next posts.&lt;/p&gt;</content>
  </entry>
  
  

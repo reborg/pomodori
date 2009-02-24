@@ -21,6 +21,19 @@ The project is young but features are added fast. As of today:
 
 Want to suggest a new feature? Use [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview)
 
+A running Pomodoro:
+
+![Pomodoro Running](resources/pomodoro-run.png "Pomodoro Running")
+
+A "Done" Pomodoro. After ringing, Pomodori is ready to accept a description of what you did. Or empty if you prefer.
+
+![Pomodoro Done](resources/pomodoro-done.png "Pomodoro Done")
+
+A "Break". Relax! Now!
+
+![Pomodoro Break](resources/pomodoro-break.png "Pomodoro Break")
+
+
 COMING SOON
 -----------
 
