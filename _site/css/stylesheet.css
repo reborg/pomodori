@@ -1,5 +1,5 @@
 html {
-	background: #1e1e1e;
+	background: #DB0B00;
 }
 body {
 /*  background: transparent url("http://macromates.com/images/site/bg_body") repeat-y 50% 0px;*/
@@ -26,17 +26,18 @@ html>body #wrapper {
 
 #header {
 	position: relative;
-	background: #FF6633;
-	height: 113px;
+	background: #fff;
+	height: 133px;
 }
 #header h1 {
 	position: absolute;
-	left: 60px;
-	top: 40px;
+	left: 140px;
+	top: 28px;
 	width: 380px;
 	height: 50px;
 	cursor: pointer;
-	color: white;
+	color: #DB0B00;
+	font-size: 300%;
 }
 
 #navigation {
