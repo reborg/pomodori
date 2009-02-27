@@ -9,16 +9,10 @@ class ApplicationTest < Test::Unit::TestCase
   end
 
   def test_starts_another_25_mins_timer_after_break
+    @application.stubs(:update_metrics_for_pomodoro)
     countdown_field = mock('countdown_field')
     @application.expects(:countdown_field).returns(countdown_field)
     countdown_field.expects(:start)
-    @application.on_5_mins_done
-  end
-  
-  def test_disable_input_box_after_break
-    text_input = mock('text_input')
-    @application.expects(:input_box).returns(text_input)
-    text_input.expects(:disable)
     @application.on_5_mins_done
   end
   

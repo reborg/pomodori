@@ -3,7 +3,7 @@ require 'thirdparties/kirbybase'
 class KirbyStorage
   attr_accessor :path, :db
   
-  DB_PATH = "#{ENV['HOME']}/Library/Application Support/Pomodori"
+  DB_PATH = File.expand_path("~/Library/Application Support/Pomodori")
   SECS_IN_DAY = 60 * 60 * 24
   
   def initialize(path = DB_PATH)

@@ -6,6 +6,9 @@ class OnClickTheSubmitButtonTest < Test::Unit::TestCase
   def setup
     @application = Application.new
     @application.stubs(:update_metrics_for_break)
+    controller = mock('controller')
+    @application.expects(:pomodori_controller).returns(controller)
+    controller.expects(:create)
   end
 
   def test_it_starts_the_break
@@ -16,9 +19,6 @@ class OnClickTheSubmitButtonTest < Test::Unit::TestCase
   end
   
   def test_creates_a_pomodoro
-    controller = mock('controller')
-    @application.expects(:pomodori_controller).returns(controller)
-    controller.expects(:create)
     @application.on_click_submit_button.call
   end
   
