@@ -1,9 +1,7 @@
 INBOX:
-- mocha 0.9.5 upgrade
-- @stopbutton I just implemented a void action and I realized that there is to introduce a new paused state for the countdown field. When you stop the button changes to play and the countdown goes into paused state. When you click Play it resumes and just start ticking again. 3
-- @marketing pomodoro launch. Pomodoro ML announce. Twitter, Blog post. Macupdate, Version tracker. Direct email to Obtivians and 8thlights. Uncle bob. 4
+- @package dr.nic create pomodori dmg and update with Sparkle http://tinyurl.com/dzjoao 4
+- @marketing Blog post. Macupdate, Version tracker 4
 - @pleaseinsert when the pomodoro is done and the input box is enabled, write a lightgray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
-- @easy search for macruby applications open source (I think I saw many of them once) and download the sources. Have a look to see how do they packaged the application, if macruby is embedded maybe. 1
 - @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
 - @bug copy and paste on the description box is not possible
 - @lowprio a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all

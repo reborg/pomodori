@@ -1,4 +1,4 @@
-lib_path = File.expand_path(File.dirname(__FILE__) + "/../mocha/lib")
+lib_path = File.expand_path(File.dirname(__FILE__) + "/../mocha-0.9.5/lib")
 $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
 
 require "mocha"
