@@ -1,9 +1,9 @@
 TODAY PLANNED 6:
 - @spike charting lib for ruby search 2
-- @prj mocha 0.9.5 upgrade 2
 
-DONE 1:
+DONE 2:
 - @easy search for macruby applications open source (I think I saw many of them once) and download the sources. Have a look to see how do they packaged the application, if macruby is embedded maybe. 2 => 1
+- @prj mocha 0.9.5 upgrade 2 => 1
 
 NOT DONE:
 

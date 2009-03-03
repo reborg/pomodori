@@ -51,8 +51,8 @@ class KirbyStorage
   private
   
     def table_for(object)
-      sym = object.class.to_s.to_sym
-      sym = object.to_s.to_sym if object.class == Class
+      sym = object.class.to_s.downcase.to_sym
+      sym = object.to_s.downcase.to_sym if object.class == Class
       @db.get_table(sym)
     end
     

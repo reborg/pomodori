@@ -16,6 +16,14 @@ class KirbyStorageTest < Test::Unit::TestCase
     assert_not_nil(@kirby_storage.send(:table_for, Pomodoro))
   end
   
+  def test_should_convert_lowercase
+    db = mock('db')
+    @kirby_storage.db = db
+    db.expects(:get_table).at_least(2).with(:pomodoro)
+    @kirby_storage.send(:table_for, Pomodoro)
+    @kirby_storage.send(:table_for, Pomodoro.new)
+  end
+  
   def test_creates_a_record
     @kirby_storage.save(Pomodoro.new(:text => "done!"))
     assert_equal(1, @kirby_storage.find_all(Pomodoro).size)
