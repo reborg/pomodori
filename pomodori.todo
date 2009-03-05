@@ -1,5 +1,6 @@
 INBOX:
 - @package dr.nic create pomodori dmg and update with Sparkle http://tinyurl.com/dzjoao 4
+- need to automate release cycle if that's not already included with Sparkle
 - @marketing Blog post. Macupdate, Version tracker 4
 - @pleaseinsert when the pomodoro is done and the input box is enabled, write a lightgray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
 - @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
