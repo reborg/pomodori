@@ -3,23 +3,26 @@ layout: default
 title: Welcome to Pomodori
 ---
 
-Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori has a timer and lets you store pomodoro descriptions. Pomodori manages your pomodoros with just a single click for the overall cycle. Pomodori shows metrics to help you plan future activities. For more information about pomodoros please read the [original PDF paper](http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf) and keep in touch with the [pomodoro community](http://www.pomodorotechnique.com/).
+Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori has a timer and lets you store pomodoro descriptions. Pomodori manages pomodoros with just a single click and no need for you to set or start a timer. Pomodori shows metrics to help you plan future activities. For more information about pomodoros please read the [original PDF paper](http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf) and keep in touch with the [pomodoro community](http://www.pomodorotechnique.com/).
 
-FEATURES
---------
+VERSION 0.1 FEATURES
+--------------------
 
-The project is young but features are added fast. As of today:
+The project is young but features are added fast. As of today (Version 0.1):
 
 * Pomodori automatically starts a 25 mins countdown when launched
 * Pomodori rings a bell at the end of the 25 mins
 * A description can be added to the pomodoro just spent and a timestamp is saved automatically
 * A database is created in ~/Library/Application Support/Pomodori where you can read the descriptions (for the final realease advanced report capabilities will be provided)
 * Pomodori starts a break timer (5 mins) automatically as soon as you add the description
-* Pomodori rings again at the end of the break and starts another 25 mins pomodoro for you
+* Pomodori rings again at the end of the break and starts another 25 mins pomodoro
 * And so on, until you've got everything DONE!
 * A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break
 
 Want to suggest a new feature? Use [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview)
+
+SCREENSHOTS
+-----------
 
 A running Pomodoro:
 
@@ -46,7 +49,7 @@ COMING SOON
 REQUIREMENTS
 ------------
 
-* MacRuby 0.3
+* MacRuby 0.3 (MacRuby 0.4 arriving soon)
 * Download the [MacRuby binaries](http://www.macruby.org/files/MacRuby%200.3.zip)
 * Unzip and double click on the installer and follow the instructions
 * If you have MacRuby 0.4 trunk installed, please rename /Library/Frameworks/MacRuby.framework before installing 0.3
@@ -54,7 +57,7 @@ REQUIREMENTS
 INSTALL
 -------
 
-* Download the [zipped application](http://reborg.github.com/pomodori/resources/pomodori.zip)
+* Download the [pomodori-0.1.zip archive](http://reborg.github.com/pomodori/resources/pomodori-0.1.zip)
 * Unzip and copy to pomodori.app to /Applications
 * Please report installation issues at [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets)
 
