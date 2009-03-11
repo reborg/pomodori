@@ -24,7 +24,7 @@ class SubmitButton
     @render ||= button(
       :title => title, 
       :frame => frame.to_a, 
-      :bezel => :rounded, 
+      :bezel => :textured_square, 
       :layout => {:expand => :width, :start => false}, 
       :on_action => action)
   end

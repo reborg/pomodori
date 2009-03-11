@@ -45,7 +45,7 @@ class Application
   def submit_button
     @submit_button ||= SubmitButton.new(
       :action => on_click_void_button, 
-      :frame => Frame.new(279, 4, 96, 32),
+      :frame => Frame.new(300, 12, 66, 28),
       :title => "Void")
   end
   

@@ -1,17 +1,22 @@
 INBOX:
 - @package dr.nic create pomodori dmg and update with Sparkle http://tinyurl.com/dzjoao 4
-- need to automate release cycle if that's not already included with Sparkle
-- @marketing Blog post. Macupdate, Version tracker 4
-- @pleaseinsert when the pomodoro is done and the input box is enabled, write a lightgray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
+- @package need to automate release cycle if that's not already included with Sparkle
+- @marketing Blog post. Macupdate, Version tracker. 4
+- @pleaseinsert when the pomodoro is done and the input box is enabled, write a light-gray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
 - @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
-- @bug copy and paste on the description box is not possible
-- @lowprio a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
+- @bug copy and paste on the description box is not possible. Search copy paste Cocoa. 2
+- @mvp I liked the example I saw where a distinct controller was taking care of different part of the view (timer, stats label, buttons). Refactor current code into multiple controller, don't need presenter class right now. 4
 
-"Pomodoro history": As a Pomodoro user I want to see the Pomodoro history so that I know what I did yesterday:
-- @history new window to show history 3
-- @history new button to open history on main timer window 1
-- @history spike scrollable grid-table views 1
-- @history use grid view to show history as scrollable table 1
+HISTORY: 
+As a PT practitioner I want to see pomodoros history so that I know what I did yesterday.
+- @history spike scrollable grid-table views 2
+- @history new window to show history 4
+- @history button should open history from main window 1
+
+CHARTS:
+As a PT practitioner I want to see segmentation of worked pomodoros by tag as a bar chart
+- @charts database query to retrieve count of pomodoros by tag. 3
+- @charts template generation from a template file and a collection of data to display. 4
 
 UI:
 - @uimenubar always show the timer on the menu bar a-la minuteur
@@ -20,6 +25,9 @@ UI:
 TAGGING:
 - @tagmodel many to many relationship pomodoro => tag, kirby table and entity object
 - @uitags everything that starts with a '@' in the input box should autocomplete for already existing tags
+
+OTHER:
+- @preferences a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
 
 KNOWN ISSUES:
 - connect the 'return' key pressed event to the submit button 2 (5) I spent some time on this but with my scarce knowledge of Cocoa I couldn't find a solution. I tried to tweak on a MacRuby example trying to intercept a key pressed event without success. I think it's better I move on hoping that in the future I'll be able to fix this quickly.

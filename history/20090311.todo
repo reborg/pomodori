@@ -1,0 +1,17 @@
+TODAY PLANNED 8:
+- @charts webview window with a close button that load a given html on startup. 2
+
+DONE 4:
+- @spike radius templating for html generation to refresh the webview with a new chart 2 => 4
+
+NOT DONE:
+
+INTERNAL INTERRUPTIONS:
+- wasted a pomodoro searching for a better organization of virtual desktops
+
+EXTERNAL INTERRUPTIONS:
+
+RELEVANT HISTORY:
+
+BRAIN DUMP:
+- trying radius as templating. If it doesn't work in a couple more pomoroso doing my own with gsub.
