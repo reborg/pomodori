@@ -1,6 +1,6 @@
 name: pomodori
 load: lib/main.rb
-version: "0.1 © reborg@reborg.net"
+version: "0.2 beta © reborg@reborg.net"
 icon: resources/pomodori.icns
 resources:
   - resources/**/*.*

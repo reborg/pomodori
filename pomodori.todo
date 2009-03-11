@@ -1,4 +1,6 @@
 INBOX:
+- move pomodoro model to models directory
+- Add a feature to the pomodoro model so that @something in the description is automatically collected as tag internally. Add all tag related features to pormodoros. 4
 - @package dr.nic create pomodori dmg and update with Sparkle http://tinyurl.com/dzjoao 4
 - @package need to automate release cycle if that's not already included with Sparkle
 - @marketing Blog post. Macupdate, Version tracker. 4

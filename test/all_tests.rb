@@ -1,6 +1,6 @@
 require 'test/unit/testsuite'
 require 'test/unit/ui/console/testrunner'
-Dir.glob(File.join(File.dirname(__FILE__), 'pomodori/*_test.rb')).each {|f| require f}
+Dir.glob(File.join(File.dirname(__FILE__), 'pomodori/**/*_test.rb')).each {|f| require f}
 
 class AllTests
   def self.suite
@@ -20,6 +20,7 @@ class AllTests
     suite << On25MinsTimerTest.suite
     suite << OnClickTheSubmitButtonTest.suite
     suite << DisplayStatisticsTest.suite
+    suite << PomodorosByTagTest.suite
     return suite
   end
 end
