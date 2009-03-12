@@ -1,0 +1,18 @@
+TODAY PLANNED 8:
+
+DONE 8:
+- planning 1 => 1
+- @charts webview window with a close button that load a given html on startup. 2 => 7
+
+NOT DONE:
+- @charts Add a feature to the pomodoro model so that '@something' in the description is automatically collected as tag internally. 2
+- @charts database query to retrieve count of pomodoros by tag. 3
+
+INTERNAL INTERRUPTIONS:
+
+EXTERNAL INTERRUPTIONS:
+
+RELEVANT HISTORY:
+
+RETROSPECTIVE:
+- productive morning. Just huge underestimated opening a new window for charts. Many issues (examples not working in 0.3) and also testability issues. Learned a lot, so should be better next time.

@@ -1,13 +1,13 @@
 INBOX:
-- move pomodoro model to models directory
-- Add a feature to the pomodoro model so that @something in the description is automatically collected as tag internally. Add all tag related features to pormodoros. 4
-- @package dr.nic create pomodori dmg and update with Sparkle http://tinyurl.com/dzjoao 4
-- @package need to automate release cycle if that's not already included with Sparkle
+- @refact move pomodoro model to models directory. 1
+- @build dr.nic create pomodori dmg and update with Sparkle http://tinyurl.com/dzjoao. 4
+- @build need to automate release cycle if that's not already included with Sparkle
 - @marketing Blog post. Macupdate, Version tracker. 4
-- @pleaseinsert when the pomodoro is done and the input box is enabled, write a light-gray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
-- @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 3
-- @bug copy and paste on the description box is not possible. Search copy paste Cocoa. 2
-- @mvp I liked the example I saw where a distinct controller was taking care of different part of the view (timer, stats label, buttons). Refactor current code into multiple controller, don't need presenter class right now. 4
+
+CHARTS:
+As a PT practitioner I want to see segmentation of worked pomodoros by tag as a bar chart
+- @charts template generation from a template file and a collection of data to display. 4
+- @charts many to many relationship pomodoro => tag, kirby table and entity object. 2
 
 HISTORY: 
 As a PT practitioner I want to see pomodoros history so that I know what I did yesterday.
@@ -15,21 +15,19 @@ As a PT practitioner I want to see pomodoros history so that I know what I did y
 - @history new window to show history 4
 - @history button should open history from main window 1
 
-CHARTS:
-As a PT practitioner I want to see segmentation of worked pomodoros by tag as a bar chart
-- @charts database query to retrieve count of pomodoros by tag. 3
-- @charts template generation from a template file and a collection of data to display. 4
+TAGS:
+- @tags the tag class should tell me how many distinct tags are stored in the db. 1
+- @tags everything that starts with a '@' in the input box should autocomplete for already existing tags
 
 UI:
-- @uimenubar always show the timer on the menu bar a-la minuteur
-- @uibigscreen bring big panel to front at the end of the 25 mins timer a-la minuteur to stop current activity
-
-TAGGING:
-- @tagmodel many to many relationship pomodoro => tag, kirby table and entity object
-- @uitags everything that starts with a '@' in the input box should autocomplete for already existing tags
+- @copypaste @bug copy and paste on the description box is not possible. Search copy paste Cocoa. 2
+- @menubar always show the timer on the menu bar a-la minuteur
+- @visualalert bring big panel to front at the end of the 25 mins timer a-la minuteur to stop current activity
+- @uiinputbox when the pomodoro is done and the input box is enabled, write a light-gray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
 
 OTHER:
 - @preferences a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
+- @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 4
 
 KNOWN ISSUES:
 - connect the 'return' key pressed event to the submit button 2 (5) I spent some time on this but with my scarce knowledge of Cocoa I couldn't find a solution. I tried to tweak on a MacRuby example trying to intercept a key pressed event without success. I think it's better I move on hoping that in the future I'll be able to fix this quickly.

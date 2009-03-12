@@ -7,8 +7,8 @@ class Application
   # POMODORO = 5
   # BREAK = 3
   attr_accessor :input_box, :countdown_field, :main_window
-  attr_accessor :bottom_view, :submit_button, :main_app
-  attr_accessor :on_click_submit_button, :on_click_void_button, :on_click_stop_button
+  attr_accessor :bottom_view, :submit_button, :main_app, :chart_window
+  attr_accessor :on_click_submit_button, :on_click_void_button, :on_click_stop_button, :chart_button, :on_click_chart_button
   
   include HotCocoa
   
@@ -19,6 +19,7 @@ class Application
       main_window << input_box.render
       
       bottom_view << countdown_field.start(POMODORO, method(:on_25_mins_done))
+      bottom_view << chart_button
       bottom_view << submit_button.render
       
       main_window << bottom_view
@@ -48,11 +49,25 @@ class Application
       :frame => Frame.new(300, 12, 66, 28),
       :title => "Void")
   end
+
+  def chart_button
+    @chart_button ||= button(
+        :title => "Report",
+        :bezel => :textured_square,
+        :frame => [230, 12, 66, 28],
+        :on_action => on_click_chart_button)
+  end
   
   def pomodori_controller
     @pomodori_controller ||= PomodoriController.new
   end
-  
+
+  def on_click_chart_button
+    @on_click_chart_button ||= Proc.new do
+      ChartView.new.render
+    end
+  end
+    
   def on_click_submit_button
     @on_click_submit_button ||= Proc.new do
       pomodori_controller.create(:text => input_box.render.to_s)

@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.1 © reborg@reborg.net</string>
+	<string>0.2 beta © reborg@reborg.net</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
