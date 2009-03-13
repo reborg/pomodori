@@ -15,28 +15,25 @@ class ChartView
   
   def chart_window
     @chart_window ||= window(:frame => [100, 100, 700, 500], :title => "Reports") do |win|
-      win << top_view
       win << bottom_view
+      win << top_view
     end
   end
   
-  ##
-  # FIXME: I suspect the expansion is not working in MacRuby 0.3
-  # try again on 0.4
-  #
   def top_view
     @top_view ||= layout_view(
-      :frame => [0, 50, 700, 450], 
-      # :layout => {:expand => [:width, :height]},
-      :margin => 4, :spacing => 4) do |view|
+      # :frame => [0, 50, 700, 450],
+      :mode => :horizontal,
+      :layout => {:expand => [:width, :height]},
+      :margin => 4, :spacing => 0) do |view|
       view << browser
     end
   end
   
   def bottom_view
     @bottom_view ||= layout_view(
-      :mode => :horizontal, 
-      :frame => [0, 0, 700, 50]) do |view|
+      :mode => :horizontal,
+      :layout => {:expand => [:width, :height]}) do |view|
       view << reload_button
       view << close_button      
     end
@@ -46,8 +43,7 @@ class ChartView
     @reload_button ||= button(
         :title => "Reload",
         :bezel => :textured_square,
-        :frame => [525, 12, 66, 28], 
-        :layout => {:expand => :width, :start => false}, 
+        :frame => [525, 12, 66, 28],
         :on_action => Proc.new {})
   end
   
@@ -56,14 +52,12 @@ class ChartView
         :title => "Close",
         :bezel => :textured_square,
         :frame => [600, 12, 66, 28],
-        :layout => {:expand => :width, :start => false}, 
         :on_action => Proc.new {@chart_window.close})
   end
   
   def browser
     @browser ||= web_view(
-      :frame => [0, 0, 700, 450], 
-      # :layout => {:expand =>  [:width, :height]}, 
+      :layout => {:expand =>  [:width, :height]}, 
       :url => NSURL.alloc.initFileURLWithPath(ALL_TAGS_REPORT))
   end
   

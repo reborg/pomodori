@@ -1,4 +1,6 @@
 TODAY PLANNED 6:
+- @refact extract multiple controllers and new main_view object from application.rb 4 => 2
+- @project install 0.4 macruby final and migrate project. Also see if deploy task works now and change installation instruction accordingly. 2
 
 DONE:
 
@@ -7,6 +9,7 @@ NOT DONE:
 INTERNAL INTERRUPTIONS:
 
 EXTERNAL INTERRUPTIONS:
+- mama Skype call, 1 pomo gone.
 
 RELEVANT HISTORY:
 58|@spike tried some view layout configuration|2009-03-11 17:46:36 -0500
@@ -20,13 +23,3 @@ RELEVANT HISTORY:
 66|@charts got a working solution with a stubbed local HTML to give the idea. Next step is to refactor application.rb and make the template dynamic.|2009-03-12 13:14:51 -0500
 67|@design pen and paper deisgn to understand how many controllers I need|2009-03-12 16:44:32 -0500
 68|@spike tried out choctop, but it works only if there is an xcode project. Decided to stay with current distribution workflow, maybe some more rake automation.|2009-03-12 17:23:20 -0500
-
-BRAIN DUMP:
-- I just realized that this brain dump is probably the content of the blog included in gh-pages website for the project!
-- There is now a button that opens a new window with a webview that shows just a static HTML. The next step is of course to connect that HTML generation to the pomodoro history.
-- I need a component that starting from a template is able to generate the HTML table with correct numbers to host the current pomodoros worked by tags chart.
-- I also started thinking about refactoring the appliction.rb main file into multiple controllers, one for each part of the UI.
-- I found the following architectural rule to be consistent: one class per view that represents only the UI tree and nothing else. One controller for each sub-view (this is because a sub-view is really an independent user story on its own). The controller can use zero or more model objects. There are controllers with no back end model. The controller works as a presenter: the controller knows about views and model and send command to change the view when the model change.
-- I tried choctop: it doesn't work without an underlying Xcode project, or at least not the tutorial. It's a framework, so I suppose it can be used also with macruby. But I don't know how and now it's too complex.
-
-RETROSPECTIVE:
