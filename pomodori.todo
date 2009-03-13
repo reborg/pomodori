@@ -6,6 +6,8 @@ INBOX:
 
 CHARTS:
 As a PT practitioner I want to see segmentation of worked pomodoros by tag as a bar chart
+- @charts Add a feature to the pomodoro model so that '@something' in the description is automatically collected as tag internally. 2
+- @charts database query to retrieve count of pomodoros by tag. 3
 - @charts template generation from a template file and a collection of data to display. 4
 - @charts many to many relationship pomodoro => tag, kirby table and entity object. 2
 

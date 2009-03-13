@@ -1,0 +1,32 @@
+TODAY PLANNED 6:
+
+DONE:
+
+NOT DONE:
+
+INTERNAL INTERRUPTIONS:
+
+EXTERNAL INTERRUPTIONS:
+
+RELEVANT HISTORY:
+58|@spike tried some view layout configuration|2009-03-11 17:46:36 -0500
+59|@planning yesterday retrospective, planned day, 3 mins layout design at the end|2009-03-12 09:12:04 -0500
+60|@charts creating the main chart window view. Discovered how to ask for subviews to a main window.|2009-03-12 09:43:24 -0500
+61|@charts had the problem of instantiating a window without an app loop outside. Have to change the way the view is built passing the window from outside.|2009-03-12 10:14:09 -0500
+62|@charts still specifying on the window views and sub widgets. Got a workaround so I don't need to create a window obj.|2009-03-12 10:45:23 -0500
+63|@charts attaching the chart view to the main window in application.rb. Noticing I need to factor out different views and controller.|2009-03-12 11:39:15 -0500
+64|@charts debugging webview not showing in chart window|2009-03-12 12:09:48 -0500
+65|@charts found that the expand directive doesn't work for layout view, searching correct coordinates manually.|2009-03-12 12:44:05 -0500
+66|@charts got a working solution with a stubbed local HTML to give the idea. Next step is to refactor application.rb and make the template dynamic.|2009-03-12 13:14:51 -0500
+67|@design pen and paper deisgn to understand how many controllers I need|2009-03-12 16:44:32 -0500
+68|@spike tried out choctop, but it works only if there is an xcode project. Decided to stay with current distribution workflow, maybe some more rake automation.|2009-03-12 17:23:20 -0500
+
+BRAIN DUMP:
+- I just realized that this brain dump is probably the content of the blog included in gh-pages website for the project!
+- There is now a button that opens a new window with a webview that shows just a static HTML. The next step is of course to connect that HTML generation to the pomodoro history.
+- I need a component that starting from a template is able to generate the HTML table with correct numbers to host the current pomodoros worked by tags chart.
+- I also started thinking about refactoring the appliction.rb main file into multiple controllers, one for each part of the UI.
+- I found the following architectural rule to be consistent: one class per view that represents only the UI tree and nothing else. One controller for each sub-view (this is because a sub-view is really an independent user story on its own). The controller can use zero or more model objects. There are controllers with no back end model. The controller works as a presenter: the controller knows about views and model and send command to change the view when the model change.
+- I tried choctop: it doesn't work without an underlying Xcode project, or at least not the tutorial. It's a framework, so I suppose it can be used also with macruby. But I don't know how and now it's too complex.
+
+RETROSPECTIVE:
