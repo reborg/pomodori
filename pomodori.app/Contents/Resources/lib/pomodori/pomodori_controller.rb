@@ -1,5 +1,10 @@
 class PomodoriController
   attr_accessor :storage
+  attr_accessor :main_view
+
+  def initialize(params = {})
+    @main_view = params[:main_view] ||= Application.new
+  end
   
   def create(params)
     pomodoro = Pomodoro.new(params)
