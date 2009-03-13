@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width = 750">
     <link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css" charset="utf-8">
-    <title>Welcome to 'Pomodori'</title>
+    <title>work on charts started</title>
   </head>
   <body id="intro">
     <div id="wrapper">
@@ -27,7 +27,31 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <p>Pomodori is out! This first release is missing many of the features intended for the final product but it&#8217;s already usable. More to come in the next posts.</p>
+          <p>I just realized that this brain dump and retrospective I was writing at the end of each planning page for the day is a perfect fit for the content of this micro blog! The retrospective is process only: how my PT (Pomodoro Technique) is doing, pros and cons, what went right and what went wrong. The standup is to get started for the day: yesterday&#8217;s achievements, today&#8217;s plan, design ideas and so on. Everyday is taking me 1 pomodoro for this and definitely worth it.</p>
+
+<h2 id='retrospective'>Retrospective</h2>
+
+<ul>
+<li>Still shooting for half a day of work these days, that means around 8 pomodoros.</li>
+
+<li>Productive morning no internal/external interruptions.</li>
+
+<li>I didn&#8217;t forget about the longer break this time.</li>
+</ul>
+
+<h2 id='standup'>Standup</h2>
+
+<ul>
+<li>There is now a button that opens a new window with a webview that shows just a static HTML. The next step is of course to connect that HTML generation to the pomodoro history.</li>
+
+<li>I need a component that starting from a template is able to generate the HTML table with correct numbers to host the current pomodoros worked by tags chart.</li>
+
+<li>I also started thinking about refactoring the appliction.rb main file into multiple controllers, one for each part of the UI.</li>
+
+<li>I found the following architectural rule to be consistent: one class per view that represents only the UI tree and nothing else. One controller for each sub-view (this is because a sub-view is really an independent user story on its own). The controller can use zero or more model objects. There are controllers with no back end model. The controller works as a presenter: the controller knows about views and model and send command to change the view when the model change.</li>
+
+<li>I tried choctop: it doesn&#8217;t work without an underlying Xcode project, or at least not the tutorial. It&#8217;s a framework, so I suppose it can be used also with macruby. But I don&#8217;t know how and now it&#8217;s too complex.</li>
+</ul>
                     
           <script type="text/javascript">var disqus_url = "http://reborg.github.com/pomodori/"; var disqus_title ="";</script>
           <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/pomodori/embed.js"></script>

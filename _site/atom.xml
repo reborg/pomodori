@@ -4,13 +4,45 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-02-24T16:39:17-06:00</updated>
+ <updated>2009-03-13T09:13:16-05:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
    <email>reborg@reborg.net</email>
  </author>
 
+ 
+ <entry>
+   <title>work on charts started</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/13/charts.html"/>
+   <updated>2009-03-13T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/13/charts</id>
+   <content type="html">&lt;p&gt;I just realized that this brain dump and retrospective I was writing at the end of each planning page for the day is a perfect fit for the content of this micro blog! The retrospective is process only: how my PT (Pomodoro Technique) is doing, pros and cons, what went right and what went wrong. The standup is to get started for the day: yesterday&amp;#8217;s achievements, today&amp;#8217;s plan, design ideas and so on. Everyday is taking me 1 pomodoro for this and definitely worth it.&lt;/p&gt;
+
+&lt;h2 id='retrospective'&gt;Retrospective&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Still shooting for half a day of work these days, that means around 8 pomodoros.&lt;/li&gt;
+
+&lt;li&gt;Productive morning no internal/external interruptions.&lt;/li&gt;
+
+&lt;li&gt;I didn&amp;#8217;t forget about the longer break this time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;Standup&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is now a button that opens a new window with a webview that shows just a static HTML. The next step is of course to connect that HTML generation to the pomodoro history.&lt;/li&gt;
+
+&lt;li&gt;I need a component that starting from a template is able to generate the HTML table with correct numbers to host the current pomodoros worked by tags chart.&lt;/li&gt;
+
+&lt;li&gt;I also started thinking about refactoring the appliction.rb main file into multiple controllers, one for each part of the UI.&lt;/li&gt;
+
+&lt;li&gt;I found the following architectural rule to be consistent: one class per view that represents only the UI tree and nothing else. One controller for each sub-view (this is because a sub-view is really an independent user story on its own). The controller can use zero or more model objects. There are controllers with no back end model. The controller works as a presenter: the controller knows about views and model and send command to change the view when the model change.&lt;/li&gt;
+
+&lt;li&gt;I tried choctop: it doesn&amp;#8217;t work without an underlying Xcode project, or at least not the tutorial. It&amp;#8217;s a framework, so I suppose it can be used also with macruby. But I don&amp;#8217;t know how and now it&amp;#8217;s too complex.&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
  
  <entry>
    <title>Welcome to 'Pomodori'</title>

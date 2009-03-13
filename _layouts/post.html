@@ -10,7 +10,7 @@
   <body id="intro">
     <div id="wrapper">
       <div id="header" onclick="javascript:window.location='/pomodori/'">
-        <h1>Pomodori</h1>
+        <h1>Daily Pomodoros</h1>
       </div>
       <div id="navigation">
         <ul>
@@ -65,7 +65,7 @@
           <div class="item">
             <!-- Blog   -->
             <a href="../../../atom.xml" id="rss_feed" name="rss_feed">Blog Posts</a>
-            <h4>Blog Posts</h4>
+            <h4>Daily Pomodoros</h4>
             <p>
               {% for post in site.posts %} 
                 <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}">{{ post.title }}</a><br>

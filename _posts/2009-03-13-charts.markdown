@@ -1,0 +1,24 @@
+---
+layout: post
+title: work on charts started
+---
+
+I just realized that this brain dump and retrospective I was writing at the end of each planning page for the day is a perfect fit for the content of this micro blog! The retrospective is process only: how my PT (Pomodoro Technique) is doing, pros and cons, what went right and what went wrong. The standup is to get started for the day: yesterday's achievements, today's plan, design ideas and so on. Everyday is taking me 1 pomodoro for this and definitely worth it.
+
+Retrospective
+-------------
+
+* Still shooting for half a day of work these days, that means around 8 pomodoros.
+* Productive morning no internal/external interruptions.
+* I didn't forget about the longer break this time.
+
+Standup
+-------
+
+- There is now a button that opens a new window with a webview that shows just a static HTML. The next step is of course to connect that HTML generation to the pomodoro history.
+- I need a component that starting from a template is able to generate the HTML table with correct numbers to host the current pomodoros worked by tags chart.
+- I also started thinking about refactoring the appliction.rb main file into multiple controllers, one for each part of the UI.
+- I found the following architectural rule to be consistent: one class per view that represents only the UI tree and nothing else. One controller for each sub-view (this is because a sub-view is really an independent user story on its own). The controller can use zero or more model objects. There are controllers with no back end model. The controller works as a presenter: the controller knows about views and model and send command to change the view when the model change.
+- I tried choctop: it doesn't work without an underlying Xcode project, or at least not the tutorial. It's a framework, so I suppose it can be used also with macruby. But I don't know how and now it's too complex.
+
+
