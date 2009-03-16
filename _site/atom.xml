@@ -4,13 +4,39 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-03-13T09:13:16-05:00</updated>
+ <updated>2009-03-16T15:05:33-05:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
    <email>reborg@reborg.net</email>
  </author>
 
+ 
+ <entry>
+   <title>some refactoring</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/16/todo.html"/>
+   <updated>2009-03-16T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/16/todo</id>
+   <content type="html">&lt;h2 id='today_planned_9'&gt;TODAY PLANNED 9&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+- \@planning 1
+- \@refact extract multiple controllers and new main_view object from application.rb. 4.
+- \@charts Add a feature to the pomodoro model so that '\@something' in the description is automatically collected as tag internally. 4.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id='today_done'&gt;TODAY DONE&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id='today_not_done'&gt;TODAY NOT DONE&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='relevant_history'&gt;RELEVANT HISTORY&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
  
  <entry>
    <title>work on charts started</title>
@@ -41,7 +67,15 @@
 &lt;li&gt;I found the following architectural rule to be consistent: one class per view that represents only the UI tree and nothing else. One controller for each sub-view (this is because a sub-view is really an independent user story on its own). The controller can use zero or more model objects. There are controllers with no back end model. The controller works as a presenter: the controller knows about views and model and send command to change the view when the model change.&lt;/li&gt;
 
 &lt;li&gt;I tried choctop: it doesn&amp;#8217;t work without an underlying Xcode project, or at least not the tutorial. It&amp;#8217;s a framework, so I suppose it can be used also with macruby. But I don&amp;#8217;t know how and now it&amp;#8217;s too complex.&lt;/li&gt;
-&lt;/ul&gt;</content>
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+69|@planning realized I can use the blog feature of gh-pages as a daily plan page, retrospective and the rest.|2009-03-13 09:16:42 -0500
+70|@mvp started refactoring by extracting void pomodoro function|2009-03-13 09:55:06 -0500
+71|@refact extended pomodoro_controller to call the view and started a new main_view to remove everything UI related from application.rb|2009-03-13 11:03:19 -0500
+72|@project migrated to 0.4 now playing again with view_layout expansion to remove abolute widgets locations.|2009-03-13 11:34:30 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
  </entry>
  
  <entry>
