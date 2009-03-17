@@ -6,33 +6,38 @@ class Application
   BREAK = 5 * 60
   # POMODORO = 5
   # BREAK = 3
+  attr_accessor :main_view
   attr_accessor :input_box, :countdown_field, :main_window
   attr_accessor :bottom_view, :submit_button, :main_app, :chart_window
   attr_accessor :on_click_submit_button, :on_click_void_button, :on_click_stop_button, :chart_button, :on_click_chart_button
   
   include HotCocoa
   
+  # def start
+  #   @main_app = application :name => "Hotcocoa" do |app|
+  #     app.delegate = self
+  #     main_window.will_close { exit }
+  #     main_window << input_box.render
+  #     
+  #     bottom_view << countdown_field.start(POMODORO, method(:on_25_mins_done))
+  #     bottom_view << chart_button
+  #     bottom_view << submit_button.render
+  #     
+  #     main_window << bottom_view
+  #     update_metrics_for_pomodoro
+  #   end
+  # end
+  
   def start
-    @main_app = application :name => "Hotcocoa" do |app|
+    application do |app| 
       app.delegate = self
-      main_window.will_close { exit }
-      main_window << input_box.render
-      
-      bottom_view << countdown_field.start(POMODORO, method(:on_25_mins_done))
-      bottom_view << chart_button
-      bottom_view << submit_button.render
-      
-      main_window << bottom_view
-      update_metrics_for_pomodoro
+      main_view.will_close {exit}
     end
   end
   
-  # def start
-  #   application do |app| 
-  #     app.delegate = self
-  #     MainView.new.render.will_close {exit}
-  #   end
-  # end
+  def main_view
+    @main_view ||= MainView.new.render
+  end
   
   def main_window
     @main_window ||= window(:frame => [0, 0, 389, 140], :title => "Pomodori", :view => :nolayout)

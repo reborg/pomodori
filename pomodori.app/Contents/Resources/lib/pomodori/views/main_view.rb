@@ -2,82 +2,58 @@ require 'hotcocoa'
 
 class MainView
   include HotCocoa
-  attr_reader :bottom_view, :top_view, :main_window, :timer_view
-  attr_reader :modal_button, :report_button, :timer_label, :summary_label, :pomodoro_icon_view
+  attr_reader :container
+  attr_reader :modal_button, :report_button, :timer_label, :summary_label, :pomodoro_icon
   
   def render
-    main_window
+    container
   end
   
-  def main_window
-    @main_window ||= window(:frame => [0, 0, 389, 140], :title => "Pomodori") do |win|
-      win << bottom_view
-      win << top_view
-      win << timer_view
+  def container
+    @container ||= window(:frame => [0, 0, 389, 140], :title => "Pomodori", :view => :nolayout) do |win|
+      win << pomodoro_icon
+      win << summary_label
+      win << modal_button
+      win << report_button
+      win << timer_label
     end
   end
   
-  def top_view
-    @top_right_view ||= layout_view(
-      :mode => :horizontal,
-      :layout => {:expand => [:width, :height]},
-      :margin => 4, :spacing => 2) do |view|
-      view << summary_label
-    end
-  end
-  
-  def bottom_view
-    @bottom_right_view ||= layout_view(
-      :mode => :horizontal,
-      :layout => {:expand => [:width, :height]},
-      :margin => 4, :spacing => 2) do |view|
-      view << modal_button
-      view << report_button
-    end
-  end
-  
-  def timer_view
-    @timer_view ||= layout_view(
-      :mode => :vertical,
-      :layout => {:expand => [:width, :height]},
-      :margin => 4, :spacing => 2) do |view|
-      view << timer_label
-      view << pomodoro_icon_view
-    end
-  end
-    
-  def pomodoro_icon_view
-    @pomodoro_icon_view ||= image_view(
-      :frame => [0,0,60,60],
-      :file => File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation,'pomodori.gif'))
+  def pomodoro_icon
+    @pomodoro_icon ||= image_view(
+      :frame => [20, 60, 75, 75],
+      :file => File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation,'pomodori75.gif'))
   end
   
   def summary_label
-    @summary_label ||= label(
-      :text => "Summary Label", 
-      :font => font(:name => "Monaco", :size => 11))
+    @summary_label ||= view(:frame => [120, 80, 300, 68]) do |view|
+      view << label(      
+        :text => "Summary Label", 
+        :font => font(:name => "Monaco", :size => 11))
+    end
   end
   
   def modal_button
     @modal_button ||= button(
-      :title => "Modal Button",
-      :frame => [0, 0, 66, 28],
+      :title => "Void",
+      :frame => [300, 12, 66, 28],
       :bezel => :textured_square, 
       :layout => {:start => false})
   end
   
   def report_button
     @report_button ||= button(
-      :title => "Report Button",
-      :frame => [0, 0, 66, 28], 
+      :title => "Report",
+      :frame => [230, 12, 66, 28], 
       :bezel => :textured_square, 
       :layout => {:start => false})
   end
   
   def timer_label
     @timer_label ||= label(
-      :text => "Timer Label", 
-      :font => font(:name => "Monaco", :size => 16))
+      :frame => [20, 8, 96, 35],
+      :text => "24:59",
+      :font => font(:name => "Monaco", :size => 26))
   end
 
 end
