@@ -27,6 +27,13 @@ class Application
     end
   end
   
+  # def start
+  #   application do |app| 
+  #     app.delegate = self
+  #     MainView.new.render.will_close {exit}
+  #   end
+  # end
+  
   def main_window
     @main_window ||= window(:frame => [0, 0, 389, 140], :title => "Pomodori", :view => :nolayout)
   end
