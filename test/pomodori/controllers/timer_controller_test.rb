@@ -1,5 +1,5 @@
-require File.dirname(__FILE__) + '/../test_helper'
-require 'pomodori/countdown_field'
+require File.dirname(__FILE__) + '/../../test_helper'
+require 'pomodori/controllers/timer_controller'
 require 'pomodori/countdown'
 require 'pomodori/views/main_view'
 
@@ -7,13 +7,13 @@ class CountdownFieldTest < Test::Unit::TestCase
   attr_accessor :called
     
   def setup
-    @main_view = MainView.new
-    @countdown_field = CountdownField.new(:main_view => @main_view)
+    @main_view = stub_everything
+    @countdown_field = TimerController.new(:main_view => @main_view)
   end
   
   def test_should_update_timer_label_on_timer_done
+    @main_view.expects(:update_timer).with("Done!")
     @countdown_field.on_timer_tick
-    assert_equal("Done!", @main_view.timer_label.to_s)
   end
   
   def test_state_is_stopped_after_timers_done
@@ -47,7 +47,7 @@ class CountdownFieldTest < Test::Unit::TestCase
     @main_view.expects(:submit_mode)
     @countdown_field.on_pomodoro_done
   end
-
+  
   def test_should_go_running_on_break_done
     @main_view.expects(:running_mode)
     @countdown_field.on_break_done
@@ -55,7 +55,7 @@ class CountdownFieldTest < Test::Unit::TestCase
   
   def test_should_go_running_on_start_timer
     @countdown_field.send(:start_timer, 1)
-    assert_equal(CountdownField::RUNNING, @countdown_field.state)
+    assert_equal(TimerController::RUNNING, @countdown_field.state)
   end
   
   def test_should_initialize_counter

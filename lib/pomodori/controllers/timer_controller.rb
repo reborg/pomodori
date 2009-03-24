@@ -4,7 +4,7 @@ require 'pomodori/countdown'
 ##
 # FIXME: rename me TimerController and move me to the controller folder
 #
-class CountdownField
+class TimerController
   attr_accessor :countdown
   attr_reader :start_time, :state, :timer
   attr_reader :main_view
@@ -35,17 +35,6 @@ class CountdownField
   def time
     "#{normalize(@countdown.mins)}:#{normalize(@countdown.secs)}"
   end
-  
-  # def start(from, on_timer_done = nil)
-  #   callback = lambda do
-  #     @state = :done
-  #     on_timer_done.call if on_timer_done
-  #   end
-  #   @countdown = Countdown.new(from, callback)
-  #   @start_time = Time.now
-  #   @state = :running
-  #   @main_view.timer_label
-  # end
   
   def on_pomodoro_start
     start_timer(POMODORO, method(:on_pomodoro_done))

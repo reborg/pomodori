@@ -1,6 +1,6 @@
 require 'hotcocoa'
 require 'pomodori/controllers/modal_button_controller'
-require 'pomodori/countdown_field'
+require 'pomodori/controllers/timer_controller'
 require 'pomodori/pomodori_controller'
 require 'pomodori/views/chart_view'
 
@@ -14,7 +14,7 @@ class MainView
   
   def initialize(opts = {})
     @modal_button_controller = opts[:modal_button_controller] ||= ModalButtonController.new(:main_view => self)
-    @timer_controller = opts[:timer_controller] ||= CountdownField.new(:main_view => self)
+    @timer_controller = opts[:timer_controller] ||= TimerController.new(:main_view => self)
     @pomodori_controller = opts[:pomodori_controller] ||= PomodoriController.new(:main_view => self)
     running_mode
   end
