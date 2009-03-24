@@ -8,7 +8,10 @@ class MainViewTest < Test::Unit::TestCase
     @modal_button_controller = mock("modal_button_controller")
     @modal_button_controller.class.send(:define_method, :on_click_void, lambda{})
     @modal_button_controller.class.send(:define_method, :on_click_submit, lambda{})
-    @main_view = MainView.new(:modal_button_controller => @modal_button_controller)
+    @main_view = MainView.new(
+      :modal_button_controller => @modal_button_controller,
+      :timer_controller => stub_everything,
+      :pomodori_controller => stub_everything)
   end
   
   def test_should_go_running_mode_on_init

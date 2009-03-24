@@ -5,12 +5,8 @@ require 'pomodori/views/main_view'
 class ModalButtonControllerTest < Test::Unit::TestCase
   
   def setup
-    @main_view = MainView.new
+    @main_view = stub_everything
     @modal_button_controller = ModalButtonController.new(:main_view => @main_view)
-  end
-  
-  def test_set_button_and_action_on_init
-    assert_equal("Void", @main_view.modal_button.title)
   end
   
   def test_should_switch_to_break_mode_on_void_click
@@ -22,8 +18,8 @@ class ModalButtonControllerTest < Test::Unit::TestCase
     @main_view.expects(:update_modal_button_action).with do |a_block|
       assert_match(/on_click_void/, a_block.name)
     end
+    @main_view.expects(:update_modal_button_label).with("Void")
     @modal_button_controller.on_click_restart("sender")
-    assert_equal("Void", @main_view.modal_button.title)
   end
   
   def test_should_switch_to_break_on_submit
@@ -35,8 +31,8 @@ class ModalButtonControllerTest < Test::Unit::TestCase
     @main_view.expects(:update_modal_button_action).with do |a_block|
       assert_match(/on_click_restart/, a_block.name)
     end
+    @main_view.expects(:update_modal_button_label).with("Restart")
     @modal_button_controller.send(action, "sender")
-    assert_equal("Restart", @main_view.modal_button.title)
   end
   
 end
