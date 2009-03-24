@@ -1,7 +1,7 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require File.dirname(__FILE__) + '/../../test_helper'
 require 'pomodori/models/pomodoro'
 require 'pomodori/kirby_storage'
-require 'pomodori/pomodori_controller'
+require 'pomodori/controllers/pomodori_controller'
 
 class PomodoriControllerTest < Test::Unit::TestCase
   

@@ -1,7 +1,7 @@
 require 'hotcocoa'
 require 'pomodori/controllers/modal_button_controller'
 require 'pomodori/controllers/timer_controller'
-require 'pomodori/pomodori_controller'
+require 'pomodori/controllers/pomodori_controller'
 require 'pomodori/views/chart_view'
 
 ##
