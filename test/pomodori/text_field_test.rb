@@ -21,21 +21,5 @@ class TextFieldTest < Test::Unit::TestCase
     @text_field.expects(:text_field)
     @text_field.render
   end
-  
-  def test_switch_to_not_editable
-    @text_field.disable
-    assert_equal(false, @text_field.render.editable?)
-  end
-  
-  def test_displays_given_text_on_disable
-    @text_field.disable("good")
-    assert_equal("good", @text_field.render.to_s)
-  end
-  
-  def test_switch_to_editable
-    @text_field.enable
-    assert_equal(true, @text_field.render.editable?)
-    assert_equal("", @text_field.render.to_s)
-  end
-  
+    
 end

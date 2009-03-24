@@ -1,11 +1,12 @@
 require 'pomodori/views/main_view'
+require 'pomodori/kirby_storage'
 
 class PomodoriController
   attr_accessor :storage
   attr_accessor :main_view
 
   def initialize(params = {})
-    @main_view = params[:main_view] ||= MainView.new
+    @main_view = params[:main_view]
   end
   
   def create(params)

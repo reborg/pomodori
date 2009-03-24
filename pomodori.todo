@@ -1,7 +1,12 @@
 INBOX:
-- @refact move pomodoro model to models directory. 1
-- @build need to automate release cycle if that's not already included with Sparkle 
-- @marketing Blog post. Macupdate, Version tracker. 4
+- A system of placeholder so that some part of the application (timer times and database position) can be changed while developing from the rake task. Like an Ant substitution before running rake tasks.
+- @refactoring create distinct summary label from input box and hide mutually when needed bring the logic inside the main view 4
+- @refactoring remove all unnecessary hotcocoa wrappers: submit button, text field, frame now that everything is in the main view. No more wrapping. 2
+- @easy better screenshot for the website, formatting of raw dump section in the blog 1
+- @docs integrate website with 5 mins tutorial on how to use the pomodoro technique 3
+- @refactoring move pomodoro model to models directory. 1
+- @build need to automate release cycle with appropriate rake tasks 6
+- @marketing blog post. Macupdate, Version tracker. 4
 
 CHARTS:
 As a PT practitioner I want to see segmentation of worked pomodoros by tag as a bar chart
