@@ -10,10 +10,10 @@ class CountdownField
   attr_reader :main_view
   include HotCocoa
   
-  # POMODORO = 25 * 60
-  # BREAK = 5 * 60
-  POMODORO = 5
-  BREAK = 3
+  POMODORO = 25 * 60
+  BREAK = 5 * 60
+  # POMODORO = 5
+  # BREAK = 3
   
   RUNNING = :running
   DONE = :done
