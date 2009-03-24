@@ -26,22 +26,20 @@ Want to suggest a new feature? http://reborg.lighthouseapp.com/projects/25822-po
 
 == COMING SOON:
 
-* After 4 pomodoros Pomodori will kindly remember you that is time for a longer break
-* Tag management to tag pomodoros belonging to a certain category
 * Charts and advanced statistics based on pomodoro history
+* Tag management to tag pomodoros belonging to a certain category
+* After 4 pomodoros Pomodori will kindly remember you that is time for a longer break
 * Timer visible in the menubar
 * Many many more...
 
 == REQUIREMENTS:
 
-* MacRuby 0.3
-* Download MacRuby binaries from http://www.macruby.org/files/MacRuby%200.3.zip
+* MacRuby 0.4
+* Download MacRuby binaries from http://www.macruby.org/files/MacRuby%200.4.zip
 * Unzip and double click on the installer and follow the instructions
-* If you have MacRuby 0.4 trunk installed, please rename /Library/Frameworks/MacRuby.framework before installing 0.3
 
 == INSTALL:
 
-* ho ho
 * Download http://reborg.github.com/pomodori/pomodori.zip
 * Unzip and copy to pomodori.app to /Applications
 * Please file installation issues here: http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets
