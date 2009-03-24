@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'thirdparties/kirbybase'
 require 'pomodori/kirby_storage'
-require 'pomodori/pomodoro'
+require 'pomodori/models/pomodoro'
 
 class KirbyStorageTest < Test::Unit::TestCase
   

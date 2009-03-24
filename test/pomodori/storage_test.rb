@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'pomodori/storage'
-require 'pomodori/pomodoro'
+require 'pomodori/models/pomodoro'
 
 class StorageTest < Test::Unit::TestCase
   

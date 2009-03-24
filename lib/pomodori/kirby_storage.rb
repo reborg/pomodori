@@ -1,5 +1,5 @@
 require 'thirdparties/kirbybase'
-require 'pomodori/pomodoro'
+require 'pomodori/models/pomodoro'
 
 class KirbyStorage
   attr_accessor :path, :db

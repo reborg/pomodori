@@ -1,5 +1,5 @@
-require File.dirname(__FILE__) + '/../test_helper'
-require 'pomodori/pomodoro'
+require File.dirname(__FILE__) + '/../../test_helper'
+require 'pomodori/models/pomodoro'
 
 class PomodoroTest < Test::Unit::TestCase
   

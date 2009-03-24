@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'pomodori/models/pomodoros_by_tag'
-require 'pomodori/pomodoro'
+require 'pomodori/models/pomodoro'
 
 class PomodorosByTagTest < Test::Unit::TestCase
   

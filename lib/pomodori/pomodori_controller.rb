@@ -1,5 +1,6 @@
 require 'pomodori/views/main_view'
 require 'pomodori/kirby_storage'
+require 'pomodori/models/pomodoro'
 
 class PomodoriController
   attr_accessor :storage
