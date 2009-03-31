@@ -73,17 +73,14 @@ class TimerControllerTest < Test::Unit::TestCase
     @timer_controller.send(:on_timer_done, "message")
   end
     
-  ##
-  # this should move to summary controller.
-  #
-  # def test_should_format_time
-  #   @timer_controller.start(1)
-  #   assert_equal("00:01", @timer_controller.time)
-  #   @timer_controller.start(60)
-  #   assert_equal("01:00", @timer_controller.time)
-  #   @timer_controller.start( (60*25)-1 )
-  #   assert_equal("24:59", @timer_controller.time)
-  # end
+  def test_should_format_time
+    @timer_controller.send(:start_timer, 1)
+    assert_equal("00:01", @timer_controller.time)
+    @timer_controller.send(:start_timer, 60)
+    assert_equal("01:00", @timer_controller.time)
+    @timer_controller.send(:start_timer, 60*25-1)
+    assert_equal("24:59", @timer_controller.time)
+  end
 
 end
 

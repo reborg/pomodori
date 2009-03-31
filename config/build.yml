@@ -6,6 +6,4 @@ resources:
   - resources/**/*.*
 sources: 
   - lib/**/*.rb
-  - resources/**/*.html
-  - resources/**/*.css
   

@@ -1,38 +1,39 @@
 INBOX:
-- A system of placeholder so that some part of the application (timer times and database position) can be changed while developing from the rake task. Like an Ant substitution before running rake tasks.
-- @refactoring create distinct summary label from input box and hide mutually when needed bring the logic inside the main view 4
-- @refactoring remove all unnecessary hotcocoa wrappers: submit button, text field, frame now that everything is in the main view. No more wrapping. 2
-- @easy better screenshot for the website, formatting of raw dump section in the blog 1
-- @docs integrate website with 5 mins tutorial on how to use the pomodoro technique 3
-- @refactoring move pomodoro model to models directory. 1
+- @bug copy and paste on the description box is not possible. Search copy paste Cocoa. 2
+
+BUILD 10:
 - @build need to automate release cycle with appropriate rake tasks 6
+- @build A system of placeholder so that some part of the application (timer times and database position) can be changed while developing from the rake task. It happened already several time I committed debug/test code. 4
+
+MARKETING and WEBSITE 20:
+- @docs @website integrate website with 5 mins tutorial on how to use the pomodoro technique 3
 - @marketing blog post. Macupdate, Version tracker. 4
+- @blog @website @marketing I want to talk about the simplified model view presenter architecture I've been using to split model view controllers. 4
+- @screencast Pomodori usage example and introduction to the PT 8
 
-CHARTS:
-As a PT practitioner I want to see segmentation of worked pomodoros by tag as a bar chart
-- charts Add a feature to the pomodoro model so that 'something' in the description is automatically collected as tag internally. 4.
-- @charts database query to retrieve count of pomodoros by tag. 3
-- @charts template generation from a template file and a collection of data to display. 4
-- @charts many to many relationship pomodoro => tag, kirby table and entity object. 2
-- @charts @layout under 0.4 layout_view working properly but still need to constrain top view. 1
+CHARTS 9:
+As a PT practitioner I want to see a bar chart of worked pomodoros by day
+- @charts database query to retrieve count of pomodoros by day. 2
 
-HISTORY: 
+HISTORY 7:
 As a PT practitioner I want to see pomodoros history so that I know what I did yesterday.
 - @history spike scrollable grid-table views 2
 - @history new window to show history 4
 - @history button should open history from main window 1
 
-TAGS:
+TAGS 17:
+- @charts many to many relationship pomodoro => tag, kirby table and entity object. 2
+- @charts Add a feature to the pomodoro model so that 'something' in the description is automatically collected as tag internally. 4.
 - @tags the tag class should tell me how many distinct tags are stored in the db. 1
-- @tags everything that starts with a '@' in the input box should autocomplete for already existing tags
+- @tags everything that starts with a '@' in the input box should autocomplete for already existing tags 10. Split me.
 
 UI:
-- @copypaste @bug copy and paste on the description box is not possible. Search copy paste Cocoa. 2
 - @menubar always show the timer on the menu bar a-la minuteur
 - @visualalert bring big panel to front at the end of the 25 mins timer a-la minuteur to stop current activity
 - @uiinputbox when the pomodoro is done and the input box is enabled, write a light-gray "Please enter pomodoro description" that goes away as soon as the input box grab focus. 2
 
 OTHER:
+- @bug not mine. Layout_view: if I expand in only one direction everything disappear from the screen. Create example that can be posted to show what's wrong. 4
 - @preferences a preference panel where you can set to have a different alarm sound, different alarm volume or no alarm at all
 - @longbreak every 4 tomatoes, at the end of the fourth after submitting the descr, show a small alert that it's time to take a longer break. If yes, instead of starting 5 mins break the timer is set to 25 mins break. Then a real tomato will start. If no just proceed with a 5 mins break. 4
 
@@ -44,3 +45,4 @@ KNOWN ISSUES:
   ../Frameworks/MacRuby.framework/Versions/0.4/usr/lib/libmacruby.dylib
   Pomodori.app/Contents/MacOS/Pomodori
 which changes the dylib dependencies of the executable. The problem is that it doesn't work with the relative path passed. But if you want to go absolute, then it depend from where the application is installed. If /Applications, I can stuck the absolute path there, but I don't like it. So the plan is to wait some more time and hopefully MacRuby will be part of Leopard snow edition.
+- view_layout: man, was not able to understand how it works or how to use it. Reverted back to absolute position for everything. The main complaint is that sometimes all widget disappears if I try to expand in just one direction. You should probably formulate an example and post it to the ML.

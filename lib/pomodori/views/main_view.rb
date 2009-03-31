@@ -2,6 +2,7 @@ require 'hotcocoa'
 require 'pomodori/controllers/modal_button_controller'
 require 'pomodori/controllers/timer_controller'
 require 'pomodori/controllers/pomodori_controller'
+require 'pomodori/controllers/charts_controller'
 require 'pomodori/views/chart_view'
 
 ##
@@ -16,6 +17,7 @@ class MainView
     @modal_button_controller = opts[:modal_button_controller] ||= ModalButtonController.new(:main_view => self)
     @timer_controller = opts[:timer_controller] ||= TimerController.new(:main_view => self)
     @pomodori_controller = opts[:pomodori_controller] ||= PomodoriController.new(:main_view => self)
+    @charts_controller = opts[:charts_controller] ||= ChartsController.new
     running_mode
   end
 
@@ -67,17 +69,13 @@ class MainView
       :layout => {:start => false})
   end
   
-  ##
-  # FIXME: maybe instead of forking a new view from here
-  # consider to ask a chart_controller to do what needs to be done
-  #
   def report_button
     @report_button ||= button(
       :title => "Report",
       :frame => [230, 12, 66, 28], 
       :bezel => :textured_square, 
       :layout => {:start => false},
-      :on_action => lambda {|sender| ChartView.new.render})
+      :on_action => lambda {|sender| @charts_controller.on_open_report })
   end
   
   def timer_label

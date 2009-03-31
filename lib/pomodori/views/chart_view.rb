@@ -1,5 +1,6 @@
 require 'hotcocoa'
 framework 'webkit'
+require 'pomodori/controllers/charts_controller'
 
 ##
 # UI components for the chart view.
@@ -7,22 +8,25 @@ framework 'webkit'
 class ChartView
   include HotCocoa
   attr_reader :top_view, :bottom_view, :reload_button, :close_button, :browser, :chart_window
-  ALL_TAGS_REPORT = File.join(NSBundle.mainBundle.resourcePath.fileSystemRepresentation, 'resources/all_tags_report.html')
+
+  def initialize(opts = {})
+    @charts_controller = opts[:charts_controller]
+  end
   
   def render
     chart_window
   end
   
   def chart_window
-    @chart_window ||= window(:frame => [100, 100, 700, 500], :title => "Reports") do |win|
+    @chart_window ||= window(:frame => [100, 100, 500, 300], :title => "Reports") do |win|
       win << bottom_view
       win << top_view
+      @charts_controller.on_load_view
     end
   end
   
   def top_view
     @top_view ||= layout_view(
-      # :frame => [0, 50, 700, 450],
       :mode => :horizontal,
       :layout => {:expand => [:width, :height]},
       :margin => 4, :spacing => 0) do |view|
@@ -32,8 +36,8 @@ class ChartView
   
   def bottom_view
     @bottom_view ||= layout_view(
-      :mode => :horizontal,
-      :layout => {:expand => [:width, :height]}) do |view|
+      :mode => :horizontal,      
+      :frame => [0, 0, 450, 50]) do |view|
       view << reload_button
       view << close_button      
     end
@@ -57,8 +61,14 @@ class ChartView
   
   def browser
     @browser ||= web_view(
-      :layout => {:expand =>  [:width, :height]}, 
-      :url => NSURL.alloc.initFileURLWithPath(ALL_TAGS_REPORT))
+      :layout => {:expand =>  [:width, :height]})
   end
   
+  ##
+  # SERVICES
+  ##
+  
+  def load_chart(url)
+    browser.url = url
+  end
 end

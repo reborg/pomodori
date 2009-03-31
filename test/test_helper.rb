@@ -18,3 +18,21 @@ def wipe_dir(dir, regex = /.tbl/)
     end
   end
 end
+
+def pomodoros
+  pomos = []
+  10.times do |i|
+    pomos << Pomodoro.new(
+      :text => "Pomo#{i}",
+      :timestamp => DateTime.new(2009, 03, i % 3 + 1))
+  end
+  pomos
+end
+
+def pomodoro_count_by_day_sample
+  pomos = []
+  3.times do |i|
+    pomos << PomodoroCountByDay.new(DateTime.new(2009, 03, i % 3 + 1), pomodoros)
+  end
+  pomos
+end
