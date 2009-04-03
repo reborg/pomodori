@@ -5,7 +5,7 @@ require 'pomodori/models/chart'
 class ChartsControllerTest < Test::Unit::TestCase
   
   def setup
-    @chart.stubs(:process => "/tmp/something.html")
+    @chart = mock(:process => "/tmp/something.html")
     Chart.stubs(:new).returns(@chart)
     @chart_view = mock
     @charts_controller = ChartsController.new(:chart_view => @chart_view)
@@ -16,9 +16,8 @@ class ChartsControllerTest < Test::Unit::TestCase
     @charts_controller.on_load_view
   end
   
-  def test_create_new_view_on_click_report
-    @chart_view.expects(:render)
-    @charts_controller.on_open_report
+  def test_should_tell_the_view_to_reload_url
+    test_should_load_default_chart_on_load_view
   end
-  
+    
 end

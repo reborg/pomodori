@@ -29,7 +29,7 @@ class ChartView
     @top_view ||= layout_view(
       :mode => :horizontal,
       :layout => {:expand => [:width, :height]},
-      :margin => 4, :spacing => 0) do |view|
+      :margin => 0, :spacing => 0) do |view|
       view << browser
     end
   end
@@ -48,7 +48,16 @@ class ChartView
         :title => "Reload",
         :bezel => :textured_square,
         :frame => [525, 12, 66, 28],
-        :on_action => Proc.new {})
+        :on_action => reload_button_action)
+  end
+  
+  ##
+  # FIXME: extracted for testing because:
+  # ChartView.reload_button.on_action returns an NSButton
+  # and not a proc.
+  # 
+  def reload_button_action
+    lambda {|sender| @charts_controller.on_reload_chart}
   end
   
   def close_button

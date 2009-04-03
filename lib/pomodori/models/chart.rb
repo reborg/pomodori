@@ -42,7 +42,8 @@ class Chart
   
   ##
   # Produces HTML relevant to the pomodoro summary
-  # chart template.
+  # chart template. The % is multiplied by 5 because
+  # I assume there will never be more than 20 pomos a day.
   #
   def pomodoro_summary
     html = ""
@@ -51,7 +52,7 @@ class Chart
       html << "<li>"
         html << "<span class=\"date\">#{pomo.date.strftime('%Y-%m-%d')}</span>"
         html << "<span class=\"count\">#{pomo.count}</span>"
-        html << "<span class=\"index\" style=\"width: #{pomo.count}%\">#{pomo.count}</span>"
+        html << "<span class=\"index\" style=\"width: #{pomo.count * 5}%\"></span>"
       html << "</li>"
     end
     html

@@ -23,4 +23,9 @@ class ChartViewTest < Test::Unit::TestCase
     assert_equal(2, @chart_view.bottom_view.subviews.size)
   end
   
+  def test_delegates_to_ctrl_on_reload
+    @charts_controller.expects(:on_reload_chart)
+    @chart_view.reload_button_action.call("sender")
+  end
+  
 end

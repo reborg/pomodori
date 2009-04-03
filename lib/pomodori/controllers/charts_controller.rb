@@ -17,7 +17,12 @@ class ChartsController
   end
   
   def on_open_report
+    @chart_view = ChartView.new(:charts_controller => self)
     @chart_view.render
+  end
+  
+  def on_reload_chart
+    on_load_view
   end
 
 end
