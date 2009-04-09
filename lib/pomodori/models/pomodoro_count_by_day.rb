@@ -28,7 +28,11 @@ class PomodoroCountByDay
       hash[ts] = PomodoroCountByDay.new(pomodoro.timestamp) unless hash[ts]
       hash[ts] << pomodoro
     end
-    hash.values
+    hash.values.sort
+  end
+  
+  def <=>(other)
+    self.date <=> other.date
   end
   
 end
