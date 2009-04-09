@@ -27,10 +27,4 @@ class PomodoriController
     @storage ||= KirbyStorage.new
   end
   
-  def void_pomodoro
-    @main_view.now_counting = 'Break'
-    @main_view.timer = 5*60
-    @main_view.modal_button = 'Restart'
-  end
-  
 end

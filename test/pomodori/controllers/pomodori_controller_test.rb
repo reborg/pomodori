@@ -18,11 +18,4 @@ class PomodoriControllerTest < Test::Unit::TestCase
     ctrl.create({:text => "hola"})
   end
   
-  def test_void_current_pomodoro
-    @main_view.expects(:now_counting=).with('Break')
-    @main_view.expects(:timer=).with(5*60)
-    @main_view.expects(:modal_button=).with('Restart')
-    @pomodori_controller.void_pomodoro
-  end
-  
 end
