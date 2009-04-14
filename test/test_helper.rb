@@ -1,8 +1,11 @@
-lib_path = File.expand_path(File.dirname(__FILE__) + "/../mocha-0.9.5/lib")
-$LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
+Dir[File.dirname(__FILE__) + "/../vendor/**/lib"].each do |dir|
+  $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
+end
 
 require "mocha"
+require "matchy"
 require "test/unit"
+require "microspec"
 require File.dirname(__FILE__) + '/../lib/pomodori'
 
 def wipe_dir(dir, regex = /.tbl/)
