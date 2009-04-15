@@ -14,13 +14,13 @@ class PomodoriController
     pomodoro = Pomodoro.new(params)
     storage.save(pomodoro)
   end
-  
+
   def yesterday_pomodoros
-    storage.yesterday_pomodoros.size
+    storage.find_all_day_before(Pomodoro, Time.now).size
   end
   
   def today_pomodoros
-    storage.today_pomodoros.size
+    storage.find_all_by_date(Pomodoro, Time.now).size
   end
   
   def storage
