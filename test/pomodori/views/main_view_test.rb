@@ -14,41 +14,36 @@ class MainViewTest < Test::Unit::TestCase
       :pomodori_controller => stub_everything)
   end
   
-  def test_should_go_running_mode_on_init
-    @main_view.expects(:running_mode)
-    @main_view.send(:initialize)
-  end
-  
-  def test_should_change_timer_label
+  it "changes the timer label" do
     @main_view.update_timer("hey")
-    assert("hey", @main_view.timer_label)
+    @main_view.timer_label.to_s.should == "hey"
   end
   
-  def test_switch_off_input_box
+  it "switches off the input box" do
     @main_view.send(:disable_input_box)
-    assert_equal(false, @main_view.summary_label.editable?)
+    @main_view.summary_label.editable?.should == false
   end
   
-  def test_switch_off_input_box_with_message
+  it "switches off the input box with a message" do
     @main_view.send(:disable_input_box, "good")
-    assert_equal("good", @main_view.summary_label.to_s)
+    @main_view.summary_label.to_s.should == "good"
   end
   
-  def test_switch_on_input_box
+  it "switches on the input box for editing" do
     @main_view.send(:enable_input_box)
-    assert_equal(true, @main_view.summary_label.editable?)
-    assert_equal("<hit enter to add description>", @main_view.summary_label.to_s)
+    @main_view.summary_label.editable?.should == true
+    @main_view.summary_label.to_s.should == "<hit enter to add description>"
   end
   
-  def test_switch_to_submit_mode
+  it "enable input box when going submit mode" do
     @main_view.expects(:enable_input_box)
     @main_view.submit_mode
-    assert_equal("Submit", @main_view.modal_button.title)
+    @main_view.modal_button.title.should == "Submit"
   end
   
-  def test_should_update_modal_label
+  it "changes the modal label" do
     @main_view.update_modal_button_label("cips")
-    assert_equal("cips", @main_view.modal_button.title)
+    @main_view.modal_button.title.should == "cips"
   end
   
 end

@@ -6,6 +6,8 @@ KirbyStorage.init_db
 
 require 'hotcocoa'
 include HotCocoa
-application do |app| 
-  MainView.new.render.will_close {exit}
+application do |app|
+  main_view = MainView.new
+  main_view.render.will_close {exit}
+  main_view.running_mode
 end

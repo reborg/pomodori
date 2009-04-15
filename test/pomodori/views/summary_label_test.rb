@@ -12,14 +12,14 @@ class SummaryLabelTest < Test::Unit::TestCase
   end
 
   it "shows statistics for break mode" do
+    @main_view.expects(:update_window_title).with("Break...")
     @main_view.break_mode
-    @main_view.summary_label.to_s.should =~ /BREAK/
     @main_view.summary_label.to_s.should =~ /10/
   end
 
   it "shows statistics for running mode" do
+    @main_view.expects(:update_window_title).with("Running...")
     @main_view.running_mode
-    @main_view.summary_label.to_s.should =~ /POMODORO/
     @main_view.summary_label.to_s.should =~ /5/
   end
   
