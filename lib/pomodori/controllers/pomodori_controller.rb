@@ -27,4 +27,12 @@ class PomodoriController
     @storage ||= KirbyStorage.new
   end
   
+  ##
+  # Calculates the daily average pomodoros
+  #
+  def daily_average
+    all = PomodoroCountByDay.find_all
+    (all.inject(0) { |sum, day| sum + day.count}) / all.size    
+  end
+  
 end

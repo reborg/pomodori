@@ -46,14 +46,14 @@ class MainView
   end
   
   def summary_label_view
-    @summary_label_view ||= view(:frame => [115, 60, 250, 62]) do |view|
+    @summary_label_view ||= view(:frame => [115, 60, 250, 72]) do |view|
       view << summary_label
     end
   end
   
   def summary_label
     @summary_label ||= label(
-      :frame => [0, 0, 250, 62],
+      :frame => [0, 0, 250, 72],
       :text => format_metrics("Pomodoro"), 
       :font => font(:name => "Andale Mono", :size => 12))
   end
@@ -141,7 +141,8 @@ class MainView
     def format_metrics(title)
       "#{title.upcase}!\n" +
       "Yesterday's pomodoros       #{@pomodori_controller.yesterday_pomodoros}\n" +
-      "Today's pomodoros so far    #{@pomodori_controller.today_pomodoros}"
+      "Today's pomodoros so far    #{@pomodori_controller.today_pomodoros}\n" +
+      "Daily average               #{@pomodori_controller.daily_average}"
     end
   
     ##
@@ -169,7 +170,7 @@ class MainView
       summary_label.setBordered(true)
       summary_label.setSelectable(true)
       summary_label.editable = true
-      summary_label.text = "Pomodoro description here"
+      summary_label.text = "<hit enter to add description>"
     end
   
 end

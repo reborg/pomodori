@@ -10,7 +10,7 @@ class PomodoriControllerTest < Test::Unit::TestCase
     @pomodori_controller = PomodoriController.new(:main_view => @main_view)
   end
   
-  def test_create_new_pomodoro
+  it "should create a new pomodoro" do
     storage = mock('storage')
     ctrl = PomodoriController.new
     ctrl.storage = storage
@@ -18,4 +18,9 @@ class PomodoriControllerTest < Test::Unit::TestCase
     ctrl.create({:text => "hola"})
   end
   
+  it "should return the average daily pomo" do
+    PomodoroCountByDay.stubs(:find_all).returns(pomodoro_count_by_day_sample)
+    @pomodori_controller.daily_average.should == 1
+  end
+
 end

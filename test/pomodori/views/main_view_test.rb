@@ -37,7 +37,7 @@ class MainViewTest < Test::Unit::TestCase
   def test_switch_on_input_box
     @main_view.send(:enable_input_box)
     assert_equal(true, @main_view.summary_label.editable?)
-    assert_equal("Pomodoro description here", @main_view.summary_label.to_s)
+    assert_equal("<hit enter to add description>", @main_view.summary_label.to_s)
   end
   
   def test_switch_to_submit_mode
