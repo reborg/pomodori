@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width = 750">
     <link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css" charset="utf-8">
-    <title>extracting controllers</title>
+    <title>history table view</title>
   </head>
   <body id="intro">
     <div id="wrapper">
@@ -28,67 +28,60 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <h2 id='todays_planned_6__5'>TODAY&#8217;s PLANNED 6 =&gt; 5</h2>
+          <h2 id='session_planned_8'>SESSION PLANNED 8</h2>
 
-<h2 id='todays_done_5'>TODAY&#8217;s DONE 5</h2>
-
-<ul>
-<li>planning 1 =&gt; 1</li>
-
-<li>modularization take some time to understand how much work still to be done and fill a task list to close in 6 pomodoros 1</li>
-
-<li>modularization migrate on-pomodoro-done and on-break-done and on-app-start to the countdown-field soon to be timer-controller and update test suite for it 1 =&gt; 3</li>
-</ul>
-
-<h2 id='todays_not_done'>TODAY&#8217;s NOT DONE</h2>
+<h2 id='session_done_8'>SESSION DONE 8</h2>
 
 <ul>
-<li>modularization summary controller to control statistics display with update-summary and format-metrics 2</li>
+<li>\@planning 1 =&gt; 1</li>
 
-<li>modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 2</li>
+<li>\@pomodori \@tiny need to go through the gh-pages process once again because I lost connection with real site 1 =&gt; 0</li>
+
+<li>\@pomodori \@yestpomo spike scrollable grid-table views 2 =&gt; 2</li>
+
+<li>\@pomodori \@yestpomo history view with grid table view showing list of pomodoros 4 =&gt; 4</li>
+
+<li>\@pomospective 1</li>
 </ul>
+
+<h2 id='session_not_done'>SESSION NOT DONE</h2>
 
 <h2 id='standup'>STANDUP</h2>
 
 <ul>
-<li>I started to see the light of the refactoring but I still have an hard time figuring out how much work is to be done.</li>
+<li>Yesterday I did some UI work to compact the view and some design for the yestpomo story</li>
 
-<li>I should be done next session in another 8 pomodoros.</li>
+<li>Today I&#8217;d like to close the full yesterday&#8217;s pomo story</li>
+
+<li>Today: strictly observe breaks(!) Next email check during long break. Full stop!</li>
 </ul>
 
-<h2 id='retrospective'>RETROSPECTIVE</h2>
+<h2 id='pomospective'>POMOSPECTIVE</h2>
 
 <ul>
-<li>Planned 6, actually done 5</li>
+<li>I can do better for my 4 pomos longer breaks. Do I really really have to read the email? Should I start scheduling a working pomo for that instead? The reason is: reading emails/tweets is brain consuming.</li>
 
-<li>I split the modularization into multiple tasks and that worked. Underestimated heavily the timer controller work.</li>
+<li>I thought allocating only 8 when I see a potential of 11-12 was not enough. But I had my 2 longer breaks (12-2) plus sometimes I don&#8217;t stop right away after the 25 mins and I do another 5 (12-2-1) and I started allocating for the pomospective (12-2-1-1)</li>
 
-<li>I was fast and fairly focused</li>
+<li>So if you see a potential of 12 allocate a (-3) 9. If you see a 16 (a full day) allocate for a 12 (-4).</li>
 
-<li>A couple of internal interruptions completely avoidable. Close chat next time, let people use the phone (somehow they need more effort to call)</li>
+<li>I underestimated the lenght of the history story. So today I&#8217;m not done. The problem is that I need to spend more time than expected for things like the table view to understand how the work.</li>
+
+<li>Next time, for a full story, allocate more than the impression of what needs to be done.</li>
 </ul>
 
-<h2 id='internal_interruptions'>INTERNAL INTERRUPTIONS</h2>
-
-<ul>
-<li>Update the clean code cheat sheet while reading the last agile in a flash card. I should have deferred this to the to-do list. The error is always the same: thinking I can do something in the 5 mins break and it takes 15 mins instead. Defer, defer, defer.</li>
-
-<li>Voided again, my bad. I couldn&#8217;t resist to formulate a tweet after reading on twitter and it took ages. I should consider not opening twitters each break because potentially dangerous.</li>
-</ul>
-
-<h2 id='external_interruptions'>EXTERNAL INTERRUPTIONS</h2>
-
-<ul>
-<li>Palomino&#8217;s updates from wife, aborting. Can&#8217;t really close chat in this case.</li>
-</ul>
+<h2 id='interruptions'>INTERRUPTIONS</h2>
 
 <h2 id='raw_dump'>RAW DUMP</h2>
 <pre><code>
-  87|@planning trying to shrink refactoring to 6 pomodoros today|2009-03-19 10:20:45 -0500
-  88|@planning splitted tasks for the modularization process.|2009-03-19 11:03:02 -0500
-  89|@modularization moving timer related event handling from application to timer controller.|2009-03-19 11:50:38 -0500
-  90|@modularization going fast but much more than a single pomo to move all behavior into the timer controller.|2009-03-19 12:21:21 -0500
-  91|@modularization last pomodoro of the day. I think I did big steps but underestimated the effort. Mostly done with the new timer controller.|2009-03-19 13:08:44 -0500
+  177|\@planning|2009-04-16 07:32:31 -0500
+  178|\@pomodori \@yestpomo spiking on table view got the whole picture, understanding details.|2009-04-16 08:03:44 -0500
+  179|\@pomodori \@yestpomo learned about the complicated problem of resizeable cells in a table view|2009-04-16 08:36:33 -0500
+  180|\@pomodori \@yestpomo created history view. Was thinking about poor man line soft wrapping.|2009-04-16 09:07:22 -0500
+  181|\@pomodori \@yestpomo evaluating effort for soft-wrapping on 3 lines of text|2009-04-16 10:04:14 -0500
+  182|\@pomodori \@yestpomo written a method for softwrapping to a given lenght|2009-04-16 10:35:12 -0500
+  183|\@pomodori \@yestpomo created hashify for pomodoro|2009-04-16 11:06:00 -0500
+  184|\@pomodori \@yestpomo added the table view and the main window to the history view|2009-04-16 11:37:57 -0500
 </code></pre>
                     
           <script type="text/javascript">var disqus_url = "http://reborg.github.com/pomodori/"; var disqus_title ="";</script>

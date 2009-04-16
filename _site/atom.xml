@@ -4,13 +4,75 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-04-16T07:25:28-05:00</updated>
+ <updated>2009-04-16T12:10:50-05:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
    <email>reborg@reborg.net</email>
  </author>
 
+ 
+ <entry>
+   <title>history table view</title>
+   <link href="http://reborg.github.com/pomodori/2009/04/16/todo.html"/>
+   <updated>2009-04-16T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/04/16/todo</id>
+   <content type="html">&lt;h2 id='session_planned_8'&gt;SESSION PLANNED 8&lt;/h2&gt;
+
+&lt;h2 id='session_done_8'&gt;SESSION DONE 8&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@planning 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@tiny need to go through the gh-pages process once again because I lost connection with real site 1 =&amp;gt; 0&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@yestpomo spike scrollable grid-table views 2 =&amp;gt; 2&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@yestpomo history view with grid table view showing list of pomodoros 4 =&amp;gt; 4&lt;/li&gt;
+
+&lt;li&gt;\@pomospective 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='session_not_done'&gt;SESSION NOT DONE&lt;/h2&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Yesterday I did some UI work to compact the view and some design for the yestpomo story&lt;/li&gt;
+
+&lt;li&gt;Today I&amp;#8217;d like to close the full yesterday&amp;#8217;s pomo story&lt;/li&gt;
+
+&lt;li&gt;Today: strictly observe breaks(!) Next email check during long break. Full stop!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I can do better for my 4 pomos longer breaks. Do I really really have to read the email? Should I start scheduling a working pomo for that instead? The reason is: reading emails/tweets is brain consuming.&lt;/li&gt;
+
+&lt;li&gt;I thought allocating only 8 when I see a potential of 11-12 was not enough. But I had my 2 longer breaks (12-2) plus sometimes I don&amp;#8217;t stop right away after the 25 mins and I do another 5 (12-2-1) and I started allocating for the pomospective (12-2-1-1)&lt;/li&gt;
+
+&lt;li&gt;So if you see a potential of 12 allocate a (-3) 9. If you see a 16 (a full day) allocate for a 12 (-4).&lt;/li&gt;
+
+&lt;li&gt;I underestimated the lenght of the history story. So today I&amp;#8217;m not done. The problem is that I need to spend more time than expected for things like the table view to understand how the work.&lt;/li&gt;
+
+&lt;li&gt;Next time, for a full story, allocate more than the impression of what needs to be done.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='interruptions'&gt;INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  177|\@planning|2009-04-16 07:32:31 -0500
+  178|\@pomodori \@yestpomo spiking on table view got the whole picture, understanding details.|2009-04-16 08:03:44 -0500
+  179|\@pomodori \@yestpomo learned about the complicated problem of resizeable cells in a table view|2009-04-16 08:36:33 -0500
+  180|\@pomodori \@yestpomo created history view. Was thinking about poor man line soft wrapping.|2009-04-16 09:07:22 -0500
+  181|\@pomodori \@yestpomo evaluating effort for soft-wrapping on 3 lines of text|2009-04-16 10:04:14 -0500
+  182|\@pomodori \@yestpomo written a method for softwrapping to a given lenght|2009-04-16 10:35:12 -0500
+  183|\@pomodori \@yestpomo created hashify for pomodoro|2009-04-16 11:06:00 -0500
+  184|\@pomodori \@yestpomo added the table view and the main window to the history view|2009-04-16 11:37:57 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
  
  <entry>
    <title>making space on the main view</title>
