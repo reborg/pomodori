@@ -1,0 +1,44 @@
+---
+layout: post
+title: making space on the main view
+---
+
+SESSION PLANNED 7
+-----------------
+
+SESSION DONE 5
+--------------
+- \@planning 1
+- \@pomodori instead of the label "running" in the summary, try to change the title bar instead 1 => 2
+- \@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1 => 1
+- \@pomodori \@yestpomo spike on different kind of windows and retrieve mouse position 1 => 1
+
+SESSION NOT DONE
+----------------
+- \@pomodori \@yestpomo spike scrollable grid-table views 2
+
+STANDUP
+-------
+* I'd like to work on the pomo history to display the dump of raw pomodoros (first step) instead of opening the file by hand to copy the raw dump
+* Still not sure how to handle the new window in the UI
+
+POMOSPECTIVE
+------------
+* I did a big underestimation and I grabbed the next task
+* I was tired at the end I skipped one pomo
+* Distractions are more tempting when I'm tired. Doh.
+* I always have the feeling I've done something thanks to pomos.
+
+INTERRUPTIONS
+-------------
+- \@internal as usual, reading blogs I couldn't resist to read some more. Damn.
+
+RAW DUMP
+--------
+<pre><code>
+  172|\@planning|2009-04-15 17:08:58 -0500
+  173|\@pomodori \@yestpomo want to update the main title on running modes, but this breaks the tests!|2009-04-15 17:40:14 -0500
+  174|\@pomodori change title bar working now with new compacted layout. Had to remove the running mode call from main view init|2009-04-15 18:11:56 -0500
+  175|\@pomodori \@refactoring moved two unrelated methods from kirby to pomo controller|2009-04-15 18:42:49 -0500
+  176|\@pomodori \@yestpomo started analyizing the problem of catching mouse position|2009-04-15 19:20:54 -0500
+</code></pre>

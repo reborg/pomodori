@@ -1,0 +1,41 @@
+---
+layout: post
+title: back to charts
+---
+
+TODAY's PLANNED 4
+---------------
+
+TODAY's DONE 3
+------------
+* \@spike samr try to use it for an html file defining a syntax similar to erb. 4 => 2
+* \@spike custom solution to the html parsing problem 2 => 1
+
+TODAY's NOT DONE
+----------------
+
+STANDUP
+-------
+* Closed all refactoring operations. The architecture is now: 1 class to handle the UI for a window, multiple controllers to handle widget on that window, models if persisted state is involved.
+* Also tweaked the UI using a nice looking gradient fill.
+* Today: back to business value! I left charting when I created that mocked view to show the web-view and css-charting was a working possibility
+* I need a template mechanism with placeholders for the chart template. Radius was not parsing correctly. Placeholder by hand are good until I need looping. Samr?
+
+POMOSPECTIVE
+------------
+* I need to schedule also non-billable time, something I need to do before working on Pomodori needs to run on Pomodoro too, even though is not tracked here.
+* Few pomodoros are always good pomodoros.
+
+INTERNAL INTERRUPTIONS
+----------------------
+
+EXTERNAL INTERRUPTIONS
+----------------------
+
+RAW DUMP
+--------
+<pre><code>
+  109|\@spike trying semr. I need to remove the oniguruma dependency if I want to use it. It looks possible. Doing.|2009-03-26 17:31:06 -0500
+  110|\@spike semr: wrote to the author. I can't make it work with plain regexp. Ready to go manual html parsing.|2009-03-26 18:10:27 -0500
+  111|\@spike own solution with replacement done by just expanding HTML into the template. Working.|2009-03-26 18:43:07 -0500
+</code></pre>

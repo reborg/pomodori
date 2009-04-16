@@ -1,0 +1,45 @@
+---
+layout: post
+title: charts in progress
+---
+
+TODAY's PLANNED 7
+-----------------
+
+TODAY's DONE 6
+------------
+- \@template a component that reads an html and replaces placeholder with actual data 6 => 6 (but not finished)
+
+TODAY's NOT DONE
+----------------
+- \@template a component that reads an html and replaces placeholder with actual data 6 => 6 (not done)
+- \@charts @layout move back to absolute positioning 1
+
+STANDUP
+-------
+* Yesterday I did some working on the HTML template prototype and decided that a simple text expansion is all I need
+* Today I'm going to create that component that handle all the html creation from the template to the temp file with real data substitution
+
+POMOSPECTIVE
+------------
+* Fairly good estimates
+* Was not able to split the task into subtasks. There are 3 subtasks to this "component". A design pomodoro maybe would do the trick.
+
+INTERNAL INTERRUPTIONS
+----------------------
+* Several micro-internal-interruptions mainly due to my breaks reading mail and tweets and following up to them on the go. Got to stop this.
+
+EXTERNAL INTERRUPTIONS
+----------------------
+* I had an abort session before I closed the last pomodoro
+
+RAW DUMP
+--------
+<pre><code>
+  112|\@charts writing the chart model that loads template and makes substitutions|2009-03-27 07:47:55 -0500
+  113|\@charts creating logic to replace a ERB like tag from a line of text|2009-03-27 08:18:38 -0500
+  114|\@charts going strategies from the main chart class to create different types of charts. The summary is the default, by day is the second.|2009-03-27 08:51:21 -0500
+  115|\@charts done with the template processing, only need to call pomodorocountbyday|2009-03-27 09:23:52 -0500
+  116|\@charts implementing the pomodoro by count class. Creating the test pomodoros.|2009-03-27 10:20:11 -0500
+  117|\@charts almost done with the pomo count abstraction. Need to create attr accessors.|2009-03-27 10:51:31 -0500
+</code></pre>

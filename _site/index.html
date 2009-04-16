@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width = 750">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" charset="utf-8">
-    <title>Welcome to Pomodori</title>
+    <title>Welcome to Pomodori!</title>
   </head>
   <body id="intro">
     <div id="wrapper">
@@ -28,11 +28,23 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <p>Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a>. Pomodori has a timer and lets you store pomodoro descriptions. Pomodori manages pomodoros with just a single click and no need for you to set or start a timer. Pomodori shows metrics to help you plan future activities. For more information about pomodoros please read the <a href='http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf'>original PDF paper</a> and keep in touch with the <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
+          <p>Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a>. Pomodori measures the pomodoro time and stores pomodoro descriptions with only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
 
-<h2 id='version_01_features'>VERSION 0.1 FEATURES</h2>
+<h2 id='features'>FEATURES</h2>
 
-<p>The project is young but features are added fast. As of today (Version 0.1):</p>
+<p>The project is young but features are added fast. Do you want to suggest a feature? Please enter here: <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>LightHouse</a></p>
+
+<p>Release 0.2</p>
+
+<ul>
+<li>Added &#8220;Pomodoro Summary by Day&#8221; chart that shows the count of pomodoros by day in a bar chart</li>
+
+<li>Better looking UI</li>
+
+<li>Improved stability</li>
+</ul>
+
+<p>Release 0.1</p>
 
 <ul>
 <li>Pomodori automatically starts a 25 mins countdown when launched</li>
@@ -52,30 +64,28 @@
 <li>A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break</li>
 </ul>
 
-<p>Want to suggest a new feature? Use <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>LightHouse</a></p>
-
 <h2 id='screenshots'>SCREENSHOTS</h2>
 
-<p>A running Pomodoro:</p>
+<p>Running Pomodoro:</p>
 
 <p><img src='resources/pomodoro-run.png' alt='Pomodoro Running' /></p>
 
-<p>A &#8220;Done&#8221; Pomodoro. After ringing, Pomodori is ready to accept a description of what you did. Or empty if you prefer.</p>
+<p>Done Pomodoro:</p>
 
 <p><img src='resources/pomodoro-done.png' alt='Pomodoro Done' /></p>
 
-<p>A &#8220;Break&#8221;. Relax! Now!</p>
+<p>Pomodoros Count by Day Chart:</p>
 
-<p><img src='resources/pomodoro-break.png' alt='Pomodoro Break' /></p>
+<p><img src='resources/chart-pom-count.png' alt='Pomodoro Count' /></p>
 
 <h2 id='coming_soon'>COMING SOON</h2>
 
 <ul>
-<li>After 4 pomodoros Pomodori will kindly remember you that is time for a longer break</li>
-
 <li>Tag management to tag pomodoros belonging to a certain category</li>
 
-<li>Charts and advanced statistics based on pomodoro history</li>
+<li>More advanced charts such as pomodoros worked by tag</li>
+
+<li>After 4 pomodoros Pomodori will kindly remember you that is time for a longer break</li>
 
 <li>Timer visible in the menubar</li>
 
@@ -85,37 +95,35 @@
 <h2 id='requirements'>REQUIREMENTS</h2>
 
 <ul>
-<li>MacRuby 0.3 (MacRuby 0.4 arriving soon)</li>
+<li>MacRuby 0.4 (is really easy to install while waiting for the official Apple inclusion into Mac Os X)</li>
 
-<li>Download the <a href='http://www.macruby.org/files/MacRuby%200.3.zip'>MacRuby binaries</a></li>
+<li>Download MacRuby binaries from <a href='http://www.macruby.org/files/MacRuby%200.4.zip'>MacRuby binaries</a></li>
 
 <li>Unzip and double click on the installer and follow the instructions</li>
-
-<li>If you have MacRuby 0.4 trunk installed, please rename /Library/Frameworks/MacRuby.framework before installing 0.3</li>
 </ul>
 
 <h2 id='install'>INSTALL</h2>
 
 <ul>
-<li>Download the <a href='http://reborg.github.com/pomodori/resources/pomodori-0.1.zip'>pomodori-0.1.zip archive</a></li>
+<li>Download the <a href='http://reborg.github.com/pomodori/resources/pomodori-0.2.zip'>pomodori-0.2.zip archive</a></li>
 
 <li>Unzip and copy to pomodori.app to /Applications</li>
 
 <li>Please report installation issues at <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets'>LightHouse</a></li>
 </ul>
 
-<h2 id='build'>BUILD</h2>
+<h2 id='developing'>DEVELOPING</h2>
 
-<p>If you need to build the application from scratch, gitclone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. Then:</p>
+<p>Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. Then:</p>
 
 <ul>
 <li>cd pomodori</li>
 
 <li>Optional but recommended: run the test suite with &#8216;macrake&#8217;</li>
 
-<li>&#8216;macrake clean&#8217;</li>
+<li>&#8216;macrake run&#8217; from the root directory to generate the app and run it</li>
 
-<li>&#8216;macrake build&#8217; from the root directory to generate the app</li>
+<li>&#8217;./script/console&#8217; to load an interactive console with pre-loaded HotCocoa and Pomodori classes</li>
 </ul>
 
 <h2 id='links'>LINKS</h2>
@@ -144,23 +152,45 @@
         </div>
         <div id="sidebar">
           <div class="item">
-            <!-- Tickets   -->
-            <h4><a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a></h4>
-            <p>
-              Found a bug?<br />
-              Request a feature?
-            </p>
+            <h5><a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a></h5>
+            <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub</a></h5>
+            <h5><a href="http://blog.reborg.net/">Reblog</a></h5>
           </div>
           <div class="item">
-            <!-- Blog   -->
-            <h4><a href="atom.xml" id="rss_feed" name="rss_feed">Blog Posts</a></h4>
+            <h4>Blog Posts [<a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a>]</h4>
             <p>
+               
+                <span>15 Apr 2009</span> » <a href="/pomodori/2009/04/15/todo.html">making space on the main view</a><br>
+               
+                <span>14 Apr 2009</span> » <a href="/pomodori/2009/04/14/todo.html">average pomodoros and specs</a><br>
+               
+                <span>06 Apr 2009</span> » <a href="/pomodori/2009/04/06/todo.html">chirb talk</a><br>
+               
+                <span>04 Apr 2009</span> » <a href="/pomodori/2009/04/04/ann-0.2.html">Announcing 0.2 release</a><br>
+               
+                <span>03 Apr 2009</span> » <a href="/pomodori/2009/04/03/todo.html">clean-up charts for 0.2</a><br>
+               
+                <span>31 Mar 2009</span> » <a href="/pomodori/2009/03/31/todo.html">summary chart</a><br>
+               
+                <span>29 Mar 2009</span> » <a href="/pomodori/2009/03/29/todo.html">template processing</a><br>
+               
+                <span>27 Mar 2009</span> » <a href="/pomodori/2009/03/27/todo.html">charts in progress</a><br>
+               
+                <span>26 Mar 2009</span> » <a href="/pomodori/2009/03/26/todo.html">back to charts</a><br>
+               
+                <span>24 Mar 2009</span> » <a href="/pomodori/2009/03/24/todo.html">extracting controllers</a><br>
+               
+                <span>23 Mar 2009</span> » <a href="/pomodori/2009/03/23/todo.html">closing huge refactoring (hopefully)</a><br>
+               
+                <span>20 Mar 2009</span> » <a href="/pomodori/2009/03/20/todo.html">controllers refactoring</a><br>
+               
+                <span>19 Mar 2009</span> » <a href="/pomodori/2009/03/19/todo.html">extracting controllers</a><br>
+               
+                <span>17 Mar 2009</span> » <a href="/pomodori/2009/03/17/todo.html">main view work in progress</a><br>
                
                 <span>16 Mar 2009</span> » <a href="/pomodori/2009/03/16/todo.html">some refactoring</a><br>
                
                 <span>13 Mar 2009</span> » <a href="/pomodori/2009/03/13/charts.html">work on charts started</a><br>
-               
-                <span>21 Feb 2009</span> » <a href="/pomodori/2009/02/21/first-post.html">Welcome to 'Pomodori'</a><br>
               
             </p>
           </div>

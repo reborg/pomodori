@@ -1,0 +1,58 @@
+---
+layout: post
+title: summary chart
+---
+
+TODAY's PLANNED 5
+---------------
+
+TODAY's DONE 6
+------------
+* \@planning planned the plan 1 => 1
+* \@charts need to tweak the HTML produced 1 => 3
+* \@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2 => 1
+* \@build commit, test, build automation just a bit 1 => 1
+
+
+TODAY's NOT DONE
+----------------
+* \@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2 => 1 (Missing: reload button should reload and open report from the main view should always work)
+* \@marketing \@website better screenshot for the website, release 0.2 1
+
+STANDUP
+-------
+* Was almost done with chart processing last session
+* Today closing summary chart basics and probably there will be some tweaking next days
+
+POMOSPECTIVE
+------------
+* Couldn't break very well today, feel the pressure of the incoming presentations and the fact that I don't know how much time I have available per day these days
+
+INTERNAL INTERRUPTIONS
+----------------------
+
+EXTERNAL INTERRUPTIONS
+----------------------
+
+RAW DUMP
+--------
+<pre><code>
+  122
+\@planning
+2009-03-31 14:34:18 -0500
+  123
+\@charts implemented process method for template but test failing.
+2009-03-31 15:05:28 -0500
+  124
+\@charts I was missing the template in the right place and the main view now needs to start the chart view using the controller
+2009-03-31 15:36:31 -0500
+  125
+\@charts having troubles with the html. CSS seems to be gone.
+2009-03-31 16:07:59 -0500
+  126
+\@charts found the bug right at the end. The css file was not in the tmp directory
+2009-03-31 16:41:04 -0500
+  127
+\@charts fixed UI and main commit. Several other details remain, reload button and reopening view.
+2009-03-31 17:13:20 -0500
+</code></pre>

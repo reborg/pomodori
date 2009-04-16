@@ -4,7 +4,7 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-03-16T15:05:33-05:00</updated>
+ <updated>2009-04-15T19:32:05-05:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
@@ -13,29 +13,881 @@
 
  
  <entry>
+   <title>making space on the main view</title>
+   <link href="http://reborg.github.com/pomodori/2009/04/15/todo.html"/>
+   <updated>2009-04-15T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/04/15/todo</id>
+   <content type="html">&lt;h2 id='session_planned_7'&gt;SESSION PLANNED 7&lt;/h2&gt;
+
+&lt;h2 id='session_done_5'&gt;SESSION DONE 5&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@planning 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori instead of the label &amp;#8220;running&amp;#8221; in the summary, try to change the title bar instead 1 =&amp;gt; 2&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@yestpomo spike on different kind of windows and retrieve mouse position 1 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='session_not_done'&gt;SESSION NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@pomodori \@yestpomo spike scrollable grid-table views 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I&amp;#8217;d like to work on the pomo history to display the dump of raw pomodoros (first step) instead of opening the file by hand to copy the raw dump&lt;/li&gt;
+
+&lt;li&gt;Still not sure how to handle the new window in the UI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I did a big underestimation and I grabbed the next task&lt;/li&gt;
+
+&lt;li&gt;I was tired at the end I skipped one pomo&lt;/li&gt;
+
+&lt;li&gt;Distractions are more tempting when I&amp;#8217;m tired. Doh.&lt;/li&gt;
+
+&lt;li&gt;I always have the feeling I&amp;#8217;ve done something thanks to pomos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='interruptions'&gt;INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@internal as usual, reading blogs I couldn&amp;#8217;t resist to read some more. Damn.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  172|\@planning|2009-04-15 17:08:58 -0500
+  173|\@pomodori \@yestpomo want to update the main title on running modes, but this breaks the tests!|2009-04-15 17:40:14 -0500
+  174|\@pomodori change title bar working now with new compacted layout. Had to remove the running mode call from main view init|2009-04-15 18:11:56 -0500
+  175|\@pomodori \@refactoring moved two unrelated methods from kirby to pomo controller|2009-04-15 18:42:49 -0500
+  176|\@pomodori \@yestpomo started analyizing the problem of catching mouse position|2009-04-15 19:20:54 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>average pomodoros and specs</title>
+   <link href="http://reborg.github.com/pomodori/2009/04/14/todo.html"/>
+   <updated>2009-04-14T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/04/14/todo</id>
+   <content type="html">&lt;h2 id='session_planned_7'&gt;SESSION PLANNED 7&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@pomodoro \@history instead of the label &amp;#8220;running&amp;#8221; in the summary, try to change the title bar instead 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='session_done_5'&gt;SESSION DONE 5&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@pomodori \@planning 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@setup Matchy http://github.com/jeremymcanally/matchy is another rspec like syntax for test::unit 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@setup I&amp;#8217;d like to use this microspec.rb 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@pomodori \@metrics add average pomodoros per day in the summary 2 =&amp;gt; 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='session_not_done'&gt;SESSION NOT DONE&lt;/h2&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Last session I was able to close release 0.2&lt;/li&gt;
+
+&lt;li&gt;Today I need to finish ChiRb slides for tonight&amp;#8217;s talk&lt;/li&gt;
+
+&lt;li&gt;Planning on a 2 pomodoros presentation&lt;/li&gt;
+
+&lt;li&gt;I&amp;#8217;ll leave the last part for the train tonight&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Short breaks, I felt the pressure of closing the slides with the time available&lt;/li&gt;
+
+&lt;li&gt;Too bad, but I got the slides done&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='interruptions'&gt;INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@external starbucks full of smoke and noisy, had to move to caribou&lt;/li&gt;
+
+&lt;li&gt;\@internal lost replying tweets, sigh. Voided, lost 5 mins and relaxing during the break! Damn all the free wifi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  167|\@planning|2009-04-14 17:05:55 -0500
+  168|\@pomodori \@setup installed matchy and moved mocha into vendor folder|2009-04-14 17:56:52 -0500
+  169|\@pomodori \@setup installed microspec ready to use it. Describe blocks doesn't work though.|2009-04-14 18:33:39 -0500
+  170|\@pomodori \@metrics adding average on pomodoro controller|2009-04-14 19:04:04 -0500
+  171|\@pomodori \@metrics done, daily average integrated|2009-04-14 19:35:46 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>chirb talk</title>
+   <link href="http://reborg.github.com/pomodori/2009/04/06/todo.html"/>
+   <updated>2009-04-06T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/04/06/todo</id>
+   <content type="html">&lt;p&gt;This is both an announce and the planning for today. The announce is that tonight I&amp;#8217;m gonna talk about Pomodori and HotCocoa development at the Chicago Ruby User Group @ ThoughtWorks. Kind of late announce here on the Pomodori&amp;#8217;s blog, but anyway, step by if you have a chance, show permitting.&lt;/p&gt;
+
+&lt;h2 id='session_planned_8'&gt;SESSION PLANNED 8&lt;/h2&gt;
+
+&lt;h2 id='session_done_7'&gt;SESSION DONE 7&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@chirb presentation part 1, macruby, hotcocoa, pomo intro 2 =&amp;gt; 2&lt;/li&gt;
+
+&lt;li&gt;\@chirb presentation part 2, pomodori app, testing challenge, architecture 4 =&amp;gt; 4&lt;/li&gt;
+
+&lt;li&gt;\@chirb presentation part 2, conclusions, pros, cons, links 2 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='session_not_done'&gt;SESSION NOT DONE&lt;/h2&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Last session I was able to close release 0.2&lt;/li&gt;
+
+&lt;li&gt;Today I need to finish ChiRb slides for tonight&amp;#8217;s talk&lt;/li&gt;
+
+&lt;li&gt;Planning on a 2 pomodoros presentation&lt;/li&gt;
+
+&lt;li&gt;I&amp;#8217;ll leave the last part for the train tonight&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Short breaks, I felt the pressure of closing the slides with the time available&lt;/li&gt;
+
+&lt;li&gt;Too bad, but I got the slides done&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  145|\@chirb adding code examples on macruby and hotcocoa part|2009-04-06 08:01:30 -0500
+  146|\@chirb should be done with macruby hotcocoa and PT intro presentation first part (1 pomo talk time)|2009-04-06 08:33:57 -0500
+  147|\@chirb created first Pomodori TDD slides|2009-04-06 09:04:19 -0500
+  148|\@chirb drawing architecture slide|2009-04-06 09:36:23 -0500
+  149|\@chirb done with main architectural slides|2009-04-06 10:07:18 -0500
+  150|\@chirb writing conclusions to close|2009-04-06 10:40:02 -0500
+  151|\@chirb done|2009-04-06 11:10:14 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Announcing 0.2 release</title>
+   <link href="http://reborg.github.com/pomodori/2009/04/04/ann-0.2.html"/>
+   <updated>2009-04-04T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/04/04/ann-0.2</id>
+   <content type="html">&lt;h1 id='pomodori_02_is_out'&gt;Pomodori 0.2 is out!&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src='../../../resources/chart-pom-count.png' alt='Pomodoro Count' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pomodori now draws charts! The first simple chart has been introduced with this release. The bar chart shows how many pomodoros you worked by day. This metric can be used to see the fluctuation of your productivity over time and why there are good and bad days. This is just the first of a series of chart I&amp;#8217;d like to introduce to improve your Pomodoro Technique.&lt;/p&gt;
+
+&lt;p&gt;As far as I learn to be a better Cocoa programmer, I tweak the UI to be more usable and better looking. I added the pomodoro icon and a gradient to the interface. More substantial UI improvement to come in the future.&lt;/p&gt;
+
+&lt;p&gt;A less evident change was done with a huge refactoring to the core classes of Pomodori. There is now an architectural view that I like. As part of the refactoring there is less code which is more simple with more functionalities. The bloated application.rb class has gone and now the view only contains view logic. Multiple controllers have been created to handle all the workflow logic and comunication with the model. Happy.&lt;/p&gt;
+
+&lt;p&gt;For the next 0.3 release I&amp;#8217;d like to have all the tag based features working, including a chart by tags of pomodoros. Feel free to help me improving Pomodori!&lt;/p&gt;
+
+&lt;p&gt;See ya.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>clean-up charts for 0.2</title>
+   <link href="http://reborg.github.com/pomodori/2009/04/03/todo.html"/>
+   <updated>2009-04-03T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/04/03/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
+
+&lt;h2 id='todays_done_7'&gt;TODAY&amp;#8217;s DONE 7&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@planning 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2 =&amp;gt; 2 (Missing: reload button should reload and open report from the main view should always work)&lt;/li&gt;
+
+&lt;li&gt;\@marketing \@website better screenshot for the website, blog post about 0.2, update documentation release 0.2 1 =&amp;gt; 2&lt;/li&gt;
+
+&lt;li&gt;\@chirb presentation part one, macruby, hotcocoa intro 2 =&amp;gt; 3 (TBD)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@chirb presentation part one, macruby, hotcocoa intro 2 =&amp;gt; 3 (TBD)&lt;/li&gt;
+
+&lt;li&gt;\@chirb presentation part two, pomodoro technique intro 1&lt;/li&gt;
+
+&lt;li&gt;\@chirb presentation part three, pomodori app, testing challenge, architecture 2&lt;/li&gt;
+
+&lt;li&gt;\@chirb presentation part four, conclusions, pros, cons, links 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;today should be able to close release 0.2 with the simple chart working properly.&lt;/li&gt;
+
+&lt;li&gt;There is a fix to be done in the way the chart is loaded everytime&lt;/li&gt;
+
+&lt;li&gt;The reload button is not working now&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I thought I could close the day later, I had to close it before the exp. time&lt;/li&gt;
+
+&lt;li&gt;So estimates are right.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I found interesting examples of MacRuby apps, I couldn&amp;#8217;t resist to have a look.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  137|\@planning|2009-04-03 14:30:20 -0500
+  138|\@charts fixed the button behaviors for reload and reopen|2009-04-03 15:01:04 -0500
+  139|\@marketing preparing for release 0.2|2009-04-03 15:38:57 -0500
+  140|\@marketing re-done screenshots, update blog and home page created zipped app|2009-04-03 16:05:07 -0500
+  141|\@chirb created git repo starting writing slides.|2009-04-03 16:35:30 -0500
+  142|\@chirb wasted some time for a nice looking ruby image|2009-04-03 17:18:51 -0500
+  143|\@chirb wrote first introductory slides|2009-04-03 17:44:30 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>summary chart</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/31/todo.html"/>
+   <updated>2009-03-31T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/31/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_5'&gt;TODAY&amp;#8217;s PLANNED 5&lt;/h2&gt;
+
+&lt;h2 id='todays_done_6'&gt;TODAY&amp;#8217;s DONE 6&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@planning planned the plan 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@charts need to tweak the HTML produced 1 =&amp;gt; 3&lt;/li&gt;
+
+&lt;li&gt;\@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@build commit, test, build automation just a bit 1 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2 =&amp;gt; 1 (Missing: reload button should reload and open report from the main view should always work)&lt;/li&gt;
+
+&lt;li&gt;\@marketing \@website better screenshot for the website, release 0.2 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Was almost done with chart processing last session&lt;/li&gt;
+
+&lt;li&gt;Today closing summary chart basics and probably there will be some tweaking next days&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Couldn&amp;#8217;t break very well today, feel the pressure of the incoming presentations and the fact that I don&amp;#8217;t know how much time I have available per day these days&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  122
+\@planning
+2009-03-31 14:34:18 -0500
+  123
+\@charts implemented process method for template but test failing.
+2009-03-31 15:05:28 -0500
+  124
+\@charts I was missing the template in the right place and the main view now needs to start the chart view using the controller
+2009-03-31 15:36:31 -0500
+  125
+\@charts having troubles with the html. CSS seems to be gone.
+2009-03-31 16:07:59 -0500
+  126
+\@charts found the bug right at the end. The css file was not in the tmp directory
+2009-03-31 16:41:04 -0500
+  127
+\@charts fixed UI and main commit. Several other details remain, reload button and reopening view.
+2009-03-31 17:13:20 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>template processing</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/29/todo.html"/>
+   <updated>2009-03-29T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/29/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_6'&gt;TODAY&amp;#8217;s PLANNED 6&lt;/h2&gt;
+
+&lt;h2 id='todays_done_4'&gt;TODAY&amp;#8217;s DONE 4&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@charts chart model to complete with actual processing of template 1 =&amp;gt; 1 (not finished yet)&lt;/li&gt;
+
+&lt;li&gt;\@charts Need to finish the pomodoro by count model by returning a collection of pomodoro-by-count models 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;\@charts Need to add attributes to pomodoro-by-count model to hold relevant data 1 =&amp;gt; 0&lt;/li&gt;
+
+&lt;li&gt;\@charts Need to change chart-view to use new chart controller to create URL 1 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@charts chart model to complete with actual processing of template 1 =&amp;gt; 1 (not finished yet)&lt;/li&gt;
+
+&lt;li&gt;\@marketing @website better screenshot for the website, formatting of raw dump section in the blog 1&lt;/li&gt;
+
+&lt;li&gt;\@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Panera session, noisy but doable.&lt;/li&gt;
+
+&lt;li&gt;Should be able to close charting today, only details are missing but the design is down&lt;/li&gt;
+
+&lt;li&gt;I envisioned a collaboration between the view asking to open an URL which is generated by a chart component.&lt;/li&gt;
+
+&lt;li&gt;The chart component uses an aggregated pomodoro count by day model object&lt;/li&gt;
+
+&lt;li&gt;I need a chart controller I don&amp;#8217;t want the view to know anything about URL generation logic. Just a plain call.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I just assumed I had 6 pomodoros available but those were really only 5&lt;/li&gt;
+
+&lt;li&gt;Worked very well on breaks, I looked out the window, that&amp;#8217;s it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt; 
+  119
+\@charts done with the chart controller to upload the view with a new url when called
+2009-03-29 10:38:43 -0500
+  120
+\@charts changed the chart view to initialize the page on rendering which is done by the controller
+2009-03-29 11:09:37 -0500
+  121
+\@charts creating html for the summary to complete the chart model
+2009-03-29 11:42:13 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>charts in progress</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/27/todo.html"/>
+   <updated>2009-03-27T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/27/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_7'&gt;TODAY&amp;#8217;s PLANNED 7&lt;/h2&gt;
+
+&lt;h2 id='todays_done_6'&gt;TODAY&amp;#8217;s DONE 6&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@template a component that reads an html and replaces placeholder with actual data 6 =&amp;gt; 6 (but not finished)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@template a component that reads an html and replaces placeholder with actual data 6 =&amp;gt; 6 (not done)&lt;/li&gt;
+
+&lt;li&gt;\@charts @layout move back to absolute positioning 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Yesterday I did some working on the HTML template prototype and decided that a simple text expansion is all I need&lt;/li&gt;
+
+&lt;li&gt;Today I&amp;#8217;m going to create that component that handle all the html creation from the template to the temp file with real data substitution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fairly good estimates&lt;/li&gt;
+
+&lt;li&gt;Was not able to split the task into subtasks. There are 3 subtasks to this &amp;#8220;component&amp;#8221;. A design pomodoro maybe would do the trick.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Several micro-internal-interruptions mainly due to my breaks reading mail and tweets and following up to them on the go. Got to stop this.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I had an abort session before I closed the last pomodoro&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  112|\@charts writing the chart model that loads template and makes substitutions|2009-03-27 07:47:55 -0500
+  113|\@charts creating logic to replace a ERB like tag from a line of text|2009-03-27 08:18:38 -0500
+  114|\@charts going strategies from the main chart class to create different types of charts. The summary is the default, by day is the second.|2009-03-27 08:51:21 -0500
+  115|\@charts done with the template processing, only need to call pomodorocountbyday|2009-03-27 09:23:52 -0500
+  116|\@charts implementing the pomodoro by count class. Creating the test pomodoros.|2009-03-27 10:20:11 -0500
+  117|\@charts almost done with the pomo count abstraction. Need to create attr accessors.|2009-03-27 10:51:31 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>back to charts</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/26/todo.html"/>
+   <updated>2009-03-26T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/26/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_4'&gt;TODAY&amp;#8217;s PLANNED 4&lt;/h2&gt;
+
+&lt;h2 id='todays_done_3'&gt;TODAY&amp;#8217;s DONE 3&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;\@spike samr try to use it for an html file defining a syntax similar to erb. 4 =&amp;gt; 2&lt;/li&gt;
+
+&lt;li&gt;\@spike custom solution to the html parsing problem 2 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Closed all refactoring operations. The architecture is now: 1 class to handle the UI for a window, multiple controllers to handle widget on that window, models if persisted state is involved.&lt;/li&gt;
+
+&lt;li&gt;Also tweaked the UI using a nice looking gradient fill.&lt;/li&gt;
+
+&lt;li&gt;Today: back to business value! I left charting when I created that mocked view to show the web-view and css-charting was a working possibility&lt;/li&gt;
+
+&lt;li&gt;I need a template mechanism with placeholders for the chart template. Radius was not parsing correctly. Placeholder by hand are good until I need looping. Samr?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I need to schedule also non-billable time, something I need to do before working on Pomodori needs to run on Pomodoro too, even though is not tracked here.&lt;/li&gt;
+
+&lt;li&gt;Few pomodoros are always good pomodoros.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  109|\@spike trying semr. I need to remove the oniguruma dependency if I want to use it. It looks possible. Doing.|2009-03-26 17:31:06 -0500
+  110|\@spike semr: wrote to the author. I can't make it work with plain regexp. Ready to go manual html parsing.|2009-03-26 18:10:27 -0500
+  111|\@spike own solution with replacement done by just expanding HTML into the template. Working.|2009-03-26 18:43:07 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>extracting controllers</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/24/todo.html"/>
+   <updated>2009-03-24T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/24/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
+
+&lt;h2 id='todays_done'&gt;TODAY&amp;#8217;s DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modularization manual acceptance UI plus fixing button actions plus add test coverage 4 =&amp;gt; 4&lt;/li&gt;
+
+&lt;li&gt;modularization move models to models and controllers to controllers plus renaming 2 =&amp;gt; 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Charts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I was able to close with the main refactoring operations like extracting controllers and fix the test suite&lt;/li&gt;
+
+&lt;li&gt;I started manual acceptance of the new GUI and there are button actions to fix&lt;/li&gt;
+
+&lt;li&gt;Today: keep going with the manual acceptance until everything works and create test to cover the fix, commit a working app.&lt;/li&gt;
+
+&lt;li&gt;Final refactoring: rename countdown field, move pomodoro to models, delete useless old wrapper UI classes and commit again&lt;/li&gt;
+
+&lt;li&gt;Everything should be ready for the next session to start working again on charts.&lt;/li&gt;
+
+&lt;li&gt;Be careful with breaks and longer breaks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Had session abort 2 hours before expected. Nothing I can do about it right now.&lt;/li&gt;
+
+&lt;li&gt;I was good with estimates to close the refactoring&lt;/li&gt;
+
+&lt;li&gt;I was strict with 5 mins break: did nothing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Several quick IM message exchange&lt;/li&gt;
+
+&lt;li&gt;Abort session&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  103
+  |@modularization fixed void click with a sender argument, now fixing submit click and writing tests
+  |2009-03-24 08:03:15 -0500
+  104
+  |@modularization realized I was not saving the pomo on submit fixed
+  |2009-03-24 08:35:10 -0500
+  105
+  |@modularization cosmetic changes to summary position plus tried borderless
+  |2009-03-24 09:06:44 -0500
+  106
+  |@modularization committed, plus some other small fixes like removing the application class that was almost useless
+  |2009-03-24 09:38:46 -0500
+  107
+  |@modularization renamed and moved the countdown field into timer controller
+  |2009-03-24 11:20:35:43 -0500
+  108
+  |@modularization moved controllers and models to specific folders, fixed slow tests by mocking main view
+  |2009-03-24 11:58:18:26 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>closing huge refactoring (hopefully)</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/23/todo.html"/>
+   <updated>2009-03-23T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/23/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_6'&gt;TODAY&amp;#8217;s PLANNED 6&lt;/h2&gt;
+
+&lt;h2 id='todays_done_6'&gt;TODAY&amp;#8217;s DONE 6&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 4 =&amp;gt; 5&lt;/li&gt;
+
+&lt;li&gt;modularization summary controller to control statistics display with update-summary and format-metrics 2 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I was taking a convolute path when I saw a state machine in the modal button controller. That&amp;#8217;s BDUF and not the simplest thing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='pomospective'&gt;POMOSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Forced to abort current pomodoro and session for external problems.&lt;/li&gt;
+
+&lt;li&gt;Forcing brain relaxing activities during the break. No more mails/rss, plus standup from chair.&lt;/li&gt;
+
+&lt;li&gt;Going easy on long break to avoid brain draining.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  97|@modalcontroller creating necessary action behavior when pressing the button with different states|2009-03-23 16:55:58 -0500
+  98|@modalcontroller I think I'm done with the controller, now need to install it into the main view.|2009-03-23 17:26:26 -0500
+  99|@modalcontroller going through all the failing tests and organizing the test suite after the new test classes were added|2009-03-23 17:57:18 -0500
+  100|@modalcontroller wasted some time for a stupid error (action instead of on-action)|2009-03-23 18:29:28 -0500
+  101|@modalcontroller I fixed all tests, now I want to try a run before the refactoring that changes names and move models/controllers|2009-03-23 19:01:14 -0500
+  102|@modularization it's almost working as before. I should be able to make it work 100% with just a couple of tweaks|2009-03-23 19:32:25 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>controllers refactoring</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/20/todo.html"/>
+   <updated>2009-03-20T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/20/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
+
+&lt;h2 id='todays_done_5'&gt;TODAY&amp;#8217;s DONE 5&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;planning 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;modularization migrate on-pomodoro-done and on-break-done and on-app-start to the countdown-field soon to be timer-controller and update test suite for it 4 =&amp;gt; 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modularization summary controller to control statistics display with update-summary and format-metrics 2&lt;/li&gt;
+
+&lt;li&gt;modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I was able to split the refactoring operations into multiple tasks and that worked out very well.&lt;/li&gt;
+
+&lt;li&gt;I moved 90% of the timer logic out of application.rb into the timer-controller&lt;/li&gt;
+
+&lt;li&gt;I had to move also the enabling/disabling logic out of the text field class&lt;/li&gt;
+
+&lt;li&gt;I still need to extract the on-break-down method&lt;/li&gt;
+
+&lt;li&gt;Today I&amp;#8217;ll try to close the timer controller (the renaming is basically the final action)&lt;/li&gt;
+
+&lt;li&gt;Then I want to extract the other logics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='retrospective'&gt;RETROSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I was slower because I mixed two different tasks: extracting timer controller logic and creating a main view in parallel. I should have extracted the controller logic from application.rb leaving all the rest and then extracting or renaming application.rb to mainview. Remember next time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Session aborted to go home fix Palomino&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  92|@planning planned the day|2009-03-20 13:08:15 -0500
+  93|@timercontroller created on break done logic|2009-03-20 13:38:49 -0500
+  94|@modularization done with the timer controller logic. Now back to main view and application to integrate the work done with the goal of commit ASAP|2009-03-20 14:09:28 -0500
+  95|@modalcontroller started implementing onclicks and title for modal button in related controller.|2009-03-20 14:40:38 -0500
+  96|@modalcontroller created the modal controller and thinking that shoul only contain a state machine|2009-03-20 15:11:40 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>extracting controllers</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/19/todo.html"/>
+   <updated>2009-03-19T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/19/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_6__5'&gt;TODAY&amp;#8217;s PLANNED 6 =&amp;gt; 5&lt;/h2&gt;
+
+&lt;h2 id='todays_done_5'&gt;TODAY&amp;#8217;s DONE 5&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;planning 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;modularization take some time to understand how much work still to be done and fill a task list to close in 6 pomodoros 1&lt;/li&gt;
+
+&lt;li&gt;modularization migrate on-pomodoro-done and on-break-done and on-app-start to the countdown-field soon to be timer-controller and update test suite for it 1 =&amp;gt; 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modularization summary controller to control statistics display with update-summary and format-metrics 2&lt;/li&gt;
+
+&lt;li&gt;modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I started to see the light of the refactoring but I still have an hard time figuring out how much work is to be done.&lt;/li&gt;
+
+&lt;li&gt;I should be done next session in another 8 pomodoros.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='retrospective'&gt;RETROSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Planned 6, actually done 5&lt;/li&gt;
+
+&lt;li&gt;I split the modularization into multiple tasks and that worked. Underestimated heavily the timer controller work.&lt;/li&gt;
+
+&lt;li&gt;I was fast and fairly focused&lt;/li&gt;
+
+&lt;li&gt;A couple of internal interruptions completely avoidable. Close chat next time, let people use the phone (somehow they need more effort to call)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Update the clean code cheat sheet while reading the last agile in a flash card. I should have deferred this to the to-do list. The error is always the same: thinking I can do something in the 5 mins break and it takes 15 mins instead. Defer, defer, defer.&lt;/li&gt;
+
+&lt;li&gt;Voided again, my bad. I couldn&amp;#8217;t resist to formulate a tweet after reading on twitter and it took ages. I should consider not opening twitters each break because potentially dangerous.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Palomino&amp;#8217;s updates from wife, aborting. Can&amp;#8217;t really close chat in this case.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  87|@planning trying to shrink refactoring to 6 pomodoros today|2009-03-19 10:20:45 -0500
+  88|@planning splitted tasks for the modularization process.|2009-03-19 11:03:02 -0500
+  89|@modularization moving timer related event handling from application to timer controller.|2009-03-19 11:50:38 -0500
+  90|@modularization going fast but much more than a single pomo to move all behavior into the timer controller.|2009-03-19 12:21:21 -0500
+  91|@modularization last pomodoro of the day. I think I did big steps but underestimated the effort. Mostly done with the new timer controller.|2009-03-19 13:08:44 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>main view work in progress</title>
+   <link href="http://reborg.github.com/pomodori/2009/03/17/todo.html"/>
+   <updated>2009-03-17T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/03/17/todo</id>
+   <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
+
+&lt;h2 id='todays_done_7'&gt;TODAY&amp;#8217;s DONE 7&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;planning 1 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;add gh-pages as submodule of master 2 =&amp;gt; 1&lt;/li&gt;
+
+&lt;li&gt;modularization: replace actual application.rb UI with mainview object 2 =&amp;gt; 3&lt;/li&gt;
+
+&lt;li&gt;modularization: extract multiple controllers and new mainview object from application.rb. 4 =&amp;gt; 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='todays_not_done'&gt;TODAY&amp;#8217;s NOT DONE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modularization: extract multiple controllers and new mainview object from application.rb. 4 =&amp;gt; 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='standup'&gt;STANDUP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I need to decide how big the refactoring should be and if I can call it refactoring or just a re-write of the application.rb&lt;/li&gt;
+
+&lt;li&gt;I think UI modularization is more appropriate&lt;/li&gt;
+
+&lt;li&gt;The work to do is to finish the layout of the mainview until I have more or less the same visual appeal of before&lt;/li&gt;
+
+&lt;li&gt;Consider not to waste too much time fine tweaking the UI, try to get the modularization done first and then fine tweak the UI. The important thing is that you see everything on the UI working as before.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='retrospective'&gt;RETROSPECTIVE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Planned 9, actually done 7&lt;/li&gt;
+
+&lt;li&gt;I have to be more careful about judging how much time I have available considering one long break every 4 hours&lt;/li&gt;
+
+&lt;li&gt;The refactoring operations are much more complicated than expected I should split into multiple tasks or consider if I&amp;#8217;m working on focus. Is the main view creation part of the controller extraction?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
+
+&lt;h2 id='raw_dump'&gt;RAW DUMP&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+  73|@planning plus fixing some markdown jekyll generation issue|2009-03-16 15:07:24 -0500
+  74|@refactor creating the main view and learning how to align layout-views correctly using the example app|2009-03-16 15:37:57 -0500
+  75|@refactor creating the main-view more layout madness|2009-03-16 16:08:50 -0500
+  76|@refactor creating the main view. Had to decide if to use the same label for input and output. Also had a look at NSIMage for the pomo icon|2009-03-16 16:39:49 -0500
+  77|@refactor done with main-view creation copy pasting from application. It doesn't visualize as expected.|2009-03-16 17:29:42 -0500
+  78|@refactor testing the new main view but having problems to see where the margin of the layouts are.|2009-03-16 18:02:54 -0500
+  79|@refactor did some progress on understanding layouts. The mode vertical/horizontal for example. Still fighting for the best layout.|2009-03-16 18:36:55 -0500
+  80|@website finally got gh-pages as master submodule so I can change the site from the master branch|2009-03-17 08:43:32 -0500
+&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>some refactoring</title>
    <link href="http://reborg.github.com/pomodori/2009/03/16/todo.html"/>
    <updated>2009-03-16T00:00:00-05:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/16/todo</id>
    <content type="html">&lt;h2 id='today_planned_9'&gt;TODAY PLANNED 9&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;
-- \@planning 1
-- \@refact extract multiple controllers and new main_view object from application.rb. 4.
-- \@charts Add a feature to the pomodoro model so that '\@something' in the description is automatically collected as tag internally. 4.
-&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;planning 1&lt;/li&gt;
+
+&lt;li&gt;refact extract multiple controllers and new mainview object from application.rb 4&lt;/li&gt;
+
+&lt;li&gt;charts Add a feature to the pomodoro model so that &amp;#8216;something&amp;#8217; in the description is automatically collected as tag internally 4&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id='today_done'&gt;TODAY DONE&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;planning 1 =&amp;gt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id='today_not_done'&gt;TODAY NOT DONE&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;refact extract multiple controllers and new mainview object from application.rb. 4 =&amp;gt; 7&lt;/li&gt;
+
+&lt;li&gt;charts Add a feature to the pomodoro model so that &amp;#8216;something&amp;#8217; in the description is automatically collected as tag internally. 4.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id='internal_interruptions'&gt;INTERNAL INTERRUPTIONS&lt;/h2&gt;
 
 &lt;h2 id='external_interruptions'&gt;EXTERNAL INTERRUPTIONS&lt;/h2&gt;
 
-&lt;h2 id='relevant_history'&gt;RELEVANT HISTORY&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;h2 id='relevant_history'&gt;RELEVANT HISTORY&lt;/h2&gt;</content>
  </entry>
  
  <entry>
@@ -76,14 +928,6 @@
 71|@refact extended pomodoro_controller to call the view and started a new main_view to remove everything UI related from application.rb|2009-03-13 11:03:19 -0500
 72|@project migrated to 0.4 now playing again with view_layout expansion to remove abolute widgets locations.|2009-03-13 11:34:30 -0500
 &lt;/code&gt;&lt;/pre&gt;</content>
- </entry>
- 
- <entry>
-   <title>Welcome to 'Pomodori'</title>
-   <link href="http://reborg.github.com/pomodori/2009/02/21/first-post.html"/>
-   <updated>2009-02-21T00:00:00-06:00</updated>
-   <id>http://reborg.github.com/pomodori/2009/02/21/first-post</id>
-   <content type="html">&lt;p&gt;Pomodori is out! This first release is missing many of the features intended for the final product but it&amp;#8217;s already usable. More to come in the next posts.&lt;/p&gt;</content>
  </entry>
  
  

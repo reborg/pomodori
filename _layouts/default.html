@@ -32,16 +32,12 @@
         </div>
         <div id="sidebar">
           <div class="item">
-            <!-- Tickets   -->
-            <h4><a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a></h4>
-            <p>
-              Found a bug?<br />
-              Request a feature?
-            </p>
+            <h5><a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a></h5>
+            <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub</a></h5>
+            <h5><a href="http://blog.reborg.net/">Reblog</a></h5>
           </div>
           <div class="item">
-            <!-- Blog   -->
-            <h4><a href="atom.xml" id="rss_feed" name="rss_feed">Blog Posts</a></h4>
+            <h4>Blog Posts [<a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a>]</h4>
             <p>
               {% for post in site.posts %} 
                 <span>{{ post.date | date_to_string }}</span> » <a href="/pomodori{{ post.url }}">{{ post.title }}</a><br>

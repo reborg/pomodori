@@ -1,0 +1,48 @@
+---
+layout: post
+title: chirb talk
+---
+
+This is both an announce and the planning for today. The announce is that tonight I'm gonna talk about Pomodori and HotCocoa development at the Chicago Ruby User Group @ ThoughtWorks. Kind of late announce here on the Pomodori's blog, but anyway, step by if you have a chance, show permitting.
+
+SESSION PLANNED 8
+-----------------
+
+SESSION DONE 7
+------------
+* \@chirb presentation part 1, macruby, hotcocoa, pomo intro 2 => 2
+* \@chirb presentation part 2, pomodori app, testing challenge, architecture 4 => 4
+* \@chirb presentation part 2, conclusions, pros, cons, links 2 => 1
+
+SESSION NOT DONE
+----------------
+
+STANDUP
+-------
+* Last session I was able to close release 0.2
+* Today I need to finish ChiRb slides for tonight's talk
+* Planning on a 2 pomodoros presentation
+* I'll leave the last part for the train tonight
+
+POMOSPECTIVE
+------------
+* Short breaks, I felt the pressure of closing the slides with the time available
+* Too bad, but I got the slides done
+
+INTERNAL INTERRUPTIONS
+----------------------
+
+EXTERNAL INTERRUPTIONS
+----------------------
+
+RAW DUMP
+--------
+<pre><code>
+  145|\@chirb adding code examples on macruby and hotcocoa part|2009-04-06 08:01:30 -0500
+  146|\@chirb should be done with macruby hotcocoa and PT intro presentation first part (1 pomo talk time)|2009-04-06 08:33:57 -0500
+  147|\@chirb created first Pomodori TDD slides|2009-04-06 09:04:19 -0500
+  148|\@chirb drawing architecture slide|2009-04-06 09:36:23 -0500
+  149|\@chirb done with main architectural slides|2009-04-06 10:07:18 -0500
+  150|\@chirb writing conclusions to close|2009-04-06 10:40:02 -0500
+  151|\@chirb done|2009-04-06 11:10:14 -0500
+</code></pre>

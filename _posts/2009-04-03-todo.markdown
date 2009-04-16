@@ -1,0 +1,51 @@
+---
+layout: post
+title: clean-up charts for 0.2
+---
+
+TODAY's PLANNED 9
+---------------
+
+TODAY's DONE 7
+------------
+* \@planning 1 => 1
+* \@charts The chart-controller is called by the view to obtain the chart url or reload/close operations and the alike 2 => 2 (Missing: reload button should reload and open report from the main view should always work)
+* \@marketing \@website better screenshot for the website, blog post about 0.2, update documentation release 0.2 1 => 2
+* \@chirb presentation part one, macruby, hotcocoa intro 2 => 3 (TBD)
+
+TODAY's NOT DONE
+----------------
+* \@chirb presentation part one, macruby, hotcocoa intro 2 => 3 (TBD)
+* \@chirb presentation part two, pomodoro technique intro 1
+* \@chirb presentation part three, pomodori app, testing challenge, architecture 2
+* \@chirb presentation part four, conclusions, pros, cons, links 1
+
+STANDUP
+-------
+* today should be able to close release 0.2 with the simple chart working properly.
+* There is a fix to be done in the way the chart is loaded everytime
+* The reload button is not working now
+
+POMOSPECTIVE
+------------
+* I thought I could close the day later, I had to close it before the exp. time
+* So estimates are right.
+
+INTERNAL INTERRUPTIONS
+----------------------
+* I found interesting examples of MacRuby apps, I couldn't resist to have a look.
+
+EXTERNAL INTERRUPTIONS
+----------------------
+
+RAW DUMP
+--------
+<pre><code>
+  137|\@planning|2009-04-03 14:30:20 -0500
+  138|\@charts fixed the button behaviors for reload and reopen|2009-04-03 15:01:04 -0500
+  139|\@marketing preparing for release 0.2|2009-04-03 15:38:57 -0500
+  140|\@marketing re-done screenshots, update blog and home page created zipped app|2009-04-03 16:05:07 -0500
+  141|\@chirb created git repo starting writing slides.|2009-04-03 16:35:30 -0500
+  142|\@chirb wasted some time for a nice looking ruby image|2009-04-03 17:18:51 -0500
+  143|\@chirb wrote first introductory slides|2009-04-03 17:44:30 -0500
+</code></pre>

@@ -1,0 +1,42 @@
+---
+layout: post
+title: closing huge refactoring (hopefully)
+---
+
+TODAY's PLANNED 6
+---------------
+
+TODAY's DONE 6
+------------
+* modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 4 => 5
+* modularization summary controller to control statistics display with update-summary and format-metrics 2 => 1
+
+TODAY's NOT DONE
+----------------
+
+STANDUP
+-------
+* I was taking a convolute path when I saw a state machine in the modal button controller. That's BDUF and not the simplest thing.
+
+POMOSPECTIVE
+-------------
+* Forced to abort current pomodoro and session for external problems.
+* Forcing brain relaxing activities during the break. No more mails/rss, plus standup from chair.
+* Going easy on long break to avoid brain draining.
+
+INTERNAL INTERRUPTIONS
+----------------------
+
+EXTERNAL INTERRUPTIONS
+----------------------
+
+RAW DUMP
+--------
+<pre><code>
+  97|@modalcontroller creating necessary action behavior when pressing the button with different states|2009-03-23 16:55:58 -0500
+  98|@modalcontroller I think I'm done with the controller, now need to install it into the main view.|2009-03-23 17:26:26 -0500
+  99|@modalcontroller going through all the failing tests and organizing the test suite after the new test classes were added|2009-03-23 17:57:18 -0500
+  100|@modalcontroller wasted some time for a stupid error (action instead of on-action)|2009-03-23 18:29:28 -0500
+  101|@modalcontroller I fixed all tests, now I want to try a run before the refactoring that changes names and move models/controllers|2009-03-23 19:01:14 -0500
+  102|@modularization it's almost working as before. I should be able to make it work 100% with just a couple of tweaks|2009-03-23 19:32:25 -0500
+</code></pre>

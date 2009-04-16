@@ -1,0 +1,49 @@
+---
+layout: post
+title: extracting controllers
+---
+
+TODAY's PLANNED 6 => 5
+-----------------
+
+TODAY's DONE 5
+------------
+* planning 1 => 1
+* modularization take some time to understand how much work still to be done and fill a task list to close in 6 pomodoros 1
+* modularization migrate on-pomodoro-done and on-break-done and on-app-start to the countdown-field soon to be timer-controller and update test suite for it 1 => 3
+
+TODAY's NOT DONE
+----------------
+* modularization summary controller to control statistics display with update-summary and format-metrics 2
+* modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 2
+
+STANDUP
+-------
+* I started to see the light of the refactoring but I still have an hard time figuring out how much work is to be done.
+* I should be done next session in another 8 pomodoros.
+
+RETROSPECTIVE
+-------------
+* Planned 6, actually done 5
+* I split the modularization into multiple tasks and that worked. Underestimated heavily the timer controller work.
+* I was fast and fairly focused
+* A couple of internal interruptions completely avoidable. Close chat next time, let people use the phone (somehow they need more effort to call)
+
+INTERNAL INTERRUPTIONS
+----------------------
+* Update the clean code cheat sheet while reading the last agile in a flash card. I should have deferred this to the to-do list. The error is always the same: thinking I can do something in the 5 mins break and it takes 15 mins instead. Defer, defer, defer.
+* Voided again, my bad. I couldn't resist to formulate a tweet after reading on twitter and it took ages. I should consider not opening twitters each break because potentially dangerous.
+
+EXTERNAL INTERRUPTIONS
+----------------------
+* Palomino's updates from wife, aborting. Can't really close chat in this case.
+
+RAW DUMP
+--------
+<pre><code>
+  87|@planning trying to shrink refactoring to 6 pomodoros today|2009-03-19 10:20:45 -0500
+  88|@planning splitted tasks for the modularization process.|2009-03-19 11:03:02 -0500
+  89|@modularization moving timer related event handling from application to timer controller.|2009-03-19 11:50:38 -0500
+  90|@modularization going fast but much more than a single pomo to move all behavior into the timer controller.|2009-03-19 12:21:21 -0500
+  91|@modularization last pomodoro of the day. I think I did big steps but underestimated the effort. Mostly done with the new timer controller.|2009-03-19 13:08:44 -0500
+</code></pre>

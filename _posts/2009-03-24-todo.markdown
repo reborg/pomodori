@@ -1,0 +1,62 @@
+---
+layout: post
+title: extracting controllers
+---
+
+TODAY's PLANNED 9
+---------------
+
+TODAY's DONE
+------------
+* modularization manual acceptance UI plus fixing button actions plus add test coverage 4 => 4
+* modularization move models to models and controllers to controllers plus renaming 2 => 2
+
+TODAY's NOT DONE
+----------------
+* Charts
+
+STANDUP
+-------
+* I was able to close with the main refactoring operations like extracting controllers and fix the test suite
+* I started manual acceptance of the new GUI and there are button actions to fix
+* Today: keep going with the manual acceptance until everything works and create test to cover the fix, commit a working app.
+* Final refactoring: rename countdown field, move pomodoro to models, delete useless old wrapper UI classes and commit again
+* Everything should be ready for the next session to start working again on charts.
+* Be careful with breaks and longer breaks
+
+POMOSPECTIVE
+------------
+* Had session abort 2 hours before expected. Nothing I can do about it right now.
+* I was good with estimates to close the refactoring
+* I was strict with 5 mins break: did nothing.
+
+INTERNAL INTERRUPTIONS
+----------------------
+
+EXTERNAL INTERRUPTIONS
+----------------------
+* Several quick IM message exchange
+* Abort session
+
+RAW DUMP
+--------
+<pre><code>
+  103
+  |@modularization fixed void click with a sender argument, now fixing submit click and writing tests
+  |2009-03-24 08:03:15 -0500
+  104
+  |@modularization realized I was not saving the pomo on submit fixed
+  |2009-03-24 08:35:10 -0500
+  105
+  |@modularization cosmetic changes to summary position plus tried borderless
+  |2009-03-24 09:06:44 -0500
+  106
+  |@modularization committed, plus some other small fixes like removing the application class that was almost useless
+  |2009-03-24 09:38:46 -0500
+  107
+  |@modularization renamed and moved the countdown field into timer controller
+  |2009-03-24 11:20:35:43 -0500
+  108
+  |@modularization moved controllers and models to specific folders, fixed slow tests by mocking main view
+  |2009-03-24 11:58:18:26 -0500
+</code></pre>

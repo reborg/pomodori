@@ -1,0 +1,46 @@
+---
+layout: post
+title: average pomodoros and specs
+---
+
+SESSION PLANNED 7
+-----------------
+- \@pomodoro \@history instead of the label "running" in the summary, try to change the title bar instead 1
+- \@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1
+
+SESSION DONE 5
+--------------
+- \@pomodori \@planning 1
+- \@pomodori \@setup Matchy http://github.com/jeremymcanally/matchy is another rspec like syntax for test::unit 1 => 1
+- \@pomodori \@setup I'd like to use this microspec.rb 1 => 1
+- \@pomodori \@metrics add average pomodoros per day in the summary 2 => 2
+
+SESSION NOT DONE
+----------------
+
+STANDUP
+-------
+* Last session I was able to close release 0.2
+* Today I need to finish ChiRb slides for tonight's talk
+* Planning on a 2 pomodoros presentation
+* I'll leave the last part for the train tonight
+
+POMOSPECTIVE
+------------
+* Short breaks, I felt the pressure of closing the slides with the time available
+* Too bad, but I got the slides done
+
+INTERRUPTIONS
+-------------
+- \@external starbucks full of smoke and noisy, had to move to caribou
+- \@internal lost replying tweets, sigh. Voided, lost 5 mins and relaxing during the break! Damn all the free wifi.
+
+RAW DUMP
+--------
+<pre><code>
+  167|\@planning|2009-04-14 17:05:55 -0500
+  168|\@pomodori \@setup installed matchy and moved mocha into vendor folder|2009-04-14 17:56:52 -0500
+  169|\@pomodori \@setup installed microspec ready to use it. Describe blocks doesn't work though.|2009-04-14 18:33:39 -0500
+  170|\@pomodori \@metrics adding average on pomodoro controller|2009-04-14 19:04:04 -0500
+  171|\@pomodori \@metrics done, daily average integrated|2009-04-14 19:35:46 -0500
+</code></pre>

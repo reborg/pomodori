@@ -1,0 +1,47 @@
+---
+layout: post
+title: controllers refactoring
+---
+
+TODAY's PLANNED 9
+---------------
+
+TODAY's DONE 5
+------------
+* planning 1 => 1
+* modularization migrate on-pomodoro-done and on-break-done and on-app-start to the countdown-field soon to be timer-controller and update test suite for it 4 => 4
+
+TODAY's NOT DONE
+----------------
+* modularization summary controller to control statistics display with update-summary and format-metrics 2
+* modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 2
+
+STANDUP
+-------
+* I was able to split the refactoring operations into multiple tasks and that worked out very well.
+* I moved 90% of the timer logic out of application.rb into the timer-controller
+* I had to move also the enabling/disabling logic out of the text field class
+* I still need to extract the on-break-down method
+* Today I'll try to close the timer controller (the renaming is basically the final action)
+* Then I want to extract the other logics
+
+RETROSPECTIVE
+-------------
+* I was slower because I mixed two different tasks: extracting timer controller logic and creating a main view in parallel. I should have extracted the controller logic from application.rb leaving all the rest and then extracting or renaming application.rb to mainview. Remember next time.
+
+INTERNAL INTERRUPTIONS
+----------------------
+
+EXTERNAL INTERRUPTIONS
+----------------------
+* Session aborted to go home fix Palomino
+
+RAW DUMP
+--------
+<pre><code>
+  92|@planning planned the day|2009-03-20 13:08:15 -0500
+  93|@timercontroller created on break done logic|2009-03-20 13:38:49 -0500
+  94|@modularization done with the timer controller logic. Now back to main view and application to integrate the work done with the goal of commit ASAP|2009-03-20 14:09:28 -0500
+  95|@modalcontroller started implementing onclicks and title for modal button in related controller.|2009-03-20 14:40:38 -0500
+  96|@modalcontroller created the modal controller and thinking that shoul only contain a state machine|2009-03-20 15:11:40 -0500
+</code></pre>

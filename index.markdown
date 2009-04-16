@@ -1,14 +1,22 @@
 ---
 layout: default
-title: Welcome to Pomodori
+title: Welcome to Pomodori!
 ---
 
-Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori has a timer and lets you store pomodoro descriptions. Pomodori manages pomodoros with just a single click and no need for you to set or start a timer. Pomodori shows metrics to help you plan future activities. For more information about pomodoros please read the [original PDF paper](http://www.tecnicadelpomodoro.it/docs/francesco-cirillo/2007/ThePomodoroTechnique_v1-3.pdf) and keep in touch with the [pomodoro community](http://www.pomodorotechnique.com/).
+Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori measures the pomodoro time and stores pomodoro descriptions with only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
 
-VERSION 0.1 FEATURES
+FEATURES
 --------------------
 
-The project is young but features are added fast. As of today (Version 0.1):
+The project is young but features are added fast. Do you want to suggest a feature? Please enter here: [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview)
+
+Release 0.2
+
+* Added "Pomodoro Summary by Day" chart that shows the count of pomodoros by day in a bar chart
+* Better looking UI
+* Improved stability
+
+Release 0.1
 
 * Pomodori automatically starts a 25 mins countdown when launched
 * Pomodori rings a bell at the end of the 25 mins
@@ -19,57 +27,54 @@ The project is young but features are added fast. As of today (Version 0.1):
 * And so on, until you've got everything DONE!
 * A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break
 
-Want to suggest a new feature? Use [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview)
-
 SCREENSHOTS
 -----------
 
-A running Pomodoro:
+Running Pomodoro:
 
 ![Pomodoro Running](resources/pomodoro-run.png "Pomodoro Running")
 
-A "Done" Pomodoro. After ringing, Pomodori is ready to accept a description of what you did. Or empty if you prefer.
+Done Pomodoro:
 
 ![Pomodoro Done](resources/pomodoro-done.png "Pomodoro Done")
 
-A "Break". Relax! Now!
+Pomodoros Count by Day Chart:
 
-![Pomodoro Break](resources/pomodoro-break.png "Pomodoro Break")
+![Pomodoro Count](resources/chart-pom-count.png "Pomodoro Chart")
 
 
 COMING SOON
 -----------
 
-* After 4 pomodoros Pomodori will kindly remember you that is time for a longer break
 * Tag management to tag pomodoros belonging to a certain category
-* Charts and advanced statistics based on pomodoro history
+* More advanced charts such as pomodoros worked by tag
+* After 4 pomodoros Pomodori will kindly remember you that is time for a longer break
 * Timer visible in the menubar
 * Many many more...
 
 REQUIREMENTS
 ------------
 
-* MacRuby 0.3 (MacRuby 0.4 arriving soon)
-* Download the [MacRuby binaries](http://www.macruby.org/files/MacRuby%200.3.zip)
+* MacRuby 0.4 (is really easy to install while waiting for the official Apple inclusion into Mac Os X)
+* Download MacRuby binaries from [MacRuby binaries](http://www.macruby.org/files/MacRuby%200.4.zip)
 * Unzip and double click on the installer and follow the instructions
-* If you have MacRuby 0.4 trunk installed, please rename /Library/Frameworks/MacRuby.framework before installing 0.3
 
 INSTALL
 -------
 
-* Download the [pomodori-0.1.zip archive](http://reborg.github.com/pomodori/resources/pomodori-0.1.zip)
+* Download the [pomodori-0.2.zip archive](http://reborg.github.com/pomodori/resources/pomodori-0.2.zip)
 * Unzip and copy to pomodori.app to /Applications
 * Please report installation issues at [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets)
 
-BUILD
------
+DEVELOPING
+----------
 
-If you need to build the application from scratch, gitclone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
+Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
 
 * cd pomodori
 * Optional but recommended: run the test suite with 'macrake'
-* 'macrake clean'
-* 'macrake build' from the root directory to generate the app
+* 'macrake run' from the root directory to generate the app and run it
+* './script/console' to load an interactive console with pre-loaded HotCocoa and Pomodori classes
 
 LINKS
 -----

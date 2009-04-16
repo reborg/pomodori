@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width = 750">
+    <link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css" charset="utf-8">
+    <title>main view work in progress</title>
+  </head>
+  <body id="intro">
+    <div id="wrapper">
+      <div id="header" onclick="javascript:window.location='/pomodori/'">
+        <img src="../../../resources/pomodori128.gif"/>
+        <h1>Daily Pomodoros</h1>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li id="navi_intro">
+            <a href="/pomodori/">Intro</a>
+          </li>
+          <li id="navi_source">
+            <a href="http://github.com/reborg/pomodori">Source</a>
+          </li>
+          <li id="navi_tickets">
+            <a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a>
+          </li>
+        </ul>
+      </div>
+      <div id="page_body">
+        <div id="content">
+          <h2 id='todays_planned_9'>TODAY&#8217;s PLANNED 9</h2>
+
+<h2 id='todays_done_7'>TODAY&#8217;s DONE 7</h2>
+
+<ul>
+<li>planning 1 =&gt; 1</li>
+
+<li>add gh-pages as submodule of master 2 =&gt; 1</li>
+
+<li>modularization: replace actual application.rb UI with mainview object 2 =&gt; 3</li>
+
+<li>modularization: extract multiple controllers and new mainview object from application.rb. 4 =&gt; 2</li>
+</ul>
+
+<h2 id='todays_not_done'>TODAY&#8217;s NOT DONE</h2>
+
+<ul>
+<li>modularization: extract multiple controllers and new mainview object from application.rb. 4 =&gt; 2</li>
+</ul>
+
+<h2 id='standup'>STANDUP</h2>
+
+<ul>
+<li>I need to decide how big the refactoring should be and if I can call it refactoring or just a re-write of the application.rb</li>
+
+<li>I think UI modularization is more appropriate</li>
+
+<li>The work to do is to finish the layout of the mainview until I have more or less the same visual appeal of before</li>
+
+<li>Consider not to waste too much time fine tweaking the UI, try to get the modularization done first and then fine tweak the UI. The important thing is that you see everything on the UI working as before.</li>
+</ul>
+
+<h2 id='retrospective'>RETROSPECTIVE</h2>
+
+<ul>
+<li>Planned 9, actually done 7</li>
+
+<li>I have to be more careful about judging how much time I have available considering one long break every 4 hours</li>
+
+<li>The refactoring operations are much more complicated than expected I should split into multiple tasks or consider if I&#8217;m working on focus. Is the main view creation part of the controller extraction?</li>
+</ul>
+
+<h2 id='internal_interruptions'>INTERNAL INTERRUPTIONS</h2>
+
+<h2 id='external_interruptions'>EXTERNAL INTERRUPTIONS</h2>
+
+<h2 id='raw_dump'>RAW DUMP</h2>
+<pre><code>
+  73|@planning plus fixing some markdown jekyll generation issue|2009-03-16 15:07:24 -0500
+  74|@refactor creating the main view and learning how to align layout-views correctly using the example app|2009-03-16 15:37:57 -0500
+  75|@refactor creating the main-view more layout madness|2009-03-16 16:08:50 -0500
+  76|@refactor creating the main view. Had to decide if to use the same label for input and output. Also had a look at NSIMage for the pomo icon|2009-03-16 16:39:49 -0500
+  77|@refactor done with main-view creation copy pasting from application. It doesn't visualize as expected.|2009-03-16 17:29:42 -0500
+  78|@refactor testing the new main view but having problems to see where the margin of the layouts are.|2009-03-16 18:02:54 -0500
+  79|@refactor did some progress on understanding layouts. The mode vertical/horizontal for example. Still fighting for the best layout.|2009-03-16 18:36:55 -0500
+  80|@website finally got gh-pages as master submodule so I can change the site from the master branch|2009-03-17 08:43:32 -0500
+</code></pre>
+                    
+          <script type="text/javascript">var disqus_url = "http://reborg.github.com/pomodori/"; var disqus_title ="";</script>
+          <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/pomodori/embed.js"></script>
+          <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+          <script type="text/javascript">
+          //<![CDATA[
+          (function() {
+          		var links = document.getElementsByTagName('a');
+          		var query = '?';
+          		for(var i = 0; i < links.length; i++) {
+          			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+          			}
+          		}
+          		document.write('<script type="text/javascript" src="http://disqus.com/forums/pomodori/get_num_replies.js' + query + '"></' + 'script>');
+          	})();
+          //]]>
+          </script>
+          
+        </div>
+        <div id="sidebar">
+          <div class="item">
+            <h5><a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a></h5>
+            <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub</a></h5>
+            <h5><a href="http://blog.reborg.net/">Reblog</a></h5>
+          </div>
+          <div class="item">
+            <h4>Other Posts</h4>
+            <p>
+               
+                <span>15 Apr 2009</span> » <a href="/2009/04/15/todo.html">making space on the main view</a><br>
+               
+                <span>14 Apr 2009</span> » <a href="/2009/04/14/todo.html">average pomodoros and specs</a><br>
+               
+                <span>06 Apr 2009</span> » <a href="/2009/04/06/todo.html">chirb talk</a><br>
+               
+                <span>04 Apr 2009</span> » <a href="/2009/04/04/ann-0.2.html">Announcing 0.2 release</a><br>
+               
+                <span>03 Apr 2009</span> » <a href="/2009/04/03/todo.html">clean-up charts for 0.2</a><br>
+               
+                <span>31 Mar 2009</span> » <a href="/2009/03/31/todo.html">summary chart</a><br>
+               
+                <span>29 Mar 2009</span> » <a href="/2009/03/29/todo.html">template processing</a><br>
+               
+                <span>27 Mar 2009</span> » <a href="/2009/03/27/todo.html">charts in progress</a><br>
+               
+                <span>26 Mar 2009</span> » <a href="/2009/03/26/todo.html">back to charts</a><br>
+               
+                <span>24 Mar 2009</span> » <a href="/2009/03/24/todo.html">extracting controllers</a><br>
+               
+                <span>23 Mar 2009</span> » <a href="/2009/03/23/todo.html">closing huge refactoring (hopefully)</a><br>
+               
+                <span>20 Mar 2009</span> » <a href="/2009/03/20/todo.html">controllers refactoring</a><br>
+               
+                <span>19 Mar 2009</span> » <a href="/2009/03/19/todo.html">extracting controllers</a><br>
+               
+                <span>17 Mar 2009</span> » <a href="/2009/03/17/todo.html">main view work in progress</a><br>
+               
+                <span>16 Mar 2009</span> » <a href="/2009/03/16/todo.html">some refactoring</a><br>
+               
+                <span>13 Mar 2009</span> » <a href="/2009/03/13/charts.html">work on charts started</a><br>
+              
+            </p>
+          </div>
+          <div class="item">
+            <script type="text/javascript" src="http://disqus.com/forums/pomodori/combination_widget.js?num_items=5&color=orange&default_tab=recent"></script>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <p><a href="http://github.com/reborg/pomodori/tree/gh-pages" title="reborg's pomodori at gh-pages &mdash; GitHub">website source</a> | generated by <a href="http://github.com/mojombo/jekyll">jekyll</a> and <a href="http://drnic.github.com/jekyll_generator">jekyll_generator</a></p>
+      </div>
+    </div>
+    <a href="http://github.com/reborg/pomodori"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  </body>
+</html>

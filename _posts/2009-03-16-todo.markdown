@@ -5,21 +5,18 @@ title: some refactoring
 
 TODAY PLANNED 9
 ---------------
-<pre><code>
-- \@planning 1
-- \@refact extract multiple controllers and new main_view object from application.rb. 4.
-- \@charts Add a feature to the pomodoro model so that '\@something' in the description is automatically collected as tag internally. 4.
-</code></pre>
+- planning 1
+- refact extract multiple controllers and new mainview object from application.rb 4
+- charts Add a feature to the pomodoro model so that 'something' in the description is automatically collected as tag internally 4
 
 TODAY DONE
 ----------
-<pre><code>
-</code></pre>
+- planning 1 => 1
 
 TODAY NOT DONE
 --------------
-<pre><code>
-</code></pre>
+- refact extract multiple controllers and new mainview object from application.rb. 4 => 7
+- charts Add a feature to the pomodoro model so that 'something' in the description is automatically collected as tag internally. 4.
 
 INTERNAL INTERRUPTIONS
 ----------------------
@@ -29,5 +26,3 @@ EXTERNAL INTERRUPTIONS
 
 RELEVANT HISTORY
 ----------------
-<pre><code>
-</code></pre>

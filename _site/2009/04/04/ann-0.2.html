@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width = 750">
+    <link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css" charset="utf-8">
+    <title>Announcing 0.2 release</title>
+  </head>
+  <body id="intro">
+    <div id="wrapper">
+      <div id="header" onclick="javascript:window.location='/pomodori/'">
+        <img src="../../../resources/pomodori128.gif"/>
+        <h1>Daily Pomodoros</h1>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li id="navi_intro">
+            <a href="/pomodori/">Intro</a>
+          </li>
+          <li id="navi_source">
+            <a href="http://github.com/reborg/pomodori">Source</a>
+          </li>
+          <li id="navi_tickets">
+            <a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a>
+          </li>
+        </ul>
+      </div>
+      <div id="page_body">
+        <div id="content">
+          <h1 id='pomodori_02_is_out'>Pomodori 0.2 is out!</h1>
+
+<p><img src='../../../resources/chart-pom-count.png' alt='Pomodoro Count' /></p>
+
+<p>Pomodori now draws charts! The first simple chart has been introduced with this release. The bar chart shows how many pomodoros you worked by day. This metric can be used to see the fluctuation of your productivity over time and why there are good and bad days. This is just the first of a series of chart I&#8217;d like to introduce to improve your Pomodoro Technique.</p>
+
+<p>As far as I learn to be a better Cocoa programmer, I tweak the UI to be more usable and better looking. I added the pomodoro icon and a gradient to the interface. More substantial UI improvement to come in the future.</p>
+
+<p>A less evident change was done with a huge refactoring to the core classes of Pomodori. There is now an architectural view that I like. As part of the refactoring there is less code which is more simple with more functionalities. The bloated application.rb class has gone and now the view only contains view logic. Multiple controllers have been created to handle all the workflow logic and comunication with the model. Happy.</p>
+
+<p>For the next 0.3 release I&#8217;d like to have all the tag based features working, including a chart by tags of pomodoros. Feel free to help me improving Pomodori!</p>
+
+<p>See ya.</p>
+                    
+          <script type="text/javascript">var disqus_url = "http://reborg.github.com/pomodori/"; var disqus_title ="";</script>
+          <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/pomodori/embed.js"></script>
+          <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+          <script type="text/javascript">
+          //<![CDATA[
+          (function() {
+          		var links = document.getElementsByTagName('a');
+          		var query = '?';
+          		for(var i = 0; i < links.length; i++) {
+          			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+          			}
+          		}
+          		document.write('<script type="text/javascript" src="http://disqus.com/forums/pomodori/get_num_replies.js' + query + '"></' + 'script>');
+          	})();
+          //]]>
+          </script>
+          
+        </div>
+        <div id="sidebar">
+          <div class="item">
+            <h5><a href="http://reborg.lighthouseapp.com/projects/TODO/tickets">Tickets</a></h5>
+            <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub</a></h5>
+            <h5><a href="http://blog.reborg.net/">Reblog</a></h5>
+          </div>
+          <div class="item">
+            <h4>Other Posts</h4>
+            <p>
+               
+                <span>15 Apr 2009</span> » <a href="/2009/04/15/todo.html">making space on the main view</a><br>
+               
+                <span>14 Apr 2009</span> » <a href="/2009/04/14/todo.html">average pomodoros and specs</a><br>
+               
+                <span>06 Apr 2009</span> » <a href="/2009/04/06/todo.html">chirb talk</a><br>
+               
+                <span>04 Apr 2009</span> » <a href="/2009/04/04/ann-0.2.html">Announcing 0.2 release</a><br>
+               
+                <span>03 Apr 2009</span> » <a href="/2009/04/03/todo.html">clean-up charts for 0.2</a><br>
+               
+                <span>31 Mar 2009</span> » <a href="/2009/03/31/todo.html">summary chart</a><br>
+               
+                <span>29 Mar 2009</span> » <a href="/2009/03/29/todo.html">template processing</a><br>
+               
+                <span>27 Mar 2009</span> » <a href="/2009/03/27/todo.html">charts in progress</a><br>
+               
+                <span>26 Mar 2009</span> » <a href="/2009/03/26/todo.html">back to charts</a><br>
+               
+                <span>24 Mar 2009</span> » <a href="/2009/03/24/todo.html">extracting controllers</a><br>
+               
+                <span>23 Mar 2009</span> » <a href="/2009/03/23/todo.html">closing huge refactoring (hopefully)</a><br>
+               
+                <span>20 Mar 2009</span> » <a href="/2009/03/20/todo.html">controllers refactoring</a><br>
+               
+                <span>19 Mar 2009</span> » <a href="/2009/03/19/todo.html">extracting controllers</a><br>
+               
+                <span>17 Mar 2009</span> » <a href="/2009/03/17/todo.html">main view work in progress</a><br>
+               
+                <span>16 Mar 2009</span> » <a href="/2009/03/16/todo.html">some refactoring</a><br>
+               
+                <span>13 Mar 2009</span> » <a href="/2009/03/13/charts.html">work on charts started</a><br>
+              
+            </p>
+          </div>
+          <div class="item">
+            <script type="text/javascript" src="http://disqus.com/forums/pomodori/combination_widget.js?num_items=5&color=orange&default_tab=recent"></script>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <p><a href="http://github.com/reborg/pomodori/tree/gh-pages" title="reborg's pomodori at gh-pages &mdash; GitHub">website source</a> | generated by <a href="http://github.com/mojombo/jekyll">jekyll</a> and <a href="http://drnic.github.com/jekyll_generator">jekyll_generator</a></p>
+      </div>
+    </div>
+    <a href="http://github.com/reborg/pomodori"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  </body>
+</html>
