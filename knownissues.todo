@@ -8,3 +8,7 @@
   Pomodori.app/Contents/MacOS/Pomodori
 which changes the dylib dependencies of the executable. The problem is that it doesn't work with the relative path passed. But if you want to go absolute, then it depend from where the application is installed. If /Applications, I can stuck the absolute path there, but I don't like it. So the plan is to wait some more time and hopefully MacRuby will be part of Leopard snow edition.
 - view_layout: man, was not able to understand how it works or how to use it. Reverted back to absolute position for everything. The main complaint is that sometimes all widget disappears if I try to expand in just one direction. You should probably formulate an example and post it to the ML.
+
+Resizeable Cell in Table View:
+- If one day you want to have the table view to soft-wrap the text in the cell for long pomodoro descriptions you can use this http://evanjones.ca/software/osx-tableview.html as a starting point
+- basically you subclass the table view and intercept the cell draw event to grab cell dimension and wrap the text accordingly
