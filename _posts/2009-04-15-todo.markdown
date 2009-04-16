@@ -8,14 +8,14 @@ SESSION PLANNED 7
 
 SESSION DONE 5
 --------------
-- \@planning 1
-- \@pomodori instead of the label "running" in the summary, try to change the title bar instead 1 => 2
-- \@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1 => 1
-- \@pomodori \@yestpomo spike on different kind of windows and retrieve mouse position 1 => 1
+* \@planning 1
+* \@pomodori instead of the label "running" in the summary, try to change the title bar instead 1 => 2
+* \@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1 => 1
+* \@pomodori \@yestpomo spike on different kind of windows and retrieve mouse position 1 => 1
 
 SESSION NOT DONE
 ----------------
-- \@pomodori \@yestpomo spike scrollable grid-table views 2
+* \@pomodori \@yestpomo spike scrollable grid-table views 2
 
 STANDUP
 -------
@@ -31,7 +31,7 @@ POMOSPECTIVE
 
 INTERRUPTIONS
 -------------
-- \@internal as usual, reading blogs I couldn't resist to read some more. Damn.
+* \@internal as usual, reading blogs I couldn't resist to read some more. Damn.
 
 RAW DUMP
 --------

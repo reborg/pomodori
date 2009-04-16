@@ -5,15 +5,15 @@ title: average pomodoros and specs
 
 SESSION PLANNED 7
 -----------------
-- \@pomodoro \@history instead of the label "running" in the summary, try to change the title bar instead 1
-- \@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1
+* \@pomodoro \@history instead of the label "running" in the summary, try to change the title bar instead 1
+* \@pomodori \@refactoring KirbyStorage contains methods like yesterday or today pomodoros. I think they should go into pomodori controller to call relevant methods from kirby storage. 1
 
 SESSION DONE 5
 --------------
-- \@pomodori \@planning 1
-- \@pomodori \@setup Matchy http://github.com/jeremymcanally/matchy is another rspec like syntax for test::unit 1 => 1
-- \@pomodori \@setup I'd like to use this microspec.rb 1 => 1
-- \@pomodori \@metrics add average pomodoros per day in the summary 2 => 2
+* \@pomodori \@planning 1
+* \@pomodori \@setup Matchy http://github.com/jeremymcanally/matchy is another rspec like syntax for test::unit 1 => 1
+* \@pomodori \@setup I'd like to use this microspec.rb 1 => 1
+* \@pomodori \@metrics add average pomodoros per day in the summary 2 => 2
 
 SESSION NOT DONE
 ----------------
@@ -32,8 +32,8 @@ POMOSPECTIVE
 
 INTERRUPTIONS
 -------------
-- \@external starbucks full of smoke and noisy, had to move to caribou
-- \@internal lost replying tweets, sigh. Voided, lost 5 mins and relaxing during the break! Damn all the free wifi.
+* \@external starbucks full of smoke and noisy, had to move to caribou
+* \@internal lost replying tweets, sigh. Voided, lost 5 mins and relaxing during the break! Damn all the free wifi.
 
 RAW DUMP
 --------
