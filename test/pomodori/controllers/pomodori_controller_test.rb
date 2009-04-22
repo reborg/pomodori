@@ -20,6 +20,11 @@ class PomodoriControllerTest < Test::Unit::TestCase
     ctrl.create({:text => "hola"})
   end
   
+  it "should not fail when no pomodoros exist" do
+    PomodoroCountByDay.stubs(:find_all).returns([])
+    assert_nothing_raised { @pomodori_controller.daily_average }
+  end
+  
   it "should return the average daily pomo" do
     PomodoroCountByDay.stubs(:find_all).returns(pomodoro_count_by_day_sample)
     @pomodori_controller.daily_average.should == 1
@@ -33,6 +38,6 @@ class PomodoriControllerTest < Test::Unit::TestCase
   it "retrieves today's pomodoros" do
     @storage.expects(:find_all_by_date).returns([])
     @pomodori_controller.today_pomodoros
-  end
+   end
   
 end

@@ -50,7 +50,9 @@ class PomodoriController
   #
   def daily_average
     all = PomodoroCountByDay.find_all
-    (all.inject(0) { |sum, day| sum + day.count}) / all.size    
+    (all.inject(0) { |sum, day| sum + day.count}) / all.size
+  rescue ZeroDivisionError
+    0
   end
   
 end
