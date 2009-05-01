@@ -11,12 +11,12 @@ class KirbyStorageTest < Test::Unit::TestCase
     @kirby_storage = KirbyStorage.new(@path)
   end
   
-  def test_retrieves_table_for_instances_or_class
-    assert_not_nil(@kirby_storage.send(:table_for, Pomodoro.new))
-    assert_not_nil(@kirby_storage.send(:table_for, Pomodoro))
+  it "retrieves table for instances or classes" do
+    @kirby_storage.send(:table_for, Pomodoro.new).should_not be_nil
+    @kirby_storage.send(:table_for, Pomodoro).should_not be_nil
   end
   
-  def test_should_convert_lowercase
+  it "should convert lowercase" do
     db = mock('db')
     @kirby_storage.db = db
     db.expects(:get_table).at_least(2).with(:pomodoro)
@@ -24,20 +24,20 @@ class KirbyStorageTest < Test::Unit::TestCase
     @kirby_storage.send(:table_for, Pomodoro.new)
   end
   
-  def test_creates_a_record
+  it "creates a record" do
     @kirby_storage.save(Pomodoro.new(:text => "done!"))
-    assert_equal(1, @kirby_storage.find_all(Pomodoro).size)
+    @kirby_storage.find_all(Pomodoro).size.should == 1
   end
   
-  def test_returns_all_pomodori
+  it "returns all pomodori" do
     bulk_import_test_data
-    assert_equal(32, @kirby_storage.find_all(Pomodoro).size)
+    @kirby_storage.find_all(Pomodoro).size.should == 32
   end
   
-  def test_returns_all_pomodoros_by_date
+  it "returns all pomodoros by date" do
     bulk_import_test_data
     date = Time.local(2009, "feb", 16, "5", "25")
-    assert_equal(5, @kirby_storage.find_all_by_date(Pomodoro, date).size)
+    @kirby_storage.find_all_by_date(Pomodoro, date).size.should == 5
   end
   
   def teardown

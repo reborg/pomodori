@@ -1,8 +1,11 @@
-lib_path = File.expand_path(File.dirname(__FILE__) + "/../mocha-0.9.5/lib")
-$LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
+Dir[File.dirname(__FILE__) + "/../vendor/**/lib"].each do |dir|
+  $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
+end
 
 require "mocha"
+require "matchy"
 require "test/unit"
+require "microspec"
 require File.dirname(__FILE__) + '/../lib/pomodori'
 
 def wipe_dir(dir, regex = /.tbl/)
@@ -19,9 +22,9 @@ def wipe_dir(dir, regex = /.tbl/)
   end
 end
 
-def pomodoros
+def pomodoros(how_many = 10)
   pomos = []
-  10.times do |i|
+  how_many.times do |i|
     pomos << Pomodoro.new(
       :text => "Pomo#{i}",
       :timestamp => DateTime.new(2009, 03, i % 3 + 1))
@@ -32,7 +35,7 @@ end
 def pomodoro_count_by_day_sample
   pomos = []
   3.times do |i|
-    pomos << PomodoroCountByDay.new(DateTime.new(2009, 03, i % 3 + 1), pomodoros)
+    pomos << PomodoroCountByDay.new(DateTime.new(2009, 03, i % 3 + 1), pomodoros(i))
   end
   pomos
 end

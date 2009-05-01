@@ -21,14 +21,6 @@ class KirbyStorage
     table_for(clazz).select
   end
   
-  def yesterday_pomodoros
-    find_all_day_before(Pomodoro, Time.now)
-  end
-  
-  def today_pomodoros
-    find_all_by_date(Pomodoro, Time.now)
-  end
-  
   def find_all_day_before(clazz, today)
     find_all_by_date(clazz, today - SECS_IN_DAY)
   end

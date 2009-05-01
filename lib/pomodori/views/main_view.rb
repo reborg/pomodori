@@ -18,7 +18,6 @@ class MainView
     @timer_controller = opts[:timer_controller] ||= TimerController.new(:main_view => self)
     @pomodori_controller = opts[:pomodori_controller] ||= PomodoriController.new(:main_view => self)
     @charts_controller = opts[:charts_controller] ||= ChartsController.new
-    running_mode
   end
 
   def render
@@ -54,7 +53,7 @@ class MainView
   def summary_label
     @summary_label ||= label(
       :frame => [0, 0, 250, 62],
-      :text => format_metrics("Pomodoro"), 
+      :text => format_metrics, 
       :font => font(:name => "Andale Mono", :size => 12))
   end
   
@@ -95,6 +94,13 @@ class MainView
   end
   
   ##
+  # Change the main window title
+  #
+  def update_window_title(new_title)
+    container.title = new_title
+  end
+  
+  ##
   # Updates the modal button label
   #
   def update_modal_button_label(label)
@@ -123,14 +129,16 @@ class MainView
   # the timer for a new pomodoro.
   # 
   def running_mode
-    disable_input_box(format_metrics("pomodoro"))
+    update_window_title("Running...")
+    disable_input_box(format_metrics)
     modal_button.title = "Void"
     modal_button.on_action = @modal_button_controller.method(:on_click_void)
     @timer_controller.on_pomodoro_start
   end
   
   def break_mode
-    disable_input_box(format_metrics("break"))
+    update_window_title("Break...")
+    disable_input_box(format_metrics)
     modal_button.title = "Restart"
     modal_button.on_action = @modal_button_controller.method(:on_click_restart)
     @timer_controller.on_break_start
@@ -138,10 +146,10 @@ class MainView
   
   private
 
-    def format_metrics(title)
-      "#{title.upcase}!\n" +
-      "Yesterday's pomodoros       #{@pomodori_controller.yesterday_pomodoros}\n" +
-      "Today's pomodoros so far    #{@pomodori_controller.today_pomodoros}"
+    def format_metrics
+      "Yesterday:  #{@pomodori_controller.yesterday_pomodoros}\n" +
+      "Today:      #{@pomodori_controller.today_pomodoros}\n" +
+      "Average:    #{@pomodori_controller.daily_average}"
     end
   
     ##
@@ -169,7 +177,7 @@ class MainView
       summary_label.setBordered(true)
       summary_label.setSelectable(true)
       summary_label.editable = true
-      summary_label.text = "Pomodoro description here"
+      summary_label.text = "<hit enter to add description>"
     end
   
 end
