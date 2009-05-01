@@ -2,6 +2,7 @@ require 'pomodori/kirby_storage'
 
 class PomodoroCountByDay
   attr_reader :date, :pomodoros
+  include Comparable
   
   def initialize(date, pomodoros = [])
     @date = date
@@ -28,7 +29,7 @@ class PomodoroCountByDay
       hash[ts] = PomodoroCountByDay.new(pomodoro.timestamp) unless hash[ts]
       hash[ts] << pomodoro
     end
-    hash.values.sort
+    hash.values.sort.reverse
   end
   
   def <=>(other)
