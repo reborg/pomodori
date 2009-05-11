@@ -18,15 +18,18 @@ class KirbyStorage
   end
   
   def find_all(clazz)
-    table_for(clazz).select
+    start = Time.now
+    all = table_for(clazz).select
+    NSLog(" [PERF]: find_all took '#{Time.now - start}'")
+    all
   end
   
   def find_all_day_before(clazz, today)
-    find_all_by_date(clazz, today - SECS_IN_DAY)
+    all = find_all_by_date(clazz, today - SECS_IN_DAY)
   end
 
   def find_all_by_date(clazz, date)
-    table_for(clazz).select { |r| r.timestamp.year == date.year and r.timestamp.month == date.month and r.timestamp.day == date.day }
+    all = table_for(clazz).select { |r| r.timestamp.year == date.year and r.timestamp.month == date.month and r.timestamp.day == date.day }
   end
   
   ##

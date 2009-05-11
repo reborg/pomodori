@@ -23,8 +23,4 @@ class SummaryLabelTest < Test::Unit::TestCase
     @main_view.summary_label.to_s.should =~ /5/
   end
   
-  it "should print the daily average in the summary" do
-    @main_view.summary_label.to_s.should =~ /13/
-  end
-  
 end
