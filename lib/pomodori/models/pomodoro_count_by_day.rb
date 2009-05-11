@@ -17,6 +17,10 @@ class PomodoroCountByDay
     @pomodoros << pomodoro
   end
   
+  def <=>(pomodoro_count)
+    date <=> pomodoro_count.date
+  end
+  
   ##
   # FIXME: filtering logic should go down to kirby_storage
   # if loading all pomos is overkill.
@@ -30,10 +34,6 @@ class PomodoroCountByDay
       hash[ts] << pomodoro
     end
     hash.values.sort.reverse
-  end
-  
-  def <=>(other)
-    self.date <=> other.date
   end
   
 end

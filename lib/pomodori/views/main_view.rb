@@ -53,7 +53,6 @@ class MainView
   def summary_label
     @summary_label ||= label(
       :frame => [0, 0, 250, 62],
-      :text => format_metrics, 
       :font => font(:name => "Andale Mono", :size => 12))
   end
   
