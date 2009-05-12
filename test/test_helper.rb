@@ -7,6 +7,7 @@ require "matchy"
 require "test/unit"
 require "microspec"
 require File.dirname(__FILE__) + '/../lib/pomodori'
+require "pomodori/extensions/timestamp"
 
 def wipe_dir(dir, regex = /.tbl/)
   Dir.entries(dir).each do |name|
@@ -27,7 +28,7 @@ def pomodoros(how_many = 10)
   how_many.times do |i|
     pomos << Pomodoro.new(
       :text => "Pomo#{i}",
-      :timestamp => DateTime.new(2009, 03, i % 3 + 1))
+      :timestamp => "2009-03-0#{i % 3 + 1} 01:01:01 -0500")
   end
   pomos
 end

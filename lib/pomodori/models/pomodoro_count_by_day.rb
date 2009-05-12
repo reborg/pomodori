@@ -29,7 +29,7 @@ class PomodoroCountByDay
     hash = {}
     all_pomodoros = KirbyStorage.new.find_all(Pomodoro)
     all_pomodoros.each do |pomodoro|
-      ts = pomodoro.timestamp.strftime('%Y%m%d')
+      ts = pomodoro.timestamp.flatten_date
       hash[ts] = PomodoroCountByDay.new(pomodoro.timestamp) unless hash[ts]
       hash[ts] << pomodoro
     end

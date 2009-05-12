@@ -47,9 +47,8 @@ class KirbyStorageTest < Test::Unit::TestCase
   private
     
     def create_db(path)
-      db = KirbyBase.new(:local, nil, nil, path)
-      db.drop_table(:pomodoro) if db.table_exists?(:pomodoro)
-      pomodoro_tbl = db.create_table(:pomodoro, :text, :String, :timestamp, :Time) { |obj| obj.encrypt = false }
+      db = KirbyStorage.init_db(path)
+      # db.drop_table(:pomodoro) if db.table_exists?(:pomodoro)
     end
     
     def bulk_import_test_data

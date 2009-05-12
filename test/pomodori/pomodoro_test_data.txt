@@ -1,4 +1,4 @@
-000035|000000|Struct|recno:Integer|text:String|timestamp:Time
+000035|000000|Struct|recno:Integer|text:String|timestamp:String
 1|it works!|2009-02-12 09:57:17 -0600
 2|@macrubyembed First pomodoro with pomodori. I think a good solution would be to execute install_name_tool from Ruby everytime the application start, to change the macruby dylib|2009-02-12 11:05:08 -0600
 3|@macrubyembed I tried without success to change the dylib to a relative path. Abandoning because it looks a time sink.|2009-02-12 11:42:48 -0600

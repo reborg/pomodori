@@ -1,5 +1,6 @@
 require 'thirdparties/kirbybase'
 require 'pomodori/models/pomodoro'
+framework 'foundation'
 
 class KirbyStorage
   attr_accessor :path, :db
@@ -29,19 +30,20 @@ class KirbyStorage
   end
 
   def find_all_by_date(clazz, date)
-    all = table_for(clazz).select { |r| r.timestamp.year == date.year and r.timestamp.month == date.month and r.timestamp.day == date.day }
+    all = table_for(clazz).select { |r| r.timestamp.flatten_date == date.to_s.flatten_date }
   end
   
   ##
   # Database migration lives here. Called by main.rb
   # at startup.
   #
-  def self.init_db
-    create_db(DB_PATH)
-    db = KirbyBase.new(:local, nil, nil, DB_PATH)
+  def self.init_db(path = DB_PATH)
+    create_db(path)
+    db = KirbyBase.new(:local, nil, nil, path)
     db.create_table(:pomodoro,
       :text, :String,
-      :timestamp, :Time) { |obj| obj.encrypt = false } unless db.table_exists?(:pomodoro)
+      :timestamp, :String) { |obj| obj.encrypt = false } unless db.table_exists?(:pomodoro)
+    db
   end
   
   private

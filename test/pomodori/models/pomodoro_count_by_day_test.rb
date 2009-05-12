@@ -20,12 +20,6 @@ class PomodoroCountByDayTest < Test::Unit::TestCase
     assert_equal(2, @pcbd.count)
   end
   
-  it "should tell me who comes first" do
-    another = PomodoroCountByDay.new(DateTime.now)
-    another <=> @pcbd
-  end
-  
-  
   it "compares to another PomoCount" do
     PomodoroCountByDay.include?(Comparable).should be(true)
     (@pcbd > PomodoroCountByDay.new(DateTime.new(2008))).should be(true)

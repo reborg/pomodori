@@ -8,7 +8,7 @@ class PomodoroTest < Test::Unit::TestCase
   end
   
   def test_intializes_with_arg_hash
-    now = DateTime.now
+    now = "2009-05-11 18:06:43 -0500"
     pomodoro = Pomodoro.new({:text => "hola", :timestamp => now})
     assert_equal("hola", pomodoro.text)
     assert_equal(now, pomodoro.timestamp)
