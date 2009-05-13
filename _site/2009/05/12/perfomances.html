@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width = 750">
     <link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css" charset="utf-8">
-    <title>extracting controllers</title>
+    <title>Fixed performance issue</title>
   </head>
   <body id="intro">
     <div id="wrapper">
@@ -28,79 +28,21 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <h2 id='todays_planned_9'>TODAY&#8217;s PLANNED 9</h2>
+          <h1 id='well_over_400_pomodoros'>Well over 400 Pomodoros</h1>
 
-<h2 id='todays_done'>TODAY&#8217;s DONE</h2>
+<p>I started noticing an increasing delay during the use of the Pomodori tool since some weeks ago. I easily correlated the problem to the increasing number of pomodoros in my pomodoro database. Right now I have around 450 entries in the table and every time I started Pomodori, or simply switching between running/break status resulted in this annoying 2 secs refresh of the user interface.</p>
 
-<ul>
-<li>modularization manual acceptance UI plus fixing button actions plus add test coverage 4 =&gt; 4</li>
+<p>I decided to investigate and I found to major problems: first, I was calling the computation of the average twice by mistake and second, even removing the double call, find all pomodoros was really slow. I had a look at the Kirbybase manual to see what I was doing wrong and there is a very nicely done <a href='http://www.netpromi.com/files/kirbybase_ruby_manual.html#tips-on-improving-performance' title='Perf section'>performance section there</a> that says &#8220;Beware of Date/DateTime&#8221;. Of course I was using Time as the database type for pomodoros timestamps!</p>
 
-<li>modularization move models to models and controllers to controllers plus renaming 2 =&gt; 2</li>
-</ul>
+<p>I migrated the type of the column to string and modified the rest of the application to deal with string comparisons for date related queries. I created a <a href='http://github.com/reborg/pomodori/blob/master/lib/pomodori/extensions/timestamp.rb' title='String Extension'>string extension</a> to deal with timestamps. The problem then was how to migrate the already existing database file (pomodoro.tbl) to the new column type. I extracted the migration portion from KirbyStorage into a new <a href='http://github.com/reborg/pomodori/blob/master/lib/pomodori/migration.rb' title='Migration Class'>migration class</a> where I check at startup if the database should be migrated. So if you are using Pomodori already you shouldn&#8217;t be worried to trash your old pomodoro history.</p>
 
-<h2 id='todays_not_done'>TODAY&#8217;s NOT DONE</h2>
+<p>Now I&#8217;m happy to have back my nice and fluid Pomodori interface. By the way numbers for the find all went down from 1.4s to 0.14s.</p>
 
-<ul>
-<li>Charts</li>
-</ul>
+<h2 id='new_features'>New Features</h2>
 
-<h2 id='standup'>STANDUP</h2>
+<p>There are several other important things I&#8217;m working on right now. I&#8217;m going to open a window if you click on the yesterday&#8217;s count to show you the related Pomodoros. The pomodoro/count/day that now is a separate chart will be integrated in the main window to give you a quick overview of your performance in the last 30 days. I&#8217;m also working on a secret feature&#8230;. don&#8217;t tell anyone.</p>
 
-<ul>
-<li>I was able to close with the main refactoring operations like extracting controllers and fix the test suite</li>
-
-<li>I started manual acceptance of the new GUI and there are button actions to fix</li>
-
-<li>Today: keep going with the manual acceptance until everything works and create test to cover the fix, commit a working app.</li>
-
-<li>Final refactoring: rename countdown field, move pomodoro to models, delete useless old wrapper UI classes and commit again</li>
-
-<li>Everything should be ready for the next session to start working again on charts.</li>
-
-<li>Be careful with breaks and longer breaks</li>
-</ul>
-
-<h2 id='pomospective'>POMOSPECTIVE</h2>
-
-<ul>
-<li>Had session abort 2 hours before expected. Nothing I can do about it right now.</li>
-
-<li>I was good with estimates to close the refactoring</li>
-
-<li>I was strict with 5 mins break: did nothing.</li>
-</ul>
-
-<h2 id='internal_interruptions'>INTERNAL INTERRUPTIONS</h2>
-
-<h2 id='external_interruptions'>EXTERNAL INTERRUPTIONS</h2>
-
-<ul>
-<li>Several quick IM message exchange</li>
-
-<li>Abort session</li>
-</ul>
-
-<h2 id='raw_dump'>RAW DUMP</h2>
-<pre><code>
-  103
-  |@modularization fixed void click with a sender argument, now fixing submit click and writing tests
-  |2009-03-24 08:03:15 -0500
-  104
-  |@modularization realized I was not saving the pomo on submit fixed
-  |2009-03-24 08:35:10 -0500
-  105
-  |@modularization cosmetic changes to summary position plus tried borderless
-  |2009-03-24 09:06:44 -0500
-  106
-  |@modularization committed, plus some other small fixes like removing the application class that was almost useless
-  |2009-03-24 09:38:46 -0500
-  107
-  |@modularization renamed and moved the countdown field into timer controller
-  |2009-03-24 11:20:35:43 -0500
-  108
-  |@modularization moved controllers and models to specific folders, fixed slow tests by mocking main view
-  |2009-03-24 11:58:18:26 -0500
-</code></pre>
+<p><em>Happy pomodoros to all</em></p>
                     
           <script type="text/javascript">var disqus_url = "http://reborg.github.com/pomodori/"; var disqus_title ="";</script>
           <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/pomodori/embed.js"></script>

@@ -4,13 +4,35 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-05-11T09:27:38-05:00</updated>
+ <updated>2009-05-13T09:35:37-05:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
    <email>reborg@reborg.net</email>
  </author>
 
+ 
+ <entry>
+   <title>Fixed performance issue</title>
+   <link href="http://reborg.github.com/pomodori/2009/05/12/perfomances.html"/>
+   <updated>2009-05-12T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/05/12/perfomances</id>
+   <content type="html">&lt;h1 id='well_over_400_pomodoros'&gt;Well over 400 Pomodoros&lt;/h1&gt;
+
+&lt;p&gt;I started noticing an increasing delay during the use of the Pomodori tool since some weeks ago. I easily correlated the problem to the increasing number of pomodoros in my pomodoro database. Right now I have around 450 entries in the table and every time I started Pomodori, or simply switching between running/break status resulted in this annoying 2 secs refresh of the user interface.&lt;/p&gt;
+
+&lt;p&gt;I decided to investigate and I found to major problems: first, I was calling the computation of the average twice by mistake and second, even removing the double call, find all pomodoros was really slow. I had a look at the Kirbybase manual to see what I was doing wrong and there is a very nicely done &lt;a href='http://www.netpromi.com/files/kirbybase_ruby_manual.html#tips-on-improving-performance' title='Perf section'&gt;performance section there&lt;/a&gt; that says &amp;#8220;Beware of Date/DateTime&amp;#8221;. Of course I was using Time as the database type for pomodoros timestamps!&lt;/p&gt;
+
+&lt;p&gt;I migrated the type of the column to string and modified the rest of the application to deal with string comparisons for date related queries. I created a &lt;a href='http://github.com/reborg/pomodori/blob/master/lib/pomodori/extensions/timestamp.rb' title='String Extension'&gt;string extension&lt;/a&gt; to deal with timestamps. The problem then was how to migrate the already existing database file (pomodoro.tbl) to the new column type. I extracted the migration portion from KirbyStorage into a new &lt;a href='http://github.com/reborg/pomodori/blob/master/lib/pomodori/migration.rb' title='Migration Class'&gt;migration class&lt;/a&gt; where I check at startup if the database should be migrated. So if you are using Pomodori already you shouldn&amp;#8217;t be worried to trash your old pomodoro history.&lt;/p&gt;
+
+&lt;p&gt;Now I&amp;#8217;m happy to have back my nice and fluid Pomodori interface. By the way numbers for the find all went down from 1.4s to 0.14s.&lt;/p&gt;
+
+&lt;h2 id='new_features'&gt;New Features&lt;/h2&gt;
+
+&lt;p&gt;There are several other important things I&amp;#8217;m working on right now. I&amp;#8217;m going to open a window if you click on the yesterday&amp;#8217;s count to show you the related Pomodoros. The pomodoro/count/day that now is a separate chart will be integrated in the main window to give you a quick overview of your performance in the last 30 days. I&amp;#8217;m also working on a secret feature&amp;#8230;. don&amp;#8217;t tell anyone.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Happy pomodoros to all&lt;/em&gt;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>history table view</title>
