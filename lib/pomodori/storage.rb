@@ -1,5 +1,8 @@
 require 'yaml'
 
+##
+# Old storage mechanism on plain files. Probably removable.
+# 
 class Storage
   attr_accessor :path
   TIMESTAMP_FORMAT = '%Y%m%d%H%M%S'

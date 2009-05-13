@@ -1,13 +1,14 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'thirdparties/kirbybase'
 require 'pomodori/kirby_storage'
+require 'pomodori/migration'
 require 'pomodori/models/pomodoro'
 
 class KirbyStorageTest < Test::Unit::TestCase
   
   def setup
     @path = File.dirname(__FILE__) + "/../work"
-    create_db(@path)
+    Migration.init_db(@path)
     @kirby_storage = KirbyStorage.new(@path)
   end
   
@@ -45,11 +46,6 @@ class KirbyStorageTest < Test::Unit::TestCase
   end
   
   private
-    
-    def create_db(path)
-      db = KirbyStorage.init_db(path)
-      # db.drop_table(:pomodoro) if db.table_exists?(:pomodoro)
-    end
     
     def bulk_import_test_data
       open("#{@path}/pomodoro.tbl", 'w') do |output|

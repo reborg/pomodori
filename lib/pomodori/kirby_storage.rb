@@ -10,7 +10,6 @@ class KirbyStorage
   
   def initialize(path = DB_PATH)
     @path = path
-    KirbyStorage.create_db(path)
     @db = KirbyBase.new(:local, nil, nil, path)
   end
   
@@ -21,7 +20,7 @@ class KirbyStorage
   def find_all(clazz)
     start = Time.now
     all = table_for(clazz).select
-    NSLog(" [PERF]: find_all took '#{Time.now - start}'")
+    # NSLog(" [PERF]: find_all took '#{Time.now - start}'")
     all
   end
   
@@ -32,20 +31,7 @@ class KirbyStorage
   def find_all_by_date(clazz, date)
     all = table_for(clazz).select { |r| r.timestamp.flatten_date == date.to_s.flatten_date }
   end
-  
-  ##
-  # Database migration lives here. Called by main.rb
-  # at startup.
-  #
-  def self.init_db(path = DB_PATH)
-    create_db(path)
-    db = KirbyBase.new(:local, nil, nil, path)
-    db.create_table(:pomodoro,
-      :text, :String,
-      :timestamp, :String) { |obj| obj.encrypt = false } unless db.table_exists?(:pomodoro)
-    db
-  end
-  
+    
   private
   
     def table_for(object)
@@ -53,13 +39,5 @@ class KirbyStorage
       sym = object.to_s.downcase.to_sym if object.class == Class
       @db.get_table(sym)
     end
-    
-    ##
-    # Creates the directory for the database if the path
-    # doesn't exist
-    #
-    def self.create_db(path)
-      FileUtils.mkdir(path) unless File.exists?(path)
-    end
-  
+      
 end

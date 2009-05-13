@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + '/pomodori'
-require 'pomodori/kirby_storage'
+require 'pomodori/migration'
 require 'pomodori/views/main_view'
 
-KirbyStorage.init_db
+Migration.init_db
 
 require 'hotcocoa'
 include HotCocoa
