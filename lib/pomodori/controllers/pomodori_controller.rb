@@ -54,5 +54,10 @@ class PomodoriController
   rescue ZeroDivisionError
     0
   end
+
+  def last_tags
+    last = storage.last(Pomodoro)
+    last.nil? ? [""] : last.tags
+  end
   
 end

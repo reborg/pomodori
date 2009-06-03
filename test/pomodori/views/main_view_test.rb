@@ -11,7 +11,7 @@ class MainViewTest < Test::Unit::TestCase
     @main_view = MainView.new(
       :modal_button_controller => @modal_button_controller,
       :timer_controller => stub_everything,
-      :pomodori_controller => stub_everything)
+      :pomodori_controller => stub_everything(:last_tags => ["@some", "@tag"]))
   end
   
   it "changes the timer label" do
@@ -32,7 +32,7 @@ class MainViewTest < Test::Unit::TestCase
   it "switches on the input box for editing" do
     @main_view.send(:enable_input_box)
     @main_view.summary_label.editable?.should == true
-    @main_view.summary_label.to_s.should == "<hit enter to add description>"
+    @main_view.summary_label.to_s.should == "@some @tag "
   end
   
   it "enable input box when going submit mode" do

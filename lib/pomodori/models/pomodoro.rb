@@ -24,5 +24,9 @@ class Pomodoro
   def text=(str)
     @text = fix_encoding(str)
   end
+
+  def tags
+    @text.scan(/@\w+/)
+  end
   
 end

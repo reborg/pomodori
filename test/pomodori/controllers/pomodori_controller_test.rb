@@ -39,5 +39,10 @@ class PomodoriControllerTest < Test::Unit::TestCase
     @storage.expects(:find_all_by_date).returns([])
     @pomodori_controller.today_pomodoros
    end
+
+  it 'should retrieve the last saved pomodoro' do
+    @storage.expects(:last).returns(Pomodoro.new(:text => "hey @you"))
+    @pomodori_controller.last_tags[0].should == "@you"
+  end
   
 end

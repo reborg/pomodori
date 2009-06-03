@@ -25,11 +25,6 @@ class KirbyStorageTest < Test::Unit::TestCase
     @kirby_storage.send(:table_for, Pomodoro.new)
   end
   
-  it "creates a record" do
-    @kirby_storage.save(Pomodoro.new(:text => "done!"))
-    @kirby_storage.find_all(Pomodoro).size.should == 1
-  end
-  
   it "returns all pomodori" do
     bulk_import_test_data
     @kirby_storage.find_all(Pomodoro).size.should == 32
@@ -40,19 +35,22 @@ class KirbyStorageTest < Test::Unit::TestCase
     date = Time.local(2009, "feb", 16, "5", "25")
     @kirby_storage.find_all_by_date(Pomodoro, date).size.should == 5
   end
+
+  it 'should retrieve the last pomodoro' do
+    bulk_import_test_data
+    pomodoro = @kirby_storage.last(Pomodoro)
+    pomodoro.text.should == "@planning just arranged tasks and wrote new tasks."
+    pomodoro.should be_instance_of(Pomodoro)
+  end
   
   def teardown
-    wipe_dir(@path)
+    #wipe_dir(@path)
   end
   
   private
     
     def bulk_import_test_data
-      open("#{@path}/pomodoro.tbl", 'w') do |output|
-        open(File.dirname(__FILE__) + '/pomodoro_test_data.txt') do |input|
-          input.readlines.each {|line| output.write(line)}
-        end
-      end
+      `cp #{File.dirname(__FILE__) + '/pomodoro_test_data.txt'} #{@path}/pomodoro.tbl`
     end
 
 end

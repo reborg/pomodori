@@ -176,7 +176,7 @@ class MainView
       summary_label.setBordered(true)
       summary_label.setSelectable(true)
       summary_label.editable = true
-      summary_label.text = "<hit enter to add description>"
+      summary_label.text = @pomodori_controller.last_tags.join(" ") + " "
     end
   
 end

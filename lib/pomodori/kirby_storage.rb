@@ -31,6 +31,13 @@ class KirbyStorage
   def find_all_by_date(clazz, date)
     all = table_for(clazz).select { |r| r.timestamp.flatten_date == date.to_s.flatten_date }
   end
+
+  def last(clazz)
+    table = table_for(clazz)
+    last_id = @db.engine.get_header_vars(table)[1]
+    fields = table[last_id]
+    Pomodoro.new(:text => fields[:text], :timestamp => fields[:timestamp]) if fields
+  end
     
   private
   
