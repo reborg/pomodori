@@ -24,6 +24,7 @@ def wipe_dir(dir, regex = /.tbl/)
 end
 
 def pomodoros(how_many = 10)
+  require 'pomodori/models/pomodoro'
   pomos = []
   how_many.times do |i|
     pomos << Pomodoro.new(

@@ -5,7 +5,7 @@ class ChartsController
   attr_accessor :chart_view
 
   def initialize(params = {})
-    @chart_view = params[:chart_view] ||= ChartView.new(:charts_controller => self)
+    @chart_view = params[:chart_view]
   end
   
   ##

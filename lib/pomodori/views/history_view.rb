@@ -9,6 +9,10 @@ class HistoryView
   def initialize(opts = {})
     
   end
+
+  def update_title(title)
+    @history_window.title = title.to_s
+  end
   
   def render
     history_window
@@ -18,32 +22,33 @@ class HistoryView
     @history_window ||= window(
       :frame => [100, 100, 500, 200], 
       # :style => :borderless,
-      :title => "Tableview") do |win|
-      win << table
+      :title => "History") do |win|
+      win << hc_scroll_view
       win.background_color = color(:name => :white)
     end
   end
   
-  ##
-  # Accessor for the table view with default settings
-  # 
-  def table
-    @table ||= scroll_view(
+  def hc_scroll_view
+    @hc_scroll_view ||= scroll_view(
       :layout => {:expand => [:width, :height]},
-      :column_resize => :last_column_only,
       :vertical_scroller => true, :horizontal_scroller => false) do |scroll|
-      mytable = table_view(
-        :columns => [
-          column(:id => :timestamp, :title => "When"), 
-          column(:id => :text, :title => "What")
-        ]
-      )
-      # A single line is 17 pixels by default, these are 3 lines.
-      mytable.setRowHeight(51)
-      mytable.setUsesAlternatingRowBackgroundColors(true)
-      mytable.setHeaderView(nil)
-      scroll << mytable
+      scroll << hc_table_view
     end
+  end
+
+  def hc_table_view
+    return @hc_table_view unless @hc_table_view.nil?
+    @hc_table_view = table_view(
+      :columns => [
+        column(:id => :timestamp, :title => "When"), 
+        column(:id => :text, :title => "What")
+      ]#, :column_resize => :last_column_only
+    )
+    # A single line is 17 pixels by default, these are 3 lines.
+    @hc_table_view.setRowHeight(51)
+    @hc_table_view.setUsesAlternatingRowBackgroundColors(true)
+    @hc_table_view.setHeaderView(nil)
+    @hc_table_view
   end
   
   ##
@@ -77,7 +82,8 @@ class HistoryView
   end
   
   def refresh(pomodoros)
-    table.data = hashify(pomodoros)
+    hc_table_view.data = hashify(pomodoros)
+    hc_table_view.reloadData
   end
   
 end

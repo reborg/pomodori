@@ -13,8 +13,8 @@ class MainViewTest < Test::Unit::TestCase
       :modal_button_controller => @modal_button_controller,
       :timer_controller => stub_everything,
       :pomodori_controller => stub_everything(
-        :yesterday_pomodoros => 10, 
-        :today_pomodoros => 5,
+        :yesterday_pomodoros => ["y"]*10, 
+        :today_pomodoros => ["t"]*5,
         :last_tags => ["@some", "@tag"]))
   end
   

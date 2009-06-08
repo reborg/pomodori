@@ -18,6 +18,9 @@ class SummaryWidget
     update_yesterday_count(opts[:yesterday_count])
     update_today_count(opts[:today_count])
     update_average_count(opts[:average_count])
+    hc_yesterday_count_button.on_action = opts[:on_click_yesterday]
+    hc_today_count_button.on_action = opts[:on_click_today]
+    hc_average_count_button.on_action = opts[:on_click_average]
   end
 
   def render

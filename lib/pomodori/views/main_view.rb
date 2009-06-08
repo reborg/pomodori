@@ -3,6 +3,7 @@ require 'pomodori/controllers/modal_button_controller'
 require 'pomodori/controllers/timer_controller'
 require 'pomodori/controllers/pomodori_controller'
 require 'pomodori/controllers/charts_controller'
+require 'pomodori/controllers/history_controller'
 require 'pomodori/views/chart_view'
 require 'pomodori/views/summary_widget'
 
@@ -17,6 +18,7 @@ class MainView
     @timer_controller = opts[:timer_controller] ||= TimerController.new(:main_view => self)
     @pomodori_controller = opts[:pomodori_controller] ||= PomodoriController.new(:main_view => self)
     @charts_controller = opts[:charts_controller] ||= ChartsController.new
+    @history_controller = opts[:history_controller] ||= HistoryController.new
   end
 
   def render
@@ -50,6 +52,7 @@ class MainView
   
   ##
   # This switches the interface to accept a pomodoro
+  #
   # description to be saved
   #
   def submit_mode
@@ -89,9 +92,9 @@ class MainView
     def disable_input_box
       hc_pomodoro_input_box.setHidden(true)
       summary_widget.show
-      summary_widget.update_yesterday_count(@pomodori_controller.yesterday_pomodoros)
-      summary_widget.update_today_count(@pomodori_controller.today_pomodoros)
-      summary_widget.update_average_count(@pomodori_controller.daily_average)
+      summary_widget.update_yesterday_count(@pomodori_controller.yesterday_pomodoros.size)
+      summary_widget.update_today_count(@pomodori_controller.today_pomodoros.size)
+      summary_widget.update_average_count(@pomodori_controller.average_pomodoros)
     end
   
     ##
@@ -135,7 +138,10 @@ class MainView
       @summary_widget ||= SummaryWidget.new(
         :yesterday_count => @pomodori_controller.yesterday_pomodoros,
         :today_count => @pomodori_controller.today_pomodoros,
-        :average_count => @pomodori_controller.daily_average)
+        :average_count => @pomodori_controller.average_pomodoros,
+        :on_click_yesterday => lambda {|sender| @history_controller.on_open_history(:yesterday)},
+        :on_click_today => lambda {|sender| @history_controller.on_open_history(:today)},
+        :on_click_average => lambda {|sender| @history_controller.on_open_history(:average)})
     end
     
     ##

@@ -30,14 +30,14 @@ class PomodoriController
   # yesterday.
   #
   def yesterday_pomodoros
-    storage.find_all_day_before(Pomodoro, Time.now).size
+    storage.find_all_day_before(Pomodoro, Time.now)
   end
   
   ##
   # Returns the count of Pomodoros stored today.
   #
   def today_pomodoros
-    storage.find_all_by_date(Pomodoro, Time.now).size
+    storage.find_all_by_date(Pomodoro, Time.now)
   end
   
   def storage
@@ -48,7 +48,7 @@ class PomodoriController
   # Calculates the daily average pomodoros. The rounding
   # is not really important here.
   #
-  def daily_average
+  def average_pomodoros
     all = PomodoroCountByDay.find_all
     (all.inject(0) { |sum, day| sum + day.count}) / all.size
   rescue ZeroDivisionError

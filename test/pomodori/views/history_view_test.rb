@@ -43,10 +43,4 @@ class HistoryViewTest < Test::Unit::TestCase
     @history_view.hashify(pomodoros(5)).first.should respond_to(:keys)
   end
   
-  it "updates the underlining data source" do
-    @history_view.expects(:hashify).returns([])
-    @history_view.expects(:table).returns(stub_everything)
-    @history_view.refresh(pomodoros)
-  end
-  
 end
