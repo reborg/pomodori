@@ -20,12 +20,23 @@ class HistoryView
   
   def history_window
     @history_window ||= window(
-      :frame => [100, 100, 500, 200], 
+      :frame => [100, 100, 500, 400], 
       # :style => :borderless,
       :title => "History") do |win|
+      win << hc_bottom_layout_view
       win << hc_scroll_view
-      win.background_color = color(:name => :white)
     end
+  end
+
+  def hc_bottom_layout_view
+    @hc_bottom_layout_view ||= layout_view(
+      :mode => :horizontal, 
+      :frame => [0,0,0,30],
+      :margin => 0,
+      :spacing => 4,
+      :layout => {:expand => [:width], :padding => 0}) do |v|
+        v << hc_close_button
+      end
   end
   
   def hc_scroll_view
@@ -63,8 +74,12 @@ class HistoryView
     @close_button ||= button(
       :title => "Close",
       :bezel => :textured_square,
-      :frame => [600, 12, 66, 28],
-      :on_action => Proc.new {@chart_window.close})
+      :frame => [0, 0, 66, 28],
+      :on_action => close_window_action)
+  end
+
+  def close_window_action
+    lambda {|sender| history_window.close}
   end
   
   ##

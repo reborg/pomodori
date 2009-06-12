@@ -43,4 +43,11 @@ class HistoryViewTest < Test::Unit::TestCase
     @history_view.hashify(pomodoros(5)).first.should respond_to(:keys)
   end
   
+  it 'closes the window on close button' do
+    hc_history_window = mock()
+    @history_view.expects(:history_window).returns(hc_history_window)
+    hc_history_window.expects(:close)
+    @history_view.send(:close_window_action).call("me")
+  end
+  
 end

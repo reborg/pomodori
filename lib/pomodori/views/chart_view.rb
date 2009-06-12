@@ -25,7 +25,7 @@ class ChartView
   private
 
     def hc_chart_window
-      @hc_chart_window ||= window(:frame => [100, 100, 500, 300], :title => "Reports") do |win|
+      @hc_chart_window ||= window(:frame => [100, 100, 500, 400], :title => "Reports") do |win|
         win << hc_bottom_view
         win << hc_top_view
         @charts_controller.on_load_view
@@ -44,7 +44,10 @@ class ChartView
     def hc_bottom_view
       @hc_bottom_view ||= layout_view(
         :mode => :horizontal,      
-        :frame => [0, 0, 450, 50]) do |view|
+        :margin => 0,
+        :spacing => 4,
+        :layout => {:expand => [:width], :padding => 0},
+        :frame => [0, 0, 0, 30]) do |view|
         view << hc_reload_button
         view << hc_close_button      
       end
@@ -54,7 +57,7 @@ class ChartView
       @hc_reload_button ||= button(
           :title => "Reload",
           :bezel => :textured_square,
-          :frame => [525, 12, 66, 28],
+          :frame => [0, 0, 66, 28],
           :on_action => reload_button_action)
     end
     
@@ -66,8 +69,12 @@ class ChartView
       @hc_close_button ||= button(
           :title => "Close",
           :bezel => :textured_square,
-          :frame => [600, 12, 66, 28],
-          :on_action => Proc.new {@hc_chart_window.close})
+          :frame => [0, 0, 66, 28],
+          :on_action => close_window_action)
+    end
+
+    def close_window_action
+      lambda { |sender| hc_chart_window.close } 
     end
     
     def hc_web_view

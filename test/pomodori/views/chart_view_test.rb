@@ -9,23 +9,30 @@ class ChartViewTest < Test::Unit::TestCase
     @chart_view = ChartView.new(:charts_controller => @charts_controller)
   end
   
-  def test_should_load_url
+  it "should load url" do
     @chart_view.send(:hc_web_view).expects(:url=).with("/temp/some.html")
     @chart_view.load_chart("/temp/some.html")
   end
   
-  def test_should_add_webview_on_top
+  it "should add webview on top" do
     assert_equal(1, @chart_view.send(:hc_top_view).subviews.size)
     assert_kind_of(WebView, @chart_view.send(:hc_top_view).subviews[0])
   end
   
-  def test_should_add_2_buttons_bottom
+  it "should add 2 buttons bottom" do
     assert_equal(2, @chart_view.send(:hc_bottom_view).subviews.size)
   end
   
-  def test_delegates_to_ctrl_on_reload
+  it "delegates to ctrl on reload" do
     @charts_controller.expects(:on_reload_chart)
     @chart_view.send(:reload_button_action).call("sender")
   end
-  
+
+  it 'closes the window on close button' do
+    hc_chart_window = mock()
+    @chart_view.expects(:hc_chart_window).returns(hc_chart_window)
+    hc_chart_window.expects(:close)
+    @chart_view.send(:close_window_action).call("me")
+  end
+
 end
