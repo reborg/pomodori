@@ -40,15 +40,31 @@ class HistoryView
     return @hc_table_view unless @hc_table_view.nil?
     @hc_table_view = table_view(
       :columns => [
-        column(:id => :timestamp, :title => "When"), 
+        hc_timestamp_column, 
         column(:id => :text, :title => "What")
-      ]#, :column_resize => :last_column_only
+      ]
     )
     # A single line is 17 pixels by default, these are 3 lines.
     @hc_table_view.setRowHeight(51)
     @hc_table_view.setUsesAlternatingRowBackgroundColors(true)
     @hc_table_view.setHeaderView(nil)
     @hc_table_view
+  end
+
+  def hc_timestamp_column 
+    c = column(:id => :timestamp, :title => "When") 
+    c.setMaxWidth(80)
+    c.setMinWidth(80)
+    c.setDataCell(TimeStampCell.new)
+    c
+  end
+  
+  def hc_close_button
+    @close_button ||= button(
+      :title => "Close",
+      :bezel => :textured_square,
+      :frame => [600, 12, 66, 28],
+      :on_action => Proc.new {@chart_window.close})
   end
   
   ##
@@ -87,3 +103,20 @@ class HistoryView
   end
   
 end
+
+##
+# Thanks!
+# http://everburning.com/news/heating-up-with-hotcocoa-part-iii/
+#
+class TimeStampCell < NSCell
+  def drawInteriorWithFrame(frame, inView:view)
+    NSColor.colorWithCalibratedRed("fa".hex/ 255.0, green:"8c".hex/255.0, blue:"40".hex/255.0, alpha:100).set
+    NSRectFill(frame)
+
+    rank_frame = NSMakeRect(frame.origin.x + (frame.size.width / 2) - 26,
+                            frame.origin.y + (frame.size.height / 2) - 6, frame.size.width, 17)
+
+    objectValue.to_s.drawInRect(rank_frame, withAttributes:nil)
+  end
+end
+
