@@ -15,6 +15,7 @@ class MainViewTest < Test::Unit::TestCase
       :pomodori_controller => stub_everything(
         :yesterday_pomodoros => ["y"]*10, 
         :today_pomodoros => ["t"]*5,
+        :total_count => 190,
         :last_tags => ["@some", "@tag"]))
   end
   
@@ -59,9 +60,14 @@ class MainViewTest < Test::Unit::TestCase
   end
 
   it "shows statistics for running mode" do
-    @main_view.expects(:update_window_title).with("Running...")
+    @main_view.expects(:update_window_title)
     @main_view.running_mode
     @main_view.send(:summary_widget).send(:hc_today_count_button).title.should == "5"
+  end
+
+  it 'shows total count on window bar on running mode' do
+    @main_view.expects(:update_window_title).with("190 pomodoros and counting!")
+    @main_view.running_mode
   end
   
 end

@@ -44,5 +44,10 @@ class PomodoriControllerTest < Test::Unit::TestCase
     @storage.expects(:last).returns(Pomodoro.new(:text => "hey @you"))
     @pomodori_controller.last_tags[0].should == "@you"
   end
+
+  it 'retrieves all pomodoros' do
+    @storage.expects(:find_all).returns(pomodoros)
+    @pomodori_controller.total_count.should == 10
+  end
   
 end

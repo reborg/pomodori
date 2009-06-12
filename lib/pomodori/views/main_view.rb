@@ -69,7 +69,7 @@ class MainView
   # the timer for a new pomodoro.
   # 
   def running_mode
-    update_window_title("Running...")
+    update_window_title("#{@pomodori_controller.total_count} pomodoros and counting!")
     disable_input_box
     hc_modal_button.title = "Void"
     hc_modal_button.on_action = @modal_button_controller.method(:on_click_void)

@@ -59,5 +59,9 @@ class PomodoriController
     last = storage.last(Pomodoro)
     last.nil? ? [""] : last.tags
   end
+
+  def total_count
+    storage.find_all(Pomodoro).size
+  end
   
 end
