@@ -45,7 +45,7 @@ class HistoryViewTest < Test::Unit::TestCase
   
   it 'closes the window on close button' do
     hc_history_window = mock()
-    @history_view.expects(:history_window).returns(hc_history_window)
+    @history_view.expects(:hc_history_window).returns(hc_history_window)
     hc_history_window.expects(:close)
     @history_view.send(:close_window_action).call("me")
   end

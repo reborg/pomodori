@@ -2,84 +2,14 @@ require 'hotcocoa'
 
 class HistoryView
   include HotCocoa
+  
   DESCR_COLUMN_SIZE = 50
   
-  attr_reader :table, :history_window
-  
   def initialize(opts = {})
-    
   end
 
   def update_title(title)
-    @history_window.title = title.to_s
-  end
-  
-  def render
-    history_window
-  end
-  
-  def history_window
-    @history_window ||= window(
-      :frame => [100, 100, 500, 400], 
-      # :style => :borderless,
-      :title => "History") do |win|
-      win << hc_bottom_layout_view
-      win << hc_scroll_view
-    end
-  end
-
-  def hc_bottom_layout_view
-    @hc_bottom_layout_view ||= layout_view(
-      :mode => :horizontal, 
-      :frame => [0,0,0,30],
-      :margin => 0,
-      :spacing => 4,
-      :layout => {:expand => [:width], :padding => 0}) do |v|
-        v << hc_close_button
-      end
-  end
-  
-  def hc_scroll_view
-    @hc_scroll_view ||= scroll_view(
-      :layout => {:expand => [:width, :height]},
-      :vertical_scroller => true, :horizontal_scroller => false) do |scroll|
-      scroll << hc_table_view
-    end
-  end
-
-  def hc_table_view
-    return @hc_table_view unless @hc_table_view.nil?
-    @hc_table_view = table_view(
-      :columns => [
-        hc_timestamp_column, 
-        column(:id => :text, :title => "What")
-      ]
-    )
-    # A single line is 17 pixels by default, these are 3 lines.
-    @hc_table_view.setRowHeight(51)
-    @hc_table_view.setUsesAlternatingRowBackgroundColors(true)
-    @hc_table_view.setHeaderView(nil)
-    @hc_table_view
-  end
-
-  def hc_timestamp_column 
-    c = column(:id => :timestamp, :title => "When") 
-    c.setMaxWidth(80)
-    c.setMinWidth(80)
-    c.setDataCell(TimeStampCell.new)
-    c
-  end
-  
-  def hc_close_button
-    @close_button ||= button(
-      :title => "Close",
-      :bezel => :textured_square,
-      :frame => [0, 0, 66, 28],
-      :on_action => close_window_action)
-  end
-
-  def close_window_action
-    lambda {|sender| history_window.close}
+    @hc_history_window.title = title.to_s
   end
   
   ##
@@ -116,9 +46,79 @@ class HistoryView
     hc_table_view.data = hashify(pomodoros)
     hc_table_view.reloadData
   end
-  
-end
 
+  def render
+    hc_history_window
+  end
+  
+  private
+
+    def hc_history_window
+      @hc_history_window ||= window(
+        :frame => [100, 100, 500, 400], 
+        # :style => :borderless,
+        :title => "History") do |win|
+        win << hc_bottom_layout_view
+        win << hc_scroll_view
+      end
+    end
+
+    def hc_bottom_layout_view
+      @hc_bottom_layout_view ||= layout_view(
+        :mode => :horizontal, 
+        :frame => [0,0,0,30],
+        :margin => 0,
+        :spacing => 4,
+        :layout => {:expand => [:width], :padding => 0}) do |v|
+          v << hc_close_button
+        end
+    end
+    
+    def hc_scroll_view
+      @hc_scroll_view ||= scroll_view(
+        :layout => {:expand => [:width, :height]},
+        :vertical_scroller => true, :horizontal_scroller => false) do |scroll|
+        scroll << hc_table_view
+      end
+    end
+
+    def hc_table_view
+      return @hc_table_view unless @hc_table_view.nil?
+      @hc_table_view = table_view(
+        :columns => [
+          hc_timestamp_column, 
+          column(:id => :text, :title => "What")
+        ]
+      )
+      # A single line is 17 pixels by default, these are 3 lines.
+      @hc_table_view.setRowHeight(51)
+      @hc_table_view.setUsesAlternatingRowBackgroundColors(true)
+      @hc_table_view.setHeaderView(nil)
+      @hc_table_view
+    end
+
+    def hc_timestamp_column 
+      c = column(:id => :timestamp, :title => "When") 
+      c.setMaxWidth(80)
+      c.setMinWidth(80)
+      c.setDataCell(TimeStampCell.new)
+      c
+    end
+    
+    def hc_close_button
+      @close_button ||= button(
+        :title => "Close",
+        :bezel => :textured_square,
+        :frame => [0, 0, 66, 28],
+        :on_action => close_window_action)
+    end
+
+    def close_window_action
+      lambda {|sender| hc_history_window.close}
+    end
+
+end
+  
 ##
 # Thanks!
 # http://everburning.com/news/heating-up-with-hotcocoa-part-iii/
