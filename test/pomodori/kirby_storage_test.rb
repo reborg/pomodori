@@ -42,8 +42,17 @@ class KirbyStorageTest < Test::Unit::TestCase
     pomodoro.text.should == "@planning just arranged tasks and wrote new tasks."
     pomodoro.should be_instance_of(Pomodoro)
   end
+
+  it 'caches pomodoros' do
+    table = mock()
+    table.expects(:select).returns(["a", "b"])
+    @kirby_storage.expects(:table_for).once.returns(table)
+    @kirby_storage.find_all(Pomodoro)
+    @kirby_storage.find_all(Pomodoro)
+  end
   
   def teardown
+    @kirby_storage.invalidate_caches
     #wipe_dir(@path)
   end
   

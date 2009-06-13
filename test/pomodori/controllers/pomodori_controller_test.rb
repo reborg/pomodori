@@ -17,6 +17,7 @@ class PomodoriControllerTest < Test::Unit::TestCase
     ctrl = PomodoriController.new
     ctrl.storage = storage
     storage.expects(:save)
+    storage.expects(:invalidate_caches)
     ctrl.create({:text => "hola"})
   end
   

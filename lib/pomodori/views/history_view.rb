@@ -29,11 +29,13 @@ class HistoryView
     text.gsub(/(.{1,#{chars}})( +|$\n?)|(.{1,#{chars}})/, "\\1\\3\n").chomp
   end
   
+
   ##
   # Convert an array of pomodoros into an array
   # of hashified pomodoros
   # 
   def hashify(pomodoros)
+    return [{:text => "\nThe next pomodoro will go better!", :timestamp => "None"}] unless pomodoros.size > 0
     pomodoros.inject([]) do |array, pomodoro| 
       array << {
         :text => smart_split(pomodoro.text, DESCR_COLUMN_SIZE), 

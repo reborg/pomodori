@@ -29,6 +29,10 @@ class HistoryViewTest < Test::Unit::TestCase
     @history_view.hashify([pomo]).first[:text].should_not be(nil)
     @history_view.hashify([pomo]).first[:timestamp].should_not be(nil)
   end
+
+  it 'prints a none message if no pomodoros to hashify' do
+    @history_view.hashify([]).first[:timestamp].should == "None"
+  end
   
   it "processes data for hashified pomodoro" do
     txt = "if descr is longer than 50 chars should be split into multiline"

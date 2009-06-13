@@ -4,6 +4,7 @@ framework 'foundation'
 
 class KirbyStorage
   attr_accessor :path, :db
+  @@pomodoros = nil
   
   DB_PATH = File.expand_path("~/Library/Application Support/Pomodori")
   SECS_IN_DAY = 60 * 60 * 24
@@ -19,9 +20,13 @@ class KirbyStorage
   
   def find_all(clazz)
     start = Time.now
-    all = table_for(clazz).select
-    # NSLog(" [PERF]: find_all took '#{Time.now - start}'")
-    all
+    @@pomodoros ||= table_for(clazz).select
+    #NSLog(" [PERF]: find_all took '#{Time.now - start}'")
+    @@pomodoros
+  end
+
+  def invalidate_caches
+    @@pomodoros = nil
   end
   
   def find_all_day_before(clazz, today)

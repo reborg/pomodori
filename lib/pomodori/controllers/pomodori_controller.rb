@@ -23,6 +23,7 @@ class PomodoriController
   def create(params)
     pomodoro = Pomodoro.new(params)
     storage.save(pomodoro)
+    storage.invalidate_caches
   end
 
   ##
