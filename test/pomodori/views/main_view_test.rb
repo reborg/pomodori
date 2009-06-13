@@ -9,9 +9,11 @@ class MainViewTest < Test::Unit::TestCase
     @modal_button_controller.class.send(:define_method, :on_click_void, lambda{})
     @modal_button_controller.class.send(:define_method, :on_click_submit, lambda{})
     @modal_button_controller.class.send(:define_method, :on_click_restart, lambda{})
+    @charts_controller = stub_everything
     @main_view = MainView.new(
       :modal_button_controller => @modal_button_controller,
       :timer_controller => stub_everything,
+      :charts_controller => @charts_controller,
       :pomodori_controller => stub_everything(
         :yesterday_pomodoros => ["y"]*10, 
         :today_pomodoros => ["t"]*5,
@@ -68,6 +70,11 @@ class MainViewTest < Test::Unit::TestCase
   it 'shows total count on window bar on running mode' do
     @main_view.expects(:update_window_title).with("190 pomodoros and counting!")
     @main_view.running_mode
+  end
+
+  it 'opens chart on open chart action' do
+    @charts_controller.expects(:on_open_report)
+    @main_view.send(:open_chart_action).call("sender")
   end
   
 end

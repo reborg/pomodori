@@ -116,7 +116,6 @@ class MainView
         win << summary_widget.render
         win << hc_pomodoro_input_box
         win << hc_modal_button
-        win << hc_report_button
         win << hc_timer_label
       end
     end
@@ -141,7 +140,7 @@ class MainView
         :average_count => @pomodori_controller.average_pomodoros,
         :on_click_yesterday => lambda {|sender| @history_controller.on_open_history(:yesterday)},
         :on_click_today => lambda {|sender| @history_controller.on_open_history(:today)},
-        :on_click_average => lambda {|sender| @history_controller.on_open_history(:average)})
+        :on_click_average => open_chart_action)
     end
     
     ##
@@ -150,18 +149,9 @@ class MainView
     #
     def hc_modal_button
       @hc_modal_button ||= button(
-        :frame => [300, 12, 66, 28],
+        :frame => [264, 12, 100, 28],
         :bezel => :textured_square, 
         :layout => {:start => false})
-    end
-    
-    def hc_report_button
-      @hc_report_button ||= button(
-        :title => "Report",
-        :frame => [230, 12, 66, 28], 
-        :bezel => :textured_square, 
-        :layout => {:start => false},
-        :on_action => lambda {|sender| @charts_controller.on_open_report })
     end
     
     def hc_timer_label
@@ -169,6 +159,10 @@ class MainView
         :frame => [20, 8, 96, 35],
         :text => "25:00",
         :font => font(:name => "Monaco", :size => 26))
+    end
+
+    def open_chart_action
+      lambda {|sender| @charts_controller.on_open_report}
     end
 
 end

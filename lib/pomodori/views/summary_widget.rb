@@ -55,7 +55,7 @@ class SummaryWidget
         :margin => 0,
         :spacing => 0, 
         :layout => {:start => false},
-        :frame => [115, 65, 100, 60]) do |v|
+        :frame => [264, 65, 100, 60]) do |v|
         v << hc_row_layout_view([0,0,0,20], hc_average_count_button, hc_label("Average:"))
         v << hc_row_layout_view([0,0,0,20], hc_today_count_button, hc_label("Today:"))
         v << hc_row_layout_view([0,0,0,20], hc_yesterday_count_button, hc_label("Yesterday:"))
