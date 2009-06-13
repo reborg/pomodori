@@ -52,7 +52,7 @@ class Chart
       html << "<li>"
         html << "<span class=\"date\">#{pomo.date.strftime('%Y-%m-%d')}</span>"
         html << "<span class=\"count\">#{pomo.count}</span>"
-        html << "<span class=\"index\" style=\"width: #{pomo.count * 5}%\"></span>"
+        html << "<span class=\"index\" style=\"width: #{pomo.count * 4}%\"></span>"
       html << "</li>"
     end
     html
