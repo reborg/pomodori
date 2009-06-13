@@ -22,7 +22,9 @@ class TimestampTest < Test::Unit::TestCase
   end
   
   it "format the time using same Time convention" do
-    @ts.strftime('%I:%M%p').downcase.should == "06:06pm"
+    time_regexp = /^\d{2}:\d{2}[ap]m$/
+    @ts.strftime('%I:%M%p').downcase.should =~ time_regexp
+    "2011-01-23 01:24:02 -0700".strftime('%I:%M%p').downcase.should =~ time_regexp
   end
   
 end
