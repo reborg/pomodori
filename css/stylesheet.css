@@ -27,8 +27,14 @@ html>body #wrapper {
 #header {
 	position: relative;
 	background: #fff;
-	height: 133px;
+	height: 190px;
 }
+
+#header img {
+  width: 97%;
+  padding-left: 20px;
+}
+
 #header h1 {
 	position: absolute;
 	left: 140px;
