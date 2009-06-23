@@ -13,8 +13,9 @@ class TimestampTest < Test::Unit::TestCase
     "2009_05_11 11:06:43 -0500".timestamp?.should be(false)
   end
   
-  it "extracts the the date" do
+  it "extracts the date" do
     @ts.flatten_date.should == "20090511"
+    "2009-02-16 05:25:00 +0100".flatten_date.should == "20090216"
   end
   
   it "returns empty string if not ts" do
