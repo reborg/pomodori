@@ -1,6 +1,6 @@
 *.log
 .DS_Store
-pomodori.app
+Pomodori.app
 docs
 website
 *.swp
