@@ -184,10 +184,10 @@ module KBTypeConversionsMixin
     #KB_NIL = '&kb_nil;'
 
     # Regular expression used to determine if field needs to be un-encoded.
-    UNENCODE_RE = /&(?:amp|linefeed|carriage_return|substitute|pipe);/
+    UNENCODE_RE = /&(?:amp|linefeed|carriage_return|pipe);/
 
     # Regular expression used to determine if field needs to be encoded.
-    ENCODE_RE = /&|\n|\r|\032|\|/
+    ENCODE_RE = /&|\n|\r|\|/
 
     #-----------------------------------------------------------------------
     # convert_to_native_type

@@ -50,6 +50,11 @@ class KirbyStorageTest < Test::Unit::TestCase
     @kirby_storage.find_all(Pomodoro)
     @kirby_storage.find_all(Pomodoro)
   end
+
+  it 'accepts unicode characters' do
+    @kirby_storage.save(Pomodoro.new(:text => "äåö"))
+    @kirby_storage.last(Pomodoro).text.should == "äåö"
+  end
   
   def teardown
     @kirby_storage.invalidate_caches
