@@ -9,14 +9,10 @@ task :test do
 end
 
 task :embed => [:deploy] do
-  root = "Frameworks/MacRuby.framework/Versions/Current"
-  `rm -rf ./#{AppConfig.name}.app/Contents/#{root}/0.3`
+  `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/0.3`
   `find ./#{AppConfig.name}.app/Contents -name "1.9.0" -type d | xargs rm -rf`
-  `rm -rf ./#{AppConfig.name}.app/Contents/#{root}/usr/include/ruby-1.9.0`
-  `rm -rf ./#{AppConfig.name}.app/Contents/#{root}/usr/lib/libmacruby.1.9.0.dylib`
-  `find ./#{AppConfig.name}.app/Contents -name "*.bundle" \
-    -exec install_name_tool -change \
-    /Library/#{root}/usr/lib/libmacruby.dylib \
-    @executable_path/../#{root}/usr/lib/libmacruby.dylib {} \\;`
+  `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/Current/usr/include/ruby-1.9.0`
+  `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/Current/usr/lib/libmacruby.1.9.0.dylib`
+  `find ./#{AppConfig.name}.app/Contents -name "*.bundle" -exec install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.4/usr/lib/libmacruby.dylib @executable_path/../Frameworks/MacRuby.framework/Versions/Current/usr/lib/libmacruby.dylib {} \\;`
 end
 
