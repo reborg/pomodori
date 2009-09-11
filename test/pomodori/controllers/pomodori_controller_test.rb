@@ -28,7 +28,7 @@ class PomodoriControllerTest < Test::Unit::TestCase
   
   it "should return the average daily pomo" do
     PomodoroCountByDay.stubs(:find_all).returns(pomodoro_count_by_day_sample)
-    @pomodori_controller.average_pomodoros.should == 1
+    @pomodori_controller.average_pomodoros.should == 7
   end
   
   it "retrieves yesterday's pomodoros" do

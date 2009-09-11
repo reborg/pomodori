@@ -34,10 +34,14 @@ def pomodoros(how_many = 10)
   pomos
 end
 
+##
+# 3, 6, 9 pomos a day
+# average 6+9/2=7
+#
 def pomodoro_count_by_day_sample
   pomos = []
   3.times do |i|
-    pomos << PomodoroCountByDay.new(DateTime.new(2009, 03, i % 3 + 1), pomodoros(i))
+    pomos << PomodoroCountByDay.new(DateTime.new(2009, 03, i % 3 + 1), pomodoros(3 * (i + 1)))
   end
   pomos
 end

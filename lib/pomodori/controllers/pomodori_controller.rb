@@ -47,13 +47,22 @@ class PomodoriController
   
   ##
   # Calculates the daily average pomodoros. The rounding
-  # is not really important here.
+  # is not really important here. I consider only days with more
+  # than 6 pomodoros. If less I don't consider them a real
+  # day of work but more a few tasks on a holiday.
+  # Why 6? 6 can be reasonably an underestimated half a day
   #
   def average_pomodoros
     all = PomodoroCountByDay.find_all
-    (all.inject(0) { |sum, day| sum + day.count}) / all.size
-  rescue ZeroDivisionError
-    0
+    sum = 0
+    valid_day = 0
+    all.each do |day|
+      if day.count > 5
+        valid_day+=1
+        sum = sum + day.count
+      end
+    end
+    valid_day > 0 ? sum/valid_day : 0
   end
 
   def last_tags
