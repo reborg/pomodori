@@ -5,6 +5,8 @@ title: Welcome to Pomodori!
 
 Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori measures the pomodoro time and stores pomodoro descriptions with only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
 
+Please notice that right know Pomodori does not work under Snow Leopard. The migration to Snow Leopard Mas OS X 10.6 is planned for the next release, 0.4. Sorry about that.
+
 WHAT IS THE POMODORO TECHNIQUE?
 -------------------------------
 The Pomodoro Technique (PT) is a time and focus management technique which improves productivity and quality of work. Starting with the PT is incredibily simple, you just need a timer (shameless promotion, what about Pomodori?) that counts 25 minutes:
@@ -28,17 +30,6 @@ FEATURES
 --------------------
 
 The project is young but features are added fast. Do you want a new feature? Please enter it here: [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview) or send your comment to reborg @ reborg.net
-
-Release 0.4
-
-This release is mostly maintenance, but I managed too a few other interesting changes. Now Pomodori supports internationalization with unicode chars and multiple timezones. The installation is now easier: you don't need to install (or know) about MacRuby anymore because it's now embedded in the bundle. Here's some additional detail:
-
-* Removed too short days (below 6 pomodoros) from the total daily average metric
-* Embedded MacRuby in the App, no need to install it as a dependency
-* Support for unicode international characters in Pomodoro descriptions
-* Fixed timestamps to support multiple timezones
-* A few minor bugs
-* Moved ticket support to github only (no more lighthouse)
 
 Release 0.3
 
