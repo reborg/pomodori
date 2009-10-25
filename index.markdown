@@ -1,3 +1,7 @@
+---
+layout: default
+title: Welcome to Pomodori!
+---
 
 Pomodori is a Mac OS (Leopard only for just a few more days) tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
 
