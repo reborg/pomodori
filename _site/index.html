@@ -27,9 +27,7 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <p>Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a>. Pomodori measures the pomodoro time and stores pomodoro descriptions with only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
-
-<p>Please notice that right know Pomodori does not work under Snow Leopard. The migration to Snow Leopard Mas OS X 10.6 is planned for the next release, 0.4. Sorry about that.</p>
+          <p>Pomodori is a Mac OS (Leopard only for just a few more days) tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a>. Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
 
 <h2 id='what_is_the_pomodoro_technique'>WHAT IS THE POMODORO TECHNIQUE?</h2>
 
@@ -37,7 +35,7 @@
 
 <p><img src='resources/start-easy.png' alt='Start Easy' /></p>
 
-<p>Then read the book <a href='http://www.pomodoro-book.com/'>Pomodoro Technique Illustrated</a> by Staffan Noteberg and the <a href='http://www.pomodorotechnique.com/'>paper</a> by Francesco and you should be all set.</p>
+<p>Then read the book <a href='http://www.pomodoro-book.com/'>Pomodoro Technique Illustrated</a> by Staffan Noteberg and the original <a href='http://www.pomodorotechnique.com/'>paper</a> by Francesco and you should be all set.</p>
 
 <h2 id='screenshots'>SCREENSHOTS</h2>
 
@@ -51,7 +49,19 @@
 
 <h2 id='features'>FEATURES</h2>
 
-<p>The project is young but features are added fast. Do you want a new feature? Please enter it here: <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>LightHouse</a> or send your comment to reborg @ reborg.net</p>
+<p>The project is young and features are added fast. Do you want a new feature? Please enter it here: <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>LightHouse</a> or send your comment to reborg @ reborg.net</p>
+
+<p>Release 0.4</p>
+
+<p>This release is the last based on MacRuby 0.4 (the last compatible with Mac OS X Leopard 10.5). Please download version 0.4 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'>here</a>. Included in this release:</p>
+
+<ul>
+<li>Fixed bug related to pomodoros recorded with different timezones</li>
+
+<li>Added unicode support to pomodoro descriptions <a href='http://reborg.lighthouseapp.com/projects/25822/tickets/11-scandinavic-characters-such-as-crash-pomodori'>ticket 11</a></li>
+
+<li>Removed too short days (less than 6 pomodoros) from average count</li>
+</ul>
 
 <p>Release 0.3</p>
 
@@ -102,6 +112,10 @@
 <h2 id='coming_soon'>COMING SOON</h2>
 
 <ul>
+<li>Snow Leopard compatiblity</li>
+
+<li>Major rewrite under developement. Dropping HotCocoa and moving interface deisgn in XCode.</li>
+
 <li>Tag management to tag pomodoros belonging to a certain category</li>
 
 <li>More advanced charts such as pomodoros worked by tag</li>
@@ -111,14 +125,18 @@
 <li>Timer visible in the menubar</li>
 
 <li>Many many more&#8230;</li>
+
+<li>Fixed bug related to pomodoros recorded with different timezones</li>
+
+<li>Added unicode support to pomodoro descriptions <span /></li>
 </ul>
 
 <h2 id='requirements'>REQUIREMENTS</h2>
 
-<ul>
-<li>MacRuby 0.4 (really easy to install while waiting for the official Apple inclusion into Mac Os X)</li>
+<p>Mac OS X 10.5 Leopard users:</p>
 
-<li>Download MacRuby binaries from <a href='http://www.macruby.org/files/MacRuby%200.4.zip'>MacRuby binaries</a></li>
+<ul>
+<li>Download MacRuby 0.4 binaries from <a href='http://www.macruby.org/files/MacRuby%200.4.zip'>MacRuby binaries</a></li>
 
 <li>Unzip and double click on the installer and follow the instructions</li>
 </ul>
@@ -126,7 +144,7 @@
 <h2 id='install'>INSTALL</h2>
 
 <ul>
-<li>Download the <a href='http://reborg.github.com/pomodori/resources/pomodori-0.3.zip'>pomodori-0.3.zip archive</a></li>
+<li>Download the pomodori 0.4 archive <a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'>here</a></li>
 
 <li>Unzip and copy to pomodori.app to /Applications</li>
 
@@ -181,7 +199,7 @@
             <h5><a href="http://www.pomodorotechnique.com/">PT Pomodoro Technique</a></h5>
           </div>
           <div class="item">
-            <h4>Blog Posts [<a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a>]</h4>
+            <h4>Blog Posts <a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a></h4>
             <p>
                
                 <span>08 Jun 2009</span> » <a href="/pomodori/2009/06/08/historyview.html">View History Feature</a><br>

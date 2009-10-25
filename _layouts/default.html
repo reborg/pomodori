@@ -39,7 +39,7 @@
             <h5><a href="http://www.pomodorotechnique.com/">PT Pomodoro Technique</a></h5>
           </div>
           <div class="item">
-            <h4>Blog Posts [<a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a>]</h4>
+            <h4>Blog Posts <a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a></h4>
             <p>
               {% for post in site.posts %} 
                 <span>{{ post.date | date_to_string }}</span> » <a href="/pomodori{{ post.url }}">{{ post.title }}</a><br>
