@@ -1,0 +1,25 @@
+---
+layout: post
+title: Pomodori 0.4 and Snow Leopard Issues
+---
+
+Porting Pomodori to Snow Leopard
+=====================
+Greetings Pomodori users! I've been busy the last months with my day job and relocating to Europe. Hopefully situation will stabilize a bit in the next months. The time has come for Pomodori to work under Snow Leopard as well as classic 10.5 Leopard.
+
+I was expecting issues, so it comes as no surprises that right now I still don't have a working Pomodori under Mac OS 10.6. I have issue with KirbyBase and strange unicode characters showing up from nowhere (although the issue might not be related to KirbyBase in particular). If I temporary remove KirbyBase I get stuck into a nil symbol while loading the menu.rb file. The last issue seems related to HotCocoa instead.
+
+At this point I'd like to spend a few more hours trying to quick fix those problems but if that turns out to be a time sink, I might decide to drop HotCocoa if favor of Interface Builder. The last move is also needed because I'm wasting a lot of time creating the UI programmatically, a problem that also depends on the lack of documentation and examples on how to build complex HotCocoa interfaces (other than Twitter clients for example).
+
+So if you're on Leopard just download the new [Pomodori 0.4](http://reborg.github.com/pomodori/resources/pomodori-0.4.zip). There are a few fixes you might be interested in. The 0.4 is also the last and from now on unsupported Pomodori release that works on Mac OS 10.5 Leopard. Pomodori 0.5 will break compatibility with the old operating system and will work on Snow Leopard or above.
+
+Thank you for your patience until now. I have absolutely no intention to stop Pomodori development there are features that I need for my Pomodoro Technique that no other products is offering until now. A good case for developing myself! :)
+
+2000+ pomodoros
+-------------
+I'm glad to announce I've collected more than 2000 pomodoros using Pomodori. Here's is a speaking image:
+
+![General View](http://img.skitch.com/20091026-r51i2xcdp1xee9he12ekjx9328.jpg)
+
+*Happy pomodoros to all*
+

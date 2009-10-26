@@ -4,13 +4,39 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-10-25T10:24:03-05:00</updated>
+ <updated>2009-10-26T10:50:45-05:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
    <email>reborg@reborg.net</email>
  </author>
 
+ 
+ <entry>
+   <title>Pomodori 0.4 and Snow Leopard Issues</title>
+   <link href="http://reborg.github.com/pomodori/2009/10/26/ann-0.4-and-snow.html"/>
+   <updated>2009-10-26T00:00:00-05:00</updated>
+   <id>http://reborg.github.com/pomodori/2009/10/26/ann-0.4-and-snow</id>
+   <content type="html">&lt;h1 id='porting_pomodori_to_snow_leopard'&gt;Porting Pomodori to Snow Leopard&lt;/h1&gt;
+
+&lt;p&gt;Greetings Pomodori users! I&amp;#8217;ve been busy the last months with my day job and relocating to Europe. Hopefully situation will stabilize a bit in the next months. The time has come for Pomodori to work under Snow Leopard as well as classic 10.5 Leopard.&lt;/p&gt;
+
+&lt;p&gt;I was expecting issues, so it comes as no surprises that right now I still don&amp;#8217;t have a working Pomodori under Mac OS 10.6. I have issue with KirbyBase and strange unicode characters showing up from nowhere (although the issue might not be related to KirbyBase in particular). If I temporary remove KirbyBase I get stuck into a nil symbol while loading the menu.rb file. The last issue seems related to HotCocoa instead.&lt;/p&gt;
+
+&lt;p&gt;At this point I&amp;#8217;d like to spend a few more hours trying to quick fix those problems but if that turns out to be a time sink, I might decide to drop HotCocoa if favor of Interface Builder. The last move is also needed because I&amp;#8217;m wasting a lot of time creating the UI programmatically, a problem that also depends on the lack of documentation and examples on how to build complex HotCocoa interfaces (other than Twitter clients for example).&lt;/p&gt;
+
+&lt;p&gt;So if you&amp;#8217;re on Leopard just download the new &lt;a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'&gt;Pomodori 0.4&lt;/a&gt;. There are a few fixes you might be interested in. The 0.4 is also the last and from now on unsupported Pomodori release that works on Mac OS 10.5 Leopard. Pomodori 0.5 will break compatibility with the old operating system and will work on Snow Leopard or above.&lt;/p&gt;
+
+&lt;p&gt;Thank you for your patience until now. I have absolutely no intention to stop Pomodori development there are features that I need for my Pomodoro Technique that no other products is offering until now. A good case for developing myself! :)&lt;/p&gt;
+
+&lt;h2 id='2000_pomodoros'&gt;2000+ pomodoros&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#8217;m glad to announce I&amp;#8217;ve collected more than 2000 pomodoros using Pomodori. Here&amp;#8217;s is a speaking image:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src='http://img.skitch.com/20091026-r51i2xcdp1xee9he12ekjx9328.jpg' alt='General View' /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Happy pomodoros to all&lt;/em&gt;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>View History Feature</title>

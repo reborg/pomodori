@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width = 750">
     <link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css" charset="utf-8">
-    <title>extracting controllers</title>
+    <title>Pomodori 0.4 and Snow Leopard Issues</title>
   </head>
   <body id="intro">
     <div id="wrapper">
@@ -29,68 +29,25 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <h2 id='todays_planned_6__5'>TODAY&#8217;s PLANNED 6 =&gt; 5</h2>
+          <h1 id='porting_pomodori_to_snow_leopard'>Porting Pomodori to Snow Leopard</h1>
 
-<h2 id='todays_done_5'>TODAY&#8217;s DONE 5</h2>
+<p>Greetings Pomodori users! I&#8217;ve been busy the last months with my day job and relocating to Europe. Hopefully situation will stabilize a bit in the next months. The time has come for Pomodori to work under Snow Leopard as well as classic 10.5 Leopard.</p>
 
-<ul>
-<li>planning 1 =&gt; 1</li>
+<p>I was expecting issues, so it comes as no surprises that right now I still don&#8217;t have a working Pomodori under Mac OS 10.6. I have issue with KirbyBase and strange unicode characters showing up from nowhere (although the issue might not be related to KirbyBase in particular). If I temporary remove KirbyBase I get stuck into a nil symbol while loading the menu.rb file. The last issue seems related to HotCocoa instead.</p>
 
-<li>modularization take some time to understand how much work still to be done and fill a task list to close in 6 pomodoros 1</li>
+<p>At this point I&#8217;d like to spend a few more hours trying to quick fix those problems but if that turns out to be a time sink, I might decide to drop HotCocoa if favor of Interface Builder. The last move is also needed because I&#8217;m wasting a lot of time creating the UI programmatically, a problem that also depends on the lack of documentation and examples on how to build complex HotCocoa interfaces (other than Twitter clients for example).</p>
 
-<li>modularization migrate on-pomodoro-done and on-break-done and on-app-start to the countdown-field soon to be timer-controller and update test suite for it 1 =&gt; 3</li>
-</ul>
+<p>So if you&#8217;re on Leopard just download the new <a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'>Pomodori 0.4</a>. There are a few fixes you might be interested in. The 0.4 is also the last and from now on unsupported Pomodori release that works on Mac OS 10.5 Leopard. Pomodori 0.5 will break compatibility with the old operating system and will work on Snow Leopard or above.</p>
 
-<h2 id='todays_not_done'>TODAY&#8217;s NOT DONE</h2>
+<p>Thank you for your patience until now. I have absolutely no intention to stop Pomodori development there are features that I need for my Pomodoro Technique that no other products is offering until now. A good case for developing myself! :)</p>
 
-<ul>
-<li>modularization summary controller to control statistics display with update-summary and format-metrics 2</li>
+<h2 id='2000_pomodoros'>2000+ pomodoros</h2>
 
-<li>modularization modal button controller with on click methods for submit, void, stop and callbacks to main view to change labels 2</li>
-</ul>
+<p>I&#8217;m glad to announce I&#8217;ve collected more than 2000 pomodoros using Pomodori. Here&#8217;s is a speaking image:</p>
 
-<h2 id='standup'>STANDUP</h2>
+<p><img src='http://img.skitch.com/20091026-r51i2xcdp1xee9he12ekjx9328.jpg' alt='General View' /></p>
 
-<ul>
-<li>I started to see the light of the refactoring but I still have an hard time figuring out how much work is to be done.</li>
-
-<li>I should be done next session in another 8 pomodoros.</li>
-</ul>
-
-<h2 id='retrospective'>RETROSPECTIVE</h2>
-
-<ul>
-<li>Planned 6, actually done 5</li>
-
-<li>I split the modularization into multiple tasks and that worked. Underestimated heavily the timer controller work.</li>
-
-<li>I was fast and fairly focused</li>
-
-<li>A couple of internal interruptions completely avoidable. Close chat next time, let people use the phone (somehow they need more effort to call)</li>
-</ul>
-
-<h2 id='internal_interruptions'>INTERNAL INTERRUPTIONS</h2>
-
-<ul>
-<li>Update the clean code cheat sheet while reading the last agile in a flash card. I should have deferred this to the to-do list. The error is always the same: thinking I can do something in the 5 mins break and it takes 15 mins instead. Defer, defer, defer.</li>
-
-<li>Voided again, my bad. I couldn&#8217;t resist to formulate a tweet after reading on twitter and it took ages. I should consider not opening twitters each break because potentially dangerous.</li>
-</ul>
-
-<h2 id='external_interruptions'>EXTERNAL INTERRUPTIONS</h2>
-
-<ul>
-<li>Palomino&#8217;s updates from wife, aborting. Can&#8217;t really close chat in this case.</li>
-</ul>
-
-<h2 id='raw_dump'>RAW DUMP</h2>
-<pre><code>
-  87|@planning trying to shrink refactoring to 6 pomodoros today|2009-03-19 10:20:45 -0500
-  88|@planning splitted tasks for the modularization process.|2009-03-19 11:03:02 -0500
-  89|@modularization moving timer related event handling from application to timer controller.|2009-03-19 11:50:38 -0500
-  90|@modularization going fast but much more than a single pomo to move all behavior into the timer controller.|2009-03-19 12:21:21 -0500
-  91|@modularization last pomodoro of the day. I think I did big steps but underestimated the effort. Mostly done with the new timer controller.|2009-03-19 13:08:44 -0500
-</code></pre>
+<p><em>Happy pomodoros to all</em></p>
                     
           <script type="text/javascript">var disqus_url = "http://reborg.github.com/pomodori/"; var disqus_title ="";</script>
           <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/pomodori/embed.js"></script>
