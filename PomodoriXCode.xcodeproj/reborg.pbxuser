@@ -1,0 +1,232 @@
+// !$*UTF8*$!
+{
+	172754BD107597F200D0347B /* Test */ = {
+		activeExec = 0;
+	};
+	1727560D10759EEA00D0347B /* Embed MacRuby */ = {
+		activeExec = 0;
+	};
+	17D55CD81076A1A2008207BD /* run_suite.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 130}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 161}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 8FF13997109A86CA00D5E494 /* PomodoriXCode */;
+		activeTarget = 8D1107260486CEB800E47090 /* PomodoriXCode */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* PomodoriXCode */,
+			172754BD107597F200D0347B /* Test */,
+		);
+		codeSenseManager = 8FF139B6109A86DB00D5E494 /* Code sense */;
+		executables = (
+			8FF13997109A86CA00D5E494 /* PomodoriXCode */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					556,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					516,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 281435104;
+			PBXWorkspaceStateSaveDate = 281435104;
+		};
+		perUserProjectItems = {
+			8F69DE6610B2A6920085B25B = 8F69DE6610B2A6920085B25B /* PBXTextBookmark */;
+			8F9D377510C652BE009FDFFC = 8F9D377510C652BE009FDFFC /* PBXTextBookmark */;
+			8F9D377610C652BE009FDFFC = 8F9D377610C652BE009FDFFC /* PBXTextBookmark */;
+			8F9D37A310C653B4009FDFFC = 8F9D37A310C653B4009FDFFC /* PBXTextBookmark */;
+			8F9D37A410C653B4009FDFFC = 8F9D37A410C653B4009FDFFC /* PBXBookmark */;
+			8F9D37A510C653B4009FDFFC = 8F9D37A510C653B4009FDFFC /* PBXTextBookmark */;
+		};
+		sourceControlManager = 8FF139B5109A86DB00D5E494 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 221}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 161}";
+		};
+	};
+	8D1107260486CEB800E47090 /* PomodoriXCode */ = {
+		activeExec = 0;
+		executables = (
+			8FF13997109A86CA00D5E494 /* PomodoriXCode */,
+		);
+	};
+	8F69DE1410AF0FD00085B25B /* sqlite3.c */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.c;
+		name = sqlite3.c;
+		path = /Users/reborg/Documents/projects/my/pomodori/Vendor/Sqlite/src/sqlite3.c;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 1.278e+06}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{3875, 299}";
+		};
+	};
+	8F69DE1510AF0FD00085B25B /* sqlite3.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = sqlite3.h;
+		path = /Users/reborg/Documents/projects/my/pomodori/Vendor/Sqlite/src/sqlite3.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 88530}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 441}";
+		};
+	};
+	8F69DE6610B2A6920085B25B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F69DE1510AF0FD00085B25B /* sqlite3.h */;
+		name = "sqlite3.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 441;
+		vrLoc = 0;
+	};
+	8F9D377510C652BE009FDFFC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F69DE1410AF0FD00085B25B /* sqlite3.c */;
+		name = "sqlite3.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 3875;
+	};
+	8F9D377610C652BE009FDFFC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 17D55CD81076A1A2008207BD /* run_suite.rb */;
+		name = "run_suite.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 161;
+		vrLoc = 0;
+	};
+	8F9D37A310C653B4009FDFFC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8FF139BE109A8A2500D5E494 /* timer_controller.rb */;
+		name = "timer_controller.rb: 20";
+		rLen = 0;
+		rLoc = 349;
+		rType = 0;
+		vrLen = 204;
+		vrLoc = 0;
+	};
+	8F9D37A410C653B4009FDFFC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+	};
+	8F9D37A510C653B4009FDFFC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 162;
+		vrLoc = 0;
+	};
+	8FF13997109A86CA00D5E494 /* PomodoriXCode */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = PomodoriXCode;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	8FF139B5109A86DB00D5E494 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	8FF139B6109A86DB00D5E494 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8FF139BE109A8A2500D5E494 /* timer_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 260}}";
+			sepNavSelRange = "{349, 0}";
+			sepNavVisRange = "{0, 204}";
+		};
+	};
+}
