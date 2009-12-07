@@ -14,4 +14,8 @@ class Pomodoro
     @text.scan(/@\w+/)
   end
   
+  def save
+    NSLog("pomodoro saved with text #{text}")  
+  end
+  
 end
