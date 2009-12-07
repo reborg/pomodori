@@ -1,5 +1,3 @@
-framework 'foundation'
-
 class TimerController
   attr_accessor :timer_label
   

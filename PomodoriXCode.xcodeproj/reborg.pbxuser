@@ -1,5 +1,12 @@
 // !$*UTF8*$!
 {
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 66}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 100}";
+		};
+	};
 	172754BD107597F200D0347B /* Test */ = {
 		activeExec = 0;
 	};
@@ -7,6 +14,12 @@
 		activeExec = 0;
 	};
 	17D55CD81076A1A2008207BD /* run_suite.rb */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.script.ruby;
+		name = run_suite.rb;
+		path = /Users/reborg/Documents/projects/my/pomodori/Tests/run_suite.rb;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {734, 115}}";
 			sepNavSelRange = "{0, 0}";
@@ -100,6 +113,22 @@
 		perUserProjectItems = {
 			8F5E823910CD050A007D0DF1 /* PBXTextBookmark */ = 8F5E823910CD050A007D0DF1 /* PBXTextBookmark */;
 			8F5E824B10CD0DFE007D0DF1 /* PBXTextBookmark */ = 8F5E824B10CD0DFE007D0DF1 /* PBXTextBookmark */;
+			8F5E827910CD1274007D0DF1 /* PBXTextBookmark */ = 8F5E827910CD1274007D0DF1 /* PBXTextBookmark */;
+			8F5E827A10CD1274007D0DF1 /* PBXTextBookmark */ = 8F5E827A10CD1274007D0DF1 /* PBXTextBookmark */;
+			8F5E827B10CD1274007D0DF1 /* PBXTextBookmark */ = 8F5E827B10CD1274007D0DF1 /* PBXTextBookmark */;
+			8F5E827C10CD1274007D0DF1 /* PBXTextBookmark */ = 8F5E827C10CD1274007D0DF1 /* PBXTextBookmark */;
+			8F5E838210CD1582007D0DF1 /* PBXTextBookmark */ = 8F5E838210CD1582007D0DF1 /* PBXTextBookmark */;
+			8F5E838310CD1582007D0DF1 /* PBXTextBookmark */ = 8F5E838310CD1582007D0DF1 /* PBXTextBookmark */;
+			8F5E838410CD1582007D0DF1 /* PBXTextBookmark */ = 8F5E838410CD1582007D0DF1 /* PBXTextBookmark */;
+			8F5E838510CD1582007D0DF1 /* PBXTextBookmark */ = 8F5E838510CD1582007D0DF1 /* PBXTextBookmark */;
+			8F5E838610CD1582007D0DF1 /* PBXTextBookmark */ = 8F5E838610CD1582007D0DF1 /* PBXTextBookmark */;
+			8F5E838A10CD15D2007D0DF1 /* PBXTextBookmark */ = 8F5E838A10CD15D2007D0DF1 /* PBXTextBookmark */;
+			8F5E838C10CD15EC007D0DF1 /* PBXTextBookmark */ = 8F5E838C10CD15EC007D0DF1 /* PBXTextBookmark */;
+			8F5E838D10CD15EC007D0DF1 /* PBXTextBookmark */ = 8F5E838D10CD15EC007D0DF1 /* PBXTextBookmark */;
+			8F5E838E10CD15EC007D0DF1 /* PBXTextBookmark */ = 8F5E838E10CD15EC007D0DF1 /* PBXTextBookmark */;
+			8F5E839910CD1630007D0DF1 /* PBXTextBookmark */ = 8F5E839910CD1630007D0DF1 /* PBXTextBookmark */;
+			8F5E839A10CD1630007D0DF1 /* PBXTextBookmark */ = 8F5E839A10CD1630007D0DF1 /* PBXTextBookmark */;
+			8F5E839B10CD1630007D0DF1 /* PBXTextBookmark */ = 8F5E839B10CD1630007D0DF1 /* PBXTextBookmark */;
 			8F93FEF510C6A1F0000EF5FA = 8F93FEF510C6A1F0000EF5FA /* PBXTextBookmark */;
 			8F93FF2410C94F9B000EF5FA = 8F93FF2410C94F9B000EF5FA /* PBXTextBookmark */;
 			8F93FF2510C94F9B000EF5FA = 8F93FF2510C94F9B000EF5FA /* PBXTextBookmark */;
@@ -113,9 +142,16 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {734, 221}}";
+			sepNavIntBoundsRect = "{{0, 0}, {734, 195}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 161}";
+			sepNavVisRange = "{133, 64}";
+		};
+	};
+	4DE339F60D74FCDD00ADB6EE /* rb_main.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 195}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{111, 160}";
 		};
 	};
 	8D1107260486CEB800E47090 /* PomodoriXCode */ = {
@@ -144,6 +180,193 @@
 		vrLen = 78;
 		vrLoc = 0;
 	};
+	8F5E826D10CD1018007D0DF1 /* build.yml */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text;
+		name = build.yml;
+		path = /Users/reborg/Documents/projects/my/pomodori/config/build.yml;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 130}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 130}";
+		};
+	};
+	8F5E827910CD1274007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 100;
+		vrLoc = 0;
+	};
+	8F5E827A10CD1274007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F5E826D10CD1018007D0DF1 /* build.yml */;
+		name = "build.yml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 130;
+		vrLoc = 0;
+	};
+	8F5E827B10CD1274007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	8F5E827C10CD1274007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	8F5E837410CD1531007D0DF1 /* environment.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 143}}";
+			sepNavSelRange = "{362, 0}";
+			sepNavVisRange = "{0, 159}";
+		};
+	};
+	8F5E837F10CD156F007D0DF1 /* build.yml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 117}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 98}";
+		};
+	};
+	8F5E838210CD1582007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	8F5E838310CD1582007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 100;
+		vrLoc = 0;
+	};
+	8F5E838410CD1582007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F5E837F10CD156F007D0DF1 /* build.yml */;
+		name = "build.yml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 98;
+		vrLoc = 0;
+	};
+	8F5E838510CD1582007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F5E837410CD1531007D0DF1 /* environment.rb */;
+		name = "environment.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 157;
+		vrLoc = 0;
+	};
+	8F5E838610CD1582007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F5E837410CD1531007D0DF1 /* environment.rb */;
+		name = "environment.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 157;
+		vrLoc = 0;
+	};
+	8F5E838A10CD15D2007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F5E837410CD1531007D0DF1 /* environment.rb */;
+		name = "environment.rb: 11";
+		rLen = 0;
+		rLoc = 362;
+		rType = 0;
+		vrLen = 159;
+		vrLoc = 0;
+	};
+	8F5E838C10CD15EC007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8F5E837410CD1531007D0DF1 /* environment.rb */;
+		name = "environment.rb: 11";
+		rLen = 0;
+		rLoc = 362;
+		rType = 0;
+		vrLen = 159;
+		vrLoc = 0;
+	};
+	8F5E838D10CD15EC007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 111;
+		vrLoc = 0;
+	};
+	8F5E838E10CD15EC007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 59;
+		vrLoc = 281;
+	};
+	8F5E839910CD1630007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 64;
+		vrLoc = 133;
+	};
+	8F5E839A10CD1630007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 160;
+		vrLoc = 111;
+	};
+	8F5E839B10CD1630007D0DF1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */;
+		name = "rb_main.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 160;
+		vrLoc = 111;
+	};
 	8F93FEF510C6A1F0000EF5FA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 8F9D37CC10C6A003009FDFFC /* pomodori_view.rb */;
@@ -155,6 +378,12 @@
 		vrLoc = 78;
 	};
 	8F93FF0510C6A28B000EF5FA /* pomodori_controller.rb */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.script.ruby;
+		name = pomodori_controller.rb;
+		path = /Users/reborg/Documents/projects/my/pomodori/Classes/Controllers/pomodori_controller.rb;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {734, 208}}";
 			sepNavSelRange = "{365, 0}";
@@ -269,6 +498,12 @@
 		indexTemplatePath = "";
 	};
 	8FF139BE109A8A2500D5E494 /* timer_controller.rb */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.script.ruby;
+		name = timer_controller.rb;
+		path = /Users/reborg/Documents/projects/my/pomodori/Classes/Controllers/timer_controller.rb;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {734, 260}}";
 			sepNavSelRange = "{349, 0}";

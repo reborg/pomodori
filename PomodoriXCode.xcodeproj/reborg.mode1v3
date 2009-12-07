@@ -266,22 +266,18 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>172754AE1075979200D0347B</string>
-								<string>080E96DDFE201D6D7F000001</string>
-								<string>8F9D37CB10C6A003009FDFFC</string>
-								<string>8FF139BA109A88DB00D5E494</string>
+								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>8F5E824910CD0DFE007D0DF1</string>
-								<string>8F5E824A10CD0DFE007D0DF1</string>
+								<string>8F5E827810CD1274007D0DF1</string>
+								<string>8F5E838110CD1582007D0DF1</string>
+								<string>8F5E839810CD1630007D0DF1</string>
 								<string>1C37FABC05509CD000000102</string>
 								<string>1CC0EA4004350EF90041110B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>4</integer>
-									<integer>3</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -321,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>pomodori_view.rb</string>
+								<string>rb_main.rb</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,18 +325,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>pomodori_view.rb</string>
+										<string>rb_main.rb</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8F5E824B10CD0DFE007D0DF1</string>
+										<string>8F5E839B10CD1630007D0DF1</string>
 										<key>history</key>
 										<array>
-											<string>8F9D37DA10C6A1BF009FDFFC</string>
 											<string>8F9D37DB10C6A1BF009FDFFC</string>
-											<string>8F93FF2410C94F9B000EF5FA</string>
-											<string>8F93FF2510C94F9B000EF5FA</string>
-											<string>8F93FF2610C94F9B000EF5FA</string>
+											<string>8F5E838310CD1582007D0DF1</string>
+											<string>8F5E838410CD1582007D0DF1</string>
+											<string>8F5E838C10CD15EC007D0DF1</string>
+											<string>8F5E839910CD1630007D0DF1</string>
+											<string>8F5E839A10CD1630007D0DF1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -538,7 +535,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>8F5E825310CD0DFE007D0DF1</string>
+		<string>8F5E839C10CD1630007D0DF1</string>
 		<string>8F5E825410CD0DFE007D0DF1</string>
 		<string>8F5E825510CD0DFE007D0DF1</string>
 		<string>1CD10A99069EF8BA00B06720</string>
