@@ -3,12 +3,12 @@ require 'pomodoro'
 class PomodoriController
   attr_accessor :text_area
   def create(sender)
-    @pomodoro = Pomodoro.new(:text => @text_area.to_s)
-    if(@pomodoro.save)
+    if(Pomodoro.save(@text_area.stringValue))
       NSLog("Controller created pomodoro")
     else
       # WarningsController.new
       # warnings.show('Was not possible to save your pomodoro')
     end
   end
+
 end

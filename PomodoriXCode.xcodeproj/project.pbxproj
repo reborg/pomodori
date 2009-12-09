@@ -43,6 +43,8 @@
 		8F5E837A10CD1531007D0DF1 /* pomodoro.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E837610CD1531007D0DF1 /* pomodoro.rb */; };
 		8F5E837B10CD1531007D0DF1 /* timer_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E837710CD1531007D0DF1 /* timer_controller.rb */; };
 		8F5E839510CD162B007D0DF1 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
+		8F5E83B210CD1E2D007D0DF1 /* persistence.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E83B110CD1E2D007D0DF1 /* persistence.rb */; };
+		8F77F52F10CFA8E20098077A /* Pomodori.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		8F5E837610CD1531007D0DF1 /* pomodoro.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pomodoro.rb; sourceTree = "<group>"; };
 		8F5E837710CD1531007D0DF1 /* timer_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = timer_controller.rb; sourceTree = "<group>"; };
 		8F5E837F10CD156F007D0DF1 /* build.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.yml; sourceTree = "<group>"; };
+		8F5E83B110CD1E2D007D0DF1 /* persistence.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = persistence.rb; sourceTree = "<group>"; };
+		8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Pomodori.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */,
 			);
 			name = PomodoriXCode;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8F5E83B110CD1E2D007D0DF1 /* persistence.rb */,
 				8F5E837410CD1531007D0DF1 /* environment.rb */,
 				8F5E837510CD1531007D0DF1 /* pomodori_controller.rb */,
 				8F5E837610CD1531007D0DF1 /* pomodoro.rb */,
@@ -211,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5E83B210CD1E2D007D0DF1 /* persistence.rb in Resources */,
 				8F5E839510CD162B007D0DF1 /* rb_main.rb in Resources */,
 				8F5E837810CD1531007D0DF1 /* environment.rb in Resources */,
 				8F5E837910CD1531007D0DF1 /* pomodori_controller.rb in Resources */,
@@ -258,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				8F77F52F10CFA8E20098077A /* Pomodori.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
