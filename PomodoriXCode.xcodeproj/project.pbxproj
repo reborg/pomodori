@@ -38,15 +38,16 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		8F5E837810CD1531007D0DF1 /* environment.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E837410CD1531007D0DF1 /* environment.rb */; };
-		8F5E837910CD1531007D0DF1 /* pomodori_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E837510CD1531007D0DF1 /* pomodori_controller.rb */; };
-		8F5E837A10CD1531007D0DF1 /* pomodoro.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E837610CD1531007D0DF1 /* pomodoro.rb */; };
-		8F5E837B10CD1531007D0DF1 /* timer_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E837710CD1531007D0DF1 /* timer_controller.rb */; };
-		8F5E839510CD162B007D0DF1 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
-		8F5E83B210CD1E2D007D0DF1 /* persistence.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E83B110CD1E2D007D0DF1 /* persistence.rb */; };
+		8F3929A010E66D93001A66EE /* environment.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F39299F10E66D93001A66EE /* environment.rb */; };
+		8F3929A210E66DEE001A66EE /* pomodori_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929A110E66DEE001A66EE /* pomodori_controller.rb */; };
+		8F3929B010E66E9E001A66EE /* application_delegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929AF10E66E9E001A66EE /* application_delegate.rb */; };
+		8F3929B410E66EDE001A66EE /* pomodoro.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929B310E66EDE001A66EE /* pomodoro.rb */; };
+		8F3929B710E66EED001A66EE /* menu_bar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929B510E66EED001A66EE /* menu_bar.rb */; };
+		8F3929B810E66EED001A66EE /* persistence.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929B610E66EED001A66EE /* persistence.rb */; };
+		8F3929BA10E66F25001A66EE /* timer_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929B910E66F25001A66EE /* timer_controller.rb */; };
+		8F3929C110E66F66001A66EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929C010E66F66001A66EE /* rb_main.rb */; };
+		8F3929D410E670FB001A66EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929D310E670FB001A66EE /* Info.plist */; };
 		8F77F52F10CFA8E20098077A /* Pomodori.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */; };
-		8FFD7AB010D6456C00DB908A /* application_delegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8FFD7AAF10D6456C00DB908A /* application_delegate.rb */; };
-		8FFD7AB810D6492800DB908A /* menu_bar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8FFD7AB710D6492800DB908A /* menu_bar.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,18 +68,18 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		4DE339F60D74FCDD00ADB6EE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		4DE3BE130D8651D900ECA448 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* PomodoriXCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoriXCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F5E837410CD1531007D0DF1 /* environment.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = environment.rb; sourceTree = "<group>"; };
-		8F5E837510CD1531007D0DF1 /* pomodori_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pomodori_controller.rb; sourceTree = "<group>"; };
-		8F5E837610CD1531007D0DF1 /* pomodoro.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pomodoro.rb; sourceTree = "<group>"; };
-		8F5E837710CD1531007D0DF1 /* timer_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = timer_controller.rb; sourceTree = "<group>"; };
-		8F5E83B110CD1E2D007D0DF1 /* persistence.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = persistence.rb; sourceTree = "<group>"; };
+		8F39299F10E66D93001A66EE /* environment.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = environment.rb; path = Config/environment.rb; sourceTree = "<group>"; };
+		8F3929A110E66DEE001A66EE /* pomodori_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = pomodori_controller.rb; path = Classes/Controllers/pomodori_controller.rb; sourceTree = "<group>"; };
+		8F3929AF10E66E9E001A66EE /* application_delegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = application_delegate.rb; path = Classes/application_delegate.rb; sourceTree = "<group>"; };
+		8F3929B310E66EDE001A66EE /* pomodoro.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = pomodoro.rb; path = Classes/Models/pomodoro.rb; sourceTree = "<group>"; };
+		8F3929B510E66EED001A66EE /* menu_bar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = menu_bar.rb; path = Classes/menu_bar.rb; sourceTree = "<group>"; };
+		8F3929B610E66EED001A66EE /* persistence.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = persistence.rb; path = Classes/persistence.rb; sourceTree = "<group>"; };
+		8F3929B910E66F25001A66EE /* timer_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = timer_controller.rb; path = Classes/Controllers/timer_controller.rb; sourceTree = "<group>"; };
+		8F3929C010E66F66001A66EE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = rb_main.rb; path = Classes/rb_main.rb; sourceTree = "<group>"; };
+		8F3929D310E670FB001A66EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Pomodori.xcdatamodel; sourceTree = "<group>"; };
-		8FFD7AAF10D6456C00DB908A /* application_delegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = application_delegate.rb; sourceTree = "<group>"; };
-		8FFD7AB710D6492800DB908A /* menu_bar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = menu_bar.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +125,11 @@
 		29B97314FDCFA39411CA2CEA /* PomodoriXCode */ = {
 			isa = PBXGroup;
 			children = (
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				8F3929D310E670FB001A66EE /* Info.plist */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				8F39299C10E66D64001A66EE /* Config */,
+				8F39299810E66D48001A66EE /* Tests */,
+				8F39299010E66BFF001A66EE /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -133,26 +138,9 @@
 			name = PomodoriXCode;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				8FFD7AB710D6492800DB908A /* menu_bar.rb */,
-				8FFD7AAF10D6456C00DB908A /* application_delegate.rb */,
-				8F5E83B110CD1E2D007D0DF1 /* persistence.rb */,
-				8F5E837410CD1531007D0DF1 /* environment.rb */,
-				8F5E837510CD1531007D0DF1 /* pomodori_controller.rb */,
-				8F5E837610CD1531007D0DF1 /* pomodoro.rb */,
-				8F5E837710CD1531007D0DF1 /* timer_controller.rb */,
-				4DE339F60D74FCDD00ADB6EE /* rb_main.rb */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 			);
@@ -166,6 +154,83 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F39299010E66BFF001A66EE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8F3929C010E66F66001A66EE /* rb_main.rb */,
+				8F3929B510E66EED001A66EE /* menu_bar.rb */,
+				8F3929B610E66EED001A66EE /* persistence.rb */,
+				8F3929AF10E66E9E001A66EE /* application_delegate.rb */,
+				8F39299310E66C1D001A66EE /* Views */,
+				8F39299210E66C0C001A66EE /* Controllers */,
+				8F39299110E66C07001A66EE /* Models */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8F39299110E66C07001A66EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F3929B310E66EDE001A66EE /* pomodoro.rb */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8F39299210E66C0C001A66EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F3929B910E66F25001A66EE /* timer_controller.rb */,
+				8F3929A110E66DEE001A66EE /* pomodori_controller.rb */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8F39299310E66C1D001A66EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8F39299810E66D48001A66EE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8F39299B10E66D59001A66EE /* Views */,
+				8F39299A10E66D54001A66EE /* Models */,
+				8F39299910E66D4D001A66EE /* Controllers */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		8F39299910E66D4D001A66EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8F39299A10E66D54001A66EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8F39299B10E66D59001A66EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8F39299C10E66D64001A66EE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8F39299F10E66D93001A66EE /* environment.rb */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,16 +278,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F5E83B210CD1E2D007D0DF1 /* persistence.rb in Resources */,
-				8F5E839510CD162B007D0DF1 /* rb_main.rb in Resources */,
-				8F5E837810CD1531007D0DF1 /* environment.rb in Resources */,
-				8F5E837910CD1531007D0DF1 /* pomodori_controller.rb in Resources */,
-				8F5E837A10CD1531007D0DF1 /* pomodoro.rb in Resources */,
-				8F5E837B10CD1531007D0DF1 /* timer_controller.rb in Resources */,
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				8FFD7AB010D6456C00DB908A /* application_delegate.rb in Resources */,
-				8FFD7AB810D6492800DB908A /* menu_bar.rb in Resources */,
+				8F3929A010E66D93001A66EE /* environment.rb in Resources */,
+				8F3929A210E66DEE001A66EE /* pomodori_controller.rb in Resources */,
+				8F3929B010E66E9E001A66EE /* application_delegate.rb in Resources */,
+				8F3929B410E66EDE001A66EE /* pomodoro.rb in Resources */,
+				8F3929B710E66EED001A66EE /* menu_bar.rb in Resources */,
+				8F3929B810E66EED001A66EE /* persistence.rb in Resources */,
+				8F3929BA10E66F25001A66EE /* timer_controller.rb in Resources */,
+				8F3929C110E66F66001A66EE /* rb_main.rb in Resources */,
+				8F3929D410E670FB001A66EE /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
