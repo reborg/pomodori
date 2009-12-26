@@ -1,0 +1,118 @@
+= matchy
+
+* http://github.com/jeremymcanally/matchy
+
+== DESCRIPTION:
+Hate writing assertions?  Need a little behavior-driven love in your tests?  Then matchy is for you.
+
+== FEATURES/PROBLEMS:
+
+* Get the beauty of RSpec without all the overhead
+* Create your own matchers with ease and def_matcher()
+
+== SYNOPSIS:
+
+* Get BDD on your objects
+
+    x = 13 * 4
+    x.should == 42
+    
+    y = "hello"
+    y.length.should_not be(4)
+
+* Use familiar syntax to specify things
+
+    # RSpec
+    "my string".should =~ /string/
+    lambda { raise "FAIL" }.should raise_error
+    
+    # matchy
+    "my string".should =~ /string/
+    lambda { raise "FAIL" }.should raise_error
+
+* Most of familiar RSpec Matchers are built in
+
+    # raise_error matcher
+    lambda {raise}.should raise_error                                  #pass
+    lambda {raise MyCustomError.new}.should raise_error(MyCustomError) #pass
+    lambda {raise "message"}.should raise_error("message")             #pass
+    lambda {raise "message"}.should raise_error(/essa/)                #pass
+
+    # change matcher
+    lambda {@var+=1}.should change {@var}
+    # passes
+    lambda { }.should change {@var}
+    # fails
+    @var = 1
+    lambda {@var+=1}.should change {@var}.from(1).to(2)
+    # passes
+
+    # be_something matcher
+    @obj.should be_something
+    # passes if @obj.something? is true
+
+    * a lot more ...
+    
+* Get the speed of Test:Unit with the syntax of RSpec
+
+* Create your own matchers
+    
+    # nil_matcher (As a simple and quick example)
+    def_matcher :be_nil do |receiver, matcher, args|
+      receiver.nil?
+    end
+
+    nil.should be_nil            # pass
+    nil.should_not be_nil        # fails
+    'notnil'.should be_nil       # fails
+    'notnil'.should_not be_nil   # pass
+
+    # have(n).somethings matcher (A little bit more complex)
+    def_matcher :have do |receiver, matcher, args|  
+		  count = args[0]
+		  something = matcher.msgs[0].name
+		  actual = receiver.send(something).length
+		  matcher.positive_msg = "Expected #{receiver} to have #{actual} #{something}, but found #{count} "
+		  actual == count
+		end
+		
+		class Thing
+		  def widgets
+		    @widgets ||= []
+		  end
+		end
+		@thing.should have(3).widgets 
+
+== REQUIREMENTS:
+
+* Test::Unit (you got it)
+
+== INSTALL:
+
+    $ gem sources -a http://gems.github.com
+    $ sudo gem install mhennemeyer-matchy
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2008 Jeremy McAnally
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -6,44 +6,6 @@ module Persistence
     @mom ||= NSManagedObjectModel.mergedModelFromBundles(nil)
   end
   
-  ##
-  # The ManagedObjectModel MOM keeps track of objects and their
-  # relationships. It doesn't care about actual persistency which is
-  # managed object context responsability
-  def self.managed_object_model
-    return @mom if @mom
-    @mom = NSManagedObjectModel.new
-    
-    # create the entity
-    pomodoro_entity = NSEntityDescription.new
-    pomodoro_entity.name = "Pomodoro"
-    pomodoro_entity.managedObjectClassName = "Pomodoro"
-    @mom.entities = [pomodoro_entity]
-
-    # create the Timestamp attribute for the run entity
-    timestamp_attribute = NSAttributeDescription.new
-    timestamp_attribute.name = "timestamp"
-    timestamp_attribute.attributeType = NSDateAttributeType
-    timestamp_attribute.optional = false
-
-    # create the Text attribute for the Pomodoro entity
-    text_attribute = NSAttributeDescription.new
-    text_attribute.name = "text"
-    text_attribute.attributeType = NSStringAttributeType
-    text_attribute.optional = true
-
-    # Attaching the properties we created to the Pomodoro entity
-    pomodoro_entity.properties = [timestamp_attribute, text_attribute]
-    
-    # This is the accessory internationalization dictionary 
-    # to attach to the model
-    localization_dictionary = {"Property/timestamp/Entity/Pomodoro" => "Timestamp",
-      "Property/text/Entity/Pomodoro" => "Text"}
-    @mom.localizationDictionary=localization_dictionary
-    
-    @mom
-  end
-
   def self.applicationSupportFolder
     paths = NSSearchPathForDirectoriesInDomains(
       NSApplicationSupportDirectory, 

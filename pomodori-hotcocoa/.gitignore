@@ -1,0 +1,7 @@
+*.log
+.DS_Store
+Pomodori.app
+docs
+website
+*.swp
+build

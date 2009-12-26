@@ -17,9 +17,10 @@ class Pomodoro < NSManagedObject
     error = Pointer.new_with_type('@')
     unless moc.save(error)
       msg = error[0].localizedDescription ?  error[0].localizedDescription : "Unknown"
-      puts "Error while saving entity #{msg}"
+      NSLog("Error while saving entity #{msg}")
+      return false
     end
-
+    return true
   end
 
 end
