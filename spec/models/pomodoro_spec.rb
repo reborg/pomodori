@@ -1,7 +1,7 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require File.dirname(__FILE__) + '/../spec_helper'
 require 'pomodoro'
 
-class PomodoroTest < Test::Unit::TestCase
+class PomodoroSpec < Test::Unit::TestCase
   def setup
     @pomodoro = Pomodoro.new
   end

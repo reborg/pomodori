@@ -1,8 +1,8 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require File.dirname(__FILE__) + '/../spec_helper'
 require 'pomodoro'
 framework 'coredata'
 
-class PomodoroPersistenceTest < Test::Unit::TestCase
+class PomodoroPersistenceSpec < Test::Unit::TestCase
   it 'retrieve the count of saved pomodoros' do
     Persistence.stubs(:object_model_from_bundle).returns(mom)
     Pomodoro.count.should == 15

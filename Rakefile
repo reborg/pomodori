@@ -29,7 +29,7 @@ task :build => "xcode:build:#{DEFAULT_TARGET}:#{DEFAULT_CONFIGURATION}"
 
 desc 'Run the spec suite'
 task :spec do
-  sh %{macruby spec/run_suite.rb}
+  sh %{macruby spec/all_spec.rb}
 end
 
 desc 'Deep clean of everything'
