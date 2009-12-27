@@ -4,12 +4,12 @@ framework 'coredata'
 
 class PomodoroPersistenceSpec < Test::Unit::TestCase
   it 'retrieve the count of saved pomodoros' do
-    Persistence.stubs(:object_model_from_bundle).returns(mom)
-    Pomodoro.count.should == 15
+    Persistence.stubs(:object_model_from_bundle).returns(test_mom)
+    Pomodoro.count.should == 59
   end
 end
 
-def mom
-  bundle = NSBundle.bundleWithPath(APP_ROOT + "/build/Debug/#{APP_NAME}.app/") 
+def test_mom
+  bundle = NSBundle.bundleWithPath(File.dirname(__FILE__) + "/../test_mom") 
   NSManagedObjectModel.mergedModelFromBundles([bundle])
 end
