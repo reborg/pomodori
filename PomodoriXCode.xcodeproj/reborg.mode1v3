@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -266,16 +264,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>8F39299010E66BFF001A66EE</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>8F545BAB10E7A0AA009FE4FC</string>
 								<string>1C37FABC05509CD000000102</string>
-								<string>1CC0EA4004350EF90041110B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -315,7 +310,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>persistence.rb</string>
+								<string>main.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,23 +318,21 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>persistence.rb</string>
+										<string>main.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8F545BB610E7A0B4009FE4FC</string>
+										<string>8F545BF310E7AC34009FE4FC</string>
 										<key>history</key>
 										<array>
 											<string>8F9D37DB10C6A1BF009FDFFC</string>
 											<string>8F5E838310CD1582007D0DF1</string>
-											<string>8F3929A610E66E46001A66EE</string>
-											<string>8F3929A710E66E46001A66EE</string>
 											<string>8F3929BD10E66F34001A66EE</string>
-											<string>8F3929CD10E67080001A66EE</string>
 											<string>8F545BB210E7A0B4009FE4FC</string>
-											<string>8F545BB310E7A0B4009FE4FC</string>
-											<string>8F545BB410E7A0B4009FE4FC</string>
-											<string>8F545BB510E7A0B4009FE4FC</string>
+											<string>8F545BF010E7AC34009FE4FC</string>
+											<string>8F545BF110E7AC34009FE4FC</string>
+											<string>8F545BF210E7AC34009FE4FC</string>
+											<string>8F3929CD10E67080001A66EE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -361,6 +354,8 @@
 							<string>186pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -537,7 +532,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>8F545BFB10E7AC34009FE4FC</string>
+		<string>8F545BFC10E7AC34009FE4FC</string>
+		<string>8F545BFD10E7AC34009FE4FC</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>8FF139A9109A86DB00D5E494</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/reborg/Documents/projects/my/pomodori/PomodoriXCode.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -740,13 +740,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>8F39294310E656CE001A66EE</string>
+				<string>8F545BF410E7AC34009FE4FC</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>8F39294410E656CE001A66EE</string>
-				<string>8F39294510E656CE001A66EE</string>
-				<string>8F39294610E656CE001A66EE</string>
-				<string>8F39294710E656CE001A66EE</string>
-				<string>8F39294810E656CE001A66EE</string>
+				<string>8F545BF510E7AC34009FE4FC</string>
+				<string>8F545BF610E7AC34009FE4FC</string>
+				<string>8F545BF710E7AC34009FE4FC</string>
+				<string>8F545BF810E7AC34009FE4FC</string>
+				<string>8F545BF910E7AC34009FE4FC</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -910,7 +910,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>8F39294910E656CE001A66EE</string>
+				<string>8F545BFA10E7AC34009FE4FC</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

@@ -27,9 +27,9 @@ end
 desc 'Build the default target using the default configuration'
 task :build => "xcode:build:#{DEFAULT_TARGET}:#{DEFAULT_CONFIGURATION}"
 
-desc 'Run the test suite'
-task :test do
-  sh %{macruby Tests/run_suite.rb}
+desc 'Run the spec suite'
+task :spec do
+  sh %{macruby spec/run_suite.rb}
 end
 
 desc 'Deep clean of everything'
