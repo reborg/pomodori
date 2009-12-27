@@ -1,5 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + "/../Config/environment")
 require 'mocha'
+require 'microspec'
 require 'matchy'
 require 'test/unit'
-require 'microspec'
+
+APP_ROOT = File.expand_path(File.dirname(__FILE__) + "/..")
+APP_NAME = "PomodoriXCode"
