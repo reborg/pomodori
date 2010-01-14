@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Loading Pomodori Interactive Console"
+macirb -r script/init.rb --simple-prompt

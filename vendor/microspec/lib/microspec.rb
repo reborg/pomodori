@@ -8,12 +8,12 @@ module Test::Unit
   class TestCase
     class << self
       # Runs before each test case.
-      def before(&block)
+      def before(scope, &block)
         define_method("setup", &block)
       end
       
       # Runs after each test case.
-      def after(&block)
+      def after(scope, &block)
         define_method("teardown", &block)
       end
       
