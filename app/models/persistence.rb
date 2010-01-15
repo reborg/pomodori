@@ -41,7 +41,40 @@ class Persistence
     @moc ||= init_moc
   end
 
-  private
+  def self.fetch(request)
+    error = fetch_error
+    results = Persistence.instance.moc.executeFetchRequest(request, error:error)
+    process_error(error)
+    results
+  end
+
+  ##
+  # Saves an already existing instance to the database.
+  # FIXME: try to extend process_error to handle true/false 
+  # results as well as exception raising and delete error 
+  # processing from here.
+  def self.save
+    error = fetch_error
+    unless Persistence.instance.moc.save(error)
+      msg = error[0].localizedDescription ?  error[0].localizedDescription : "Unknown"
+      NSLog("Error while saving entity #{msg}")
+      return false
+    end
+    return true
+  end
+
+  def self.fetch_error
+    Pointer.new_with_type('@')
+  end  
+
+  def self.process_error(error)
+    unless error[0] == nil
+      msg = error[0].localizedDescription ? error[0].localizedDescription : "Unknown"
+      raise "CoreData access error: \n#{msg}"
+    end
+  end
+
+  private 
 
     def init_moc
       moc = NSManagedObjectContext.new

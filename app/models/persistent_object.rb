@@ -18,15 +18,9 @@ class PersistentObject < NSManagedObject
   end
 
   ##
-  # Saves an already existing instance in the database.
+  # Saves an already existing instance to the database.
   def save
-    error = PersistentObject.fetch_error
-    unless Persistence.instance.moc.save(error)
-      msg = error[0].localizedDescription ?  error[0].localizedDescription : "Unknown"
-      NSLog("Error while saving entity #{msg}")
-      return false
-    end
-    return true
+    Persistence.save
   end
 
   ##
@@ -55,32 +49,14 @@ class PersistentObject < NSManagedObject
     request.includesPendingChanges = false
     request.entity = entity
     request.predicate = NSPredicate.predicateWithFormat("%K like %@", "text", str)
-    error = fetch_error
-    results = Persistence.instance.moc.executeFetchRequest(request, error:error)
-    if ((error[0] != nil) || (results == nil))
-      msg = error[0].localizedDescription ? 
-      error[0].localizedDescription : "Unknown"
-      puts "Error fetching entity #{msg}"
-    end
-    results.first
+    Persistence.fetch(request).first
   end
 
   def self.all
     request = NSFetchRequest.new
     request.includesPendingChanges = false
     request.entity = entity
-    error = fetch_error
-    results = Persistence.instance.moc.executeFetchRequest(request, error:error)
-    if ((error[0] != nil) || (results == nil))
-      msg = error[0].localizedDescription ? 
-      error[0].localizedDescription : "Unknown"
-      puts "Error fetching entity #{msg}"
-    end
-    results
-  end
-
-  def self.fetch_error
-    Pointer.new_with_type('@')
+    Persistence.fetch(request)
   end
 
   ##

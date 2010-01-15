@@ -43,6 +43,20 @@ class PersistenceSpec < Test::Unit::TestCase
     @persistence.moc.registeredObjects.count.should == 0
   end
 
+  it 'handles errors executing fetch requests' do
+    moc = stub(:executeFetchRequest => ['results'])
+    Persistence.instance.stubs(:moc).returns(moc)
+    Pointer.stubs(:new_with_type).returns(['error'])
+    Persistence.expects(:fetch).raises
+  end
+
+  it 'handles errors executing save requests' do
+    moc = stub(:save => true)
+    Persistence.instance.stubs(:moc).returns(moc)
+    Pointer.stubs(:new_with_type).returns(['error'])
+    Persistence.expects(:save).raises
+  end
+
   def teardown
     @persistence.reset
   end
