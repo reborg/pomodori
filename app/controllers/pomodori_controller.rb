@@ -1,13 +1,14 @@
 require 'pomodoro'
 
 class PomodoriController
+
   attr_accessor :text_area
   attr_accessor :submit_button
+
   def create(sender)
-    if(Pomodoro.save(@text_area.stringValue))
+    pomodoro = Pomodoro.new(:text => @text_area.stringValue)
+    if(pomodoro.save)
       NSLog("Controller created pomodoro")
-      @text_area.setHidden(true)
-      @submit_button.setHidden(true)
     else
       NSLog("Persistence ERROR")
       # WarningsController.new

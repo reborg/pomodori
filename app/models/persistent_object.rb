@@ -1,4 +1,4 @@
-require 'models/persistence'
+require 'persistence'
 
 ##
 # ActiveRecord like persistence based on CoreData. WIP.

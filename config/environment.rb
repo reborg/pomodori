@@ -1,3 +1,4 @@
+framework 'coredata'
 APP_ROOT = File.expand_path(File.dirname(__FILE__) + "/..")
 
 [".", "models", "controllers", "views"].each do |path|

@@ -42,12 +42,14 @@
 		8F3929D410E670FB001A66EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F3929D310E670FB001A66EE /* Info.plist */; };
 		8F545BC110E7AAB6009FE4FC /* application_delegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BBD10E7AAB6009FE4FC /* application_delegate.rb */; };
 		8F545BC210E7AAB6009FE4FC /* menu_bar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BBE10E7AAB6009FE4FC /* menu_bar.rb */; };
-		8F545BC310E7AAB6009FE4FC /* persistence.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BBF10E7AAB6009FE4FC /* persistence.rb */; };
 		8F545BC410E7AAB6009FE4FC /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BC010E7AAB6009FE4FC /* rb_main.rb */; };
 		8F545BC710E7AAC0009FE4FC /* pomodori_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BC510E7AAC0009FE4FC /* pomodori_controller.rb */; };
 		8F545BC810E7AAC0009FE4FC /* timer_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BC610E7AAC0009FE4FC /* timer_controller.rb */; };
 		8F545BCA10E7AACF009FE4FC /* pomodoro.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8F545BC910E7AACF009FE4FC /* pomodoro.rb */; };
 		8F77F52F10CFA8E20098077A /* Pomodori.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */; };
+		8FFE6F4C1109B54700E0EE8E /* persistent_object.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE6F4B1109B54700E0EE8E /* persistent_object.rb */; };
+		8FFE6F4E1109B55B00E0EE8E /* persistence.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE6F4D1109B55B00E0EE8E /* persistence.rb */; };
+		8FFE6F581109B7AE00E0EE8E /* todo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE6F571109B7AE00E0EE8E /* todo.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,12 +76,14 @@
 		8F3929D310E670FB001A66EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F545BBD10E7AAB6009FE4FC /* application_delegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = application_delegate.rb; path = app/application_delegate.rb; sourceTree = "<group>"; };
 		8F545BBE10E7AAB6009FE4FC /* menu_bar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = menu_bar.rb; path = app/menu_bar.rb; sourceTree = "<group>"; };
-		8F545BBF10E7AAB6009FE4FC /* persistence.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = persistence.rb; path = app/persistence.rb; sourceTree = "<group>"; };
 		8F545BC010E7AAB6009FE4FC /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = rb_main.rb; path = app/rb_main.rb; sourceTree = "<group>"; };
 		8F545BC510E7AAC0009FE4FC /* pomodori_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = pomodori_controller.rb; path = app/controllers/pomodori_controller.rb; sourceTree = "<group>"; };
 		8F545BC610E7AAC0009FE4FC /* timer_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = timer_controller.rb; path = app/controllers/timer_controller.rb; sourceTree = "<group>"; };
 		8F545BC910E7AACF009FE4FC /* pomodoro.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = pomodoro.rb; path = app/models/pomodoro.rb; sourceTree = "<group>"; };
 		8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Pomodori.xcdatamodel; sourceTree = "<group>"; };
+		8FFE6F4B1109B54700E0EE8E /* persistent_object.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = persistent_object.rb; path = app/models/persistent_object.rb; sourceTree = "<group>"; };
+		8FFE6F4D1109B55B00E0EE8E /* persistence.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = persistence.rb; path = app/models/persistence.rb; sourceTree = "<group>"; };
+		8FFE6F571109B7AE00E0EE8E /* todo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todo.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8F77F52E10CFA8E20098077A /* Pomodori.xcdatamodel */,
+				8FFE6F571109B7AE00E0EE8E /* todo.xib */,
 			);
 			name = PomodoriXCode;
 			sourceTree = "<group>";
@@ -160,7 +165,6 @@
 			children = (
 				8F545BBD10E7AAB6009FE4FC /* application_delegate.rb */,
 				8F545BBE10E7AAB6009FE4FC /* menu_bar.rb */,
-				8F545BBF10E7AAB6009FE4FC /* persistence.rb */,
 				8F545BC010E7AAB6009FE4FC /* rb_main.rb */,
 				8F39299310E66C1D001A66EE /* views */,
 				8F39299210E66C0C001A66EE /* controllers */,
@@ -172,6 +176,8 @@
 		8F39299110E66C07001A66EE /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8FFE6F4D1109B55B00E0EE8E /* persistence.rb */,
+				8FFE6F4B1109B54700E0EE8E /* persistent_object.rb */,
 				8F545BC910E7AACF009FE4FC /* pomodoro.rb */,
 			);
 			name = models;
@@ -252,11 +258,13 @@
 				8F3929D410E670FB001A66EE /* Info.plist in Resources */,
 				8F545BC110E7AAB6009FE4FC /* application_delegate.rb in Resources */,
 				8F545BC210E7AAB6009FE4FC /* menu_bar.rb in Resources */,
-				8F545BC310E7AAB6009FE4FC /* persistence.rb in Resources */,
 				8F545BC410E7AAB6009FE4FC /* rb_main.rb in Resources */,
 				8F545BC710E7AAC0009FE4FC /* pomodori_controller.rb in Resources */,
 				8F545BC810E7AAC0009FE4FC /* timer_controller.rb in Resources */,
 				8F545BCA10E7AACF009FE4FC /* pomodoro.rb in Resources */,
+				8FFE6F4C1109B54700E0EE8E /* persistent_object.rb in Resources */,
+				8FFE6F4E1109B55B00E0EE8E /* persistence.rb in Resources */,
+				8FFE6F581109B7AE00E0EE8E /* todo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

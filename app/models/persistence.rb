@@ -10,6 +10,7 @@ require 'singleton'
 # entity all the unsaved entity in the context will be saved as well
 # and that could not be the expected behavior)
 class Persistence
+
   include Singleton
   attr_writer :db_path, :bundles_path
 
@@ -26,7 +27,7 @@ class Persistence
   end
 
   def bundles_path
-    @bundles_path ||= [nil]
+    @bundles_path ||= nil
   end
 
   def mom
