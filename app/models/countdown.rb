@@ -1,7 +1,3 @@
-##
-# Counts from the given number of seconds down to zero. You can give
-# an optional block to the countdown to call when zero is reached.
-#
 class Countdown
   attr_accessor :secs, :callback
   

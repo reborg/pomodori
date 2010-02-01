@@ -59,6 +59,7 @@ class Persistence
     unless Persistence.instance.moc.save(error)
       msg = error[0].localizedDescription ?  error[0].localizedDescription : "Unknown"
       NSLog("Error while saving entity #{msg}")
+      raise "Error on save: #{error[0].description}"
       return false
     end
     return true
