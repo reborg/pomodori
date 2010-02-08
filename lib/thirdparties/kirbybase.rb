@@ -2798,13 +2798,13 @@ class KBTable
         # case we are dropping an index or a column.  We want to make sure
         # an select_by_index method doesn't hang around if it's index or
         # column has been dropped.
-        methods.each do |m|
-            next if m == 'select_by_recno_index'
-            
-            if m =~ /select_by_.*_index/
-                class << self; self end.send(:remove_method, m.to_sym)
-            end    
-        end
+        #methods.each do |m|
+        #    next if m == 'select_by_recno_index'
+        #    
+        #    if m =~ /select_by_.*_index/
+        #        class << self; self end.send(:remove_method, m.to_sym)
+        #    end    
+        #end
 
         # Create the recno index.  A recno index always gets created even if
         # there are no user-defined indexes for the table.

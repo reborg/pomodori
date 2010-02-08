@@ -6,4 +6,4 @@ resources:
   - resources/**/*.*
 sources: 
   - lib/**/*.rb
-  
+  - vendor/hotcocoa-0.5.1+patch/**/*.rb
