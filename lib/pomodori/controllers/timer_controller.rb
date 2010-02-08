@@ -1,4 +1,3 @@
-require 'hotcocoa'
 require 'pomodori/countdown'
 
 ##

@@ -37,7 +37,7 @@ class Chart
   end
   
   def process_line(line)
-    extract_tag(line) ? send(extract_tag(line)).to_sym : line
+    extract_tag(line) ? send(extract_tag(line)) : line
   end
   
   ##

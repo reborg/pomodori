@@ -1,5 +1,3 @@
-require 'hotcocoa'
-
 class HistoryView
   include HotCocoa
   

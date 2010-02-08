@@ -1,5 +1,3 @@
-require 'hotcocoa'
-
 ##
 # Creating a view guidelines.
 # - For each HotCocoa element there should be an accessor method

@@ -1,4 +1,3 @@
-require 'hotcocoa'
 framework 'webkit'
 require 'pomodori/controllers/charts_controller'
 
