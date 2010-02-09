@@ -1,6 +1,6 @@
 = Pomodori
 
-![reborg -at- reborg -dot- net](http://reborg.github.com/pomodori/resources/general-view.png "Timer View")
+http://reborg.github.com/pomodori/resources/general-view.png
 
 * Homepage: http://reborg.github.com/pomodori
 * Main Tracking: http://github.com/reborg/pomodori/issues (for issues, suggestions, features)
