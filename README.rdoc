@@ -1,12 +1,17 @@
 = Pomodori
 
+![reborg -at- reborg -dot- net](http://reborg.github.com/pomodori/resources/general-view.png "Timer View")
+
 * Homepage: http://reborg.github.com/pomodori
-* Tracking1: http://reborg.lighthouseapp.com/projects/25822-pomodori/overview
-* Tracking2: http://github.com/reborg/pomodori/issues
+* Main Tracking: http://github.com/reborg/pomodori/issues (for issues, suggestions, features)
+* Alternative tracking (but github preferred): http://reborg.lighthouseapp.com/projects/25822-pomodori/overview
 * Blog:     http://blog.reborg.net
 * Contact:  reborg -at- reborg.net
 
 == DESCRIPTION:
 
-Pomodori is a Mac OS only tool based on the pomodoro technique (PT) by Francesco Cirillo. Pomodori measures the pomodoro time and stores pomodoro descriptions. Pomodori has metrics to help you plan future activities and detailed charts. For more information about the technique please visit http://www.pomodorotechnique.com. For release notes, installing and other info: http://reborg.github.com/pomodori
+Pomodori is a tool based on the pomodoro technique (PT) by Francesco Cirillo only available for Mac Os X. Pomodori measures the pomodoro time and stores pomodoro descriptions. Pomodori has metrics to help you plan future activities and detailed charts. For more information about the technique please visit http://www.pomodorotechnique.com. For release notes, installing and other info visit the home site of the app at http://reborg.github.com/pomodori.
 
+== Pomodoro Talk:
+
+I recorded a Pomodoro Technique introduction talk which is available here: http://www.vimeo.com/4546375. Other resources available at the Pomodori main web site: http://reborg.github.com/pomodori
