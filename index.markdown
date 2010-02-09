@@ -3,7 +3,7 @@ layout: default
 title: Welcome to Pomodori!
 ---
 
-Pomodori is a Mac OS (Leopard only for just a few more days) tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/). Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
+Pomodori is a tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/) available for Mac Os X. Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
 
 WHAT IS THE POMODORO TECHNIQUE?
 -------------------------------
@@ -27,11 +27,15 @@ Done Pomodoro:
 FEATURES
 --------------------
 
-The project is young and features are added fast. Do you want a new feature? Please enter it here: [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview) or send your comment to reborg @ reborg.net
+The project is young and features are added fast. Do you want a new feature? Please enter it here: [Github-Issues](http://github.com/reborg/pomodori/issues) or send your comment to reborg @ reborg.net
+
+Release 0.5
+
+This release introduces compatibility with Snow Leopard Mac Os X 10.6. If you have Snow Leopard please download Pomodori 0.5 [here](http://reborg.github.com/pomodori/resources/pomodori-0.5.zip). Other than fixes for the OS version bump, this release also embed MacRuby in the executable so you don't need a separate installtion: just unzip and go!
 
 Release 0.4
 
-This release is the last based on MacRuby 0.4 (the last compatible with Mac OS X Leopard 10.5). Please download version 0.4 [here](http://reborg.github.com/pomodori/resources/pomodori-0.4.zip). Included in this release:
+This release was the last based on MacRuby 0.4 (the last compatible with Mac OS X Leopard 10.5). If you are still running on Leopard Mac Os X 10.5 please download version 0.4 [here](http://reborg.github.com/pomodori/resources/pomodori-0.4.zip). Included in this release:
 
 * Fixed bug related to pomodoros recorded with different timezones
 * Added unicode support to pomodoro descriptions [ticket 11](http://reborg.lighthouseapp.com/projects/25822/tickets/11-scandinavic-characters-such-as-crash-pomodori)
@@ -66,7 +70,6 @@ Release 0.1
 COMING SOON
 -----------
 
-* Snow Leopard compatiblity
 * Major rewrite under developement. Dropping HotCocoa and moving interface deisgn in XCode.
 * Tag management to tag pomodoros belonging to a certain category
 * More advanced charts such as pomodoros worked by tag
@@ -79,42 +82,48 @@ COMING SOON
 REQUIREMENTS
 ------------
 
+Mac Os X 10.6 Snow Leopard Users:
+
+* Just download latest Pomodori release, unzip and go.
+
 Mac OS X 10.5 Leopard users:
 
 * Download MacRuby 0.4 binaries from [MacRuby binaries](http://www.macruby.org/files/MacRuby%200.4.zip)
 * Unzip and double click on the installer and follow the instructions
+* Unzip and use Pomodori 0.4
 
 INSTALL
 -------
 
-* Download the pomodori 0.4 archive [here](http://reborg.github.com/pomodori/resources/pomodori-0.4.zip)
+* Download the pomodori 0.5 archive [here](http://reborg.github.com/pomodori/resources/pomodori-0.5.zip)
 * Unzip and copy to pomodori.app to /Applications
-* Please report installation issues at [LightHouse](http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets)
+* Please report installation issues at [Github-Issues](http://github.com/reborg/pomodori/issues)
 
 DEVELOPING
 ----------
 
-Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
+This procedure works for the latest developments in the master branch. First of all you need to install MacRuby (at this time the last release available is 0.5). Then Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
 
 * cd pomodori
 * Optional but recommended: run the test suite with 'macrake'
 * 'macrake run' from the root directory to generate the app and run it
+* 'macrake embed' to create a pomodori app distribution with embedded MacRury.
 * './script/console' to load an interactive console with pre-loaded HotCocoa and Pomodori classes
 
 LINKS
 -----
 
 * [Homepage](http://reborg.github.com/pomodori)
-* [Tracking](http://reborg.lighthouseapp.com/projects/25822-pomodori/overview) at LightHouse
+* [Tracking](http://github.com/reborg/pomodori/issues) at Github Issues Tracker
 * [Blog](http://blog.reborg.net) my blog where I also talk about pomodoros
-* Mail me at:  reborg -at- reborg.net
+* Mail me at:  reborg -at- reborg -dot- net
 
 LICENSE
 -------
 
 (The MIT License)
 
-Copyright (c) 2009 Renzo Borgatti
+Copyright (c) 2010 ReBorg - Renzo Borgatti
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

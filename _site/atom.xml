@@ -4,7 +4,7 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2009-10-26T10:50:45-05:00</updated>
+ <updated>2010-02-09T12:57:25+01:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
@@ -13,9 +13,23 @@
 
  
  <entry>
+   <title>Pomodori 0.5 now on Snow Leopard</title>
+   <link href="http://reborg.github.com/pomodori/2010/02/09/ann-0.5-snow-leopard.html"/>
+   <updated>2010-02-09T00:00:00+01:00</updated>
+   <id>http://reborg.github.com/pomodori/2010/02/09/ann-0.5-snow-leopard</id>
+   <content type="html">&lt;h1 id='pomodori_finally_available_on_the_latest_mac'&gt;Pomodori Finally Available on the latest Mac&lt;/h1&gt;
+
+&lt;p&gt;Greetings Pomodori users! While a major rewrite of Pomodori is in progress, I was able to release a new Pomodori &amp;#8220;old-style&amp;#8221; compatible with Snow Leopard. I was able to quickly release 0.5 after MacRuby went final with the 0.5 release and many of the compatibility problems I found while it was in beta were gone. Other than a few fixes to make it work, this Pomodori works exactly as before but only on Snow Leopard. If you happen to have an old mac, please keep on using version 0.4. The new Pomodori is available &lt;a href='http://reborg.github.com/pomodori/resources/pomodori-0.5.zip'&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The application is now aroung 42Mb after unzipping and this is because MacRuby (and a Ruby 1.9 release) are emebedded in the package. For this reason, you don&amp;#8217;t need to do absolutely nothing to make it works. Just unzip and install and it should work right away.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Happy pomodoros to all&lt;/em&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>Pomodori 0.4 and Snow Leopard Issues</title>
    <link href="http://reborg.github.com/pomodori/2009/10/26/ann-0.4-and-snow.html"/>
-   <updated>2009-10-26T00:00:00-05:00</updated>
+   <updated>2009-10-26T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/10/26/ann-0.4-and-snow</id>
    <content type="html">&lt;h1 id='porting_pomodori_to_snow_leopard'&gt;Porting Pomodori to Snow Leopard&lt;/h1&gt;
 
@@ -41,7 +55,7 @@
  <entry>
    <title>View History Feature</title>
    <link href="http://reborg.github.com/pomodori/2009/06/08/historyview.html"/>
-   <updated>2009-06-08T00:00:00-05:00</updated>
+   <updated>2009-06-08T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/06/08/historyview</id>
    <content type="html">&lt;h1 id='release_03_is_close'&gt;Release 0.3 is close!&lt;/h1&gt;
 
@@ -59,7 +73,7 @@
  <entry>
    <title>Fixed performance issue</title>
    <link href="http://reborg.github.com/pomodori/2009/05/12/perfomances.html"/>
-   <updated>2009-05-12T00:00:00-05:00</updated>
+   <updated>2009-05-12T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/05/12/perfomances</id>
    <content type="html">&lt;h1 id='well_over_400_pomodoros'&gt;Well over 400 Pomodoros&lt;/h1&gt;
 
@@ -81,7 +95,7 @@
  <entry>
    <title>history table view</title>
    <link href="http://reborg.github.com/pomodori/2009/04/16/todo.html"/>
-   <updated>2009-04-16T00:00:00-05:00</updated>
+   <updated>2009-04-16T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/04/16/todo</id>
    <content type="html">&lt;h2 id='session_planned_8'&gt;SESSION PLANNED 8&lt;/h2&gt;
 
@@ -143,7 +157,7 @@
  <entry>
    <title>making space on the main view</title>
    <link href="http://reborg.github.com/pomodori/2009/04/15/todo.html"/>
-   <updated>2009-04-15T00:00:00-05:00</updated>
+   <updated>2009-04-15T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/04/15/todo</id>
    <content type="html">&lt;h2 id='session_planned_7'&gt;SESSION PLANNED 7&lt;/h2&gt;
 
@@ -204,7 +218,7 @@
  <entry>
    <title>average pomodoros and specs</title>
    <link href="http://reborg.github.com/pomodori/2009/04/14/todo.html"/>
-   <updated>2009-04-14T00:00:00-05:00</updated>
+   <updated>2009-04-14T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/04/14/todo</id>
    <content type="html">&lt;h2 id='session_planned_7'&gt;SESSION PLANNED 7&lt;/h2&gt;
 
@@ -269,7 +283,7 @@
  <entry>
    <title>chirb talk</title>
    <link href="http://reborg.github.com/pomodori/2009/04/06/todo.html"/>
-   <updated>2009-04-06T00:00:00-05:00</updated>
+   <updated>2009-04-06T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/04/06/todo</id>
    <content type="html">&lt;p&gt;This is both an announce and the planning for today. The announce is that tonight I&amp;#8217;m gonna talk about Pomodori and HotCocoa development at the Chicago Ruby User Group @ ThoughtWorks. Kind of late announce here on the Pomodori&amp;#8217;s blog, but anyway, step by if you have a chance, show permitting.&lt;/p&gt;
 
@@ -326,7 +340,7 @@
  <entry>
    <title>Announcing 0.2 release</title>
    <link href="http://reborg.github.com/pomodori/2009/04/04/ann-0.2.html"/>
-   <updated>2009-04-04T00:00:00-05:00</updated>
+   <updated>2009-04-04T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/04/04/ann-0.2</id>
    <content type="html">&lt;h1 id='pomodori_02_is_out'&gt;Pomodori 0.2 is out!&lt;/h1&gt;
 
@@ -346,7 +360,7 @@
  <entry>
    <title>clean-up charts for 0.2</title>
    <link href="http://reborg.github.com/pomodori/2009/04/03/todo.html"/>
-   <updated>2009-04-03T00:00:00-05:00</updated>
+   <updated>2009-04-03T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/04/03/todo</id>
    <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
 
@@ -415,7 +429,7 @@
  <entry>
    <title>summary chart</title>
    <link href="http://reborg.github.com/pomodori/2009/03/31/todo.html"/>
-   <updated>2009-03-31T00:00:00-05:00</updated>
+   <updated>2009-03-31T00:00:00+02:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/31/todo</id>
    <content type="html">&lt;h2 id='todays_planned_5'&gt;TODAY&amp;#8217;s PLANNED 5&lt;/h2&gt;
 
@@ -483,7 +497,7 @@
  <entry>
    <title>template processing</title>
    <link href="http://reborg.github.com/pomodori/2009/03/29/todo.html"/>
-   <updated>2009-03-29T00:00:00-05:00</updated>
+   <updated>2009-03-29T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/29/todo</id>
    <content type="html">&lt;h2 id='todays_planned_6'&gt;TODAY&amp;#8217;s PLANNED 6&lt;/h2&gt;
 
@@ -552,7 +566,7 @@
  <entry>
    <title>charts in progress</title>
    <link href="http://reborg.github.com/pomodori/2009/03/27/todo.html"/>
-   <updated>2009-03-27T00:00:00-05:00</updated>
+   <updated>2009-03-27T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/27/todo</id>
    <content type="html">&lt;h2 id='todays_planned_7'&gt;TODAY&amp;#8217;s PLANNED 7&lt;/h2&gt;
 
@@ -612,7 +626,7 @@
  <entry>
    <title>back to charts</title>
    <link href="http://reborg.github.com/pomodori/2009/03/26/todo.html"/>
-   <updated>2009-03-26T00:00:00-05:00</updated>
+   <updated>2009-03-26T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/26/todo</id>
    <content type="html">&lt;h2 id='todays_planned_4'&gt;TODAY&amp;#8217;s PLANNED 4&lt;/h2&gt;
 
@@ -661,7 +675,7 @@
  <entry>
    <title>extracting controllers</title>
    <link href="http://reborg.github.com/pomodori/2009/03/24/todo.html"/>
-   <updated>2009-03-24T00:00:00-05:00</updated>
+   <updated>2009-03-24T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/24/todo</id>
    <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
 
@@ -741,7 +755,7 @@
  <entry>
    <title>closing huge refactoring (hopefully)</title>
    <link href="http://reborg.github.com/pomodori/2009/03/23/todo.html"/>
-   <updated>2009-03-23T00:00:00-05:00</updated>
+   <updated>2009-03-23T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/23/todo</id>
    <content type="html">&lt;h2 id='todays_planned_6'&gt;TODAY&amp;#8217;s PLANNED 6&lt;/h2&gt;
 
@@ -789,7 +803,7 @@
  <entry>
    <title>controllers refactoring</title>
    <link href="http://reborg.github.com/pomodori/2009/03/20/todo.html"/>
-   <updated>2009-03-20T00:00:00-05:00</updated>
+   <updated>2009-03-20T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/20/todo</id>
    <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
 
@@ -852,7 +866,7 @@
  <entry>
    <title>extracting controllers</title>
    <link href="http://reborg.github.com/pomodori/2009/03/19/todo.html"/>
-   <updated>2009-03-19T00:00:00-05:00</updated>
+   <updated>2009-03-19T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/19/todo</id>
    <content type="html">&lt;h2 id='todays_planned_6__5'&gt;TODAY&amp;#8217;s PLANNED 6 =&amp;gt; 5&lt;/h2&gt;
 
@@ -921,7 +935,7 @@
  <entry>
    <title>main view work in progress</title>
    <link href="http://reborg.github.com/pomodori/2009/03/17/todo.html"/>
-   <updated>2009-03-17T00:00:00-05:00</updated>
+   <updated>2009-03-17T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/17/todo</id>
    <content type="html">&lt;h2 id='todays_planned_9'&gt;TODAY&amp;#8217;s PLANNED 9&lt;/h2&gt;
 
@@ -985,7 +999,7 @@
  <entry>
    <title>some refactoring</title>
    <link href="http://reborg.github.com/pomodori/2009/03/16/todo.html"/>
-   <updated>2009-03-16T00:00:00-05:00</updated>
+   <updated>2009-03-16T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/16/todo</id>
    <content type="html">&lt;h2 id='today_planned_9'&gt;TODAY PLANNED 9&lt;/h2&gt;
 
@@ -1021,7 +1035,7 @@
  <entry>
    <title>work on charts started</title>
    <link href="http://reborg.github.com/pomodori/2009/03/13/charts.html"/>
-   <updated>2009-03-13T00:00:00-05:00</updated>
+   <updated>2009-03-13T00:00:00+01:00</updated>
    <id>http://reborg.github.com/pomodori/2009/03/13/charts</id>
    <content type="html">&lt;p&gt;I just realized that this brain dump and retrospective I was writing at the end of each planning page for the day is a perfect fit for the content of this micro blog! The retrospective is process only: how my PT (Pomodoro Technique) is doing, pros and cons, what went right and what went wrong. The standup is to get started for the day: yesterday&amp;#8217;s achievements, today&amp;#8217;s plan, design ideas and so on. Everyday is taking me 1 pomodoro for this and definitely worth it.&lt;/p&gt;
 

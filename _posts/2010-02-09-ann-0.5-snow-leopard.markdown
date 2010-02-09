@@ -1,0 +1,12 @@
+---
+layout: post
+title: Pomodori 0.5 now on Snow Leopard
+---
+
+Pomodori Finally Available on the latest Mac
+============================================
+Greetings Pomodori users! While a major rewrite of Pomodori is in progress, I was able to release a new Pomodori "old-style" compatible with Snow Leopard. I was able to quickly release 0.5 after MacRuby went final with the 0.5 release and many of the compatibility problems I found while it was in beta were gone. Other than a few fixes to make it work, this Pomodori works exactly as before but only on Snow Leopard. If you happen to have an old mac, please keep on using version 0.4. The new Pomodori is available [here](http://reborg.github.com/pomodori/resources/pomodori-0.5.zip). 
+
+The application is now aroung 42Mb after unzipping and this is because MacRuby (and a Ruby 1.9 release) are emebedded in the package. For this reason, you don't need to do absolutely nothing to make it works. Just unzip and install and it should work right away.
+
+*Happy pomodoros to all*

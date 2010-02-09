@@ -21,13 +21,13 @@
             <a href="http://github.com/reborg/pomodori">Source</a>
           </li>
           <li id="navi_tickets">
-            <a href="http://reborg.lighthouseapp.com/projects/25822-pomodori">Tickets</a>
+            <a href="http://github.com/reborg/pomodori/issues">Issues</a>
           </li>
         </ul>
       </div>
       <div id="page_body">
         <div id="content">
-          <p>Pomodori is a Mac OS (Leopard only for just a few more days) tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a>. Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
+          <p>Pomodori is a tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a> available for Mac Os X. Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
 
 <h2 id='what_is_the_pomodoro_technique'>WHAT IS THE POMODORO TECHNIQUE?</h2>
 
@@ -49,11 +49,15 @@
 
 <h2 id='features'>FEATURES</h2>
 
-<p>The project is young and features are added fast. Do you want a new feature? Please enter it here: <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>LightHouse</a> or send your comment to reborg @ reborg.net</p>
+<p>The project is young and features are added fast. Do you want a new feature? Please enter it here: <a href='http://github.com/reborg/pomodori/issues'>Github-Issues</a> or send your comment to reborg @ reborg.net</p>
+
+<p>Release 0.5</p>
+
+<p>This release introduces compatibility with Snow Leopard Mac Os X 10.6. If you have Snow Leopard please download Pomodori 0.5 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.5.zip'>here</a>. Other than fixes for the OS version bump, this release also embed MacRuby in the executable so you don&#8217;t need a separate installtion: just unzip and go!</p>
 
 <p>Release 0.4</p>
 
-<p>This release is the last based on MacRuby 0.4 (the last compatible with Mac OS X Leopard 10.5). Please download version 0.4 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'>here</a>. Included in this release:</p>
+<p>This release was the last based on MacRuby 0.4 (the last compatible with Mac OS X Leopard 10.5). If you are still running on Leopard Mac Os X 10.5 please download version 0.4 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'>here</a>. Included in this release:</p>
 
 <ul>
 <li>Fixed bug related to pomodoros recorded with different timezones</li>
@@ -112,8 +116,6 @@
 <h2 id='coming_soon'>COMING SOON</h2>
 
 <ul>
-<li>Snow Leopard compatiblity</li>
-
 <li>Major rewrite under developement. Dropping HotCocoa and moving interface deisgn in XCode.</li>
 
 <li>Tag management to tag pomodoros belonging to a certain category</li>
@@ -133,27 +135,35 @@
 
 <h2 id='requirements'>REQUIREMENTS</h2>
 
+<p>Mac Os X 10.6 Snow Leopard Users:</p>
+
+<ul>
+<li>Just download latest Pomodori release, unzip and go.</li>
+</ul>
+
 <p>Mac OS X 10.5 Leopard users:</p>
 
 <ul>
 <li>Download MacRuby 0.4 binaries from <a href='http://www.macruby.org/files/MacRuby%200.4.zip'>MacRuby binaries</a></li>
 
 <li>Unzip and double click on the installer and follow the instructions</li>
+
+<li>Unzip and use Pomodori 0.4</li>
 </ul>
 
 <h2 id='install'>INSTALL</h2>
 
 <ul>
-<li>Download the pomodori 0.4 archive <a href='http://reborg.github.com/pomodori/resources/pomodori-0.4.zip'>here</a></li>
+<li>Download the pomodori 0.5 archive <a href='http://reborg.github.com/pomodori/resources/pomodori-0.5.zip'>here</a></li>
 
 <li>Unzip and copy to pomodori.app to /Applications</li>
 
-<li>Please report installation issues at <a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/tickets'>LightHouse</a></li>
+<li>Please report installation issues at <a href='http://github.com/reborg/pomodori/issues'>Github-Issues</a></li>
 </ul>
 
 <h2 id='developing'>DEVELOPING</h2>
 
-<p>Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. Then:</p>
+<p>This procedure works for the latest developments in the master branch. First of all you need to install MacRuby (at this time the last release available is 0.5). Then Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. Then:</p>
 
 <ul>
 <li>cd pomodori</li>
@@ -161,6 +171,8 @@
 <li>Optional but recommended: run the test suite with &#8216;macrake&#8217;</li>
 
 <li>&#8216;macrake run&#8217; from the root directory to generate the app and run it</li>
+
+<li>&#8216;macrake embed&#8217; to create a pomodori app distribution with embedded MacRury.</li>
 
 <li>&#8217;./script/console&#8217; to load an interactive console with pre-loaded HotCocoa and Pomodori classes</li>
 </ul>
@@ -170,18 +182,18 @@
 <ul>
 <li><a href='http://reborg.github.com/pomodori'>Homepage</a></li>
 
-<li><a href='http://reborg.lighthouseapp.com/projects/25822-pomodori/overview'>Tracking</a> at LightHouse</li>
+<li><a href='http://github.com/reborg/pomodori/issues'>Tracking</a> at Github Issues Tracker</li>
 
 <li><a href='http://blog.reborg.net'>Blog</a> my blog where I also talk about pomodoros</li>
 
-<li>Mail me at: reborg -at- reborg.net</li>
+<li>Mail me at: reborg -at- reborg -dot- net</li>
 </ul>
 
 <h2 id='license'>LICENSE</h2>
 
 <p>(The MIT License)</p>
 
-<p>Copyright (c) 2009 Renzo Borgatti</p>
+<p>Copyright (c) 2010 ReBorg - Renzo Borgatti</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#8216;Software&#8217;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
@@ -191,16 +203,18 @@
         </div>
         <div id="sidebar">
           <div class="item">
-            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.4.zip">Download Pomodori 0.4</a></h5>
-            <h5><a href="http://reborg.lighthouseapp.com/projects/25822-pomodori">LightHouse</a></h5>
-            <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub</a></h5>
+            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.5.zip">Latest Pomodori Donload</a></h5>
+            <h5><a href="http://github.com/reborg/pomodori/issues">Github Issues</a></h5>
+            <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub Development</a></h5>
             <h5><a href="http://blog.reborg.net/">My Blog</a></h5>
-            <h5><a href="http://www.vimeo.com/4546375">PT Video Introduction</a></h5>
+            <h5><a href="http://www.vimeo.com/4546375">Video Introduction</a></h5>
             <h5><a href="http://www.pomodorotechnique.com/">PT Pomodoro Technique</a></h5>
           </div>
           <div class="item">
             <h4>Blog Posts <a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a></h4>
             <p>
+               
+                <span>09 Feb 2010</span> » <a href="/pomodori/2010/02/09/ann-0.5-snow-leopard.html">Pomodori 0.5 now on Snow Leopard</a><br>
                
                 <span>26 Oct 2009</span> » <a href="/pomodori/2009/10/26/ann-0.4-and-snow.html">Pomodori 0.4 and Snow Leopard Issues</a><br>
                
