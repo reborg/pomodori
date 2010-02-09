@@ -4,7 +4,7 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2010-02-09T12:57:25+01:00</updated>
+ <updated>2010-02-09T13:04:23+01:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
@@ -21,7 +21,7 @@
 
 &lt;p&gt;Greetings Pomodori users! While a major rewrite of Pomodori is in progress, I was able to release a new Pomodori &amp;#8220;old-style&amp;#8221; compatible with Snow Leopard. I was able to quickly release 0.5 after MacRuby went final with the 0.5 release and many of the compatibility problems I found while it was in beta were gone. Other than a few fixes to make it work, this Pomodori works exactly as before but only on Snow Leopard. If you happen to have an old mac, please keep on using version 0.4. The new Pomodori is available &lt;a href='http://reborg.github.com/pomodori/resources/pomodori-0.5.zip'&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The application is now aroung 42Mb after unzipping and this is because MacRuby (and a Ruby 1.9 release) are emebedded in the package. For this reason, you don&amp;#8217;t need to do absolutely nothing to make it works. Just unzip and install and it should work right away.&lt;/p&gt;
+&lt;p&gt;The application is now aroung 42Mb after unzipping and this is because MacRuby (and a Ruby 1.9 release) are emebedded in the package. For this reason, you don&amp;#8217;t need to do absolutely nothing to make it work. Just unzip and install and it should work right away.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Happy pomodoros to all&lt;/em&gt;&lt;/p&gt;</content>
  </entry>
