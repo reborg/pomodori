@@ -3,7 +3,7 @@ layout: default
 title: Welcome to Pomodori!
 ---
 
-Pomodori is a tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/) available for Mac Os X. Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
+Pomodori is a tool based on the pomodoro technique (PT) by [Francesco Cirillo](http://cirillosscrapbook.wordpress.com/) available for Mac Os X (10.6 Core 2 Duo). Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit [pomodoro community](http://www.pomodorotechnique.com/).
 
 WHAT IS THE POMODORO TECHNIQUE?
 -------------------------------
@@ -91,6 +91,11 @@ Mac OS X 10.5 Leopard users:
 * Download MacRuby 0.4 binaries from [MacRuby binaries](http://www.macruby.org/files/MacRuby%200.4.zip)
 * Unzip and double click on the installer and follow the instructions
 * Unzip and use Pomodori 0.4
+
+LIMITATIONS
+-----------
+
+MacRuby doesn't completely work on 32 bit architectures (the Mac on Intel Core Duo are 32 bit only, Mac with Intel Core 2 Duo are 64 bit). If you happen to have an "old" Mac with an Intel Core Duo chip, you should wait unitl the next MacRuby release is available to use Pomodori.
 
 INSTALL
 -------
