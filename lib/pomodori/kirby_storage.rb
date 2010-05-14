@@ -19,7 +19,7 @@ class KirbyStorage
   end
   
   def find_all(clazz)
-    start = Time.now
+    #start = Time.now
     @@pomodoros ||= table_for(clazz).select
     #NSLog(" [PERF]: find_all took '#{Time.now - start}'")
     @@pomodoros

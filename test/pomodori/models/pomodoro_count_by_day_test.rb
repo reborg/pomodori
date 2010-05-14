@@ -23,7 +23,7 @@ class PomodoroCountByDayTest < Test::Unit::TestCase
   it "compares to another PomoCount" do
     PomodoroCountByDay.include?(Comparable).should be(true)
     (@pcbd > PomodoroCountByDay.new(DateTime.new(2008))).should be(true)
-    (@pcbd > PomodoroCountByDay.new(DateTime.new(2010))).should be(false)
+    (@pcbd > PomodoroCountByDay.new(DateTime.new((DateTime.now.year + 1)))).should be(false)
   end
   
   it "orders pomo count most recent first" do
