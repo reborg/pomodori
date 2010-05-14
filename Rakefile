@@ -1,4 +1,6 @@
-require 'rubygems'
+$LOAD_PATH.unshift(File.dirname(__FILE__) + "/vendor/hotcocoa-0.5.1+patch/lib")
+require 'hotcocoa/application_builder'
+require 'hotcocoa/standard_rake_tasks'
 
 task :default => [:test]
 
