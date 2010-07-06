@@ -51,6 +51,10 @@
 
 <p>The project is young and features are added fast. Do you want a new feature? Please enter it here: <a href='http://github.com/reborg/pomodori/issues'>Github-Issues</a> or send your comment to reborg @ reborg.net</p>
 
+<p>Release 0.6</p>
+
+<p>MacRuby 0.6 is now the default embedded macruby. Also fixed a bug importing frameworks on case sensitive file systems (http://github.com/reborg/pomodori/issues#issue/4). Please download Pomodori 0.6 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.6.zip'>here</a>.</p>
+
 <p>Release 0.5</p>
 
 <p>This release introduces compatibility with Snow Leopard Mac Os X 10.6. If you have Snow Leopard please download Pomodori 0.5 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.5.zip'>here</a>. Other than fixes for the OS version bump, this release also embed MacRuby in the executable so you don&#8217;t need a separate installtion: just unzip and go!</p>
@@ -113,7 +117,7 @@
 <li>A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break</li>
 </ul>
 
-<h2 id='coming_soon'>COMING SOON</h2>
+<h2 id='coming_soon'>COMING SOON?</h2>
 
 <ul>
 <li>Major rewrite under developement. Dropping HotCocoa and moving interface deisgn in XCode.</li>
@@ -135,7 +139,7 @@
 
 <h2 id='requirements'>REQUIREMENTS</h2>
 
-<p>Mac Os X 10.6 Snow Leopard Users:</p>
+<p>Mac Os X 10.6 Snow Leopard (64bits, see limitations) Users:</p>
 
 <ul>
 <li>Just download latest Pomodori release, unzip and go.</li>
@@ -158,7 +162,7 @@
 <h2 id='install'>INSTALL</h2>
 
 <ul>
-<li>Download the pomodori 0.5 archive <a href='http://reborg.github.com/pomodori/resources/pomodori-0.5.zip'>here</a></li>
+<li>Download the pomodori 0.6 archive <a href='http://reborg.github.com/pomodori/resources/pomodori-0.6.zip'>here</a></li>
 
 <li>Unzip and copy to pomodori.app to /Applications</li>
 
@@ -167,7 +171,7 @@
 
 <h2 id='developing'>DEVELOPING</h2>
 
-<p>This procedure works for the latest developments in the master branch. First of all you need to install MacRuby (at this time the last release available is 0.5). Then Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. Then:</p>
+<p>The Macruby-0.4 branch is the current Pomodori release branch until master is stable enough to be integrated with the work of other developers. You need to install MacRuby 0.6 available <a href='http://www.macruby.org/files/MacRuby%200.6.zip'>here</a>. Then Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory and git co macruby-0.4 to move the correct branch (also master is ok but right now is a mess). Then:</p>
 
 <ul>
 <li>cd pomodori</li>
@@ -207,7 +211,7 @@
         </div>
         <div id="sidebar">
           <div class="item">
-            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.5.zip">Pomodori 0.5 Download</a></h5>
+            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.6.zip">Pomodori 0.6 Download</a></h5>
             <h5><a href="http://github.com/reborg/pomodori/issues">Github Issues</a></h5>
             <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub Development</a></h5>
             <h5><a href="http://blog.reborg.net/">My Blog</a></h5>
@@ -217,6 +221,8 @@
           <div class="item">
             <h4>Blog Posts <a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a></h4>
             <p>
+               
+                <span>06 Jul 2010</span> » <a href="/pomodori/2010/07/06/macruby-0.6.html">Upgrade to MacRuby 0.6</a><br>
                
                 <span>25 Feb 2010</span> » <a href="/pomodori/2010/02/25/32-bits-limitation.html">32 bits architecture limitation</a><br>
                

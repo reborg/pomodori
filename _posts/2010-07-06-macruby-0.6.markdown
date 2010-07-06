@@ -1,0 +1,12 @@
+---
+layout: post
+title: Upgrade to MacRuby 0.6
+---
+
+Pomodori 0.6 is out!
+==============================
+Pomodori developement is running slower than ever. Clients work is keeping me solid busy and I can just throw in a few hours a month to quick fix major bugs. This time I also updated MacRuby to the latest release. No big trouble here. There was also a problem on case sensitive Mac file systems that should be solved now.
+
+Hoping things will move faster after the summer. 
+
+*Happy Pomodoros*

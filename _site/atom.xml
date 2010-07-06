@@ -4,13 +4,27 @@
  <title>Pomodori</title>
  <link href="http://reborg.github.com/pomodori/atom.xml" rel="self"/>
  <link href="http://reborg.github.com/pomodori/"/>
- <updated>2010-02-25T22:59:59+01:00</updated>
+ <updated>2010-07-06T22:08:54+02:00</updated>
  <id>http://reborg.github.com/pomodori/</id>
  <author>
    <name>Reborg</name>
    <email>reborg@reborg.net</email>
  </author>
 
+ 
+ <entry>
+   <title>Upgrade to MacRuby 0.6</title>
+   <link href="http://reborg.github.com/pomodori/2010/07/06/macruby-0.6.html"/>
+   <updated>2010-07-06T00:00:00+02:00</updated>
+   <id>http://reborg.github.com/pomodori/2010/07/06/macruby-0.6</id>
+   <content type="html">&lt;h1 id='pomodori_06_is_out'&gt;Pomodori 0.6 is out!&lt;/h1&gt;
+
+&lt;p&gt;Pomodori developement is running slower than ever. Clients work is keeping me solid busy and I can just throw in a few hours a month to quick fix major bugs. This time I also updated MacRuby to the latest release. No big trouble here. There was also a problem on case sensitive Mac file systems that should be solved now.&lt;/p&gt;
+
+&lt;p&gt;Hoping things will move faster after the summer.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Happy Pomodoros&lt;/em&gt;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>32 bits architecture limitation</title>

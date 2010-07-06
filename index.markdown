@@ -29,6 +29,10 @@ FEATURES
 
 The project is young and features are added fast. Do you want a new feature? Please enter it here: [Github-Issues](http://github.com/reborg/pomodori/issues) or send your comment to reborg @ reborg.net
 
+Release 0.6
+
+MacRuby 0.6 is now the default embedded macruby. Also fixed a bug importing frameworks on case sensitive file systems (http://github.com/reborg/pomodori/issues#issue/4). Please download Pomodori 0.6 [here](http://reborg.github.com/pomodori/resources/pomodori-0.6.zip). 
+
 Release 0.5
 
 This release introduces compatibility with Snow Leopard Mac Os X 10.6. If you have Snow Leopard please download Pomodori 0.5 [here](http://reborg.github.com/pomodori/resources/pomodori-0.5.zip). Other than fixes for the OS version bump, this release also embed MacRuby in the executable so you don't need a separate installtion: just unzip and go!
@@ -67,8 +71,8 @@ Release 0.1
 * And so on, until you've got everything DONE!
 * A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break
 
-COMING SOON
------------
+COMING SOON?
+------------
 
 * Major rewrite under developement. Dropping HotCocoa and moving interface deisgn in XCode.
 * Tag management to tag pomodoros belonging to a certain category
@@ -82,7 +86,7 @@ COMING SOON
 REQUIREMENTS
 ------------
 
-Mac Os X 10.6 Snow Leopard Users:
+Mac Os X 10.6 Snow Leopard (64bits, see limitations) Users:
 
 * Just download latest Pomodori release, unzip and go.
 
@@ -100,14 +104,14 @@ MacRuby doesn't completely work on 32 bit architectures (the Mac on Intel Core D
 INSTALL
 -------
 
-* Download the pomodori 0.5 archive [here](http://reborg.github.com/pomodori/resources/pomodori-0.5.zip)
+* Download the pomodori 0.6 archive [here](http://reborg.github.com/pomodori/resources/pomodori-0.6.zip)
 * Unzip and copy to pomodori.app to /Applications
 * Please report installation issues at [Github-Issues](http://github.com/reborg/pomodori/issues)
 
 DEVELOPING
 ----------
 
-This procedure works for the latest developments in the master branch. First of all you need to install MacRuby (at this time the last release available is 0.5). Then Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. Then:
+The Macruby-0.4 branch is the current Pomodori release branch until master is stable enough to be integrated with the work of other developers. You need to install MacRuby 0.6 available [here](http://www.macruby.org/files/MacRuby%200.6.zip). Then Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory and git co macruby-0.4 to move the correct branch (also master is ok but right now is a mess). Then:
 
 * cd pomodori
 * Optional but recommended: run the test suite with 'macrake'
