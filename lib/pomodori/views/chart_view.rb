@@ -1,4 +1,4 @@
-framework 'webkit'
+framework 'WebKit'
 require 'pomodori/controllers/charts_controller'
 
 ##
