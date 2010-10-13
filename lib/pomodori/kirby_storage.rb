@@ -1,6 +1,6 @@
 require 'thirdparties/kirbybase'
 require 'pomodori/models/pomodoro'
-framework 'foundation'
+framework 'Foundation'
 
 class KirbyStorage
   attr_accessor :path, :db

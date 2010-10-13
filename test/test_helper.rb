@@ -2,6 +2,7 @@ Dir[File.dirname(__FILE__) + "/../vendor/*/lib"].each do |dir|
   $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
 end
 
+require "hotcocoa"
 require "mocha"
 require "matchy"
 require "test/unit"

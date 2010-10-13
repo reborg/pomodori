@@ -1,5 +1,5 @@
-require File.dirname(__FILE__) + '/../../test_helper'
 require 'hotcocoa'
+require File.dirname(__FILE__) + '/../../test_helper'
 require 'pomodori/views/chart_view'
 
 class ChartViewTest < Test::Unit::TestCase
