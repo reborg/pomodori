@@ -6,3 +6,5 @@ website
 *.swp
 build
 tags
+*.mode1v3
+*.pbxuser

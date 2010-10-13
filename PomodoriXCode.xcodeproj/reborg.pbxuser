@@ -118,8 +118,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304590767;
-			PBXWorkspaceStateSaveDate = 304590767;
+			PBXPerProjectTemplateStateSaveDate = 308683823;
+			PBXWorkspaceStateSaveDate = 308683823;
 		};
 		perUserProjectItems = {
 			8F2D72151116B9D3001C059D /* XDModelBookmark */ = 8F2D72151116B9D3001C059D /* XDModelBookmark */;
@@ -135,8 +135,8 @@
 			8F5D735F1227E7790078F4F1 /* PBXTextBookmark */ = 8F5D735F1227E7790078F4F1 /* PBXTextBookmark */;
 			8F5E838310CD1582007D0DF1 /* PBXTextBookmark */ = 8F5E838310CD1582007D0DF1 /* PBXTextBookmark */;
 			8F61F30010F34DA800443913 /* PBXTextBookmark */ = 8F61F30010F34DA800443913 /* PBXTextBookmark */;
+			8FC3964C1266245300C9B38E /* PBXTextBookmark */ = 8FC3964C1266245300C9B38E /* PBXTextBookmark */;
 			8FFE6F9D1109C0FC00E0EE8E /* PBXTextBookmark */ = 8FFE6F9D1109C0FC00E0EE8E /* PBXTextBookmark */;
-			8FFE6F9F1109C0FC00E0EE8E /* PBXTextBookmark */ = 8FFE6F9F1109C0FC00E0EE8E /* PBXTextBookmark */;
 		};
 		sourceControlManager = 8FF139B5109A86DB00D5E494 /* Source Control */;
 		userBuildSettings = {
@@ -497,6 +497,16 @@
 			sepNavWindowFrame = "{{237, 144}, {985, 696}}";
 		};
 	};
+	8FC3964C1266245300C9B38E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8FFE6F4B1109B54700E0EE8E /* persistent_object.rb */;
+		name = "persistent_object.rb: 1";
+		rLen = 0;
+		rLoc = 9;
+		rType = 0;
+		vrLen = 374;
+		vrLoc = 0;
+	};
 	8FF13997109A86CA00D5E494 /* PomodoriXCode */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -543,9 +553,9 @@
 	};
 	8FFE6F4B1109B54700E0EE8E /* persistent_object.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {712, 1248}}";
+			sepNavIntBoundsRect = "{{0, 0}, {712, 1232}}";
 			sepNavSelRange = "{9, 0}";
-			sepNavVisRange = "{0, 382}";
+			sepNavVisRange = "{0, 374}";
 		};
 	};
 	8FFE6F4D1109B55B00E0EE8E /* persistence.rb */ = {
@@ -563,16 +573,6 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 350;
-		vrLoc = 0;
-	};
-	8FFE6F9F1109C0FC00E0EE8E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 8FFE6F4B1109B54700E0EE8E /* persistent_object.rb */;
-		name = "persistent_object.rb: 1";
-		rLen = 0;
-		rLoc = 9;
-		rType = 0;
-		vrLen = 468;
 		vrLoc = 0;
 	};
 }
