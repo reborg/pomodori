@@ -5,8 +5,7 @@ require 'hotcocoa/standard_rake_tasks'
 task :default => [:test]
 
 task :test do
-  IO.popen('macruby test/all_tests.rb')
-  puts $?
+  `macruby test/all_tests.rb`
 end
 
 task :embed => [:deploy] do

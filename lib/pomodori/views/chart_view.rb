@@ -1,5 +1,6 @@
 framework 'webkit'
 require 'pomodori/controllers/charts_controller'
+require 'hotcocoa'
 
 ##
 # UI components for the chart view.
