@@ -1,9 +1,0 @@
-name: Pomodori
-load: lib/main.rb
-version: "0.4 © reborg@reborg.net"
-icon: resources/Pomodori.icns
-resources:
-  - resources/**/*.*
-sources: 
-  - lib/**/*.rb
-  
