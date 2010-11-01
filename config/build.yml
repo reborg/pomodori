@@ -1,0 +1,9 @@
+name: Pomodori
+load: lib/main.rb
+version: "0.6 © ReBorg reborg@reborg.net"
+icon: resources/Pomodori.icns
+resources:
+  - resources/**/*.*
+sources: 
+  - lib/**/*.rb
+  - vendor/hotcocoa-0.5.1+patch/**/*.rb

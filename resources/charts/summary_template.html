@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Pomodoro Summary</title>
+  <style type="text/css"> 
+  
+  <!-- 
+
+  * { 
+     margin: 0; 
+     padding: 0; 
+     list-style-type: none;
+   }
+   body { 
+     font-family: Helvetica, Arial, sans-serif; 
+     color: #333; 
+   }
+   a { 
+     color: #2D7BB2; 
+     text-decoration: none; 
+     font-weight: bold; 
+   }
+   a:hover { 
+     color: #333; 
+   }
+   h2, h3, h4 { 
+     clear: both; 
+     margin: 0 0 0.6em 0;
+   }
+   h3 { 
+     color: #666; 
+   }
+   .section { 
+     float: left;
+     clear: left;
+     padding: 1em 2em;
+   }
+
+   .chartlist { 
+     float: left; 
+     border-top: 1px solid #EEE; 
+     width: 25em;
+   }
+   .chartlist li { 
+     position: relative;
+     display: block;  
+     border-bottom: 1px solid #EEE; 
+     _zoom: 1;
+   }
+   .chartlist .date { 
+     display: block; 
+     padding: 0.4em 4.5em 0.4em 0.5em;
+     position: relative; 
+     z-index: 2;
+     color: #999;
+   }
+   .chartlist .count { 
+     display: block; 
+     position: absolute; 
+     top: 0; 
+     right: 0; 
+     margin: 0 0.3em; 
+     text-align: right; 
+     font-weight: bold; 
+     font-size: 0.875em; 
+     line-height: 2em; 
+   }
+   .chartlist .index { 
+     display: block; 
+     position: absolute; 
+     top: 0; 
+     left: 0; 
+     height: 100%; 
+     background: #B8E4F5; 
+     text-indent: -9999px; 
+     overflow: hidden; 
+     line-height: 2em;
+   }
+   .chartlist li:hover { 
+     background: #EFEFEF; 
+   }
+  
+  --> 
+  
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h3>Pomodoro Count By Day</h3>
+
+    <ul class="chartlist">
+      <%= pomodoro_summary %>
+    </ul>
+  </div>
+</body>
+</html>
