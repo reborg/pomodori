@@ -111,12 +111,11 @@ INSTALL
 DEVELOPING
 ----------
 
-The Macruby-0.4 branch is the current Pomodori release branch until master is stable enough to be integrated with the work of other developers. You need to install MacRuby 0.6 available [here](http://www.macruby.org/files/MacRuby%200.6.zip). Then Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory and git co macruby-0.4 to move the correct branch (also master is ok but right now is a mess). Then:
+You need to install MacRuby 0.6 available [here](http://www.macruby.org/files/MacRuby%200.6.zip). Then Git clone git://github.com/reborg/pomodori.git to create a local "pomodori" directory. cd into the pomodori directory and then:
 
-* cd pomodori
-* Optional but recommended: run the test suite with 'macrake'
+* (Optional but recommended) run the test suite with 'macrake test'
 * 'macrake run' from the root directory to generate the app and run it
-* 'macrake embed' to create a pomodori app distribution with embedded MacRury.
+* 'macrake embed' to create a pomodori app distribution with embedded MacRuby
 * './script/console' to load an interactive console with pre-loaded HotCocoa and Pomodori classes
 
 LINKS
