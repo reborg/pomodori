@@ -15,3 +15,7 @@ Pomodori is a tool based on the pomodoro technique (PT) by Francesco Cirillo onl
 == Pomodoro Talk:
 
 I recorded a Pomodoro Technique introduction talk which is available here: http://www.vimeo.com/4546375. Other resources available at the Pomodori main web site: http://reborg.github.com/pomodori
+
+== Release Notes
+
+Had to downgrade to MacRuby 0.5 for a SAFE level issue changing from 0 to 1 unexpectedly.

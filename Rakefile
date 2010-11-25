@@ -16,7 +16,6 @@ task :embed => [:deploy] do
   `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/lib/ruby/1.9.0/irb`
   `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/lib/ruby/1.9.0/rdoc`
   `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/share`
-  `rm -rf ./#{AppConfig.name}.app/Contents/Frameworks/MacRuby.framework/Versions/0.5`
   `find ./#{AppConfig.name}.app/Contents -name "*.rbo" -exec install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/lib/libmacruby.dylib @executable_path/../Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/lib/libmacruby.dylib {} \\;`
   `find ./#{AppConfig.name}.app/Contents -name "*.bundle" -exec install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/lib/libmacruby.dylib @executable_path/../Frameworks/MacRuby.framework/Versions/#{MACRUBY_VERSION}/usr/lib/libmacruby.dylib {} \\;`
 end
