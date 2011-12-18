@@ -1,4 +1,5 @@
-require File.dirname(__FILE__) + "/../vendor/hotcocoa-0.5.1+patch/lib/hotcocoa"
+require 'rubygems'
+require 'hotcocoa'
 require File.dirname(__FILE__) + '/pomodori'
 require 'pomodori/migration'
 require 'pomodori/views/main_view'
