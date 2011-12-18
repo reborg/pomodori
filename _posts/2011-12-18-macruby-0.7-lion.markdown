@@ -1,0 +1,10 @@
+---
+layout: post
+title: Latest Pomodori 0.7 now compatible with Lion
+---
+
+Pomodori 0.7 is out!
+==============================
+Hi all, I found a few hours today to fix Pomodori compatibility with the new Mac OS X Lion release. No new feature or bug fixing unfortunately. I should have some more time to evolve Pomodori the next year (2012) after I'm done with some important client work. Please accept my apologies for being so late.
+
+*Happy Pomodoros*

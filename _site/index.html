@@ -27,13 +27,13 @@
       </div>
       <div id="page_body">
         <div id="content">
-          <p>Pomodori is a tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a> available for Mac Os X (10.6 Core 2 Duo). Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
+          <p>Pomodori is a tool based on the pomodoro technique (PT) by <a href='http://cirillosscrapbook.wordpress.com/'>Francesco Cirillo</a> available for Mac Os X (Leopard, Snow Leopard 10.6 Core 2 Duo and Lion 10.7 please look at the Requirements section to know which version to download). Pomodori measures the pomodoro time and stores pomodoro descriptions with the help of only a single click. Pomodori shows metrics to help you plan future activities and detailed charts. For more information about the technique please visit <a href='http://www.pomodorotechnique.com/'>pomodoro community</a>.</p>
 
 <h2 id='what_is_the_pomodoro_technique'>WHAT IS THE POMODORO TECHNIQUE?</h2>
 
 <p>The Pomodoro Technique (PT) is a time and focus management technique which improves productivity and quality of work. Starting with the PT is incredibily simple, you just need a timer (shameless promotion, what about Pomodori?) that counts 25 minutes:</p>
 
-<p><img src='resources/start-easy.png' alt='Start Easy' /></p>
+<p><img alt='Start Easy' src='resources/start-easy.png' /></p>
 
 <p>Then read the book <a href='http://www.pomodoro-book.com/'>Pomodoro Technique Illustrated</a> by Staffan Noteberg and the original <a href='http://www.pomodorotechnique.com/'>paper</a> by Francesco and you should be all set.</p>
 
@@ -41,15 +41,19 @@
 
 <p>General view:</p>
 
-<p><img src='resources/general-view.png' alt='General View' /></p>
+<p><img alt='General View' src='resources/general-view.png' /></p>
 
 <p>Done Pomodoro:</p>
 
-<p><img src='resources/pomodoro-done.png' alt='Pomodoro Done' /></p>
+<p><img alt='Pomodoro Done' src='resources/pomodoro-done.png' /></p>
 
 <h2 id='features'>FEATURES</h2>
 
 <p>The project is young and features are added fast. Do you want a new feature? Please enter it here: <a href='http://github.com/reborg/pomodori/issues'>Github-Issues</a> or send your comment to reborg @ reborg.net</p>
+
+<p>Release 0.7 (Sun 18 Dec 2011)</p>
+
+<p>This release is based on MacRuby 0.10 and works on Mac OS X 10.7.x Lion. This release should not be used if you&#8217;re still using Snow Leopard (use 0.6 in that case). There are no new features in this release other than the compatibility with Lion. Please download Pomodori 0.7 <a href='http://reborg.github.com/pomodori/resources/pomodori-0.7.zip'>here</a>.</p>
 
 <p>Release 0.6</p>
 
@@ -117,7 +121,7 @@
 <li>A pomodoro can be voided (no information stored) and Pomodori jumps directly to the break</li>
 </ul>
 
-<h2 id='coming_soon'>COMING SOON?</h2>
+<h2 id='coming_soon_maybe'>COMING SOON (MAYBE)</h2>
 
 <ul>
 <li>Major rewrite under developement. Dropping HotCocoa and moving interface deisgn in XCode.</li>
@@ -139,10 +143,16 @@
 
 <h2 id='requirements'>REQUIREMENTS</h2>
 
+<p>Mac Os X 10.7 Lion users:</p>
+
+<ul>
+<li>Just download Pomodori release 0.7, unzip in /Applications folder and go.</li>
+</ul>
+
 <p>Mac Os X 10.6 Snow Leopard (64bits, see limitations) Users:</p>
 
 <ul>
-<li>Just download latest Pomodori release, unzip and go.</li>
+<li>Just download Pomodori release 0.6, unzip and go.</li>
 </ul>
 
 <p>Mac OS X 10.5 Leopard users:</p>
@@ -157,28 +167,28 @@
 
 <h2 id='limitations'>LIMITATIONS</h2>
 
-<p>MacRuby doesn&#8217;t completely work on 32 bit architectures (the Mac on Intel Core Duo are 32 bit only, Mac with Intel Core 2 Duo are 64 bit). If you happen to have an &#8220;old&#8221; Mac with an Intel Core Duo chip, you should wait unitl the next MacRuby release is available to use Pomodori.</p>
+<p>MacRuby doesn&#8217;t completely work on 32 bit architectures (the Mac on Intel Core Duo are 32 bit only, Mac with Intel Core 2 Duo are 64 bit). If you happen to have an &#8220;old&#8221; Mac with an Intel Core Duo chip, you should wait unitl the next MacRuby release is available to use Pomodori or switch to Mac Os X 10.7 Lion.</p>
 
 <h2 id='install'>INSTALL</h2>
 
 <ul>
-<li>Download the pomodori 0.6 archive <a href='http://reborg.github.com/pomodori/resources/pomodori-0.6.zip'>here</a></li>
+<li>Download the pomodori release archive based on your Mac Os X version. For Lion users please download <a href='http://reborg.github.com/pomodori/resources/pomodori-0.7.zip'>here</a></li>
 
-<li>Unzip and copy to pomodori.app to /Applications</li>
+<li>Unzip and copy to Pomodori.app to /Applications</li>
 
 <li>Please report installation issues at <a href='http://github.com/reborg/pomodori/issues'>Github-Issues</a></li>
 </ul>
 
 <h2 id='developing'>DEVELOPING</h2>
 
-<p>You need to install MacRuby 0.6 available <a href='http://www.macruby.org/files/MacRuby%200.6.zip'>here</a>. Then Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. cd into the pomodori directory and then:</p>
+<p>You need to install MacRuby 0.10 available <a href='http://www.macruby.org/files/MacRuby%200.10.zip'>here</a>. Then Git clone git://github.com/reborg/pomodori.git to create a local &#8220;pomodori&#8221; directory. cd into the pomodori directory and then:</p>
 
 <ul>
-<li>(Optional but recommended) run the test suite with &#8216;macrake test&#8217;</li>
+<li>(Optional but recommended) run the test suite with &#8216;macrake test&#8217; (not working as of 18/12/2011 after releasing for Lion).</li>
 
 <li>&#8216;macrake run&#8217; from the root directory to generate the app and run it</li>
 
-<li>&#8216;macrake embed&#8217; to create a pomodori app distribution with embedded MacRuby</li>
+<li>&#8216;macrake deploy&#8217; to create a pomodori app distribution with embedded MacRuby</li>
 
 <li>&#8217;./script/console&#8217; to load an interactive console with pre-loaded HotCocoa and Pomodori classes</li>
 </ul>
@@ -199,7 +209,7 @@
 
 <p>(The MIT License)</p>
 
-<p>Copyright (c) 2010 ReBorg - Renzo Borgatti</p>
+<p>Copyright (c) 2009-2012 ReBorg - Renzo Borgatti</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#8216;Software&#8217;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
@@ -209,7 +219,8 @@
         </div>
         <div id="sidebar">
           <div class="item">
-            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.6.zip">Pomodori 0.6 Download</a></h5>
+            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.7.zip">Latest Lion-only Pomodori 0.7</a></h5>
+            <h5><a href="http://reborg.github.com/pomodori/resources/pomodori-0.6.zip">Snow Leopard Pomodori 0.6</a></h5>
             <h5><a href="http://github.com/reborg/pomodori/issues">Github Issues</a></h5>
             <h5><a href="http://github.com/reborg/pomodori/tree/master">GitHub Development</a></h5>
             <h5><a href="http://blog.reborg.net/">My Blog</a></h5>
@@ -219,6 +230,8 @@
           <div class="item">
             <h4>Blog Posts <a href="atom.xml" id="rss_feed" name="rss_feed">RSS</a></h4>
             <p>
+               
+                <span>18 Dec 2011</span> » <a href="/pomodori/2011/12/18/macruby-0.7-lion.html">Latest Pomodori 0.7 now compatible with Lion</a><br>
                
                 <span>06 Jul 2010</span> » <a href="/pomodori/2010/07/06/macruby-0.6.html">Upgrade to MacRuby 0.6</a><br>
                
