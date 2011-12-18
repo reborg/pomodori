@@ -1,5 +1,3 @@
-#$LOAD_PATH.unshift(File.dirname(__FILE__) + "/vendor/hotcocoa-0.5.1+patch/lib")
-
 APPSPEC = 'config/Pomodori.appspec'
 
 require 'rubygems'
